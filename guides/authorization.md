@@ -18,7 +18,7 @@ Rather than using API keys for API access, `OAuth` needs to use `access
 tokens`.  A token represents a permission granted to a client to access some
 protected resources. The method to acquire a token is called __grant__.
 
-There are 4 separate types of OAuth grants, depending who owns the token and
+There are 4 separate types of OAuth grants, depending on who owns the token and
 whether or not the client is capable of keeping a secret. Each mode serves a
 different purpose, and is used in a different way:
 
@@ -28,7 +28,7 @@ different purpose, and is used in a different way:
    side component (only front end).
 3. `Password Credentials Grant`. The user provides their service credentials
    (username and password) directly to the application, which uses the
-   credentials to obtain an access token from the service. Normally is used
+   credentials to obtain an access token from the service. Normally it is used
    when the user fully trusts on the application (native applications). 
 4. `Client Credentials Grant`. This grant is suitable when building an
    application that is requesting access to protected resources under its
@@ -37,9 +37,9 @@ different purpose, and is used in a different way:
 ### Client Credential Grant
 
 Client Credentials is the grant used in __Amadeus for Developers__. Let's see
-how it works and kind of parameters are necesary to perform the authentication.
+how it works and the kind of parameters needed to perform the authorization.
 
-#### Authentication Flow
+#### Request/Response Flow
 
 To request an access token you will need to send a POST request with following
 body parameters to the authorization server:
@@ -62,7 +62,7 @@ The authorization server will respond with a JSON object containing the followin
 * `expires_in` with an integer representing the expiration time (in seconds) for the given token.
 * `state` with the value `approved`
 
-#### Requesting an Access Token via cURL
+#### Getting a token via cURL
 
 On the following example, we are going to request a new token using the `cURL`
 command. 
@@ -78,7 +78,7 @@ https://test.api.amadeus.com/v1/security/oauth2/token \
 -d "grant_type=client_credentials&client_id={consumer-key}&client_secret={consumer-secret}"
 ```
 
-Since we are sending the parameters on the body of the HTTP message as
+Since we are sending the parameters in the body of the HTTP message as
 name/value pairs separated by the ampersand (&), we need to send the header
 `content-type` as `application/x-www-form-urlencoded`.
 
@@ -101,7 +101,7 @@ to access all resources.
 
 You can copy your token and use it in the same way as you would use an API Key.
 
-#### Requesting an Access Token using Ruby
+#### Getting a token using Ruby
 
 Following the same approach, your can use your favourite language to retrieve an `access token`.
 
@@ -116,9 +116,9 @@ token = client.client_credentials.get_token
 
 Our `token` variable is ready to be used in further API calls.
 
-#### Using the `access_token` to call other APIs
+#### Using the token to call other APIs
 
-Once the token has been requests, you are ready to perform your API calls.
+Once the token has been requested, you are ready to perform your API calls.
 
 In order to get access to the protected resources, you need to add an the
 `authorization` header to your request with the value `Bearer {access_token}`,
@@ -150,7 +150,7 @@ The response will be a 200 status code along with the data:
 
 ### Authorization with SDKs
 
-Even though is recommended to understand how the authorization works using
+Even though it is recommended to understand how the authorization works using
 `OAuth`, we highly recommend to use the [Amadeus for Developers
 SDKs](https://github.com/amadeus4dev) as much as possible.  The `SDKs` wraps
 all the complexity and abstracts the implementation.
