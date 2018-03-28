@@ -6,18 +6,19 @@ Sometimes, when you’re making calls to the [Amadeus for
 Developers](http://developers.amadeus.com) REST APIs, there will be a lot of
 results to return. Let’s say your initial call is asking for all the flight
 offers using the `Flight Low-fare Search` API; the result could be a massive
-response with hundreds of pages. Don't panic. Pagination is here to the rescue,
+response with hundreds of pages. Don't panic. Pagination comes to the rescue,
 splitting the results into different pages to make sure responses are easier to
 handle.
 
  
-### Accessing to the paginated results
+### Accessing the paginated results
 
 #### Using the SDKs
 
-If you are using any of our [SDKs](https://github.com/amadeus4dev) it's very
-simple.  If an API endpoint supports pagination, the other pages are available
-under the `.next`, `.previous`, `.last` and `.first` methods.
+If you are using any of our [SDKs](https://github.com/amadeus4dev), accessing
+the paginated results is very simple.  If an API endpoint supports pagination,
+the other pages are available under the `.next`, `.previous`, `.last` and
+`.first` methods.
 
 Let's see the following example written on `node`:
 
@@ -49,7 +50,7 @@ In this case, the method will return `nil` in case we try to reach a non existin
 
 #### Manually parsing the response
 
-The responses are recevied with the following `JSON` content:
+The responses are received with the following `JSON` content:
  
 ```json
 
@@ -71,8 +72,7 @@ The responses are recevied with the following `JSON` content:
 }
 ```
 
-Accesing the next page on the result, means to access to the `meta/links/page2`
-node within the `JSON` response.
-
+Accessing the page of the results means to access the `meta/links/page2` node
+within the `JSON` response.
 
 

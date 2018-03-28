@@ -4,17 +4,17 @@
 
 In this tutorial you will learn how to understand and handle errors with our APIs. 
  
-## Types of Error
+## Types of Errors
 
-There two main type of errors depending on which side of the flow happen:
+There two main types of errors depending on which side of the flow happen:
 
-* Client: typically when the request has not been correctly built. We can debug and fix.
+* Client: typically when the request has not been properly built. We can debug and fix.
 * Server: when something happened on the server side and has to be reported.
 
 
 ### Client Errors
 
-If your API request is invalid you will receive a `Client Error` in response from
+If your API request is invalid you will receive a `Client Error` response from
 the system, with a HTTP `4xx` status code. The body of the response will match
 the format defined in our `swagger` schema and generally provides more
 information on why the request was invalid.
@@ -23,9 +23,9 @@ information on why the request was invalid.
 
 ##### 401 Invalid Token
 
-Usually happens when the access token provided in the Authorization header is
-no longer valid because it has already expired. In this particupar case you
-need to request a new access token.
+It usually happens when the access token provided in the Authorization header is
+no longer valid because it has already expired. In this particular case you
+would need to request a new access token.
 
 ```
 {
@@ -42,7 +42,7 @@ need to request a new access token.
 
 ##### 400 Unsupported Grant Type
 
-When trying to use a grant type different to `client credentials`. Make sure
+When trying to use a grant type different than  `client credentials`. Make sure
 you are following our [authorization](authorization.md) guide.
 
 
@@ -57,7 +57,7 @@ you are following our [authorization](authorization.md) guide.
 
 ##### 401 Invalid consumer key
 
-The client credentials have invalid format and are not recognised.
+The client credentials have invalid format and are not recognized.
 
 ```json
 {
@@ -135,7 +135,7 @@ a Server error in response from the system, with a HTTP `5xx` status code. The
 body will again match the defined error format, allowing your application to
 easily read it and display an appropriate message to the client. It may also
 carry some debugging information which you can submit to us if you would like
-us to investigate the error further
+us to investigate the error further.
 
 The following example shows an internal server error:
 
