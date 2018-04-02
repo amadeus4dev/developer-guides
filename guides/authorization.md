@@ -75,7 +75,7 @@ curl \
 -X POST \
 -H "Content-Type: application/x-www-form-urlencoded" \
 https://test.api.amadeus.com/v1/security/oauth2/token \
--d "grant_type=client_credentials&client_id={consumer-key}&client_secret={consumer-secret}"
+-d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
 ```
 
 Since we are sending the parameters in the body of the HTTP message as
@@ -103,19 +103,38 @@ You can copy your token and use it in the same way as you would use an API Key.
 
 #### Getting a token using Ruby
 
+For this example we are using the gem `oauth2`. 
+
+To install it:
+```ruby
+gem install oauth2
+```
+
 Following the same approach, your can use your favourite language to retrieve an `access token`.
 
 ```ruby
-TOKEN_REQUEST_URL = 'https://test.api.amadeus.com/v1/security/oauth2/token'
-CONSUMER_KEY = 'zzz'
-CONSUMER_SECRET = 'xxx'
+require 'oauth2'
 
-client = OAuth2::Client.new(CONSUMER_KEY, CONSUMER_SECRET, token_url: TOKEN_REQUEST_URL)
+client = OAuth2::Client.new([CLIENT_ID], [CLIENT_SECRET], site: 'https://test.api.amadeus.com', token_url: 'https://test.api.amadeus.com/v1/security/oauth2/token')
 token = client.client_credentials.get_token
 ```
+You can now use your `token` to make an API call:
 
-Our `token` variable is ready to be used in further API calls.
+```ruby
+response = token.get('/v1/reference-data/locations',
+  params: {
+    subType: 'AIRPORT',
+    keyword: 'Los'
+  })
 
+response_body = JSON.parse(response.body)
+
+puts response_body['data'].first['iataCode']
+```
+```
+> Output
+LAX
+```
 #### Using the token to call other APIs
 
 Once the token has been requested, you are ready to perform your API calls.
@@ -133,7 +152,7 @@ curl -X GET \
       -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
 ```
 
-The response will be a 200 status code along with the data:
+The response will be a `200` status code along with the data:
 
 ```json
 {
