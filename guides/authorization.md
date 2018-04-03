@@ -169,13 +169,13 @@ The response will be a `200` status code along with the data:
 
 ### Authorization with SDKs
 
-Even though it is recommended to understand how the authorization works using
-`OAuth`, we highly recommend to use the [Amadeus for Developers
-SDKs](https://github.com/amadeus4dev) as much as possible.  The `SDKs` wraps
-all the complexity and abstracts the implementation.
+Although it helps to understand how authorization works using
+`OAuth`, we highly recommend to use our [Amadeus for Developers
+SDKs](https://github.com/amadeus4dev).  The `SDKs` wrap
+all the complexity and abstraction the implementation for you.
 
-The following example initializes the client and perform the authentication
-underneath:
+This is how you can initialize the client and authenticate
+with the Node SDK:
 
 ```js
 var Amadeus = require('amadeus');
@@ -187,5 +187,8 @@ var amadeus = new Amadeus({
 
 ```
 
-The `SDK` stores the `access_token` and set all needed headers automatically.
+The `SDK` fetches and stores the `access_token` and then sets all the headers automatically.
+
+> Please insure that you do not store your `clientId` and/or your `clientSecret` in your code. 
+> These need to be saved as environment variables.
 
