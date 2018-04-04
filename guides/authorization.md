@@ -2,73 +2,59 @@
 
 # Authorization
 
-In the following guide we will learn how to perform the authentication and
-authorization in our applications.
+In the following guide you will learn how to perform the authorization to access all our APIs.
 
-Beware that before making any requests to the APIs, you must sign up in the
-portal in order to get your client and application keys.
+The basic steps are as follows:
+
+1. [Register](https://uat.developers.amadeus.com/create-account) on the portal
+2. Create an app to get your:
+* `API Key`
+* `API Secret`
+3. Make an authorization call to get your access token
+4. Call the API you want using the access token
 
 ## Introduction to OAuth
 
-OAuth is, in a nutshell, a protocol that supports authorization workflows. In
-other words, it provides a way to ensure that a specific user has permissions
-to do something.
+OAuth is a protocol that enables a token-based workflow which is more secure than basic authentication. It provides a way to ensure that a specific user has permissions to access services and resources.
 
-Rather than using API keys for API access, `OAuth` needs to use `access
+Rather than using API keys for API access, `OAuth` uses `access
 tokens`.  A token represents a permission granted to a client to access some
 protected resources. The method to acquire a token is called __grant__.
 
-There are 4 separate types of OAuth grants, depending on who owns the token and
-whether or not the client is capable of keeping a secret. Each mode serves a
-different purpose, and is used in a different way:
+There are different types of OAuth grants. __Amadeus for Developers__ uses the `Client Credentials Grant`.  
 
-1. `Authorization Code Grant`. This grant is used when you are building a web
-   application with server side component.
-2. `Implicit Grant Type`. Used on web applications that don’t have a server
-   side component (only front end).
-3. `Password Credentials Grant`. The user provides their service credentials
-   (username and password) directly to the application, which uses the
-   credentials to obtain an access token from the service. Normally it is used
-   when the user fully trusts on the application (native applications). 
-4. `Client Credentials Grant`. This grant is suitable when building an
-   application that is requesting access to protected resources under its
-   control and there is no third-party involved.
+## Authorization Request/Response Flow
 
-### Client Credential Grant
-
-Client Credentials is the grant used in __Amadeus for Developers__. Let's see
-how it works and the kind of parameters needed to perform the authorization.
-
-#### Request/Response Flow
-
-To request an access token you will need to send a POST request with following
+### Request
+To request an access token you need to send a POST request with the following
 body parameters to the authorization server:
 
 * `grant_type` with the value `client_credentials`
-* `client_id` with the client id.
-* `client_secret` with the client secret.
+* `client_id` with your `API Key`.
+* `client_secret` with your `API Secret`.
 
-Both `client_id` and `client_secret` have been provided to you when registering
-new applications in the portal.
+Both `API Key` and `API Secret` were provided to you when you created your application in the portal.
 
+### Response
 The authorization server will respond with a JSON object containing the following properties:
 
-* `type` usually set to `amadeusOAuth2Token` string.
-* `username` which contains the username (mail address).
-* `application_name` with the application name created in the portal.
-* `client_id` with the client id (same value as the request).
+* `type` set to `amadeusOAuth2Token` string.
+* `username` your username (email address).
+* `application_name` your application name created in the portal.
+* `client_id` your `API Key` (same as the one used in the request).
 * `token_type` with the value `Bearer`.
-* `access_token` which contains the authorization token.
-* `expires_in` with an integer representing the expiration time (in seconds) for the given token.
+* `access_token` your authorization token.
+* `expires_in` an integer representing the expiration time (in seconds) of the given token.
 * `state` with the value `approved`
 
-#### Getting a token via cURL
+## Examples of how to get the token
 
-On the following example, we are going to request a new token using the `cURL`
-command. 
+### cURL
 
-In order to perform the authentication, we need to make a `POST` request to the
-following endpoint `v1/security/oauth2/token`.
+In the following example, you are going to learn how to request a new token using the `cURL` command. 
+
+To do so you need to make a `POST` request to the
+following endpoint `/v1/security/oauth2/token`.
 
 ```bash
 curl \
@@ -78,9 +64,9 @@ https://test.api.amadeus.com/v1/security/oauth2/token \
 -d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
 ```
 
-Since we are sending the parameters in the body of the HTTP message as
-name/value pairs separated by the ampersand (&), we need to send the header
-`content-type` as `application/x-www-form-urlencoded`.
+As we are sending the parameters in the body of the HTTP message as
+name/value pairs separated by the ampersand (&), we need to set the header
+`content-type` to `application/x-www-form-urlencoded`.
 
 The response will contain the newly generated `access_token` which you can use
 to access all resources.
@@ -99,18 +85,45 @@ to access all resources.
 }
 ```
 
-You can copy your token and use it in the same way as you would use an API Key.
+Once the token has been requested, you are ready to perform your API calls.
 
-#### Getting a token using Ruby
+In order to get access to the protected resources, you need to add an the
+`authorization` header to your request with the value `Bearer {access_token}`,
+where `acess_token` is the previously obtained token.
 
-For this example we are using the gem `oauth2`. 
+You can then for example call the `Check-in Links` API to retrieve the
+check-in URL for Iberia (`IB`):
+
+```bash
+curl -X GET \
+  "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airline=1X" \
+      -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
+```
+
+```json
+> Output
+{
+    "data": [
+        {
+            "type": "checkin-link",
+            "id": "1XEN-GBWeb",
+            "href": "https://www.onex.com/manage/check-in",
+            "channel": "Web"
+        }
+    ]
+}
+```
+
+### Ruby
+
+For this example we will use `oauth2` gem. 
 
 To install it:
 ```ruby
 gem install oauth2
 ```
 
-Following the same approach, your can use your favourite language to retrieve an `access token`.
+Following the same approach as with cURL, you can retrieve your `access token` as follows:
 
 ```ruby
 require 'oauth2'
@@ -135,39 +148,9 @@ puts response_body['data'].first['iataCode']
 > Output
 LAX
 ```
-#### Using the token to call other APIs
 
-Once the token has been requested, you are ready to perform your API calls.
 
-In order to get access to the protected resources, you need to add an the
-`authorization` header to your request with the value `Bearer {access_token}`,
-where `acess_token` is the previously obtained token.
-
-The following example uses `cURL` to call `Check-in Links` API to retrieve the
-check-in URL of the `1X` airline:
-
-```bash
-curl -X GET \
-  "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airline=1X" \
-      -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
-```
-
-The response will be a `200` status code along with the data:
-
-```json
-{
-    "data": [
-        {
-            "type": "checkin-link",
-            "id": "1XEN-GBWeb",
-            "href": "https://www.onex.com/manage/check-in",
-            "channel": "Web"
-        }
-    ]
-}
-```
-
-### Authorization with SDKs
+### With our SDKs
 
 Although it helps to understand how authorization works using
 `OAuth`, we highly recommend to use our [Amadeus for Developers
