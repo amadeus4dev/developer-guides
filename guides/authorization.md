@@ -7,11 +7,12 @@ In the following guide you will learn how to perform the authorization to access
 The basic steps are as follows:
 
 1. [Register](https://uat.developers.amadeus.com/create-account) on the portal
-2. Create an app to get your:
-* `API Key`
-* `API Secret`
+2. Create an app to get your `API Key` and `API Secret`
 3. Make an authorization call to get your access token
 4. Call the API you want using the access token
+
+> Please insure that you do not commit your `API Key` and your `API Secret`. 
+
 
 ## Introduction to OAuth
 
@@ -164,14 +165,15 @@ with the Node SDK:
 var Amadeus = require('amadeus');
 
 var amadeus = new Amadeus({
-  clientId: '[YOUR_CLIENT_ID]',
-  clientSecret: '[YOUR_CLIENT_SECRET]'
+  clientId: '[API Key]',
+  clientSecret: '[API Secret]'
 });
 
 ```
 
-The `SDK` fetches and stores the `access_token` and then sets all the headers automatically.
+The `SDK` fetches and stores the `access_token` and then sets all the headers automatically in all API calls.
 
-> Please insure that you do not store your `clientId` and/or your `clientSecret` in your code. 
-> These need to be saved as environment variables.
+
+
+
 
