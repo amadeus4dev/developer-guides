@@ -2,26 +2,24 @@
 
 # Authorization
 
-In the following guide you will learn how to perform the authorization to access all our APIs.
+In the following guide you will learn how to perform the authorization needed to access all our APIs.
 
-The basic steps are as follows:
+The basic steps are:
 
 1. Open an account on the [Amadeus for Developers portal](https://uat.developers.amadeus.com/create-account)
 2. Create an app
 3. Get your `API Key` and `API Secret`
-4. Make an authorization call to get your access token
+4. Make a call to our authorization server to get an access token
 5. Call the APIs you want using the access token
 
-> Please insure that you do not commit your `API Key` and your `API Secret`. 
+> Please insure that you do not commit your `API Key` and your `API Secret` as these are strictly private. 
 
 
 ## Introduction to OAuth
 
-OAuth is a protocol that enables a token-based workflow which is more secure than basic authentication. It provides a way to ensure that a specific user has permissions to access services and resources.
+OAuth is a protocol that enables a token-based workflow, which is more secure than basic authentication. It provides a way to ensure that a specific user has permissions to access services and resources.
 
-Rather than using API keys for API access, `OAuth` uses `access
-tokens`.  A token represents a permission granted to a client to access some
-protected resources. The method to acquire a token is called __grant__.
+`OAuth` uses `access tokens` for accessing APIs.  A token represents a permission granted to a client to access some protected resources. The method to acquire a token is called __grant__.
 
 There are different types of OAuth grants. __Amadeus for Developers__ uses the `Client Credentials Grant`.  
 
@@ -42,7 +40,7 @@ The authorization server will respond with a JSON object containing the followin
 
 * `type` set to `amadeusOAuth2Token` string.
 * `username` your username (email address).
-* `application_name` your application name created in the portal.
+* `application_name` the name of your application.
 * `client_id` your `API Key` (same as the one used in the request).
 * `token_type` with the value `Bearer`.
 * `access_token` your authorization token.
@@ -53,9 +51,7 @@ The authorization server will respond with a JSON object containing the followin
 
 ### cURL
 
-In the following example, you are going to learn how to request a new token using the `cURL` command. 
-
-To do so you need to make a `POST` request to the
+To request a new token using the `cURL` command you need to make a `POST` request to the
 following endpoint `/v1/security/oauth2/token`.
 
 ```bash
@@ -87,13 +83,13 @@ to access all resources.
 }
 ```
 
-Once the token has been requested, you are ready to perform your API calls.
+Once the token has been retrieved you are ready to perform your API calls.
 
-In order to get access to the protected resources, you need to add an the
+To get access to the API you want, you need to add the
 `authorization` header to your request with the value `Bearer {access_token}`,
-where `acess_token` is the previously obtained token.
+where `acess_token` is the token you have just retrieved.
 
-You can then for example call the `Check-in Links` API to retrieve the
+You can then call, for example, the `Check-in Links` API to retrieve the
 check-in URL for Iberia (`IB`):
 
 ```bash
@@ -155,9 +151,9 @@ LAX
 ### With our SDKs
 
 Although it helps to understand how authorization works using
-`OAuth`, we highly recommend to use our [Amadeus for Developers
-SDKs](https://github.com/amadeus4dev).  The `SDKs` wrap
-all the complexity and abstraction the implementation for you.
+`OAuth`, we highly recommend you use our [Amadeus for Developers
+SDKs](https://github.com/amadeus4dev).  The `SDKs` abstract
+all the complexity of the implementation for you.
 
 This is how you can initialize the client and authenticate
 with the Node SDK:
@@ -174,7 +170,11 @@ var amadeus = new Amadeus({
 
 The `SDK` fetches and stores the `access_token` and then sets all the headers automatically in all API calls.
 
+You can then call for example the Flight Check-in Links API:
 
+```js
+amadeus.referenceData.urls.checkinLinks.get({ airline: 'IB' });
+```
 
 
 
