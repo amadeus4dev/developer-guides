@@ -1,5 +1,3 @@
-![Amadeus for Developers](../../master/images/logo.png)
-
 # Authorization
 
 In the following guide you will learn how to perform the authorization needed to access all our APIs.
