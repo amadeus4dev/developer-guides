@@ -116,7 +116,7 @@ The response returns a JSON object containing a list of destinations matching ou
 
 Congratulations! You have just made your first Amadeus for Developers API call!
 
-## Discover our APIs
+## Explore our APIs
 
 You can find all our APIs in our [API catalogue](https://developers.amadeus.com/self-service). Don’t forget to stop by our [Github workspace](https://github.com/amadeus4dev/) which contains tons of samples and prototypes where you can inspire from.
 
