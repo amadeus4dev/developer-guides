@@ -32,6 +32,8 @@ Applications using __Testing environment__ can be easily identified because they
 
 ![appTesting](../images/apptesting.png)
 
+> Remember that the API Key and API Secret are for personal use only. Do not share them with anyone (even in Testing environment). If you are developing a web based application, please make sure your API Key and Secret are stored on backend side.
+
 The easiest way to start playing with APIs is probably through cURL. Let’s see how to request a token and perform our first call.
 
 To request a new token using the cURL command you need to send a POST request to the following endpoint `/v1/security/oauth2/token` sending your `API Key` and `API Secret` in the body of the request:
@@ -119,7 +121,7 @@ Congratulations! You have just made your first Amadeus for Developers API call!
 
 ## Explore our APIs
 
-You can find all our APIs in our [API catalogue](https://developers.amadeus.com/self-service). Don’t forget to stop by our [Github workspace](https://github.com/amadeus4dev/) which contains tons of samples and prototypes where you can inspire from.
+You can find all our APIs in our [API catalogue](https://developers.amadeus.com/self-service). Don’t forget to stop by our [GitHub workspace](https://github.com/amadeus4dev/) which contains tons of samples and prototypes where you can inspire from.
 
 We also provide a useful [Cheat Sheet](https://developers.amadeus.com/self-service/cheat_sheet.pdf) with instructions on how to get started and where you can see all APIs at glance.
 
