@@ -28,11 +28,11 @@ Your `API Key` and `API Secret` will be provided to you on the next screen:
 
 It's important to understand that at this stage you are using  __Testing environment__ (Sandbox). This environment allows you to access the APIs for free, up to a certain number of calls. There are however limitations regarding the data which is either cached data, limited coverage or fake data. Check out our [pricing](https://developers.amadeus.com/pricing) page for more information about the quotas for each API.
 
+> Remember that the API Key and API Secret are for personal use only. Do not share them with anyone (even in Testing environment). If you are developing a web based application, please make sure your API Key and Secret are stored on backend side.
+
 Applications using __Testing environment__ can be easily identified because they all have the `Test` tag:
 
 ![appTesting](../images/apptesting.png)
-
-> Remember that the API Key and API Secret are for personal use only. Do not share them with anyone (even in Testing environment). If you are developing a web based application, please make sure your API Key and Secret are stored on backend side.
 
 The easiest way to start playing with APIs is probably through cURL. Let’s see how to request a token and perform our first call.
 
