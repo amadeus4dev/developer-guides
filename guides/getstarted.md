@@ -119,7 +119,9 @@ The response returns a JSON object containing a list of destinations matching ou
 
 Congratulations! You have just made your first Amadeus for Developers API call!
 
-## Explore our APIs
+## What's next?
+
+### Explore our APIs
 
 You can find all our APIs in our [API catalogue](https://developers.amadeus.com/self-service). Don’t forget to stop by our [GitHub workspace](https://github.com/amadeus4dev/) which contains tons of samples and prototypes where you can inspire from.
 
@@ -127,35 +129,7 @@ We also provide a useful [Cheat Sheet](https://developers.amadeus.com/self-servi
 
 And finally, if you are a happy postman user, as we are, feel free to use the [Amadeus for Developers postman collection](https://documenter.getpostman.com/view/2672636/RWEcPfuJ).
 
-## Go live
+### Go live
 
-Once you feel that your application is ready to be used in the Real World™, you might consider moving it to __Production Environment__.
+Ready to move to production? We have prepared a [move to production guide](production.md) which explains how to request a production key.
 
-Moving your application to Production Environment involves the request of a __Production Key__. But don't be scared! The process is quite easy:
-
-1. [Sign in](https://developers.amadeus.com/login)
-2. Click on your username (top right corner)
-3. Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps)
-4. Select the application you want to move to Production and click on `Get Production environment` button:
-
-![request_prod](../images/request_production_key.png)
-
-Requesting a Production Key involves three basic steps:
-
-1. Fill in the information: personal data, billing address and application description
-2. Add your payment information
-3. Sign the agreement. 
-
-Your contract will be electronically signed using [DocuSign](https://www.docusign.com/) and you will receive a copy of the contract via email.
-
-> The process to get the production key can take up to 72 hours for the first application. Additional applications do __not__ require any waiting time.
-
-At this point your application's tag changes to __pending__:
-
-![pending](../images/app_pending.png)
-
-Once the validation is successful you will be notified and the app's tag will change to __live__:
-
-![live](../images/app_live.png)
-
-Congrats! Your application is ready to disrupt the travel industry!
