@@ -1,5 +1,3 @@
-![Amadeus for Developers](../../master/images/logo.png)
-
 # Understanding Pagination
 
 Sometimes, when you’re making calls to the [Amadeus for
