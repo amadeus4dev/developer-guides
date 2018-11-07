@@ -44,7 +44,7 @@ Once you get your production key you will need to change your source code to:
 
 - replace the base URL for your API calls to point
 to `https://api.amadeus.com` instead of `https://test.api.amadeus.com`
-- change your `API key` and `API secret` to your new ones
+- change your `API key` and `API secret` to your new production keys 
 
 If you are using our [SDKs]('https://github.com/amadeus4dev'), just initialise the client as follows:
 
