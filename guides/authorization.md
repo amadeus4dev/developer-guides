@@ -92,7 +92,7 @@ check-in URL for Iberia (`IB`):
 
 ```bash
 curl -X GET \
-  "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airline=1X" \
+  "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airlineCode=1X" \
       -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
 ```
 
@@ -171,7 +171,7 @@ The `SDK` fetches and stores the `access_token` and then sets all the headers au
 You can then call for example the Flight Check-in Links API:
 
 ```js
-amadeus.referenceData.urls.checkinLinks.get({ airline: 'IB' });
+amadeus.referenceData.urls.checkinLinks.get({ airlineCode: 'IB' });
 ```
 
 
