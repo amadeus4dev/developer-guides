@@ -174,5 +174,27 @@ You can then call for example the Flight Check-in Links API:
 amadeus.referenceData.urls.checkinLinks.get({ airlineCode: 'IB' });
 ```
 
+## How to get the information about an access token
 
+At any time you can get all the information of an access token by calling this endpoint:
+`https://test.api.amadeus.com/v1/security/oauth2/token/{access_token}`
 
+For example:
+```bash
+curl -X GET \
+  "https://test.api.amadeus.com/v1/security/oauth2/token/CpjU0sEenniHCgPDrndzOSWFk5mN"
+```
+
+```json
+{
+    "type": "amadeusOAuth2Token",
+    "username": "foo@bar.com",
+    "application_name": "BetaTest_foobar",
+    "client_id": "3sY9VNvXIjyJYd5mmOtOzJLuL1BzJBBp",
+    "token_type": "Bearer",
+    "access_token": "CpjU0sEenniHCgPDrndzOSWFk5mN",
+    "expires_in": 1258,
+    "state": "approved",
+    "scope": ""
+}
+```
