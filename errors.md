@@ -1,3 +1,5 @@
+![Amadeus for Developers](../../master/images/logo.png)
+
 # Error Handling
 
 In this tutorial you will learn how to understand and handle errors with our APIs. 
