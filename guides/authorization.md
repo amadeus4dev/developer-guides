@@ -10,7 +10,7 @@ In the following guide you will learn how to perform the authorization needed to
 
 The basic steps are:
 
-1. Open an account on the [Amadeus for Developers portal](https://uat.developers.amadeus.com/create-account)
+1. Open an account on the [Amadeus for Developers portal](https://developers.amadeus.com/create-account)
 2. Create an app
 3. Get your `API Key` and `API Secret`
 4. Make a call to our authorization server to get an access token
