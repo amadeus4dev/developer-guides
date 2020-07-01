@@ -37,6 +37,12 @@ nav:
         - Pagination: guides/pagination.md
         - Rate Limits: guides/api-rate-limits.md
         - Data Collection: guides/api-data-collection.md
-    - SDKs:
-        - Java SDK: sdks/java-sdk.md
+    - API Resources:
+        - Flights: resources/flights.md
+        - Hotels: resources/hotels.md
+        - Locations: resources/locations.md
+        - Predictions: resources/predictions.md
+    - Tooling:
+        - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
+        - Java SDK: sdks/java-sdk.md
