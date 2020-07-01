@@ -40,7 +40,7 @@ would need to request a new access token.
 **400 Unsupported Grant Type**
 
 When trying to use a grant type different than `client credentials`. Make sure
-you are following our [authorization](../authorization.md) guide.
+you are following our [authorization](../guides/authorization.md) guide.
 
 ```json
 {
