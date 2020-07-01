@@ -1,0 +1,42 @@
+theme:
+  name: material
+  highlightjs: true
+
+  palette:
+    primary: blue
+    accent: blue
+
+markdown_extensions:
+  - admonition
+  - meta
+  - codehilite:
+      linenums: true
+  - pymdownx.tabbed
+  - pymdownx.superfences
+
+plugins:
+  - git-revision-date-localized
+
+site_name: Amadeus for Developers
+site_url: https://developers.amadeus.com
+site_description: Amadeus for Developers Documentation
+site_author: Amadeus for Developers
+
+repo_name: amadeus4dev/developer-guides
+repo_url: https://github.com/amadeus4dev/developer-guides
+
+nav:
+    - Home: index.md
+    - Getting Started:
+        - Making your first API call: get-started/first-api-call.md
+        - Self-Service vs Enterprise: get-started/self-service-enterprise.md
+        - Moving to Production: get-started/moving-to-production.md
+    - API Guides:
+        - Authorization: guides/authorization.md
+        - Permissions and errors: guides/permissions-and-errors.md
+        - Pagination: guides/pagination.md
+        - Rate Limits: guides/api-rate-limits.md
+        - Data Collection: guides/api-data-collection.md
+    - SDKs:
+        - Java SDK: sdks/java-sdk.md
+        - Python SDK: sdks/python-sdk.md
