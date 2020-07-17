@@ -1,10 +1,32 @@
 theme:
-  name: material
+  name: null
+  custom_dir: '../../alnacle/mkdocs-material/material'
   highlightjs: true
 
+  language: en
+  icon:
+    logo: logo
+
+  features:
+    - foo
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  font:
+    text: Amadeus
+    code: Source Sans Pro
+
+  favicon: icons/favicon.ico
+
   palette:
+    scheme: default
     primary: blue
     accent: blue
+
+  include_search_page: false
+  search_index_only: true
 
 markdown_extensions:
   - admonition
@@ -15,15 +37,21 @@ markdown_extensions:
   - pymdownx.superfences
 
 plugins:
+  - search
   - git-revision-date-localized
 
-site_name: Amadeus for Developers
+extra_css:
+  - css/amadeus.css
+
+site_name: Documentation
 site_url: https://developers.amadeus.com
 site_description: Amadeus for Developers Documentation
 site_author: Amadeus for Developers
 
 repo_name: amadeus4dev/developer-guides
 repo_url: https://github.com/amadeus4dev/developer-guides
+
+copyright: Copyright © Amadeus IT Group S.A.
 
 nav:
     - Home: index.md
@@ -46,3 +74,10 @@ nav:
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
         - Java SDK: sdks/java-sdk.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/amadeus4dev
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/UjXwf4F
