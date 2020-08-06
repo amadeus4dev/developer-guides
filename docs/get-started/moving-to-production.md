@@ -47,43 +47,10 @@ instead of `https://test.api.amadeus.com`
 
 If you are using our [SDKs](https://github.com/amadeus4dev), just initialise the client as follows:
 
-=== "Python"
     ``` python
     amadeus = Client(client_id='YOUR_PRODUCTION_CLIENT_ID',
                  client_secret='YOUR_PRODUCTION_CLIENT_SECRET',
                  hostname='production')
-    ```
-
-=== "Java"
-    ``` java
-    package flightsearch;
-
-    public class FlightSearch {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-        }
-    }
-    ```
-
-=== "Ruby"
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-=== "Swift"
-    ``` c#
-    using System;
-
-    class Program {
-      static void Main(string[] args) {
-        Console.WriteLine("Hello world!");
-      }
-    }
     ```
 
 **Congrats**! 🎉 Your application is ready to disrupt the travel industry!
