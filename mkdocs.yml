@@ -1,6 +1,6 @@
 theme:
   name: null
-  custom_dir: '../../alnacle/mkdocs-material/material'
+  custom_dir: 'material'
   highlightjs: true
 
   language: en
