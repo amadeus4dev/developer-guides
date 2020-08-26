@@ -1,6 +1,6 @@
 # Rate Limits
 
-Most of the Amadeus for Developers APIs have rate limits in place in order to prevent abuse by third-party services or users.
+Most Amadeus for Developers APIs have rate limits in place in order to prevent abuse by third-party services or users.
 
 Depending on the environment, the rate limits for the API calls are:
 
