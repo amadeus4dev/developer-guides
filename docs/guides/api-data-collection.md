@@ -1,39 +1,59 @@
-# Testing Data Collection
+# Test data collections
 
-The test environment is designed for testing purposes only, thus the data provided under this environment is limited.
+To build and test your applications, Amadeus for Developers provides a `Test Environment` with limited data collections. To access live data, you must move to `Production Environment`. The table below details the test data collection for each Self-Service API.
 
 
-Under `Test Environment` the APIs use the following data collections:
 
 ## Air
 
-- `Flight Inspiration Search` and `Flight Cheapest Date Search` contain the following [list of origin and destinations](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md)
+| API      | Test data |
+| :----------- | :----------- |
+| `Flight Inspiration Search` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md) |
+| `Flight Cheapest Date Search` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md) |
+| `Flight Offers Search` |  Cached data including most origin and destination cities/airports|
+| `Flight Offers Price` | Cached data including most origin and destination cities/airports|
+| `SeatMap Display` | Works with the response of `Flight Offers Search`|
+| `Flight Create Orders` | Works with the response of `Flight Offers Price` |
+| `Flight Order Management` | Works with the response of `Flight Create Orders` |
+| `Flight Delay Prediction` | No data restrictions in test |
+| `Airport On-time Performance` | No data restrictions in test |
+| `Flight Choice Prediction` | No data restrictions in test |
+| `On Demand Flight Status` | Cached data including most flights returned by `Flight Offers Search` |
+| `Flight Most Traveled Destinations` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md) |
+| `Flight Busiest Traveling Period` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md)  |
+| `Flight Most Booked Destinations` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md)  |
+| `Airline Code Lookup` | No data restrictions in test |
+| `Airport & City Search` | Cities/airports in the United States, Spain, the United Kingdom, Germany and India |
+| `Airport Nearest Relevant` | Cities/airports in the United States, Spain, the United Kingdom, Germany and India |
+| `Flight Check-in Links` | See list of [valid airlines](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md) |
 
-- `Flight Most Booked and Traveled Destinations` and `Flight Busiest Traveling Period` contain the following [list of origin and destinations](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md).
 
-- `Flight Check-in Links` contains the following [valid airlines](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md).
 
-- `Airport Nearest Relevant` & `Airport & City Search` contain data from United States, Spain, United Kingdom, Germany and India.
-
-- `Airline Code Lookup` contains almost all airlines.
-
-- `Flight Choice Prediction`, `Flight Delay Prediction` and `Airport On-time Performance` APIs have no data restrictions in test.
 
 ## Hotel
+| API          | Test data |
+| :----------- | :----------- |
+| `Hotel Search`| See list of [valid hotel chains](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md). Content is provided directly by hotels and can change dynamically. Test with big cities like `LON` (London) or `NYC` (New-York).|
+| `Hotel Booking` | Works with the response of `Hotel Search` |
+| `Hotel Ratings` | See list of [valid hotels](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelratings.md)|
 
-- The content of `Hotel Search` comes directly from the hotel providers, so the content might change dynamically. For your test, use big cities like `LON` (London) or `NYC` (New-York).
 
-- The [following table](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md) contains a list of valid hotel chains for `Hotel Search`.
-
-- `Hotel Ratings` offers 24 hotels in the test environment: 10 in London and 14 in New-York. You can find the list [here](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelratings.md).
 
 
 ## Destination Content
+| API      | Test data |
+| ----------- | ----------- |
+| `Safe Place` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
+| `Points Of Interest` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
 
-- `Points Of Interest` and `Safe Place` APIs contain data for the [following cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md) in test.
+
 
 ## Trip
-
-- `Trip Purpose Prediction` and `AI-generated Photos` APIs have no data restrictions in test.
+| API      | Test data |
+| ----------- | ----------- |
+| `Trip Parser` | No data restrictions in test |
+| `Trip Purpose Prediction` | No data restrictions in test |
+| `AI-generated Photos` | No data restrictions in test |
+| `Travel Recommendations` | No data restrictions in test |
 
 

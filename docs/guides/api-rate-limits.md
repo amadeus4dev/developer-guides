@@ -1,11 +1,8 @@
-# Rate Limits
+# Rate limits
 
-Most Amadeus for Developers APIs have rate limits in place in order to prevent abuse by third-party services or users.
+Most Amadeus for Developers Self-Service APIs have rate limits in place to protect against abuse by third-parties. The rate limits for each environment are detailed in the following table:
 
-Depending on the environment, the rate limits for the API calls are:
-
-| Testing | Production |
+| `Test` | `Production` |
 | :--- | :--- |
-| 10 transactions per second per user | 20 transactions per second per user  |
-| No more than 1 request every 100 ms. | No more than 1 request every 50 ms. |
-
+| 10 transactions per second, per user | 20 transactions per second, per user  |
+| No more than 1 request every 100ms. | No more than 1 request every 50ms. |

@@ -1,27 +1,20 @@
 # Pagination
 
-Sometimes, when you’re making calls to the [Amadeus for
-Developers](http://developers.amadeus.com) REST APIs, there will be a lot of
-results to return. Let’s say your initial call is asking for all the flight
-offers using the [Flight Offers Search
-API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search);
-the result could be a massive response with hundreds of pages. Don’t panic.
-Pagination comes to the rescue, splitting the results into different pages to
-make sure responses are easier to handle.
+Amadeus for Developers Self-Service APIs can often return a lot of results. When calling the [Flight Offers Search
+API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search), for example, you may get a response hundreds of pages long.
+That's where **pagination** comes in. Using pagination, you can split the results into different pages to make the responses easier to handle.
 
 !!!warning
-    Please be aware that no all APIs support pagination. Don't forget to check the API reference!
+    Not all Amadeus Self-Service APIs support pagination. Check the API reference for more information.
 
-## Accessing the paginated results
+## Accessing paginated results
 
-### Using the SDKs
+### Using SDKs
 
-If you are using any of our [SDKs](https://github.com/amadeus4dev), accessing
-the paginated results is very simple. If an API endpoint supports pagination,
-the other pages are available under the `.next`, `.previous`, `.last` and
+[Amadeus for Developers SDKs](https://github.com/amadeus4dev) make it simple to access paginated results. If the API endpoint supports pagination, you can get page results using the the `.next`, `.previous`, `.last` and
 `.first` methods.
 
-Let's see the following example written on `node`:
+Example in `Node`:
 
 ```javascript
 amadeus.referenceData.locations.get({
@@ -47,11 +40,11 @@ response = amadeus.reference_data.locations.get(
 amadeus.next(response) #=> returns a new response for the next page
 ```
 
-In this case, the method will return `nil` in case we try to reach a non existing page.
+In this case, the method will return `nil` if the page is not available.
 
 ### Manually parsing the response
 
-The response received from the server, will contain the following `JSON` content:
+The response will contain the following `JSON` content:
 
 ```javascript
 {
@@ -71,12 +64,11 @@ The response received from the server, will contain the following `JSON` content
 }
 ```
 
-Accessing the page of the results means to access the `meta/links/next` or
+You can access the next page of the results using the value of `meta/links/next` or
 `meta/links/last` node within the JSON response.
 
-Note that indexing elements between pages is done via `page[offset]` query
-parameter, such as `page[offset]=18`. The `next` and `last` returned on the
-example, encodes the special characters `[]` as `%5B` and `%5D`. This is called [percent
-encoding](https://en.wikipedia.org/wiki/Percent-encoding) and is used in
-encoding special characters in the url parameter values.
+Note that indexing elements between pages is done via the `page[offset]` query
+parameter. For example, `page[offset]=18`. The `next` and `last` returned in the example above encode the special characters `[]` as `%5B` and `%5D`. This is called [percent
+encoding](https://en.wikipedia.org/wiki/Percent-encoding) and is used to
+encode special characters in the url parameter values.
 

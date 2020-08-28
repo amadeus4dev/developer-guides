@@ -1,28 +1,36 @@
-# Permissions and Errors
+# Common errors
 
-The Amadeus for Developers APIs use HTTP status codes to communicate if a request has been successfully processed or not.
+Amadeus for Developers Self-Service APIs use HTTP status codes to communicate whether a request has been successfully processed.
 
-## Types of Errors
+## Types of errors
 
-There two main types of errors depending on which side of the flow happen:
+There two main types of errors are:
 
-* Client: typically when the request has not been properly built. We can debug and fix.
-* Server: when something happened on the server side and has to be reported.
+* **Client**:  typically occur when the request has not been properly built. 
+* **Server**: occur when there is an issue on the server side.
 
-### Client Errors
+## Client errors
 
-If your API request is invalid you will receive a `Client Error` response from
-the system, with a HTTP `4xx` status code. The body of the response will match
-the format defined in our `swagger` schema and generally provides more
-information on why the request was invalid.
+If your API request is invalid, you will receive a `Client Error` response with an HTTP `4xx` status code. The body of the response will match the format defined in our `swagger` schema and provide details about the error.
 
-#### Authorization Errors
+### Authorization errors
 
-**401 Invalid Token**
+**400 Bad request - Unsupported grant type**
 
-It usually happens when the access token provided in the Authorization header
-is no longer valid because it has already expired. In this particular case you
-would need to request a new access token.
+Occurs when using a grant type other than `client credentials`. For more information, read our [Authorization Guide](../guides/authorization.md).
+
+```json
+{
+    "error": "unsupported_grant_type",
+    "error_description": "Only client_credentials value is allowed for the body parameter grant_type",
+    "code": 38187,
+    "title": "Invalid parameters"
+}
+```
+
+**401 Unauthorized - Invalid access token**
+
+The access token provided in the Authorization header is expired or not longer valid. You must generate a new token.
 
 ```json
 {
@@ -37,23 +45,10 @@ would need to request a new access token.
 }
 ```
 
-**400 Unsupported Grant Type**
 
-When trying to use a grant type different than `client credentials`. Make sure
-you are following our [authorization](../guides/authorization.md) guide.
+**401 Unauthorized -  Invalid client**
 
-```json
-{
-    "error": "unsupported_grant_type",
-    "error_description": "Only client_credentials value is allowed for the body parameter grant_type",
-    "code": 38187,
-    "title": "Invalid parameters"
-}
-```
-
-**401 Invalid consumer key**
-
-The client credentials have invalid format and are not recognized.
+The client credentials have an invalid format and are not recognized.
 
 ```json
 {
@@ -64,11 +59,11 @@ The client credentials have invalid format and are not recognized.
 }
 ```
 
-#### Data Format Errors
+### Data Format Errors
 
-**400 Location format**
+**400 Bad request - Invalid format**
 
-The location parameter is expected to use IATA standard.
+An input query parameter is incorrect. In the example below, the Airport & City Search API returns an error because the location parameter is not in the expected IATA standard.
 
 ```json
 {
@@ -86,30 +81,11 @@ The location parameter is expected to use IATA standard.
 }
 ```
 
-**400 Collapse source format**
+### Resource Errors
 
-```json
-{
-    "errors": [
-        {
-            "status": 400,
-            "code": 4926,
-            "title": "INVALID DATA RECEIVED",
-            "detail": "Past date/time not allowed",
-            "source": {
-                "parameter": "departureDate/returnDate"
-            }
-        }
-    ]
-}
-```
+**404 Not found - Resource not found**
 
-#### Resource Errors
-
-**401 Resource not found**
-
-The endpoint or URL does not exists. Probably you are trying to call a non
-existing endpoint. Make sure this endpoint is correctly spelled.
+The endpoint or URL does not exists. Make sure you are calling a valid endpoint and that there are no spelling errors.
 
 ```json
 {
@@ -124,16 +100,12 @@ existing endpoint. Make sure this endpoint is correctly spelled.
 }
 ```
 
-### Server Errors
+## Server errors
 
-If something went wrong during the execution of your request, you will receive
-a Server error in response from the system, with a HTTP `5xx` status code. The
-body will again match the defined error format, allowing your application to
-easily read it and display an appropriate message to the client. It may also
-carry some debugging information which you can submit to us if you would like
-us to investigate the error further.
+If an error occurs during the execution of your request, you will receive
+a `Server error` resonse with an HTTP `5xx` status code. The body will match the defined error format, allowing your application to read it and display an appropriate message to the client. It may also contain debugging information which you can submit to us to further investigate the error.
 
-The following example shows an internal server error:
+**500 Internal error**
 
 ```json
 {
