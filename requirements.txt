@@ -15,7 +15,7 @@ mkdocs-git-revision-date-localized-plugin==0.6
 mkdocs-material==5.4.0
 mkdocs-material-extensions==1.0
 nltk==3.5
-Pygments==2.6.1
+Pygments==2.7.4
 pymdown-extensions==7.1
 pytz==2020.1
 PyYAML==5.3.1
