@@ -2,6 +2,7 @@ theme:
   name: null
   custom_dir: 'material'
   highlightjs: true
+  logo: assets/logo.png
 
   language: en
   icon:
@@ -43,7 +44,7 @@ plugins:
 extra_css:
   - css/amadeus.css
 
-site_name: Documentation
+site_name: Amadeus for Developers
 site_url: https://developers.amadeus.com
 site_description: Amadeus for Developers Documentation
 site_author: Amadeus for Developers

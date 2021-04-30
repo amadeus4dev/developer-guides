@@ -41,7 +41,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.18c0a40a.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.18d90a45.min.css' | url }}">
       {% if palette.scheme or palette.primary or palette.accent %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.1c8a562c.min.css' | url }}">
       {% endif %}
@@ -109,7 +109,20 @@
         </aside>
       {% endif %}
     </div>
+    {% block header %}
+      {% include "partials/header.html" %}
+    {% endblock %}
     <div class="md-container" data-md-component="container">
+      {% block hero %}
+        {% if page and page.meta and page.meta.hero %}
+          {% include "partials/hero.html" with context %}
+        {% endif %}
+      {% endblock %}
+      {% block tabs %}
+        {% if "tabs" in config.theme.features %}
+          {% include "partials/tabs.html" %}
+        {% endif %}
+      {% endblock %}
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           {% block site_nav %}
