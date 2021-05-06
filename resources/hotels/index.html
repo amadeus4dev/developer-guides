@@ -1,0 +1,1121 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Amadeus for Developers Documentation">
+      
+      
+        <link rel="canonical" href="https://developers.amadeus.com/resources/hotels/">
+      
+      
+        <meta name="author" content="Amadeus for Developers">
+      
+      <link rel="shortcut icon" href="../../icons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Hotels - Amadeus for Developers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18d90a45.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.1c8a562c.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amadeus:300,400,400i,700%7CSource+Sans+Pro&display=fallback">
+        <style>body,input{font-family:"Amadeus",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Sans Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/amadeus.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hotels" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developers.amadeus.com" title="Amadeus for Developers" class="md-header-nav__button md-logo" aria-label="Amadeus for Developers">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Amadeus for Developers
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Hotels
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/amadeus4dev/developer-guides/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    amadeus4dev/developer-guides
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developers.amadeus.com" title="Amadeus for Developers" class="md-nav__button md-logo" aria-label="Amadeus for Developers">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Amadeus for Developers
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/amadeus4dev/developer-guides/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    amadeus4dev/developer-guides
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../get-started/first-api-call/" title="Making your first API call" class="md-nav__link">
+      Making your first API call
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../get-started/self-service-enterprise/" title="Self-Service vs Enterprise" class="md-nav__link">
+      Self-Service vs Enterprise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../get-started/moving-to-production/" title="Moving to Production" class="md-nav__link">
+      Moving to Production
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      API Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/authorization/" title="Authorization" class="md-nav__link">
+      Authorization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/permissions-and-errors/" title="Permissions and errors" class="md-nav__link">
+      Permissions and errors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/pagination/" title="Pagination" class="md-nav__link">
+      Pagination
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/api-rate-limits/" title="Rate Limits" class="md-nav__link">
+      Rate Limits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/api-data-collection/" title="Data Collection" class="md-nav__link">
+      Data Collection
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API Resources
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API Resources" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flights/" title="Flights" class="md-nav__link">
+      Flights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hotels
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Hotels" class="md-nav__link md-nav__link--active">
+      Hotels
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#searching-hotels" class="md-nav__link">
+    Searching Hotels
+  </a>
+  
+    <nav class="md-nav" aria-label="Searching Hotels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-hotels-by-location" class="md-nav__link">
+    Search hotels by location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-rates-for-a-chosen-hotel" class="md-nav__link">
+    See rates for a chosen hotel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-final-price-and-conditions" class="md-nav__link">
+    Get the final price and conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booking-the-hotel" class="md-nav__link">
+    Booking the Hotel
+  </a>
+  
+    <nav class="md-nav" aria-label="Booking the Hotel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-about-payment" class="md-nav__link">
+    Notes about Payment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-hotel-ratings" class="md-nav__link">
+    Getting Hotel Ratings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors" class="md-nav__link">
+    Common Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptedpayments-must-be-creditcards" class="md-nav__link">
+    AcceptedPayments must be creditCards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-response-from-the-view-room-endpoint" class="md-nav__link">
+    Empty response from the View Room endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-rooms-available-at-requested-property" class="md-nav__link">
+    No rooms available at requested property
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../locations/" title="Locations" class="md-nav__link">
+      Locations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../predictions/" title="Predictions" class="md-nav__link">
+      Predictions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Tooling
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tooling" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Tooling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdks/node-sdk/" title="Node SDK" class="md-nav__link">
+      Node SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdks/python-sdk/" title="Python SDK" class="md-nav__link">
+      Python SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdks/java-sdk/" title="Java SDK" class="md-nav__link">
+      Java SDK
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#searching-hotels" class="md-nav__link">
+    Searching Hotels
+  </a>
+  
+    <nav class="md-nav" aria-label="Searching Hotels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-hotels-by-location" class="md-nav__link">
+    Search hotels by location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-rates-for-a-chosen-hotel" class="md-nav__link">
+    See rates for a chosen hotel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-final-price-and-conditions" class="md-nav__link">
+    Get the final price and conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booking-the-hotel" class="md-nav__link">
+    Booking the Hotel
+  </a>
+  
+    <nav class="md-nav" aria-label="Booking the Hotel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-about-payment" class="md-nav__link">
+    Notes about Payment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-hotel-ratings" class="md-nav__link">
+    Getting Hotel Ratings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors" class="md-nav__link">
+    Common Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptedpayments-must-be-creditcards" class="md-nav__link">
+    AcceptedPayments must be creditCards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-response-from-the-view-room-endpoint" class="md-nav__link">
+    Empty response from the View Room endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-rooms-available-at-requested-property" class="md-nav__link">
+    No rooms available at requested property
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/amadeus4dev/developer-guides/edit/master/docs/resources/hotels.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="hotels">Hotels</h1>
+<p>The Amadeus Hotel Search and Hotel Booking APIs let you build a complete hotel
+booking engine in four easy steps. Learn how to get started and help your users
+book the perfect room at over 150,000 hotels worldwide.</p>
+<p>The three endpoints of the Hotel Search API let your users search hotels by
+destination, compare rates and rooms and get the final price of the stay. Once
+a room and rate are selected, you can help them complete the reservation with
+the Hotel Booking API. Here’s how it works.</p>
+<h2 id="searching-hotels">Searching Hotels</h2>
+<p>The API allows you to search for hotels for a given location and time. The
+endpoints are designed from the perspective of a funnel; i.e. to search broadly
+for all hotels, narrow down to a particular hotel and eventually its unique
+offers. A host of parameters allow the user to filter the response as per
+his/her need. This API thus renders enormous capabilities to build solutions
+for travelers not only for the hotels space, but also complement other travel
+scenarios or enrich apps with hotel-related information. </p>
+<h3 id="search-hotels-by-location">Search hotels by location</h3>
+<p>The first endpoint <code>/shopping/hotel-offers</code> provides a list of available hotels
+in a chosen location, which is defined by a city code or a set of GPS
+coordinates. You can customize the request with parameters like chain name,
+amenities, star ratings, board type and more. </p>
+<div class="highlight"><pre><span></span><code>curl https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode<span class="o">=</span>LON
+</code></pre></div>
+
+<p>The API returns a list of <code>hotel-offers</code> objects containing the price of the
+cheapest available room as well as information including the <code>hotelId</code>, location,
+address, rating, description, amenities, contact information. </p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>The API returns cached prices. To get real-time prices and
+availability for a specific hotel, you’ll need to move to the second endpoint. </p>
+</div>
+<h3 id="see-rates-for-a-chosen-hotel">See rates for a chosen hotel</h3>
+<p>After selecting a hotel, the next step in the booking flow is to get a list the
+available offers. Hotel offers are various combinations of rooms, services and
+prices. A standard room or a studio suite? One bed or two? With breakfast and
+free cancellation? These are the factors that make up a hotel offer.</p>
+<p>To get a list of <code>hotel-offers</code> for your desired hotel, just pass the <code>hotelId</code>
+from the response of the 1st endpoint into the request to the 2nd endpoint:</p>
+<div class="highlight"><pre><span></span><code>curl https://test.api.amadeus.com/v2/shopping/hotel-offers/by-hotel?hotelId<span class="o">=</span>BGLONBGB
+</code></pre></div>
+
+<p>Where <code>BGLONBGB</code> belongs to the <code>hotelId</code> returned by the first endpoint. The
+endpoint will return a new list of <code>hotel-offers</code> objects, together with a 
+list of <code>offers</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;offers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Y0UE4D1MUT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;checkInDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-07-01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;checkOutDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-07-02&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;rateCode&quot;</span><span class="p">:</span> <span class="s2">&quot;PRO&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;rateFamilyEstimated&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;PRO&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;P&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;percentage&quot;</span><span class="p">:</span> <span class="s2">&quot;4.00&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;boardType&quot;</span><span class="p">:</span> <span class="s2">&quot;ROOM_ONLY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;room&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ROH&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;typeEstimated&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_ROOM&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="get-the-final-price-and-conditions">Get the final price and conditions</h3>
+<p>The third step is to confirm the final price and availability of the chosen
+offer and get the full conditions. As there are thousands of people reserving
+hotels at any given second, the availability of a given room may change between
+the moment you search and the moment you decide to book. If you don’t confirm
+the price and availability, you may receive an error when it comes time to make
+the reservation. </p>
+<p>The 3rd endpoint also returns the full conditions of the offer including
+cancellation policy, accepted methods of payment and a complete description of
+what’s included in the offer.</p>
+<div class="highlight"><pre><span></span><code>curl https://test.api.amadeus.com/v2/shopping/hotel-offers/Y0UE4D1MUT
+</code></pre></div>
+
+<p>This endpoint takes the offer Id obtained in the previous step as a URL
+parameter. </p>
+<p>Now that you have found the offer (and its Id) you want and confirmed the price and
+availability, you're ready to book! </p>
+<h2 id="booking-the-hotel">Booking the Hotel</h2>
+<p>The Hotel Booking API is the final step in the booking flow. By making a <code>POST</code>
+request with the offer Id returned by the Hotel Search API, the guest
+information and the payment information, you can create a booking directly on
+the hotel reservation system. </p>
+<div class="highlight"><pre><span></span><code>curl https://test.api.amadeus.com/v1/booking/hotel-bookings <span class="se">\</span>
+--data-raw <span class="s1">&#39;{</span>
+<span class="s1">  &quot;data&quot;: {</span>
+<span class="s1">    &quot;offerId&quot;: &quot;Y0UE4D1MUT&quot;,</span>
+<span class="s1">    &quot;guests&quot;: [</span>
+<span class="s1">      {</span>
+<span class="s1">        &quot;id&quot;: 1,</span>
+<span class="s1">        &quot;name&quot;: {</span>
+<span class="s1">          &quot;title&quot;: &quot;MR&quot;,</span>
+<span class="s1">          &quot;firstName&quot;: &quot;BOB&quot;,</span>
+<span class="s1">          &quot;lastName&quot;: &quot;SMITH&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        &quot;contact&quot;: {</span>
+<span class="s1">          &quot;phone&quot;: &quot;+33679278416&quot;,</span>
+<span class="s1">          &quot;email&quot;: &quot;bob.smith@email.com&quot;</span>
+<span class="s1">        }</span>
+<span class="s1">      }</span>
+<span class="s1">    ],</span>
+<span class="s1">    &quot;payments&quot;: [</span>
+<span class="s1">      {</span>
+<span class="s1">        &quot;id&quot;: 1,</span>
+<span class="s1">        &quot;method&quot;: &quot;creditCard&quot;,</span>
+<span class="s1">        &quot;card&quot;: {</span>
+<span class="s1">          &quot;vendorCode&quot;: &quot;VI&quot;,</span>
+<span class="s1">          &quot;cardNumber&quot;: &quot;4151289722471370&quot;,</span>
+<span class="s1">          &quot;expiryDate&quot;: &quot;2021-08&quot;</span>
+<span class="s1">        }</span>
+<span class="s1">      }</span>
+<span class="s1">    ],</span>
+<span class="s1">    &quot;rooms&quot;: [</span>
+<span class="s1">      {</span>
+<span class="s1">        &quot;guestIds&quot;: [</span>
+<span class="s1">          1</span>
+<span class="s1">        ],</span>
+<span class="s1">        &quot;paymentId&quot;: 1,</span>
+<span class="s1">        &quot;specialRequest&quot;: &quot;I will arrive at midnight&quot;</span>
+<span class="s1">      }</span>
+<span class="s1">    ]</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+
+<p>Congratulations, you’ve just performed your first hotel booking! Once the
+reservation is made, the API will return a unique booking confirmation ID which
+you can send to your users. </p>
+<h3 id="notes-about-payment">Notes about Payment</h3>
+<p>The Hotel Search API returns information about the payment policy of each
+hotel. The main policy types are: </p>
+<ul>
+<li>Guarantee: the hotel will save credit card information during booking but not make any charge to the account. In the case of a no-show or out-of-policy cancellation, the hotel may charge penalties to the card. </li>
+<li>Deposit: at the time or booking or on a given deadline, the hotel will charge the guest a percentage of the total amount of the reservation. The remaining amount is paid by the traveler directly at the hotel. </li>
+<li>Prepay: the total amount of the reservation must be paid by the traveler during booking. </li>
+</ul>
+<p>The current version of the Hotel Booking API only permits booking at hotels
+that accept credit cards. During the booking process, Amadeus passes the
+payment and guest information to the hotel but does not validate information.
+Be sure to validate the payment and guest information, as invalid information
+may result in the reservation being cancelled. </p>
+<p>As soon as your application stores, transmits, or processes cardholder
+information, you will need to comply with PCI Data Security Standard (PCI DSS).
+For more information, visit the <a href="https://www.pcisecuritystandards.org/merchants">PCI Security Council website</a>. </p>
+<h2 id="getting-hotel-ratings">Getting Hotel Ratings</h2>
+<p>Amadeus Hotel Ratings API returns a rating for many of the crucial elements of
+a hotel’s offer; whether that be sleep quality, services, facilities, room
+comforts, value for money, location and many other variables. Hotel Ratings API
+guarantees high-quality service for your customers.</p>
+<p>The sentiment analysis, just like the one below, is displayed in a simple flow
+to allow you to easily identify the best hotels based on traveler reviews:</p>
+<div class="highlight"><pre><span></span><code>curl https://test.api.amadeus.com/v2/e-reputation/hotel-sentiments?hotelIds<span class="o">=</span>TELONMFS,ADNYCCTB,XXXYYY01
+</code></pre></div>
+
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>  <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;hotelSentiment&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numberOfReviews&quot;</span><span class="p">:</span> <span class="mi">218</span><span class="p">,</span>
+    <span class="nt">&quot;numberOfRatings&quot;</span><span class="p">:</span> <span class="mi">278</span><span class="p">,</span>
+   <span class="nt">&quot;hotelId&quot;</span><span class="p">:</span> <span class="s2">&quot;ADNYCCTB&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overallRating&quot;</span><span class="p">:</span> <span class="mi">93</span><span class="p">,</span>
+    <span class="nt">&quot;sentiments&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;sleepQuality&quot;</span><span class="p">:</span> <span class="mi">87</span><span class="p">,</span>
+      <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span>
+      <span class="nt">&quot;facilities&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+      <span class="nt">&quot;roomComforts&quot;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span>
+      <span class="nt">&quot;valueForMoney&quot;</span><span class="p">:</span> <span class="mi">87</span><span class="p">,</span>
+      <span class="nt">&quot;catering&quot;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span>
+      <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span>
+      <span class="nt">&quot;pointsOfInterest&quot;</span><span class="p">:</span> <span class="mi">91</span><span class="p">,</span>
+      <span class="nt">&quot;staff&quot;</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;hotelSentiment&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numberOfReviews&quot;</span><span class="p">:</span> <span class="mi">2667</span><span class="p">,</span>
+    <span class="nt">&quot;numberOfRatings&quot;</span><span class="p">:</span> <span class="mi">2666</span><span class="p">,</span>
+    <span class="nt">&quot;hotelId&quot;</span><span class="p">:</span> <span class="s2">&quot;TELONMFS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overallRating&quot;</span><span class="p">:</span> <span class="mi">81</span><span class="p">,</span>
+    <span class="nt">&quot;sentiments&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;sleepQuality&quot;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span>
+      <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+      <span class="nt">&quot;facilities&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+      <span class="nt">&quot;roomComforts&quot;</span><span class="p">:</span> <span class="mi">87</span><span class="p">,</span>
+      <span class="nt">&quot;valueForMoney&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+      <span class="nt">&quot;catering&quot;</span><span class="p">:</span> <span class="mi">81</span><span class="p">,</span>
+     <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span>
+      <span class="nt">&quot;internet&quot;</span><span class="p">:</span> <span class="mi">72</span><span class="p">,</span>
+      <span class="nt">&quot;pointsOfInterest&quot;</span><span class="p">:</span> <span class="mi">81</span><span class="p">,</span>
+      <span class="nt">&quot;staff&quot;</span><span class="p">:</span> <span class="mi">89</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+With these additional filters, your booking process is made more efficient and
+you can offer your customers an enriched shopping experience, confident that
+you are offering a hotel choice that is rated highly in the areas that
+customers most appreciate.</p>
+<h2 id="common-errors">Common Errors</h2>
+<h3 id="acceptedpayments-must-be-creditcards">AcceptedPayments must be creditCards</h3>
+<p>The current version of the Hotel Booking API only supports credit card
+payments, which are accepted by most hotels. The Hotel Search API returns the
+payment policy of each hotel under acceptedPayments in the policies section.</p>
+<h3 id="empty-response-from-the-view-room-endpoint">Empty response from the View Room endpoint</h3>
+<p>If you get an empty response from the Hotel Search API’s second endpoint,
+then the hotel is fully booked and has no vacancy for the requested dates. If
+you don't use the checkInDate and checkOutDate parameters in the request the
+API will return results for a one-night stay starting on the current date. If
+the hotel is full, the response will be empty. </p>
+<h3 id="no-rooms-available-at-requested-property">No rooms available at requested property</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">3664</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;NO ROOMS AVAILABLE AT REQUESTED PROPERTY&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The offer of the selected Hotel is not longer available. Please select a new one.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: July 1, 2020
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../flights/" title="Flights" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Flights
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../locations/" title="Locations" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Locations
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © Amadeus IT Group S.A.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/amadeus4dev" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://discord.gg/UjXwf4F" target="_blank" rel="noopener" title="discord.gg" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.568ba93b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2a81e305.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["foo"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

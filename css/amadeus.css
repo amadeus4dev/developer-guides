@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'Amadeus';
+    src: url('../fonts/Amadeus.eot');
+    src: url('../fonts/Amadeus.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Amadeus.woff2') format('woff2'),
+         url('../fonts/Amadeus.woff') format('woff'),
+         url('../fonts/Amadeus.ttf') format('truetype'),
+         url('../fonts/Amadeus.svg#Amadeus') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
