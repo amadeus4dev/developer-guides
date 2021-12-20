@@ -28,4 +28,4 @@ jobs:
         run: mkdocs build --verbose --clean --strict
 
       - name: Deploy
-        run: mkdocs gh-deploy --clean
+        run: mkdocs gh-deploy --force
