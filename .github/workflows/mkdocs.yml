@@ -24,8 +24,5 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
 
-      - name: Before deploy 
-        run: mkdocs build --verbose --clean --strict
-
       - name: Deploy
         run: mkdocs gh-deploy --force
