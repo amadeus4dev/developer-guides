@@ -27,5 +27,5 @@ jobs:
       - name: Before deploy 
         run: mkdocs build --verbose --clean --strict
 
-      - name: Deploy 🚀
+      - name: Deploy
         run: mkdocs gh-deploy --clean
