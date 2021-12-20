@@ -1,0 +1,31 @@
+ name: deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.8 ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Before deploy 
+        run: mkdocs build --verbose --clean --strict
+
+      - name: Deploy 🚀
+        run: mkdocs gh-deploy --clean
