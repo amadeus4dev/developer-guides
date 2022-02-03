@@ -7,7 +7,7 @@ This is the official Amadeus for Developer documentation reference, but there ar
 * If you are a happy Postman user, as we are, feel free to use the [Amadeus for Developers Postman collection](https://www.postman.com/amadeus4dev/workspace/amadeus-for-developers-s-public-workspace/documentation/2672636-27471449-d2ca-a8c4-1399-6b0cfbddd079).
 
 !!! important
-    Something not clear? Typos? We would be happy to receive your pull requests and feedback to this documentation guides. Feel free to contribute!
+    Something not clear? Typos? We would be happy to receive your pull requests and feedback. Feel free to contribute!
 
 Happy coding!
 
