@@ -1,2 +1,2 @@
-! Ruby SDK
+# Ruby SDK
 to be udpdated
