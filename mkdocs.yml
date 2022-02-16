@@ -70,6 +70,9 @@ nav:
     - API Resources:
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
+        - Destination experiences: resources/Destination_experiences.md
+        - Itinerary management: resources/Itinerary_managment.md
+        - Market Insights: resources/Market_insight.md
         - Locations: resources/locations.md
         - Predictions: resources/predictions.md
     - Tooling:
