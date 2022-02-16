@@ -1,5 +1,5 @@
-# Self Service vs Enterprise
-Amadeus for Developers includes two different offers: Self-Service and Enterprise, each meeting different customer needs.
+# Pricing
+To be updated
 
 ## **Self-Service** 
 
