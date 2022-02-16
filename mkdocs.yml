@@ -68,7 +68,7 @@ nav:
         - Rate Limits: guides/api-rate-limits.md
         - Data Collection: guides/api-data-collection.md
     - API Resources:
-        - Travel restrictions and Covid-19: resources/Covid_19.md
+        - Travel restrictions & Covid-19: resources/Covid_19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
         - Destination experiences: resources/Destination_experiences.md
@@ -80,6 +80,10 @@ nav:
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
         - Java SDK: sdks/java-sdk.md
+        - .NET SDK: sdks/dotnet-sdk.md
+        - Ruby SDK: sdks/ruby-sdk.md
+        - iOS SDK: sdks/ios-sdk.md
+        - Android SDK: sdks/android-sdk.md
 
 extra:
   social:
