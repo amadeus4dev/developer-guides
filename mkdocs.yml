@@ -58,6 +58,7 @@ nav:
     - Home: index.md
     - Getting Started:
         - Making your first API call: get-started/first-api-call.md
+        - Pricing: get-started/pricing.md
         - Self-Service vs Enterprise: get-started/self-service-enterprise.md
         - Moving to Production: get-started/moving-to-production.md
     - API Guides:
