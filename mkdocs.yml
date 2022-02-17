@@ -84,6 +84,11 @@ nav:
         - Ruby SDK: sdks/ruby-sdk.md
         - iOS SDK: sdks/ios-sdk.md
         - Android SDK: sdks/android-sdk.md
+        - Open API Specification: sdks/specification.md
+    - Code Examples:
+        - Code Examples: examples/code_example.md
+        - Prototypes: examples/prototypes.md
+    
 
 extra:
   social:
