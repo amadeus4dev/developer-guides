@@ -58,6 +58,7 @@ nav:
     - Home: index.md
     - Getting Started:
         - Making your first API call: get-started/first-api-call.md
+        - Pricing: get-started/pricing.md
         - Self-Service vs Enterprise: get-started/self-service-enterprise.md
         - Moving to Production: get-started/moving-to-production.md
     - API Guides:
@@ -67,14 +68,27 @@ nav:
         - Rate Limits: guides/api-rate-limits.md
         - Data Collection: guides/api-data-collection.md
     - API Resources:
+        - Travel restrictions & Covid-19: resources/Covid_19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
+        - Destination experiences: resources/Destination_experiences.md
+        - Itinerary management: resources/Itinerary_managment.md
+        - Market Insights: resources/Market_insight.md
         - Locations: resources/locations.md
         - Predictions: resources/predictions.md
     - Tooling:
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
         - Java SDK: sdks/java-sdk.md
+        - .NET SDK: sdks/dotnet-sdk.md
+        - Ruby SDK: sdks/ruby-sdk.md
+        - iOS SDK: sdks/ios-sdk.md
+        - Android SDK: sdks/android-sdk.md
+        - Open API Specification: sdks/specification.md
+    - Code Examples:
+        - Code Examples: examples/code_example.md
+        - Prototypes: examples/prototypes.md
+    
 
 extra:
   social:

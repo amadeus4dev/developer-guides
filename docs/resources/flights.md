@@ -1,6 +1,6 @@
 # Flights
 
-## Searching Flights
+## How to search flights
 
 ### Inspirational Search
 
