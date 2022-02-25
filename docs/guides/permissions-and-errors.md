@@ -85,7 +85,7 @@ An input query parameter is incorrect. In the example below, the Airport & City 
 
 **404 Not found - Resource not found**
 
-The endpoint or URL does not exists. Make sure you are calling a valid endpoint and that there are no spelling errors.
+The endpoint or URL does not exist. Make sure you are calling a valid endpoint and that there are no spelling errors.
 
 ```json
 {

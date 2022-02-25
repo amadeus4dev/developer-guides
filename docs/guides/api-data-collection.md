@@ -4,6 +4,12 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 
 
 
+## Covid-19 and travel safety
+| API      | Test data |
+| ----------- | ----------- |
+| `Safe Place` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
+| `Travel Restrictions` | Cached data for all available countries/cities|
+
 ## Air
 
 | API      | Test data |
@@ -26,8 +32,9 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | `Airport & City Search` | Cities/airports in the United States, Spain, the United Kingdom, Germany and India |
 | `Airport Nearest Relevant` | Cities/airports in the United States, Spain, the United Kingdom, Germany and India |
 | `Flight Check-in Links` | See list of [valid airlines](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md) |
-
-
+| `Flight Availabilities Search` | Cached data including most origin and destination cities/airports |
+| `Branded Fares Upsell` | Cached data including most airports |
+| `Airport Routes` | Cached data including most airlines |
 
 
 ## Hotel
@@ -36,8 +43,7 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | `Hotel Search`| See list of [valid hotel chains](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md). Content is provided directly by hotels and can change dynamically. Test with big cities like `LON` (London) or `NYC` (New-York).|
 | `Hotel Booking` | Works with the response of `Hotel Search` |
 | `Hotel Ratings` | See list of [valid hotels](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelratings.md)|
-
-
+| `Hotel Name Autocomplete` | Cached data including most hotels available through Amadeus|
 
 
 ## Destination Content
@@ -45,7 +51,8 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | ----------- | ----------- |
 | `Safe Place` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
 | `Points Of Interest` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
-
+| `Location Score` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
+| `Tours and Activities` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
 
 
 ## Trip
@@ -53,7 +60,4 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | ----------- | ----------- |
 | `Trip Parser` | No data restrictions in test |
 | `Trip Purpose Prediction` | No data restrictions in test |
-| `AI-generated Photos` | No data restrictions in test |
 | `Travel Recommendations` | No data restrictions in test |
-
-
