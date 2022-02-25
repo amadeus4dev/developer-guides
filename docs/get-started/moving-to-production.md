@@ -39,37 +39,34 @@ Once you have a production key, you make the following changes to your source co
 
 If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), initialize the client as shown below:
 
-    ``` python
+
     amadeus = Client(client_id='YOUR_PRODUCTION_CLIENT_ID',
                  client_secret='YOUR_PRODUCTION_CLIENT_SECRET',
                  hostname='production')
-    ```
+
 
 ## Moving to production with the Flight Create Orders API
 Applications using `Flight Create Orders` must meet special requirements before moving to `Production`. The requirements are detailed in the following section.
 
 ### Requirements
 
-1. **You are not IATA /ARC registered travel agency**. Self-Service flight booking is designed for businesses without travel agency certification. Certified travel agents must access Amadeus REST/JSON flight booking APIs via the Enterprise catalog. [Contact us](https://developers.amadeus.com/support/contact-us-self-service) to be put in touch with our Enterprise team. 
-
-2. **You have a ticket issuance agreement with a consolidator**. Only certified
+1. **You have a ticket issuance agreement with a consolidator**. Only certified
    travel agents can issue flight tickets. Non-certified businesses must issue
    tickets via an airline consolidator (an entity that acts as a host agency
    for non-certified agents). The Amadeus for Developers team can assist you in finding a consolidator in your region. 
 
-3. **There are no restrictions in your country**. Though we are working to make Self-Service flight booking available worldwide, `Flight Create Orders` is currently not available to companies in the following countries: 
+2. **There are no restrictions in your country**. Though we are working to make Self-Service flight booking available worldwide, `Flight Create Orders` is currently not available to companies in the following countries: 
 
    *Algeria, Bangladesh, Bhutan, Bulgaria, Croatia, Egypt, Finland, Iceland, India,
 Iran, Iraq, Jordan, Kuwait, Kosovo, Lebanon, Libya, Madagascar, Maldives,
-Montenegro, Morocco, Nepal, Pakistan, Palestine, Qatar, Saudi Arabia, Serbia,
-South Korea, Sri Lanka, Sudan, Syria, Tahiti, Tunisia, United Arab Emirates and
+Montenegro, Morocco, Nepal, Pakistan, Palestine, Qatar, Saudi Arabia, Serbia, Sri Lanka, Sudan, Syria, Tahiti, Tunisia, United Arab Emirates and
 Yemen* 
 
-1. **You comply with local regulations** . Flight booking is subject to local
+3. **You comply with local regulations** . Flight booking is subject to local
    regulations and many areas (notably, California and France) have special
    requirements.
 
-[Contact us](https://developers.amadeus.com/support/contact-us-self-service) for questions about the above requirements or assistance with local regulations andairline consolidators in your region.
+[Contact us](https://developers.amadeus.com/support/contact-us-self-service) for questions about the above requirements or assistance with local regulations and airline consolidators in your region.
 
 If you meet the above requirements, you are ready to move your application 
 to production. 
