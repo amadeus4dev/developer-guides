@@ -4,9 +4,7 @@
 
 ### Inspirational Search
 
-The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) provides a list of destinations from a given
-city that is ordered by price and can be filtered by departure date or maximum
-price. The following request, retrieves a list of destinations from Boston:
+The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) provides a list of destinations from a given airport that is ordered by price and can be filtered by departure date or maximum price. The following request, retrieves a list of destinations from Boston:
 
 ```bash
 curl https://api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
@@ -25,14 +23,14 @@ cheapest dates to fly:
             "type": "flight-destination",
             "origin": "BOS",
             "destination": "CHI",
-            "departureDate": "2020-07-22",
-            "returnDate": "2020-07-28",
+            "departureDate": "2022-07-22",
+            "returnDate": "2022-07-28",
             "price": {
                 "total": "52.18"
             },
             "links": {
-                "flightDates": "https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2020-07-02,2020-12-28&oneWay=false&duration=1,15&nonStop=false&maxPrice=300&currency=USD&viewBy=DURATION",
-                "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2020-07-22&returnDate=2020-07-28&adults=1&nonStop=false&maxPrice=300&currency=USD"
+                "flightDates": "https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-07-02,2022-12-28&oneWay=false&duration=1,15&nonStop=false&maxPrice=300&currency=USD&viewBy=DURATION",
+                "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22&returnDate=2022-07-28&adults=1&nonStop=false&maxPrice=300&currency=USD"
             }
         }
     ]
@@ -50,7 +48,7 @@ and allows you to order by price, departure date or duration.
 The following example retrieves a list of `flight-date` objects containing pricing information given the origin and destination, and a range of dates:
 
 ```bash
-curl https://api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2020-08-15,2020-08-28
+curl https://api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
 ```
 
 The API provides a link to Flight Offers Search to search for flights once a
@@ -83,7 +81,7 @@ The API comes in two flavors:
 The minimum `GET` request has following parameters:
 
 ```bash
-curl https://api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2020-07-22
+curl https://api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
 ```
 
 The API returns a list of `flight-offer` objects (up to 250), including
@@ -98,7 +96,7 @@ information such as itineraries, price, pricing options, etc.
       "instantTicketingRequired": false,
       "nonHomogeneous": false,
       "oneWay": false,
-      "lastTicketingDate": "2020-07-02",
+      "lastTicketingDate": "2022-07-02",
       "numberOfBookableSeats": 9,
       "itineraries": [ ],
       "price": {
@@ -209,7 +207,7 @@ curl https://api.amadeus.com/v2/shopping/flight-offers \
       "originLocationCode": "MAD", 
       "destinationLocationCode": "PAR", 
       "departureDateTimeRange": { 
-        "date": "2020-10-03" 
+        "date": "2022-10-03" 
       } 
     }, 
     { 
@@ -217,7 +215,7 @@ curl https://api.amadeus.com/v2/shopping/flight-offers \
       "originLocationCode": "PAR", 
       "destinationLocationCode": "MUC", 
       "departureDateTimeRange": { 
-        "date": "2020-10-05" 
+        "date": "2022-10-05" 
       } 
     }, 
     { 
@@ -225,7 +223,7 @@ curl https://api.amadeus.com/v2/shopping/flight-offers \
       "originLocationCode": "MUC", 
       "destinationLocationCode": "AMS", 
       "departureDateTimeRange": { 
-        "date": "2020-10-08" 
+        "date": "2022-10-08" 
       } 
     }, 
     { 
@@ -233,7 +231,7 @@ curl https://api.amadeus.com/v2/shopping/flight-offers \
       "originLocationCode": "AMS", 
       "destinationLocationCode": "MAD", 
       "departureDateTimeRange": { 
-        "date": "2020-10-11" 
+        "date": "2022-10-11" 
       } 
     } 
   ], 
@@ -301,10 +299,6 @@ Flight Create Order API. To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
 yourself. 
 
-Please [contact
-us](https://developers.amadeus.com/support/contact-us-self-service) to learn
-more about which options is best for you.
-
 ## Issuing a ticket
 
 Once the booking is made, you need to complete payment. In most cases, you’ll
@@ -348,4 +342,3 @@ following error:
 }
 ```
 If you receive this error, reconfirm the fare price with the Flight Offers Price API before booking.
-
