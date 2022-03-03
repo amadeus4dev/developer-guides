@@ -4,9 +4,7 @@
 
 ### Inspirational Search
 
-The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) provides a list of destinations from a given
-city that is ordered by price and can be filtered by departure date or maximum
-price. The following request, retrieves a list of destinations from Boston:
+The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) provides a list of destinations from a given airport that is ordered by price and can be filtered by departure date or maximum price. The following request, retrieves a list of destinations from Boston:
 
 ```bash
 curl https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
@@ -300,10 +298,6 @@ Remember, you need to be able to issue a ticket to make bookings with our
 Flight Create Order API. To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
 yourself. 
-
-Please [contact
-us](https://developers.amadeus.com/support/contact-us-self-service) to learn
-more about which options is best for you.
 
 ## Issuing a ticket
 
