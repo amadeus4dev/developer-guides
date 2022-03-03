@@ -9,7 +9,7 @@ city that is ordered by price and can be filtered by departure date or maximum
 price. The following request, retrieves a list of destinations from Boston:
 
 ```bash
-curl https://api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
+curl https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
 ```
 
 !!!information
@@ -50,7 +50,7 @@ and allows you to order by price, departure date or duration.
 The following example retrieves a list of `flight-date` objects containing pricing information given the origin and destination, and a range of dates:
 
 ```bash
-curl https://api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
+curl https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
 ```
 
 The API provides a link to Flight Offers Search to search for flights once a
@@ -83,7 +83,7 @@ The API comes in two flavors:
 The minimum `GET` request has following parameters:
 
 ```bash
-curl https://api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
+curl https://test.api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
 ```
 
 The API returns a list of `flight-offer` objects (up to 250), including
@@ -201,7 +201,7 @@ The request will look like this:
 
 
 ```bash
-curl https://api.amadeus.com/v2/shopping/flight-offers \
+curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 -d '{ 
   "originDestinations": [ 
     { 

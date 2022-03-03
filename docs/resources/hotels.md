@@ -60,8 +60,8 @@ list of `offers`:
 "offers": [
     {
         "id": "Y0UE4D1MUT",
-        "checkInDate": "2020-07-01",
-        "checkOutDate": "2020-07-02",
+        "checkInDate": "2022-07-01",
+        "checkOutDate": "2022-07-02",
         "rateCode": "PRO",
         "rateFamilyEstimated": {
             "code": "PRO",
@@ -138,7 +138,7 @@ curl https://test.api.amadeus.com/v1/booking/hotel-bookings \
         "card": {
           "vendorCode": "VI",
           "cardNumber": "4151289722471370",
-          "expiryDate": "2021-08"
+          "expiryDate": "2023-08"
         }
       }
     ],
