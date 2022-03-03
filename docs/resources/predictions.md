@@ -11,7 +11,7 @@ out our API reference page to see the swagger with all the parameters.
 Here’s an example for a flight from Frankfurt to Brussels:
 
 ```bash
-curl https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=BRU&destinationLocationCode=FRA&departureDate=2020-01-14&departureTime=11:05:00&arrivalDate=2020-01-14&arrivalTime=12:10:00&aircraftCode=32A&carrierCode=LH&flightNumber=1009&duration=PT1H05M
+curl https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=BRU&destinationLocationCode=FRA&departureDate=2022-11-14&departureTime=11:05:00&arrivalDate=2022-11-14&arrivalTime=12:10:00&aircraftCode=32A&carrierCode=LH&flightNumber=1009&duration=PT1H05M
 ```
 
 The API will return four possible delay categories:

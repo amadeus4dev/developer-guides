@@ -26,11 +26,11 @@ All you need to do is to attach an alphanumeric string called **token** to your 
 
 !!! important
     **Test environment** 
-    At this stage you are using the testing environment, where you will enjoy a fixed free number of free API call quota per month for all your applications. When you reach the limit, you will receive an error message. Use this limited data collection to prototype your app and get ready for launching it to the market.
+    At this stage you are using the testing environment, where you will enjoy a fixed free number of free API call quota per month for all your applications. When you reach the limit, you will receive an error message. This environment will help you build and test your app for free and get ready for launching it to the market.
 
-## Step 3: calling the API
+## Step 3: Calling the API
 
-For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/203/api-doc/3/api-docs-and-example/10001), which returns a list of destinations from a given origin along with the cheapest price for each one.
+For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search/api-reference), which returns a list of destinations from a given origin along with the cheapest price for each one.
 
 ### Creating the Request
 
@@ -43,9 +43,9 @@ curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
 ```
 
 !!! warning
-    Please take a look at our [Authorization guide](../guides/authorization.md) to understand how the process works in deep.
+    Please take a look at our [Authorization guide](../guides/authorization.md) to understand how the process works in depth.
 
-The documentation says you need to use `v1/shopping/flight-destinations` as endpoint followed by the mandatory parameter `origin`. As you want to filter the offers to those cheaper than 200 EUR, you need to add the `maxPrice` parameter as well.
+According to the documentation, you need to use `v1/shopping/flight-destinations` as endpoint followed by the mandatory parameter `origin`. As you want to filter the offers to those cheaper than 200 EUR, you need to add the `maxPrice` parameter as well.
 
 Our call is therefore:
 
@@ -67,8 +67,8 @@ The response returns a `JSON` object containing a list of destinations matching 
             "type": "flight-destination",
             "origin": "PAR",
             "destination": "CAS",
-            "departureDate": "2019-01-06",
-            "returnDate": "2019-01-11",
+            "departureDate": "2022-09-06",
+            "returnDate": "2022-09-11",
             "price": {
                 "total": "161.90"
             }
@@ -77,8 +77,8 @@ The response returns a `JSON` object containing a list of destinations matching 
             "type": "flight-destination",
             "origin": "PAR",
             "destination": "AYT",
-            "departureDate": "2018-10-16",
-            "returnDate": "2018-10-31",
+            "departureDate": "2022-10-16",
+            "returnDate": "2022-10-31",
             "price": {
                 "total": "181.50"
             }
