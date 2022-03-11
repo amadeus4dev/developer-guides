@@ -99,3 +99,7 @@ amadeus.referenceData.locations.get({
 ```
 
 If a page is not available, the response will resolve to `null`.
+
+
+## list of blogs
+https://developers.amadeus.com/blog/get-started-amadeus-node-sdk

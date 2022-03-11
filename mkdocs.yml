@@ -61,21 +61,21 @@ nav:
         - Pricing: get-started/pricing.md
         - Self-Service vs Enterprise: get-started/self-service-enterprise.md
         - Moving to Production: get-started/moving-to-production.md
-    - API Guides:
+    - API General:
         - Authorization: guides/authorization.md
-        - Permissions and errors: guides/permissions-and-errors.md
+        - Common errors: guides/permissions-and-errors.md
         - Pagination: guides/pagination.md
         - Rate Limits: guides/api-rate-limits.md
-        - Data Collection: guides/api-data-collection.md
-    - API Resources:
-        - Travel restrictions & Covid-19: resources/Covid_19.md
+        - Test vs Production: guides/api-data-collection.md
+    - API Tutorials:
+        - Covid-19 & Travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
-        - Destination experiences: resources/Destination_experiences.md
-        - Itinerary management: resources/Itinerary_managment.md
-        - Market Insights: resources/Market_insight.md
-        - Locations: resources/locations.md
-        - Predictions: resources/predictions.md
+        - Destination experiences: resources/destination-experiences.md
+        - Itinerary management: resources/itinerary-managment.md
+        - Market Insights: resources/market-insight.md
+        - Locations (to be merged): resources/locations.md
+        - Predictions(to be merged): resources/predictions.md
     - Tooling:
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
@@ -84,9 +84,9 @@ nav:
         - Ruby SDK: sdks/ruby-sdk.md
         - iOS SDK: sdks/ios-sdk.md
         - Android SDK: sdks/android-sdk.md
-        - Open API Specification: sdks/specification.md
+        - OpenAPI Specification: sdks/specification.md
     - Code Examples:
-        - Code Examples: examples/code_example.md
+        - Code Examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
     
 
