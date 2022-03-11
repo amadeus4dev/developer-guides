@@ -1,5 +1,5 @@
 # Prototypes 
 
-## Available Prototypes 
+## Available Prototypes
 
-should we list blogs? or github? 
+To be updated

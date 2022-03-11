@@ -86,7 +86,7 @@ nav:
         - Android SDK: sdks/android-sdk.md
         - OpenAPI Specification: sdks/specification.md
     - Code Examples:
-        - Code Examples: examples/code_example.md
+        - Code Examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
     
 
