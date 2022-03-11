@@ -68,12 +68,12 @@ nav:
         - Rate Limits: guides/api-rate-limits.md
         - Test vs Production: guides/api-data-collection.md
     - API Tutorials:
-        - Covid-19 & Travel Safety: resources/Covid_19.md
+        - Covid-19 & Travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
-        - Destination experiences: resources/Destination_experiences.md
-        - Itinerary management: resources/Itinerary_managment.md
-        - Market Insights: resources/Market_insight.md
+        - Destination experiences: resources/destination-experiences.md
+        - Itinerary management: resources/itinerary-managment.md
+        - Market Insights: resources/market-insight.md
         - Locations (to be merged): resources/locations.md
         - Predictions(to be merged): resources/predictions.md
     - Tooling:
