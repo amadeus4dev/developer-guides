@@ -1,8 +1,10 @@
 # Prototypes 
 
 You would like to explore the applications that you can build with Amadeus Self Service APIs? 
+we have prototypes available in [Amadeus for Developers Github](https://github.com/amadeus4dev).
 
-Here we have list of prototypes(examples or Demo) based on **use case**.  
+
+Here in this page, we have listed down our prototypes(examples or Demo) based on **use case** for your convinence. 
 
 
 | Use Cases                   | 1A API used                                                                                                | Technology           | Github Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -27,9 +29,29 @@ Here we have list of prototypes(examples or Demo) based on **use case**.
 
 
 
-### External Prototypes
+### Prototypes from community
 
-Also, we have much more prototypes that developers in our community built and shared! Have a look and Feel free to let us know if you want to participate in this list ;) 
+Also, we have much more prototypes that developers in our community built and shared! 
 
+Explore more in [Amadeus for Developers Github](https://github.com/amadeus4dev) by searching keyword 'prototype', 'demo' or 'example'. 
+
+below list are available blog articles related to the External prototypes available in github.  
+
+
+
+| Use Cases                  | Blog Link                                                                                                                                                                                                                                                  |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Covid-19                   | [https://developers.amadeus.com/blog/neighborhood-safety-map-python](https://developers.amadeus.com/blog/neighborhood-safety-map-python)                                                                                                                     |
+| Flight booking             | [https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-1; https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-2](https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-1) |
+| Flight booking             | [https://developers.amadeus.com/blog/flight-booking-app-angular-1](https://developers.amadeus.com/blog/flight-booking-app-angular-1)                                                                                                                         |
+| Flight booking             | [https://developers.amadeus.com/blog/flight-booking-app-angular-2](https://developers.amadeus.com/blog/flight-booking-app-angular-2)                                                                                                                         |
+| Flight Search              | [https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-1](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-1)                                                                                                           |
+| Flight Search              | [https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-2](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-2)                                                                                                           |
+| Flight Seat Map            | [https://developers.amadeus.com/blog/react-seat-map](https://developers.amadeus.com/blog/react-seat-map)                                                                                                                                                     |
+| Hotel Booking              | [https://developers.amadeus.com/blog/react-native-hotel-booking-app](https://developers.amadeus.com/blog/react-native-hotel-booking-app)                                                                                                                     |
+| Hotel Booking              | [https://developers.amadeus.com/blog/react-native-hotel-booking-app; https://developers.amadeus.com/blog/react-hotel-booking-app-part2](https://developers.amadeus.com/blog/react-native-hotel-booking-app)                                                  |
+| Hotel Booking           | [https://developers.amadeus.com/blog/react-hotel-booking-app-part1](https://developers.amadeus.com/blog/react-hotel-booking-app-part1)                                                                                                                       |
+| Hotel Booking              | [https://developers.amadeus.com/blog/react-hotel-booking-app-part2](https://developers.amadeus.com/blog/react-hotel-booking-app-part2)                                                                                                                       |
+| Destination Experiences    | [https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api](https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api)                                                                                                       |
 
 
