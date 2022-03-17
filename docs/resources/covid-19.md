@@ -1,29 +1,29 @@
 # Covid-19 and Travel Safety 
 
 
-"Can I travel to South Korea? Thailand? or Costa Rica? Do I need to have a PCR test ? before the flight? after I arrive? How many days of quarantines is required? Where can I find these information?" 
 
-Don't worry, with Amadeus Self Service APIs, you will be able to have the details information of **current restrictions, Number of covid-19 cases, Entry requirements and Safety scores etc** with more details in a searched destinations with one single API.
+"Can I travel to South Korea? Thailand? or Costa Rica? Do I need to have a PCR test? before the flight? after I arrive? How many days of quarantines are required? Where can I find this information?" 
 
-and even more, **safety information** can be retrieved for the destination you would like to visit, so that you will be clearly aware of where you are heading to. 
+Don't worry, with Amadeus Self Service APIs, you will be able to have the details information of **current restrictions, Number of covid-19 cases, Entry requirements, and Safety scores, etc** with more details in a searched destinations with one single API.
+
+and even more, **safety information** can be retrieved for the destination you would like to visit so that you will be clearly aware of where you are heading to. 
 
 ## Search by an area
 
-There are 2 APIs to acheive the information 
+There are 2 APIs to achieve the information 
 1. [Amadeus Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) for covid-19 related information 
 2. [Amadeus Safety Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) for Safety information
 
-[Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) can be searched **by a country, city or region**. 
+[Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) can be searched **by a country, city, or region**. 
 
 ```bash
 curl https://test.api.amadeus.com/v1/duty-of-care/diseases/covid19-area-report?countryCode=FR&cityCode=PAR
 ```
-
 !!! information
     Country code(2 letters code) is defined in [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and city code(3 letters code) is defined in [IATA](https://www.iata.org/en/publications/directories/code-search/), which you can also use [Amadeus Airport & City Search API](https://developers.amadeus.com/self-service/category/air) to get.
 
 
-[Safety Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) can be searched by a given location with **latitude, longitude and radius**, or **Sqaure information** (North, West, South and east) or **by id**.
+[Safety Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) can be searched by a given location with **latitude, longitude and radius**, or **Square information** (North, West, South, and east) or **by id**.
 
 ```bash
 curl https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=48.856614&longitude=2.3522219&radius=2
@@ -37,13 +37,15 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930400878
     the id is given by your first query which has been searched by others. the search by id was designed to target a specific area that you want to focus on.
 
 
+
+
 ## Get Information from the responses
 Let's go through some highlights information you get from both Travel Restriction API and Safety Place API. 
 
 !!!information
    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/). 
-   - the data source of travel restrictions API is from [Riskline](https://riskline.com/), they have sourced from local governments and media. The quantity of information provided may vary from country to country. 
-   - the data source of Safety Place API is from [GeoSure](https://geosureglobal.com/), GeoSafeScores algorithm which analyzes crime, health and economic data, official travel alerts, local reporting and a variety of other sources. 
+   - the data source of travel restrictions API is from [Riskline](https://riskline.com/), they have been sourced from local governments and media. The quantity of information provided may vary from country to country. 
+   - the data source of Safety Place API is from [GeoSure](https://geosureglobal.com/), GeoSafeScores algorithm which analyzes crime, health and economic data, official travel alerts, local reporting, and a variety of other sources. 
 
 ### Get summary of the destination + Safety score
 
@@ -178,4 +180,3 @@ Entry information, which origin countries will be required for quarantine, Entry
 
 ### Available blog articles 
 [Keep Travelers informed with Amadeus Travel Restriction API ](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api)
-
