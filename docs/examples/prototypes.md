@@ -1,10 +1,10 @@
 # Prototypes 
 
-You would like to explore the applications that you can build with Amadeus Self Service APIs? 
-we have prototypes available in [Amadeus for Developers Github](https://github.com/amadeus4dev).
+Would you like to explore the applications that you could build with Amadeus Self Service APIs? 
+We have prototypes available in [Amadeus for Developers Github](https://github.com/amadeus4dev).
 
 
-Here in this page, we have listed down our prototypes(examples or Demo) based on **use case** for your convinence. 
+Here on this page, we have listed down our prototypes(examples or Demo) based on **use case** for your convenience. 
 
 
 | Use Cases                   | 1A API used                                                                                                | Technology           | Github Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -33,9 +33,9 @@ Here in this page, we have listed down our prototypes(examples or Demo) based on
 
 Also, we have much more prototypes that developers in our community built and shared! 
 
-Explore more in [Amadeus for Developers Github](https://github.com/amadeus4dev) by searching keyword 'prototype', 'demo' or 'example'. 
+Explore more in [Amadeus for Developers Github](https://github.com/amadeus4dev) by searching the keyword 'prototype', 'demo' or 'example'. 
 
-below list are available blog articles related to the External prototypes available in github.  
+below the list are available blog articles related to the External prototypes available in Github.  
 
 
 
