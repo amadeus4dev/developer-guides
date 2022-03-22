@@ -6,7 +6,7 @@
 
 Don't worry, with Amadeus Self Service APIs, you will be able to have the details information of **current restrictions, Number of covid-19 cases, Entry requirements, and Safety scores, etc** with more details in a searched destinations with one single API.
 
-and even more, **safety information** can be retrieved for the destination you would like to visit so that you will be clearly aware of where you are heading to. 
+and even more, **safety information** can be retrieved for the destination you would like to visit so that you will be aware of where you are heading to. 
 
 ## Search by an area
 
@@ -57,7 +57,7 @@ from the response of Travel Restriction API :
             "iataCode": "KR",
             "areaType": "Country"
         },
-        "summary": "<p>Authorities have relied on gathering limits and social distancing measures to contain outbreaks since the start of the pandemic. A three-stage lifting of COVID-19 measures was underway, but was pasued in late November 2021 as a new spike in COVID-19 cases led to rises in deaths and those with severe symptoms, and threatened hospital bed and ICU availabilities. </p>",
+        "summary": "<p>Authorities have relied on gathering limits and social distancing measures to contain outbreaks since the start of the pandemic. A three-stage lifting of COVID-19 measures was underway but was paused in late November 2021 as a new spike in COVID-19 cases led to rises in deaths and those with severe symptoms, and threatened hospital beds and ICU availabilities. </p>",
         "diseaseRiskLevel": "High",
         "diseaseInfection": {
             "date": "2022-03-06",
@@ -88,7 +88,7 @@ from the response of Safety Place API, you will get safety scores by category.
 
 ### Get Covid-19 related statistics 
 
-from the response of Travel Restriction API : the result provides Covid-19 statstics such as total cases, active cases, and current rate of infection per 100,000 
+from the response of Travel Restriction API: the result provides Covid-19 statistics such as total cases, active cases, and the current rate of infection per 100,000 
 
 ```json
         "diseaseCases": {
@@ -102,7 +102,7 @@ from the response of Travel Restriction API : the result provides Covid-19 stats
             "governmentSiteLink": "http://ncov.mohw.go.kr/en/"
         },
 ```
-and what is the vaccination ratio in this country ?
+and what is the vaccination ratio in this country?
 
 ```json
         "areaVaccinated": [
@@ -122,12 +122,12 @@ and what is the vaccination ratio in this country ?
 ### Get Travel Restrictions information 
 
 from the response of Travel Restriction API : 
-Entry information, which origin countries will be required for quarantine, Entry Requirements, Mask information, Tracing application and much more...
+Entry information, which origin countries will be required for quarantine, Entry Requirements, Mask information, Tracing application, and much more...
 
 ```json
             "entry": {
                 "date": "2022-03-04",
-                "text": "<p>All inbound non-resident foreign nationals must secure a visa prior to their travel. All travellers, including residents and Non- South Korean nationals, must hold a valid negative PCR test result to be allowed to borad on an inbound flight to South Korea. However, South Korean nationals who were found after entry with a non-conforming certificate must undergo a five days quarantine in a government designated facility and an additional two days home quarantine.</p>",
+                "text": "<p>All inbound non-resident foreign nationals must secure a visa before their travel. All travelers, including residents and Non- South Korean nationals, must hold a valid negative PCR test result to be allowed to board an inbound flight to South Korea. However, South Korean nationals who were found after entry with a non-conforming certificate must undergo a five days quarantine in a government-designated facility and an additional two days home quarantine.</p>",
                 "ban": "No",
                 "throughDate": "indef",
                 "rules": "http://ncov.mohw.go.kr/duBoardList.do?brdId=2&brdGubun=23",
