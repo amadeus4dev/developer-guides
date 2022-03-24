@@ -8,12 +8,16 @@ Don't worry, with Amadeus Self-Service APIs, you will be able to have the detail
 
 And even more, **safety information** can be retrieved for the destination you would like to visit so that you will be aware of where you are heading to. 
 
+
+
 ## Search by an area
 
 There are 2 APIs to achieve the information 
 
 1. [Amadeus Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) for COVID-19 related information 
 2. [Amadeus Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) for Safety information
+
+
 
 [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) can be searched **by a country, city, or region**. 
 
@@ -22,6 +26,7 @@ curl https://test.api.amadeus.com/v1/duty-of-care/diseases/covid19-area-report?c
 ```
 !!! information
     The country code(2 letters code) is defined in [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and the city code(3 letters code) is defined in [IATA](https://www.iata.org/en/publications/directories/code-search/). You can also use [Airport & City Search API](https://developers.amadeus.com/self-service/category/air) to get this information. 
+
 
 
 [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) can be searched by a given location with **latitude, longitude and radius**, or **Square information** (North, West, South, and east) or **by id**.
