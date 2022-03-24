@@ -1,10 +1,10 @@
 # Prototypes 
 
-You would like to explore the applications that you can build with Amadeus Self-Service APIs? 
-we have prototypes available in [GitHub](https://github.com/amadeus4dev).
+Would you like to explore the applications that you could build with Amadeus Self Service APIs?
+We have prototypes available in [GitHub](https://github.com/amadeus4dev).
 
 
-Here in this page, we have listed down our prototypes(examples or demos) based on **use case** for your convinence. 
+Here on this page, we have listed down our prototypes(examples or demos) based on **use case** for your conveience. 
 
 
 | Use Cases                   | Amadeus APIs used                                                                                                | Technology           | GitHub Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -33,9 +33,9 @@ Here in this page, we have listed down our prototypes(examples or demos) based o
 
 Also, we have much more prototypes that developers in our community built and shared! 
 
-Explore more in [GitHub](https://github.com/amadeus4dev) by searching keyword `prototype`, `demo` or `example`. 
+Explore more in [GitHub](https://github.com/amadeus4dev) by searching the keyword `prototype`, `demo` or `example`. 
 
-Blow list are available blog articles related to the external prototypes available in GitHub.  
+Below are listed the available blog articles related to the external prototypes available in GitHub.  
 
 
 
