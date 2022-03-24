@@ -4,7 +4,7 @@
 
 "Can I travel to South Korea? Thailand? or Costa Rica? Do I need to have a PCR test? before the flight? after I arrive? How many days of quarantine are required? Where can I find this information?" 
 
-Don't worry, with Amadeus Self Service APIs, you will be able to have the details information of **number of COVID-19 cases, entry requirements, and safety scores etc** with more details in a searched destinations with one single API.
+Don't worry, with Amadeus Self Service APIs, you will be able to have the details information of **number of COVID-19 cases, entry requirements, and safety scores, etc** with more details in a searched destinations with one single API.
 
 And even more, **safety information** can be retrieved for the destination you would like to visit so that you will be aware of where you are heading to. 
 
@@ -46,7 +46,7 @@ Let's highlight some information you get from both Travel Restrictions API and S
    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/). 
 
 !!! information
-   - the data source of Travel Restrictions API is from [Riskline](https://riskline.com/) and it have been sourced from local governments and media. The quantity of information provided may vary from country to country. 
+   - the data source of Travel Restrictions API is from [Riskline](https://riskline.com/) and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 
    - the data source of Safe Place API is from [GeoSure](https://geosureglobal.com/), GeoSafeScores algorithm which analyzes crime, health and economic data, official travel alerts, local reporting, and a variety of other sources. 
 
 ### Get summary of the destination + Safety score
@@ -67,7 +67,7 @@ From the response of Travel Restrictions API :
             "rate": 5088.42
 ```
 
-From the response of Safe Place API, you will get an overall safety score and scores for six component categories. 
+From the response of Safe Place API, you will get an overall safety score and scores for six-component categories. 
 
 - Women’s Safety 
 - Health & Medical Safety 
@@ -95,7 +95,7 @@ From the response of Safe Place API, you will get an overall safety score and sc
         }
 ```
 
-Safety scores range on a scale of 1-100, with 1 being the safest and 100 being the least safe. In this example of Seoul, South Korea, a “politicalFreedom” score of 28 indicahtes that the potential for infringement of political rights or political unrest is less likely happened at this location.  
+Safety scores range on a scale of 1-100, with 1 being the safest and 100 being the least safe. In this example of Seoul, South Korea, a “politicalFreedom” score of 28 indicates that the potential for infringement of political rights or political unrest is less likely to happen at this location.  
 
 ### Get COVID-19 related statistics 
 
