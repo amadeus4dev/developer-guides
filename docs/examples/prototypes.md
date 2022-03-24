@@ -1,6 +1,6 @@
 # Prototypes 
 
-Would you like to explore the applications that you could build with Amadeus Self Service APIs?
+Would you like to explore the applications that you could build with Amadeus Self-Service APIs?
 We have prototypes available in [GitHub](https://github.com/amadeus4dev).
 
 
@@ -41,17 +41,18 @@ Below are listed the available blog articles related to the external prototypes 
 
 | Use Cases                  | Blog Link                                                                                                                                                                                                                                                  |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Covid-19                   | [https://developers.amadeus.com/blog/neighborhood-safety-map-python](https://developers.amadeus.com/blog/neighborhood-safety-map-python)                                                                                                                     |
-| Flight booking             | [https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-1; https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-2](https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-1) |
-| Flight booking             | [https://developers.amadeus.com/blog/flight-booking-app-angular-1](https://developers.amadeus.com/blog/flight-booking-app-angular-1)                                                                                                                         |
-| Flight booking             | [https://developers.amadeus.com/blog/flight-booking-app-angular-2](https://developers.amadeus.com/blog/flight-booking-app-angular-2)                                                                                                                         |
-| Flight Search              | [https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-1](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-1)                                                                                                           |
-| Flight Search              | [https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-2](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-2)                                                                                                           |
-| Flight Seat Map            | [https://developers.amadeus.com/blog/react-seat-map](https://developers.amadeus.com/blog/react-seat-map)                                                                                                                                                     |
-| Hotel Booking              | [https://developers.amadeus.com/blog/react-native-hotel-booking-app](https://developers.amadeus.com/blog/react-native-hotel-booking-app)                                                                                                                     |
-| Hotel Booking              | [https://developers.amadeus.com/blog/react-native-hotel-booking-app; https://developers.amadeus.com/blog/react-hotel-booking-app-part2](https://developers.amadeus.com/blog/react-native-hotel-booking-app)                                                  |
-| Hotel Booking           | [https://developers.amadeus.com/blog/react-hotel-booking-app-part1](https://developers.amadeus.com/blog/react-hotel-booking-app-part1)                                                                                                                       |
-| Hotel Booking              | [https://developers.amadeus.com/blog/react-hotel-booking-app-part2](https://developers.amadeus.com/blog/react-hotel-booking-app-part2)                                                                                                                       |
-| Destination Experiences    | [https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api](https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api)                                                                                                       |
+| Covid-19                   | [Neighborhood safety map in Python with Amadeus Safe Place](https://developers.amadeus.com/blog/neighborhood-safety-map-python)                                                                                                                     |
+| Flight booking             | [Flight booking app in Java and React - Part 1](https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-1) |
+| Flight booking             | [Flight booking app in Java and React - Part 2](https://developers.amadeus.com/blog/flight-booking-application-java-spring-react-2) |
+| Flight booking             | [Flight booking app with Angular and Node.js - Part 1](https://developers.amadeus.com/blog/flight-booking-app-angular-1)                                                                                                                         |
+| Flight booking             | [Flight booking app with Angular and Node.js - Part 2](https://developers.amadeus.com/blog/flight-booking-app-angular-2)                                                                                                                         |
+| Flight Search              | [Flight search form using Bootstrap 5 - Part 1](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-1)                                                                                                           |
+| Flight Search              | [Flight search form using Bootstrap 5 - Part 2](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-2)                                                                                                           |
+| Flight Seat Map            | [Aircraft seat map in React](https://developers.amadeus.com/blog/react-seat-map)                                                                                                                                                     |
+| Hotel Booking              | [iOS hotel booking app with React Native - Part 1](https://developers.amadeus.com/blog/react-native-hotel-booking-app)                                                                                                                     |
+| Hotel Booking              | [iOS hotel booking app with React Native - Part 2](https://developers.amadeus.com/blog/react-native-hotel-booking-app-part2)                                                  |
+| Hotel Booking           | [Hotel booking app with Node.js and React - Part 1](https://developers.amadeus.com/blog/react-hotel-booking-app-part1)                                                                                                                       |
+| Hotel Booking              | [Hotel booking app with Node.js and React - Part 2](https://developers.amadeus.com/blog/react-hotel-booking-app-part2)                                                                                                                       |
+| Destination Experiences    | [Get nearby places using Amadeus APIs in iOS](https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api)                                                                                                       |
 
 
