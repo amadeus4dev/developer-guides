@@ -11,6 +11,7 @@ And even more, **safety information** can be retrieved for the destination you w
 ## Search by an area
 
 There are 2 APIs to achieve the information 
+
 1. [Amadeus Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) for COVID-19 related information 
 2. [Amadeus Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) for Safety information
 
