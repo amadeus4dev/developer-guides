@@ -4,7 +4,9 @@ Would you like to explore the applications that you could build with Amadeus Sel
 We have prototypes available in [GitHub](https://github.com/amadeus4dev).
 
 
-Here on this page, we have listed down our prototypes(examples or demos) based on **use case** for your convenience. 
+Here in this page, we have listed down our prototypes(examples or demos) based on **use case** for your convenience. 
+
+
 
 
 | Use Cases                   | Amadeus APIs used                                                                                                | Technology           | GitHub Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -25,6 +27,7 @@ Here on this page, we have listed down our prototypes(examples or demos) based o
 | Hotel Search                | Hotel Search                                                                                               | Swift                | [amadeus-hotel-search-swift](https://github.com/amadeus4dev/amadeus-hotel-search-swift)                                       |
 | Itinarary Management        | Trip Purpose Prediction                                                                                    | Python, django       | [amadeus-trip-purpose-django](https://github.com/amadeus4dev/amadeus-trip-purpose-django)                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | On demand flight status     | On-Demand Flight Status                                                                                    | Python               | [amadeus-async-flight-status](https://github.com/amadeus4dev/amadeus-async-flight-status)                                |
+
 
 
 
