@@ -4,7 +4,7 @@ Would you like to explore the applications that you could build with Amadeus Sel
 We have prototypes available in [GitHub](https://github.com/amadeus4dev).
 
 
-Here on this page, we have listed down our prototypes(examples or demos) based on **use case** for your conveience. 
+Here on this page, we have listed down our prototypes(examples or demos) based on **use case** for your convenience. 
 
 
 | Use Cases                   | Amadeus APIs used                                                                                                | Technology           | GitHub Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
