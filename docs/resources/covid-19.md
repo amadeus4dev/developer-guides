@@ -189,5 +189,5 @@ Entry information, which origin countries will be required for quarantine, entry
 
 
 
-### Available blog articles 
+## Available blog articles 
 [Keep Travelers informed with Amadeus Travel Restrictions API](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api)
