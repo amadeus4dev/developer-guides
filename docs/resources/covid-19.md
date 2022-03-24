@@ -4,7 +4,7 @@
 
 "Can I travel to South Korea? Thailand? or Costa Rica? Do I need to have a PCR test? before the flight? after I arrive? How many days of quarantine are required? Where can I find this information?" 
 
-Don't worry, with Amadeus Self Service APIs, you will be able to have the details information of **number of COVID-19 cases, entry requirements, and safety scores, etc** with more details in a searched destinations with one single API.
+Don't worry, with Amadeus Self-Service APIs, you will be able to have the details information of **number of COVID-19 cases, entry requirements, and safety scores, etc** with more details in a searched destinations with one single API.
 
 And even more, **safety information** can be retrieved for the destination you would like to visit so that you will be aware of where you are heading to. 
 
