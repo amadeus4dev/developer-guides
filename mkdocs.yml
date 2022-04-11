@@ -66,7 +66,7 @@ nav:
         - Common errors: guides/permissions-and-errors.md
         - Pagination: guides/pagination.md
         - Rate Limits: guides/api-rate-limits.md
-        - Test vs Production: guides/api-data-collection.md
+        - Test Data Collection: guides/api-data-collection.md
     - API Tutorials:
         - Covid-19 & Travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
