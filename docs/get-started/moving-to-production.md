@@ -37,12 +37,27 @@ Once you have a production key, you make the following changes to your source co
 1. Update the base URL for your API calls to point to `https://api.amadeus.com`.
 2. Update your `API key` and `API secret` with the new production keys.
 
-If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), initialize the client as shown below:
+If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), add `hostname='production'` in the client together with your API key and API secret as shown below example in [python SDK](https://github.com/amadeus4dev/amadeus-python):
 
+```python
+from amadeus import Client, ResponseError
 
-    amadeus = Client(client_id='YOUR_PRODUCTION_CLIENT_ID',
-                 client_secret='YOUR_PRODUCTION_CLIENT_SECRET',
-                 hostname='production')
+amadeus = Client(
+    client_id='REPLACE_BY_YOUR_API_KEY',
+    client_secret='REPLACE_BY_YOUR_API_SECRET'
+    hostname='production'
+)
+
+try:
+    response = amadeus.shopping.flight_offers_search.get(
+        originLocationCode='MAD',
+        destinationLocationCode='ATH',
+        departureDate='2022-11-01',
+        adults=1)
+    print(response.data)
+except ResponseError as error:
+    print(error)
+```
 
 
 ## Moving to production with the Flight Create Orders API
