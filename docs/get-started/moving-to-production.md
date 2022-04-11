@@ -11,7 +11,7 @@ To request a **production key**, you must complete the following steps:
 
 ![request_prod](../images/request_production_key.png)
 
-   3. Complete the form with your personal information, billing address and app information.
+   3. Complete the form with your personal information, billing address, and app information.
    4. Indicate whether your application uses `Flight Create Orders` in the checkbox at the bottom of the form. This API has special access requirements detailed below in the `Moving to Production with Flight Create Orders` section of this guide.
    5. Select your preferred method of payment \(credit card or bank transfer\) and provide the required billing information.
    6. Sign the Terms of Service agreement provided on `Docusign`. 
@@ -21,14 +21,14 @@ Once these steps are completed, your application status will be **pending**:
 
 ![pending](../images/app_pending.png)
 
-You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that validation period applies to your first production application. Subsequent applications will be validated automatically.
+You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that  the validation period applies to your first production application. Subsequent applications will be validated automatically.
 
 ![live](../images/app_live.png)
 
-> Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more informations.
+> Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more information.
 
 
-Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions on a monthly basis. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
+Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions every month. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
 
 ## Using the production key
 
