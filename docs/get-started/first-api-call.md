@@ -19,7 +19,7 @@ To start using the APIs you need to tell the system that you are allowed to do s
 !!! danger
     Remember that the API Key and API Secret are for personal use only. Do not share them with anyone.
 
-All you need to do is to attach an alphanumeric string called **token** to your calls. This token will identify you as valid user and is generated from two parameters: `API Key` and `API Secret`. In order to get them, and once your account has been verified, you can [sign in](https://developers.amadeus.com/signin) and follow these steps:
+All you need to do is to attach an alphanumeric string called **token** to your calls. This token will identify you as a valid user and is generated from two parameters: `API Key` and `API Secret`. To get them, and once your account has been verified, you can [sign in](https://developers.amadeus.com/signin) and follow these steps:
 
 * Click on your username \(top right corner\) 
 * Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps) 
@@ -33,7 +33,7 @@ All you need to do is to attach an alphanumeric string called **token** to your 
 
 !!! important
     **Test environment** 
-    At this stage you are using the testing environment, where you will enjoy a fixed free number of free API call quota per month for all your applications. When you reach the limit, you will receive an error message. This environment will help you build and test your app for free and get ready for launching it to the market.
+    At this stage, you are using the testing environment, where you will enjoy a fixed free number of free API call quotas per month for all your applications. When you reach the limit, you will receive an error message. This environment will help you build and test your app for free and get ready for launching it to the market.
 
 ## Step 3: Calling the API
 
@@ -41,7 +41,7 @@ For our first call, let's get a list of possible destinations from Paris for a m
 
 ### Creating the Request
 
-Before making your first API call, you need to get your **access token**. For security purposes we implemented the `oauth2` process that will give you your access token based on your `API Key` and `API Secret.` In order to retrieve the **token,** the we need to send a `POST` request to the following endpoint `/v1/security/oauth2/token,`with the correct `Content-Type` header and body:
+Before making your first API call, you need to get your **access token**. For security purposes, we implemented the `oauth2` process that will give you your access token based on your `API Key` and `API Secret.` To retrieve the **token,** we need to send a `POST` request to the following endpoint `/v1/security/oauth2/token,`with the correct `Content-Type` header and body:
 
 ```bash
 curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
@@ -52,7 +52,7 @@ curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
 !!! warning
     Please take a look at our [Authorization guide](../guides/authorization.md) to understand how the process works in depth.
 
-According to the documentation, you need to use `v1/shopping/flight-destinations` as endpoint followed by the mandatory parameter `origin`. As you want to filter the offers to those cheaper than 200 EUR, you need to add the `maxPrice` parameter as well.
+According to the documentation, you need to use `v1/shopping/flight-destinations` as the endpoint followed by the mandatory parameter `origin`. As you want to filter the offers to those cheaper than 200 EUR, you need to add the `maxPrice` parameter as well.
 
 Our call is therefore:
 
@@ -61,7 +61,7 @@ curl 'https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&ma
       -H 'Authorization: Bearer ABCDEFGH12345'
 ```
 
-Note how we add the `Authorization` header to the request with value `Bearer` string concatenated with the token previously requested.
+Note how we add the `Authorization` header to the request with the value `Bearer` string concatenated with the token previously requested.
 
 ### Evaluating the Response
 
