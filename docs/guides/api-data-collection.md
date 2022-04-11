@@ -19,6 +19,7 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | `Flight Create Orders` | Works with the response of `Flight Offers Price` |
 | `Flight Order Management` | Works with the response of `Flight Create Orders` |
 | `Flight Choice Prediction` | No data restrictions in test |
+| `Flight Price Analysis` | No data restrictions in test |
 | `Branded Fares Upsell` | Cached data including most airports |
 
 ## Flight Inspiration
