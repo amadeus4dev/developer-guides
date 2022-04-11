@@ -63,7 +63,7 @@ nav:
         - Moving to production: get-started/moving-to-production.md
     - API General:
         - Authorization: guides/authorization.md
-        - Common errors: guides/permissions-and-errors.md
+        - Common errors: guides/common-errors.md
         - Pagination: guides/pagination.md
         - Rate limits: guides/api-rate-limits.md
         - Test data collection: guides/api-data-collection.md
