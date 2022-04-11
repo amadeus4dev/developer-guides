@@ -72,3 +72,20 @@ parameter. For example, `page[offset]=18`. The `next` and `last` returned in the
 encoding](https://en.wikipedia.org/wiki/Percent-encoding) and is used to
 encode special characters in the url parameter values.
 
+## The APIs with pagination
+
+Below you can find the list of APIs which support pagination:
+
+[Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) 
+
+[Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest)
+
+[Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant)
+
+[Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search)
+
+[Hotel Search v2](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) 
+
+[Flight Most Travelled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations)
+
+[Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations)
