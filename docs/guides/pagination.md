@@ -14,7 +14,7 @@ Not all Amadeus Self-Service APIs support pagination. Below you can find the API
 | [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search)
 | [Hotel Search v2](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) 
 | [Flight Most Travelled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations)
-|[Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations)
+| [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations)
 
 ## Accessing paginated results
 
