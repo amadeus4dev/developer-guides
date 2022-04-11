@@ -6,7 +6,9 @@ The first step to start using Amadeus Self-Service APIs is to register and creat
 
 * In the top right corner of the page, click on [register](https://developers.amadeus.com/register)
 * Complete the form, using a valid email address and click on the `Create account` button. An automatic confirmation email will be sent to the email address you registered
-* In the confirmation email you receive, click on `Confirm my account`
+* In the confirmation email you receive, click on `Confirm my account` (Shown below)
+
+![email_confirmation](../images/email_confirmation.png)
 
 You can now log in to the portal with your new credentials! Welcome to **Amadeus for Developers**!
 
@@ -19,10 +21,15 @@ To start using the APIs you need to tell the system that you are allowed to do s
 
 All you need to do is to attach an alphanumeric string called **token** to your calls. This token will identify you as valid user and is generated from two parameters: `API Key` and `API Secret`. In order to get them, and once your account has been verified, you can [sign in](https://developers.amadeus.com/signin) and follow these steps:
 
-* Click on your username \(top right corner\)
-* Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps)
+* Click on your username \(top right corner\) 
+* Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps) 
+    ![api_key1](../images/api_key1.png)
+
 * Click on **Create New App** button
+    ![api_key2](../images/api_key2.png)
+
 * Enter your application details and click on **Create**
+    ![api_key3](../images/api_key3.png)
 
 !!! important
     **Test environment** 
