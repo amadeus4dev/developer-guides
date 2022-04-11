@@ -65,10 +65,10 @@ nav:
         - Authorization: guides/authorization.md
         - Common errors: guides/common-errors.md
         - Pagination: guides/pagination.md
-        - Rate limits: guides/api-rate-limits.md
-        - Test data collection: guides/api-data-collection.md
+        - Rate limits: guides/rate-limits.md
+        - Test data collection: guides/data-collection.md
     - API Tutorials:
-        - Covid-19 & Travel Safety: resources/covid-19.md
+        - Covid-19 & travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
         - Destination experiences: resources/destination-experiences.md
