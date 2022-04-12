@@ -6,7 +6,7 @@ The first step to start using Amadeus Self-Service APIs is to register and creat
 
 * In the top right corner of the page, click on [register](https://developers.amadeus.com/register)
 * Complete the form, using a valid email address and click on the `Create account` button. An automatic confirmation email will be sent to the email address you registered
-* In the confirmation email you receive, click on `Confirm my account` (Shown below)
+* In the confirmation email you receive, click on `Confirm my account` 
 
 ![email_confirmation](../images/email_confirmation.png)
 

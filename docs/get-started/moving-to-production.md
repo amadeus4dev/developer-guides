@@ -7,7 +7,7 @@ When your application is ready to be deployed to the Real World™, you can requ
 To request a **production key**, you must complete the following steps:
 
 1. [Sign in](https://developers.amadeus.com/login) to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
-2. Select the application to move to `Production` and click `Get Production environment` (shown below):
+2. Select the application to move to `Production` and click `Get Production environment` :
 
 ![request_prod](../images/request_production_key.png)
 
@@ -44,7 +44,7 @@ from amadeus import Client, ResponseError
 
 amadeus = Client(
     client_id='REPLACE_BY_YOUR_API_KEY',
-    client_secret='REPLACE_BY_YOUR_API_SECRET'
+    client_secret='REPLACE_BY_YOUR_API_SECRET',
     hostname='production'
 )
 
