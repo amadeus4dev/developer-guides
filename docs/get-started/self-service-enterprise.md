@@ -3,9 +3,9 @@ Amadeus for Developers includes two different offers: Self-Service and Enterpris
 
 ## **Self-Service** 
 
-Targets independent developers and start-ups that wish to connect to Amadeus APIs in a quick and easy manner. You can access and start to test these new REST/JSON APIs in less than 3 minutes, and get quick access to production data with a flexible pay-as-you-go pricing model. Please note that the catalog includes some selected APIs, although we will be constantly releasing new APIs. Currently, you can find APIs around flights, hotel, destination content and COVID-19. 
+Targets independent developers and start-ups that wish to connect to Amadeus APIs in a quick and easy manner. You can access and start to test these new REST/JSON APIs in less than 3 minutes, and get quick access to production data with a flexible pay-as-you-go pricing model. Please note that the catalog includes some selected APIs, although we will be constantly releasing new APIs. Currently, you can find APIs around flights, hotels, destination content, and COVID-19. 
 
-Self-Service users have at their disposal detailed documentation, guides and SDKs to be able to integrate the APIs in their apps. 
+Self-Service users have at their disposal detailed documentation, guides, and SDKs to be able to integrate the APIs in their apps. 
 
 ## **Enterprise**  
 
