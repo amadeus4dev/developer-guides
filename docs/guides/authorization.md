@@ -101,6 +101,19 @@ You can then call the API. The following example is a call to the `Flight Check-
 
 
 ```javascript
-amadeus.referenceData.urls.checkinLinks.get({ airline: 'IB' });
+var Amadeus = require('amadeus');
+
+var amadeus = new Amadeus({
+  clientId: '[API Key]',
+  clientSecret: '[API Secret]'
+});
+
+amadeus.referenceData.urls.checkinLinks.get({
+  airlineCode : 'IB'
+}).then(function(response){
+  console.log(response.data);
+}).catch(function(responseError){
+  console.log(responseError.code);
+});
 ```
 

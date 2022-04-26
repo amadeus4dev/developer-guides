@@ -4,8 +4,17 @@ Amadeus for Developers Self-Service APIs can often return a lot of results. When
 API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search), for example, you may get a response hundreds of pages long.
 That's where **pagination** comes in. Using pagination, you can split the results into different pages to make the responses easier to handle.
 
-!!!warning
-    Not all Amadeus Self-Service APIs support pagination. Check the API reference for more information.
+Not all Amadeus Self-Service APIs support pagination. Below you can find the APIs that support pagination:
+
+| APIs      |
+| ----------- 
+| [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) 
+| [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest)
+| [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant)
+| [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search)
+| [Hotel Search v2](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) 
+| [Flight Most Travelled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations)
+| [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations)
 
 ## Accessing paginated results
 
@@ -71,4 +80,3 @@ Note that indexing elements between pages is done via the `page[offset]` query
 parameter. For example, `page[offset]=18`. The `next` and `last` returned in the example above encode the special characters `[]` as `%5B` and `%5D`. This is called [percent
 encoding](https://en.wikipedia.org/wiki/Percent-encoding) and is used to
 encode special characters in the url parameter values.
-

@@ -1,6 +1,6 @@
 # Rate limits
 
-Most Amadeus for Developers Self-Service APIs have rate limits in place to protect against abuse by third-parties. The rate limits for each environment are detailed in the following table:
+Most Amadeus for Developers Self-Service APIs have [rate limits](https://developers.amadeus.com/self-service/apis-docs/guides/rate-limits-745) in place to protect against abuse by third-parties. The rate limits for each environment are detailed in the following table:
 
 | `Test` | `Production` |
 | :--- | :--- |
