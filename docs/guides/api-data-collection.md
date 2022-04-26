@@ -4,26 +4,27 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 
 
 ## COVID and travel safety
+
 | API      | Test data |
 | ----------- | ----------- |
-| `Safe Place` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
 | `Travel Restrictions` | Cached data for all available countries/cities|
+| `Safe Place` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
 
 ## Flight
 
+### Flight booking 
 | API      | Test data |
 | :----------- | :----------- |
 | `Flight Offers Search` |  Cached data including most origin and destination cities/airports|
 | `Flight Offers Price` | Cached data including most origin and destination cities/airports|
-| `SeatMap Display` | Works with the response of `Flight Offers Search`|
 | `Flight Create Orders` | Works with the response of `Flight Offers Price` |
 | `Flight Order Management` | Works with the response of `Flight Create Orders` |
-| `Flight Choice Prediction` | No data restrictions in test |
-| `Flight Price Analysis` | No data restrictions in test |
+| `SeatMap Display` | Works with the response of `Flight Offers Search`|
 | `Branded Fares Upsell` | Cached data including most airports |
+| `Flight Price Analysis` | No data restrictions in test |
+| `Flight Choice Prediction` | No data restrictions in test |
 
-## Flight Inspiration
-
+### Flight Inspiration
 | API      | Test data |
 | :----------- | :----------- |
 | `Flight Inspiration Search` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md) |
@@ -31,23 +32,20 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | `Flight Availabilities Search` | Cached data including most origin and destination cities/airports |
 | `Travel Recommendations` | No data restrictions in test |
 
-## Flight Schedule
-
+### Flight Schedule
 | API      | Test data |
 | :----------- | :----------- |
 | `On Demand Flight Status` | Cached data including most flights returned by `Flight Offers Search` |
 | `Flight Delay Prediction` | No data restrictions in test |
 | `Airport On-time Performance` | No data restrictions in test |
 
-## Airport
-
+### Airlines
 | API      | Test data |
 | :----------- | :----------- |
 | `Airline Code Lookup` | No data restrictions in test |
 | `Flight Check-in Links` | See list of [valid airlines](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md) |
 
-## Airlines
-
+### Airport
 | API      | Test data |
 | :----------- | :----------- |
 | `Airport & City Search` | Cities/airports in the United States, Spain, the United Kingdom, Germany and India |
@@ -55,6 +53,7 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | `Airport Routes` | Cached data including most airlines |
 
 ## Hotel
+
 | API          | Test data |
 | :----------- | :----------- |
 | `Hotel Search`| See list of [valid hotel chains](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md). Content is provided directly by hotels and can change dynamically. Test with big cities like `LON` (London) or `NYC` (New-York).|
@@ -64,6 +63,7 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 
 
 ## Destination experiences
+
 | API      | Test data |
 | ----------- | ----------- |
 | `Points Of Interest` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
@@ -71,17 +71,17 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 
 
 ## Itinerary management 
+
 | API      | Test data |
 | ----------- | ----------- |
 | `Trip Parser` | No data restrictions in test |
 | `Trip Purpose Prediction` | No data restrictions in test |
 
 ## Market insights
+
 | API      | Test data |
 | ----------- | ----------- |
-| `Points Of Interest` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
-| `Location Score` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
-| `Tours and Activities` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
 | `Flight Most Traveled Destinations` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md) |
-| `Flight Busiest Traveling Period` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md)  |
 | `Flight Most Booked Destinations` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md)  |
+| `Flight Busiest Traveling Period` | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md)  |
+| `Location Score` | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md)|
