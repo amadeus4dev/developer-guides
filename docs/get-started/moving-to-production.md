@@ -7,11 +7,11 @@ When your application is ready to be deployed to the Real World™, you can requ
 To request a **production key**, you must complete the following steps:
 
 1. [Sign in](https://developers.amadeus.com/login) to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
-2. Select the application to move to `Production` and click `Get Production environment` (shown below):
+2. Select the application to move to `Production` and click `Get Production environment` :
 
 ![request_prod](../images/request_production_key.png)
 
-   3. Complete the form with your personal information, billing address and app information.
+   3. Complete the form with your personal information, billing address, and app information.
    4. Indicate whether your application uses `Flight Create Orders` in the checkbox at the bottom of the form. This API has special access requirements detailed below in the `Moving to Production with Flight Create Orders` section of this guide.
    5. Select your preferred method of payment \(credit card or bank transfer\) and provide the required billing information.
    6. Sign the Terms of Service agreement provided on `Docusign`. 
@@ -21,14 +21,14 @@ Once these steps are completed, your application status will be **pending**:
 
 ![pending](../images/app_pending.png)
 
-You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that validation period applies to your first production application. Subsequent applications will be validated automatically.
+You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that  the validation period applies to your first production application. Subsequent applications will be validated automatically.
 
 ![live](../images/app_live.png)
 
-> Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more informations.
+> Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more information.
 
 
-Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions on a monthly basis. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
+Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions every month. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
 
 ## Using the production key
 
@@ -37,12 +37,27 @@ Once you have a production key, you make the following changes to your source co
 1. Update the base URL for your API calls to point to `https://api.amadeus.com`.
 2. Update your `API key` and `API secret` with the new production keys.
 
-If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), initialize the client as shown below:
+If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), add `hostname='production'` in the client together with your API key and API secret as shown below example in [python SDK](https://github.com/amadeus4dev/amadeus-python):
 
+```python
+from amadeus import Client, ResponseError
 
-    amadeus = Client(client_id='YOUR_PRODUCTION_CLIENT_ID',
-                 client_secret='YOUR_PRODUCTION_CLIENT_SECRET',
-                 hostname='production')
+amadeus = Client(
+    client_id='REPLACE_BY_YOUR_API_KEY',
+    client_secret='REPLACE_BY_YOUR_API_SECRET',
+    hostname='production'
+)
+
+try:
+    response = amadeus.shopping.flight_offers_search.get(
+        originLocationCode='MAD',
+        destinationLocationCode='ATH',
+        departureDate='2022-11-01',
+        adults=1)
+    print(response.data)
+except ResponseError as error:
+    print(error)
+```
 
 
 ## Moving to production with the Flight Create Orders API
