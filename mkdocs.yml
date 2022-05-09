@@ -67,6 +67,7 @@ nav:
         - Pagination: guides/pagination.md
         - Rate limits: guides/api-rate-limits.md
         - Test data collection: guides/api-data-collection.md
+        - OpenAPI: guides/open-api.md
     - API Tutorials:
         - Covid-19 & travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
