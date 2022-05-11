@@ -1,6 +1,6 @@
 # OpenAPI
 
-Amadeus for Developer provides a set of Self Service APIs which was implemented
+Amadeus for Developers provides a set of Self-Service APIs which was implemented
 with the approach API first, so we provide the API specification in OpenAPI format
 before any implementation. 
 
