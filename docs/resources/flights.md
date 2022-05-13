@@ -252,6 +252,9 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
   } 
 }' 
 ```
+### Search using loyalty programs
+
+`Flight Offers Price` and `SeatMap Display` APIs both accept Frequent Flyer information so endusers can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
 
 ## Confirm Fares
 
@@ -681,10 +684,6 @@ The `Flight Offers Price` API confirms the final price and availability of a far
 curl https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
 ```
 
-## Post-booking modifications 
-
-With the current version of our Self-Service APIs, you can’t add additional baggage after the flight has been booked. This and other post-booking modifications must be handled directly with the airline consolidator that is issuing tickets on your behalf.   
-
 ## Common Errors
 
 ### Issuance not allowed in Self Service 
@@ -711,9 +710,35 @@ following error:
     }
   ]
 }
-```
+
 If you receive this error, reconfirm the fare price with the Flight Offers Price API before booking.
 
-## Limitation 
+```
+The following is a common error in the test environment, as you can perform many bookings without restrictions (no real payment), but the inventory is a copy of the real one, so if you book many seats, the inventory will be empty and you won't be able to book anymore.
+
+```json
+{
+            "status": 400,
+            "code": 34651,
+            "title": "SEGMENT SELL FAILURE",
+            "detail": "Could not sell segment 1"
+        }
+```
+
+## Notes
+
+### Carriers and rates
+
 - Low cost carriers (LCCs), American Airlines are not available. Depending on the market British Airways is also not available.
-- Published rates only. Cannot access to negotiated rates, or any other special rates. 
+- Published rates only returned in Self-Service. Cannot access to negotiated rates, or any other special rates. 
+
+### Post-booking modifications 
+
+With the current version of our Self-Service APIs, you can’t add additional baggage after the flight has been booked. This and other post-booking modifications must be handled directly with the airline consolidator that is issuing tickets on your behalf.   
+
+### How payment works
+
+There are two things to consider regarding payments for flight booking:
+
+- The payment between you (the app owner) and your customers (for the services provided + the price of the flight ticket). You decide how to collect this payment, it is not included in the API. A third party payment gateway, like Stripe for example will be the easier solution for this.
+- The payment between you and the consolidator (to be able to pay the airline and issue the flight ticket). This will be done between you and your consolidator of choice, and is to be agreed with the consolidator.
