@@ -252,7 +252,8 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
   } 
 }' 
 ```
-## Confirming Fares
+
+## Confirm Fares
 
 The availability and price of airfare fluctuate so it’s important to confirm
 before proceeding to book. This is especially true if time passes between the
@@ -283,7 +284,7 @@ payment information.
     }
 ```
 
-## Booking a Flight
+## Book a Flight
 
 Once the fare is confirmed, you’re ready to use the _Flight Create Orders API_
 to perform the actual booking. This API lets you log a reservation in the
@@ -299,7 +300,7 @@ Flight Create Order API. To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
 yourself. 
 
-## Issuing a ticket
+## Issue a ticket
 
 Once the booking is made, you need to complete payment. In most cases, you’ll
 receive payment from the customer and then pay the airline, typically via an
@@ -314,16 +315,386 @@ only certain accredited parties can issue tickets. In the next section, we’ll
 go into detail about your options for managing this final step in the booking
 process.
 
+## Understand the aircraft cabin layout
+
+- `deckConfiguration` - the dimensions of the passenger deck in (x,y) coordinates, including the location of the wings, exit rows, and cabins. These dimensions form a grid on which you will later place facilities and seats.
+- `facilities` - the (x,y) coordinates of aircraft facilities like bathrooms or galleys.
+- `seats` - the (x,y) coordinates of all seats on the aircraft, with their respective availability status, characteristics, and prices.
+
+To help you build a more consistent display, the API returns a uniform width for all cabins and classes. Rows with special seating like business class or extra-legroom seats have fewer seats per row (e.g., 4 seats for width of 7 coordinates) than economy rows (e.g. 7 seats for a width of 7 coordinates).
+
+Check out this [video tutorial](https://youtu.be/uTOQjGsZLfI) for more details. 
+
+### Display in-flight amenities
+Both endpoints of the SeatMap Display API return information about the following in-flight amenities:
+
+- Seat
+- Wi-fi
+- Entertainment
+- Power
+- Food
+- Beverage
+
+### Select a seat 
+
+Requests to either endpoint of SeatMap Display will return a list of seating options with their characteristics, pricing, and coordinates. Let's look at an example response:
+
+```json
+{
+                "cabin": "M",
+                "number": "20D",
+                "characteristicsCodes": [
+                  "A",
+                  "CH",
+                  "RS"
+                ],
+                "travelerPricing": [
+                  {
+                    "travelerId": "1",
+                    "seatAvailabilityStatus": "AVAILABLE",
+                    "price": {
+                      "currency": "EUR",
+                      "total": "17.00",
+                      "base": "17.00",
+                      "taxes": [
+                        {
+                          "amount": "0.00",
+                          "code": "SUPPLIER"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "coordinates": {
+                  "x": 10,
+                  "y": 4
+                }
+              },
+```
+For each seat, the SeatMap Display API provides a seatAvailabilityStatus so you can indicate which seats are currently available for booking. Seats may have one of three availability statuses:
+
+- `AVAILABLE` – the seat is not occupied and is available to book.
+- `BLOCKED` – the seat is not occupied but isn’t available to book for the user. This is usually due to the passenger type (e.g., children may not sit in exit rows) or their fare class (e.g., some seats may be reserved for flyers in higher classes).
+- `OCCUPIED` – the seat is  occupied and unavailable to book.
+
+If a flight is fully booked, the API returns an OCCUPIED status for all seats. In most cases, fully booked flights are filtered out during search with Flight Offers Search or when confirming the price with Flight Offers Price. Flight Create Orders returns an error message if you try to book an unavailable seat. For more information on the booking flow, check out how to build a flight booking engine.
+
+Once your user has selected their seat, the next step is to add the desired seat to the flight offer and prepare them for booking.
+
+I the above example response, seat `20D` is indicated as `AVAILABLE`. For your user to be able to book the seat, you must add the seat to the flightOffer object and call `Flight Offers Price` to get a final order summary with the included seat.
+
+To include the seat in the flightOffer object, add it to `fareDetailsBySegment` → `additionalServices` → `chargeableSeatNumber`, as shown below:
+
+```json
+"fareDetailsBySegment": [
+            {
+            "additionalServices": {
+             "chargeableSeatNumber": "20D"
+              },
+              "segmentId": "60",
+              "cabin": "ECONOMY",
+              "fareBasis": "NLYO5L",
+              "brandedFare": "LITE",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 0
+              }
+            }
+          ]
+```
+
+Flight Offers Price then returns the flightOffer object with the price of the chosen seat included within additionalServices:
+
+```json
+"additionalServices":
+            {
+              "type": "SEATS",
+              "amount": "17.00"
+            }
+          ],
+```
+
+You can use this same process to select seats for multiple passengers. For each passenger, you must add the selected seats in `fareDetailsBySegment` for each `travelerId` within the flight offer.
+
+At this point, you now have a priced flightOffer which includes your user's selected seat. The final step is to book the flight using `Flight Create Orders API`. To do this, simply pass the flightOffer object into a request to Flight Create Orders API, which will book the flight and return an order summary and a booking Id.
+
+## Add additional baggage
+
+### Search additional baggage options
+
+The first step is to find the desired flight offer using the `Flight Offers Search` API. Each flight offer contains an `additionalServices` field with the types of additional services available, in this case bags, and the maximum price of the first additional bag under. Note that at this point, the price is for informational purposes only.  
+
+To get the final price of the added baggage with the airline policy and the traveler's tier level taken into account, you must call `Flight Offers Price`. To do this, add the `include=bags` parameter in the path of the Flight Offers Price API: 
+
+```bash
+curl https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=bags 
+```
+
+As you see below, the API returns the catalog of baggage options with the price and quantity (or weight): 
+
+```json
+"bags": { 
+    "1": { 
+        "quantity": 1, 
+        "name": "CHECKED_BAG", 
+        "price": { 
+            "amount": "25.00", 
+            "currencyCode": "EUR" 
+        }, 
+        "bookableByItinerary": true, 
+        "segmentIds": [ 
+            "1", 
+            "14" 
+        ], 
+        "travelerIds": [ 
+            "1" 
+        ] 
+    } 
+    "2": {  
+        "quantity": 2, 
+        "name": "CHECKED_BAG", 
+        "price": { 
+            "amount": "50.00", 
+            "currencyCode": "EUR" 
+        }, 
+        "bookableByItinerary": true, 
+        "segmentIds": [ 
+            "1", 
+            "14" 
+        ], 
+        "travelerIds": [ 
+            "1" 
+        ] 
+    } 
+} 
+```
+
+The `Flight Offers Price` API returns two bag offers for the given flight. The catalog shows that either one or two bags are available to be booked per passenger. Higher bag quantity will be rejected due to the airline's policy.
+
+In the example above, the price of two bags is double that of one bag, though some airlines do offer discounts for purchasing more than one checked bag. Each bag offer is coupled to the specific segment and traveler id returned in each bag offer. 
+
+If there is no extra baggage service available, the API won’t return a baggage catalog. 
+
+### Add additional baggage to the flight offer
+
+Next, you must add the additional baggage to the desired flight segments. This gives you the flexibility to include extra bags on only certain segments of the flight.  
+
+Fill in `chargeableCheckedBags` with the desired quantity (or weight, depending on what the airline returns) in `travelerPricings/fareDetailsBySegment/additionalServices`, as shown below:
+
+```json
+"fareDetailsBySegment": [{ 
+    "segmentId": "1", 
+    "cabin": "ECONOMY", 
+    "fareBasis": "TNOBAGD", 
+    "brandedFare": "GOLIGHT", 
+    "class": "T", 
+    "includedCheckedBags": { 
+        "quantity": 0 
+    }, 
+    "additionalServices": { 
+        "chargeableCheckedBags": { 
+            "quantity": 1 
+        } 
+    } 
+}] 
+```
+
+### Confirm the final price and book
+
+Once you’ve added the desired bags to the flight order, you must call Flight Offers Price API to get the final price of the flight with all additional services included. Once this is done, you can then call the `Flight Create Orders` API to book the flight. If you want to add different numbers of bags for different itineraries, you can do it following the same flow. 
+
+If the desired flight you want to book does not permit the additional service, `Flight Create Orders` will reject the booking and return the following error:
+
+```json
+{ 
+    "errors": [{ 
+        "status": 400, 
+        "code": 38034, 
+        "title": "ONE OR MORE SERVICES ARE NOT AVAILABLE", 
+        "detail": "Error booking additional services" 
+    }] 
+} 
+```
+
+## Book branded fares 
+
+Branded fares are airfares that bundle tickets with extras like checked bags, seat selection, refundability or loyalty points accrual. Each airline defines and packages its own branded fares and they vary from one airline to another. Branded fares not only help build brand recognition and loyalty, but also offer travelers an attractive deal as the incremental cost of the fare is usually less than that of buying the included services à la carte.  
+
+The `Branded Fares Upsell API` API receives flight offers from the Flight Offers Search and returns branded fares as flight offers which can be easily passed to the next step in the booking funnel. The booking flow is the following: 
+
+- Search for flights using Flight Offers Search. 
+- Find branded fare options for a selected flight using Branded Fares Upsell. 
+- Confirm the fare and get the final price using Flight Offers Price. 
+- Book the flight using Flight Create Orders. 
+
+Let's see an example of how to search for branded fares. 
+
+You can build the request by passing the flight-offer object from Flight Offers Search into the body of the `POST` request:
+
+```bash
+curl https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
+```
+
+```json
+{ 
+  "data": { 
+    "type": "flight-offers-upselling", 
+    "flightOffers": [ 
+      {
+            "type": "flight-offer",
+            "id": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2022-06-12",
+            "numberOfBookableSeats": 3,
+            "itineraries": [
+                {
+                    "duration": "PT6H10M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "MAD",
+                                "terminal": "1",
+                                "at": "2022-06-22T17:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "FCO",
+                                "terminal": "1",
+                                "at": "2022-06-22T20:05:00"
+                            },
+                            "carrierCode": "AZ",
+                            "number": "63",
+                            "aircraft": {
+                                "code": "32S"
+                            },
+                            "operating": {
+                                "carrierCode": "AZ"
+                            },
+                            "duration": "PT2H25M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "FCO",
+                                "terminal": "1",
+                                "at": "2022-06-22T21:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ATH",
+                                "at": "2022-06-23T00:50:00"
+                            },
+                            "carrierCode": "AZ",
+                            "number": "722",
+                            "aircraft": {
+                                "code": "32S"
+                            },
+                            "operating": {
+                                "carrierCode": "AZ"
+                            },
+                            "duration": "PT2H",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "81.95",
+                "base": "18.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "81.95",
+                "additionalServices": [
+                    {
+                        "amount": "45.00",
+                        "type": "CHECKED_BAGS"
+                    }
+                ]
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": false
+            },
+            "validatingAirlineCodes": [
+                "AZ"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "81.95",
+                        "base": "18.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "OOLGEU1",
+                            "class": "O",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "OOLGEU1",
+                            "brandedFare": "ECOLIGHT",
+                            "class": "O",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        } 
+    ]
+  } 
+}  
+```
+
+## Return fare rules 
+
+The `Flight Offers Price` API confirms the final price and availability of a fare. It also returns detailed fare rules, including the cancellation policy and other information. To get the fare rules, add the parameter `include=detailed-fare-rules` to your API call, as shown below: 
+
+````bash
+curl https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
+```
+
+## Post-booking modifications 
+
+With the current version of our Self-Service APIs, you can’t add additional baggage after the flight has been booked. This and other post-booking modifications must be handled directly with the airline consolidator that is issuing tickets on your behalf.   
+
 ## Common Errors
 
-###  Issuance not allowed in Self Service 
+### Issuance not allowed in Self Service 
 
 Self-Service users must work with an airline consolidator that can issue
 tickets on your behalf. In that case, the payment is not processed by the API
 but directly between you and the consolidator. Adding a form of payment into
 the Flight Create Orders API will be rejected by error INVALID FORMAT.
 
-###  Price discrepancy 
+### Price discrepancy 
 
 The price of airfare fluctuates constantly. Creating an order for a flight
 whose price is no longer valid at the time of booking will trigger the
@@ -342,3 +713,7 @@ following error:
 }
 ```
 If you receive this error, reconfirm the fare price with the Flight Offers Price API before booking.
+
+## Limitation 
+- Low cost carriers (LCCs), American Airlines are not available. Depending on the market British Airways is also not available.
+- Published rates only. Cannot access to negotiated rates, or any other special rates. 
