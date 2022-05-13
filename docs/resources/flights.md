@@ -7,7 +7,7 @@
 The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) provides a list of destinations from a given airport that is ordered by price and can be filtered by departure date or maximum price. The following request, retrieves a list of destinations from Boston:
 
 ```bash
-curl https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
+GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
 ```
 
 !!!information
@@ -48,7 +48,7 @@ and allows you to order by price, departure date or duration.
 The following example retrieves a list of `flight-date` objects containing pricing information given the origin and destination, and a range of dates:
 
 ```bash
-curl https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
 ```
 
 The API provides a link to Flight Offers Search to search for flights once a
@@ -81,7 +81,7 @@ The API comes in two flavors:
 The minimum `GET` request has following parameters:
 
 ```bash
-curl https://test.api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
+GET https://test.api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
 ```
 
 The API returns a list of `flight-offer` objects (up to 250), including
@@ -121,24 +121,24 @@ information such as itineraries, price, pricing options, etc.
 
 #### Flight Offers Prediction
 
-The Flight Choice Prediction API predicts the flight your users will choose.
+The [Flight Choice Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) predicts the flight your users will choose.
 Our machine-learning models have analyzed historical interactions with the
-Flight Low-Fare Search API and can determine each flight’s probability of being
+`Flight Offers Search` API and can determine each flight’s probability of being
 chosen. Boost conversions and create a personalized experience by filtering out
 the noise and showing your users the flights which are best for them.
 
-Here is a quick cURL example piping Low fare search API results directly to the prediction API, stay tuned for SDK updates with more helpers!
+Here is a quick cURL example piping Flight Offers Search API results directly to the prediction API.
 
 Let’s look at flight offers for a Madrid-New York round trip (limiting to 4 options for this test illustration)
 
 ```bash
 curl --request GET \
      --header 'Authorization: Bearer <token>' \
-     --url https://test.api.amadeus.com/v1/shopping/flight-offers\?origin\=MAD\&destination\=NYC\&departureDate\=2019-08-24\&returnDate\=2019-09-19\&max\=4 \
+     --url https://test.api.amadeus.com/v2/shopping/flight-offers\?origin\=MAD\&destination\=NYC\&departureDate\=2019-08-24\&returnDate\=2019-09-19\&adults\=1 \
 | curl --request POST \
        --header 'content-type: application/json' \
        --header 'Authorization: Bearer <token>' \
-       --url https://test.api.amadeus.com/v1/shopping/flight-offers/prediction --data @-
+       --url https://test.api.amadeus.com/v2/shopping/flight-offers/prediction --data @-
 ```
 
 The prediction API returns the same content as Low Fare search with the
@@ -252,7 +252,7 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
   } 
 }' 
 ```
-### Search using loyalty programs
+#### Search using loyalty programs
 
 `Flight Offers Price` and `SeatMap Display` APIs both accept Frequent Flyer information so endusers can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
 
@@ -262,7 +262,7 @@ The availability and price of airfare fluctuate so it’s important to confirm
 before proceeding to book. This is especially true if time passes between the
 initial search and the decision to book, as fares are limited and there are
 thousands of bookings occurring every minute. During this step, you can also
-add ancillary products like extra bags or legroom.
+add ancillary products like extra bags or legroom. For that you can use the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price).
 
 Once a flight has been selected, you’ll need to confirm the availability and
 price of the fare. This is where the Flight Offers Price API comes in. This API
@@ -289,7 +289,7 @@ payment information.
 
 ## Book a Flight
 
-Once the fare is confirmed, you’re ready to use the _Flight Create Orders API_
+Once the fare is confirmed, you’re ready to use the `Flight Create Orders` API
 to perform the actual booking. This API lets you log a reservation in the
 airlines’ systems and create a PNR, and returns a unique ID number and the
 reservation details. If you’re using an airline consolidator, the PNR will be
@@ -318,7 +318,9 @@ only certain accredited parties can issue tickets. In the next section, we’ll
 go into detail about your options for managing this final step in the booking
 process.
 
-## Understand the aircraft cabin layout
+## The aircraft cabin layout
+
+With the SeatMap Display API you can view the aircraft cabin layout: 
 
 - `deckConfiguration` - the dimensions of the passenger deck in (x,y) coordinates, including the location of the wings, exit rows, and cabins. These dimensions form a grid on which you will later place facilities and seats.
 - `facilities` - the (x,y) coordinates of aircraft facilities like bathrooms or galleys.
@@ -430,7 +432,7 @@ The first step is to find the desired flight offer using the `Flight Offers Sear
 To get the final price of the added baggage with the airline policy and the traveler's tier level taken into account, you must call `Flight Offers Price`. To do this, add the `include=bags` parameter in the path of the Flight Offers Price API: 
 
 ```bash
-curl https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=bags 
+POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=bags 
 ```
 
 As you see below, the API returns the catalog of baggage options with the price and quantity (or weight): 
@@ -535,7 +537,7 @@ Let's see an example of how to search for branded fares.
 You can build the request by passing the flight-offer object from Flight Offers Search into the body of the `POST` request:
 
 ```bash
-curl https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
+POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 ```
 
 ```json
@@ -680,13 +682,13 @@ curl https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 
 The `Flight Offers Price` API confirms the final price and availability of a fare. It also returns detailed fare rules, including the cancellation policy and other information. To get the fare rules, add the parameter `include=detailed-fare-rules` to your API call, as shown below: 
 
-````bash
-curl https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
+```bash
+POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
 ```
 
 ## Common Errors
 
-### Issuance not allowed in Self Service 
+### Issuance not allowed in Self Service
 
 Self-Service users must work with an airline consolidator that can issue
 tickets on your behalf. In that case, the payment is not processed by the API
