@@ -303,6 +303,8 @@ Flight Create Order API. To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
 yourself. 
 
+You can see the process step to step in this [video tutorial](https://www.youtube.com/watch?v=OEX7k6d52Ic&feature=youtu.be).
+
 ## Issue a ticket
 
 Once the booking is made, you need to complete payment. In most cases, you’ll
@@ -676,6 +678,26 @@ POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
     ]
   } 
 }  
+```
+
+## Cancel a reservation
+
+Just as you can help users book a flight with Flight Create Orders, you can now also help them cancel their reservations with [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) API. However, you have a limited window of time to cancel via API. If you’re working with an airline consolidator for ticketing, cancellations via API are generally only allowed while the order is queued for ticketing. Once the ticket has been issued, you’ll have to contact your consolidator directly to handle the cancellation
+
+To call Flight Order Management, you have pass as a parameter the flight-orderId from the Flight Create Orders API, such as:
+
+```bash
+DELETE https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2fAiY
+```
+
+## View reservation details
+
+With the Flight Order Management API you can consult and check your flight reservation. 
+
+To call Flight Order Management, you have pass as a parameter the flight-orderId from the Flight Create Orders API, such as:
+
+```bash
+GET https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2fAiY
 ```
 
 ## Return fare rules 
