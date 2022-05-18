@@ -119,6 +119,16 @@ information such as itineraries, price, pricing options, etc.
   ]
 ```
 
+#### Include or exclude specific airlines 
+
+If you want your search to return flights with only specified airlines, you can use the parameter `includedAirlineCodes` to consider specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens only with Aegean Airlines (A3): 
+
+`GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&includedAirlineCodes=A3&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2022-12-06`
+
+With the parameter `excludedAirlineCodes` you can ignore specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens ignoring both Aegean Airlines (A3) and Iberia (IB):
+
+`GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06`
+
 #### Flight Offers Prediction
 
 The [Flight Choice Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) predicts the flight your users will choose.
@@ -255,6 +265,36 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 #### Search using loyalty programs
 
 `Flight Offers Price` and `SeatMap Display` APIs both accept Frequent Flyer information so endusers can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
+
+### Recommend destinations to travelers 
+
+The `Travel Recommendations` API  provides personalized destinations based on the traveler location and an input destination, such as a previously searched flight destination or city of interest.
+
+For example for a  traveler based in San Francisco who has searched for multiple flights for Barcelona, what other similar destinations the API could recommend? The API  takes as input the country of the traveler and the IATA code of the city who has been searching for, in our case US and BCN respectively. 
+
+`GET https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=BCN&travelerCountryCode=US`
+
+The response will look like:
+
+```json
+{
+     "type": "flight-date",
+     "origin": "SFO",
+     "destination": "ROM",
+     "departureDate": "2021-09-19",
+     "returnDate": "2021-09-23",
+     "price": {
+         "total": "348.75"
+     },
+     "links": {
+         "flightDestinations": "https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=SFO&departureDate=2021-04-15,2021-10-11&oneWay=false&duration=1,15&nonStop=false&viewBy=DURATION",
+         "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SFO&destinationLocationCode=ROM&departureDate=2021-09-19&returnDate=2021-09-23&adults=1&nonStop=false"
+     }
+ }
+```
+
+ If you want to take it to the next level you can call the `Flight Cheapest Date Search` API to let the users know not only the recommended destinations but also which are the cheapest dates to visit any of these cities. For real-time flights you can also call the `Flight Offers Search` API. The Travel Recommendations API has returned links to both APIS. 
+
 
 ## Confirm Fares
 
