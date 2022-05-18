@@ -169,7 +169,7 @@ With the parameter `excludedAirlineCodes` you can ignore specific airlines. For 
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06`
 
-#### Flight Offers Prediction
+#### Find the best flight option
 
 The [Flight Choice Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) predicts the flight your users will choose.
 Our machine-learning models have analyzed historical interactions with the
@@ -306,7 +306,7 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 
 `Flight Offers Price` and `SeatMap Display` APIs both accept Frequent Flyer information so endusers can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
 
-### Recommend destinations to travelers 
+### Recommend personalized destinations
 
 The `Travel Recommendations` API  provides personalized destinations based on the traveler location and an input destination, such as a previously searched flight destination or city of interest.
 
@@ -335,6 +335,107 @@ The response will look like:
 
  If you want to take it to the next level you can call the `Flight Cheapest Date Search` API to let the users know not only the recommended destinations but also which are the cheapest dates to visit any of these cities. For real-time flights you can also call the `Flight Offers Search` API. The Travel Recommendations API has returned links to both APIS. 
 
+### Recommend nearby destinations 
+
+With the `Airport Nearest Relevant` API you can find the closest major airports to a starting point. By default, results are sorted by relevance but they can also be sorted by `distance`, `flights`, `travelers` using the parameter `sort`.
+
+!!!information
+    To get the latitude and longitude of a city you can use the `Airport & City Search` API with input the IATA code of the city and in the output you can find the geolocation coordinates. 
+
+Let's call the Airport Nearest Relevant API to find airports in 500km radius of Madrid.
+
+`GET https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=40.416775&longitude=-3.703790&radius=500`
+
+A part of the response looks like:
+ 
+```json
+        {
+            "type": "location",
+            "subType": "AIRPORT",
+            "name": "AIRPORT",
+            "detailedName": "BARCELONA/ES:AIRPORT",
+            "timeZoneOffset": "+02:00",
+            "iataCode": "BCN",
+            "geoCode": {
+                "latitude": 41.29694,
+                "longitude": 2.07833
+            },
+            "address": {
+                "cityName": "BARCELONA",
+                "cityCode": "BCN",
+                "countryName": "SPAIN",
+                "countryCode": "ES",
+                "regionCode": "EUROP"
+            },
+            "distance": {
+                "value": 496,
+                "unit": "KM"
+            },
+            "analytics": {
+                "flights": {
+                    "score": 25
+                },
+                "travelers": {
+                    "score": 25
+                }
+            },
+            "relevance": 5.11921
+        }
+```
+What we want to do at this point is to find the cheapest dates for all these destinations. 
+
+We can do this by calling the `Flight Cheapest Date` API which finds the cheapest dates to travel from one city to another. Let's see for example the cheapest dates to fly to Barcelona in November 2022. 
+
+`GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MAD&destination=BCN&departureDate=2021-05-01,2021-05-30`
+
+```json
+{
+    "type": "flight-date",
+    "origin": "MAD",
+    "destination": "BCN",
+    "departureDate": "2021-05-29",
+    "returnDate": "2021-06-11",
+    "price": {
+        "total": "73.61"
+    },
+    "links": {
+        "flightDestinations": "https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=MAD&departureDate=2021-05-01,2021-05-30&oneWay=false&duration=1,15&nonStop=false&viewBy=DURATION",
+        "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2022-09-29&returnDate=2021-06-11&adults=1&nonStop=false"
+    },
+{
+    "type": "flight-date",
+    "origin": "MAD",
+    "destination": "BCN",
+    "departureDate": "2021-05-05",
+    "returnDate": "2021-05-06",
+    "price": {
+        "total": "79.67"
+    },
+    "links": {
+        "flightDestinations": "https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=MAD&departureDate=2021-05-01,2021-05-30&oneWay=false&duration=1,15&nonStop=false&viewBy=DURATION",
+        "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-05&returnDate=2021-05-06&adults=1&nonStop=false"
+    }
+},
+{
+    "type": "flight-date",
+    "origin": "MAD",
+    "destination": "BCN",
+    "departureDate": "2021-05-02",
+    "returnDate": "2021-05-06",
+    "price": {
+        "total": "80.61"
+    },
+    "links": {
+        "flightDestinations": "https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=MAD&departureDate=2021-05-01,2021-05-30&oneWay=false&duration=1,15&nonStop=false&viewBy=DURATION",
+        "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-02&returnDate=2021-05-06&adults=1&nonStop=false"
+    }
+}
+```
+As you can see above in the results we have a list of dates for a roundtrip Madrid to Barcelona ordered by the cheapest price.
+
+As last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the Flight Cheapest Date API for each result contains a link to the Flight Offers Search API. For example if we want to perform a flight search for the first result we only have to take the link provided and make an API call:
+
+`GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false`
 
 ## Confirm Fares
 
