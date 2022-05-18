@@ -36,6 +36,47 @@ cheapest dates to fly:
     ]
 ```
 
+#### Search for destinations for a specific duration of stay
+
+For example let's say a traveler wants to spend 6 days in a city but doesn't have a strong preference for the destination. With the Flight Inspiration API we can recommend to the traveler the cheapest destinations based on the duration tine. 
+
+This can be done by using the parameter `viewBy` which returns flight destinations by `DATE`, `DESTINATION`, `DURATION`, `WEEK`, or `COUNTRY`. In our scenario we need to pass the value `DURATION` to the parameter `viewBy`, like the example below. Also, as input we give a duration of 6 days and origin Miami and that the departure date will be between the 1st and 3rd of September 2021.
+
+`GET https://test.api.amadeus.com/v1/shopping/flight-destinations?departureDate=2021-09-01,2021-09-03&duration=6&origin=MIA&viewBy=DURATION`
+
+```json
+  {
+            "type": "flight-destination",
+            "origin": "MIA",
+            "destination": "MSP",
+            "departureDate": "2021-09-01",
+            "returnDate": "2021-09-07",
+            "price": {
+                "total": "136.79"
+            },
+            "links": {
+                "flightDates": "https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MIA&destination=MSP&departureDate=2021-09-01,2021-09-03&oneWay=false&duration=6&nonStop=false&viewBy=DURATION",
+                "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MIA&destinationLocationCode=MSP&departureDate=2021-09-01&returnDate=2021-09-07&adults=1&nonStop=false"
+            }
+        },
+        {
+            "type": "flight-destination",
+            "origin": "MIA",
+            "destination": "STT",
+            "departureDate": "2021-09-02",
+            "returnDate": "2021-09-08",
+            "price": {
+                "total": "137.36"
+            },
+            "links": {
+                "flightDates": "https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MIA&destination=STT&departureDate=2021-09-01,2021-09-03&oneWay=false&duration=6&nonStop=false&viewBy=DURATION",
+                "flightOffers": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MIA&destinationLocationCode=STT&departureDate=2021-09-02&returnDate=2021-09-08&adults=1&nonStop=false"
+            }
+        }
+```
+
+As you can see all the recommendations have a duration of 6 days and are sorted by the cheapest price. The API also provides link the Flight Offers Search for each result in order to check for available flights.
+
 ### Flexible Search on dates
 
 The [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) finds the cheapest dates to travel from one
@@ -53,7 +94,6 @@ GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination
 
 The API provides a link to Flight Offers Search to search for flights once a
 destination is chosen, in order to proceed with the booking flow.
-
 
 ### Offers Search
 
