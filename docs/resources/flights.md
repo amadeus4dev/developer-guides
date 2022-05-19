@@ -703,6 +703,141 @@ If the desired flight you want to book does not permit the additional service, `
     }] 
 } 
 ```
+## Check flight and fare availability
+
+With the `Flight Availabilities Search` you can check the flight and fare availability for any itinerary. This refers to the full inventory of fares available for an itinerary at any given time. The concept of flight availability originated the early days of flight booking as a way for agents to check what options existed for their travelers’ itineraries.
+
+Here’s an example request for a one-way flight from Mad (MIA) to Atlanta (ATL) for one traveler departing on December 12, 2022: 
+
+`POST https://test.api.amadeus.com/v1/shopping/availability/flight-availabilities`
+
+```json
+{
+    "originDestinations": [
+        {
+            "id": "1",
+            "originLocationCode": "MIA",
+            "destinationLocationCode": "ATL",
+            "departureDateTime": {
+                "date": "2021-11-01"
+            }
+        }
+    ],
+    "travelers": [
+        {
+            "id": "1",
+            "travelerType": "ADULT"
+        }
+    ],
+    "sources": [
+        "GDS"
+    ]
+}
+```
+
+The response contains a list of available flights matching our request criteria (for the sake of this example, we show the first result). Each flight availability includes descriptive data about the flight and an `availabilityClasses` list containing the available fare classes and the number of bookable seats remaining in each fare class.
+
+```json
+"data": [
+        {
+            "type": "flight-availability",
+            "id": "1",
+            "originDestinationId": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "paymentCardRequired": false,
+            "duration": "PT1H54M",
+            "segments": [
+                {
+                    "id": "1",
+                    "numberOfStops": 0,
+                    "blacklistedInEU": false,
+                    "departure": {
+                        "iataCode": "MIA",
+                        "at": "2021-11-01T05:30:00"
+                    },
+                    "arrival": {
+                        "iataCode": "ATL",
+                        "terminal": "S",
+                        "at": "2022-11-01T07:24:00"
+                    },
+                    "carrierCode": "DL",
+                    "number": "2307",
+                    "aircraft": {
+                        "code": "321"
+                    },
+                    "operating": {},
+                    "availabilityClasses": [
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "J"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "C"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "D"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "I"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "Z"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "W"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "Y"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "B"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "M"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "H"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "Q"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "K"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "L"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "U"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "T"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "E"
+                        }
+                    ]
+                }
+            ]
+        },
+```
+Note that airlines’ bookable seat counters goes up to a maximum of 9, even if more seats are available in that fare class. If there are less than 9 bookable seats available, the exact number is displayed.  
 
 ## Book branded fares 
 
