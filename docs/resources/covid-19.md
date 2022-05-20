@@ -48,7 +48,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930400878
 Let's highlight some information you get from both Travel Restrictions API and Safe Place API. 
 
 !!! Warning
-   Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/). 
+    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/). 
 
 !!! information
    - the data source of Travel Restrictions API is from [Riskline](https://riskline.com/) and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 
@@ -101,7 +101,7 @@ From the response of Safe Place API, you will get an overall safety score and sc
         }
 ```
 
-Safety scores range on a scale of 1-100, with 1 being the safest and 100 being the least safe. In this example of Seoul, South Korea, a “politicalFreedom” score of 28 indicates that the potential for infringement of political rights or political unrest is less likely to happen at this location.  
+**Safety scores range on a scale of 1-100, with 1 being the safest and 100 being the least safe.** In this example of Seoul, South Korea, a “politicalFreedom” score of 28 indicates that the potential for infringement of political rights or political unrest is less likely to happen at this location.  
 
 
 ### Get COVID-19 related statistics 
@@ -198,3 +198,5 @@ Entry information, which origin countries will be required for quarantine, entry
 
 ## Available blog articles 
 [Keep Travelers informed with Amadeus Travel Restrictions API](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api)
+
+[How to build a neighborhood safety map in Python with Amadeus Safe Place](https://developers.amadeus.com/blog/neighborhood-safety-map-python)
