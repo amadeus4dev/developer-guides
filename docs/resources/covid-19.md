@@ -191,7 +191,7 @@ Entry information, which origin countries will be required for quarantine, entry
                         "iataCode": "AF",
                         "areaType": "country"
                     },
-                    ....
+                    
 ```
 
 
