@@ -599,7 +599,6 @@ Flight Offers Price then returns the flightOffer object with the price of the ch
               "type": "SEATS",
               "amount": "17.00"
             }
-          ],
 ```
 
 You can use this same process to select seats for multiple passengers. For each passenger, you must add the selected seats in `fareDetailsBySegment` for each `travelerId` within the flight offer.
@@ -1050,10 +1049,11 @@ following error:
     }
   ]
 }
+```
 
 If you receive this error, reconfirm the fare price with the Flight Offers Price API before booking.
 
-```
+
 The following is a common error in the test environment, as you can perform many bookings without restrictions (no real payment), but the inventory is a copy of the real one, so if you book many seats, the inventory will be empty and you won't be able to book anymore.
 
 ```json
