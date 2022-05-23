@@ -1,7 +1,9 @@
 # Node SDK
 
-## Installation
+Amadeus Node SDK for Self-service APIs is available with `npm`(node package manager) and Amadeus for Developers team is continuosly updating with new APIs and features. 
+you can refer [Amadeus-node GitHub page](https://github.com/amadeus4dev/amadeus-node) or [Amadeus npm page](https://www.npmjs.com/package/amadeus) for more details of change logs and issues to be fixed for up-to-date usage. 
 
+## Installation
 This module has been tested using Node 6 and higher, though it should work with Node 4 and 5 as well. You can install it using Yarn or NPM.
 
 ```sh
@@ -9,12 +11,10 @@ npm install amadeus --save
 ```
 
 ## Getting Started
-
 To make your first API call, you will need to [register](https://developers.amadeus.com/register) for an Amadeus Developer Account and [set up your first application](https://developers.amadeus.com/my-apps).
 
 ```js
 var Amadeus = require('amadeus');
-
 var amadeus = new Amadeus({
   clientId: 'REPLACE_BY_YOUR_API_KEY',
   clientSecret: 'REPLACE_BY_YOUR_API_SECRET'
@@ -23,7 +23,7 @@ var amadeus = new Amadeus({
 amadeus.shopping.flightOffersSearch.get({
     originLocationCode: 'SYD',
     destinationLocationCode: 'BKK',
-    departureDate: '2020-08-01',
+    departureDate: '2022-10-21',
     adults: '2'
 }).then(function(response){
   console.log(response.data);
@@ -33,8 +33,8 @@ amadeus.shopping.flightOffersSearch.get({
 ```
 
 ## Initialization
+The client can be initialized directly as below. Your credentials `client Id` and `Client Secret` can be found on the [Amadeus dashboard](https://developers.amadeus.com/my-apps).
 
-The client can be initialized directly.
 
 ```js
 // Initialize using parameters
@@ -44,13 +44,36 @@ var amadeus = new Amadeus({
 });
 ```
 
-Alternatively, it can be initialized without any parameters if the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
+!!! warning
+    Remember that direct hard coding your credentials in your code is not the best practice due to the potential exposure them to others. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
 
-```js
-var amadeus = new Amadeus();
+
+Alternatively, you can initialize by setting up environment variables. In Node, we like to use [dotenv package](https://www.npmjs.com/package/dotenv). 
+
+```sh
+npm install dotenv
 ```
 
-Your credentials can be found on the [Amadeus dashboard](https://developers.amadeus.com/my-apps).
+Put your API credentials in `.env` file 
+```sh
+AMADEUS_CLIENT_ID=REPLACE_BY_YOUR_API_KEY,
+AMADEUS_CLIENT_SECRET=REPLACE_BY_YOUR_API_SECRET
+```
+
+Initialize using dotenv package
+```js
+	const dotenv = require('dotenv').config();
+	
+	var amadeus = new Amadeus({
+	  clientId: process.env.AMADEUS_CLIENT_ID,
+	  clientSecret: process.env.AMADEUS_CLIENT_SECRET
+	});
+```
+
+!!! important
+    You will also want to add `.env` to your `.gitingore` so that your API credentials aren't included in your git repository
+
+## Moving to Production
 
 By default, the SDK environment is set to `test` environment. To switch to a `production` (pay-as-you-go) environment, please switch the hostname as follows:
 
@@ -101,5 +124,5 @@ amadeus.referenceData.locations.get({
 If a page is not available, the response will resolve to `null`.
 
 
-## list of blogs
-https://developers.amadeus.com/blog/get-started-amadeus-node-sdk
+## Useful resources
+[Get Started amadeus Node SDK with Docker](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk)
