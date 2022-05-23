@@ -62,16 +62,25 @@ AMADEUS_CLIENT_SECRET=REPLACE_BY_YOUR_API_SECRET
 
 Initialize using dotenv package
 ```js
-	const dotenv = require('dotenv').config();
-	
-	var amadeus = new Amadeus({
-	  clientId: process.env.AMADEUS_CLIENT_ID,
-	  clientSecret: process.env.AMADEUS_CLIENT_SECRET
-	});
+const dotenv = require('dotenv').config();
+var amadeus = new Amadeus();
 ```
 
 !!! important
     You will also want to add `.env` to your `.gitingore` so that your API credentials aren't included in your git repository
+    
+If you don't want to use another package, you can also simply export your key in terminal directly to initalize.
+
+export your credentials in terminal 
+```sh
+export AMADEUS_CLIENT_ID="REPLACE_BY_YOUR_API_KEY"
+export AMADEUS_CLIENT_SECRET="REPLACE_BY_YOUR_API_SECRET"
+
+```
+Initialize without 
+```js
+var amadeus = new Amadeus();
+```
 
 ## Moving to Production
 
