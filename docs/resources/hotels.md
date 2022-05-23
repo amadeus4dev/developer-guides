@@ -110,6 +110,7 @@ curl https://test.api.amadeus.com/v2/e-reputation/hotel-sentiments?hotelIds=TELO
   }
 ]
 ```
+
 With these additional filters, your booking process is made more efficient and you can offer your customers an enriched shopping experience, confident that you are offering a hotel choice that is rated highly in the areas that customers most appreciate.
 
 
