@@ -1,193 +1,70 @@
 # Hotels
 
-The Amadeus Hotel Search and Hotel Booking APIs let you build a complete hotel
-booking engine in four easy steps. Learn how to get started and help your users
-book the perfect room at over 150,000 hotels worldwide.
+The [Amadeus Hotel APIs](https://developers.amadeus.com/self-service/category/hotel) lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings. 
 
-The three endpoints of the Hotel Search API let your users search hotels by
-destination, compare rates and rooms and get the final price of the stay. Once
-a room and rate are selected, you can help them complete the reservation with
-the Hotel Booking API. Here’s how it works.
-
-## Searching Hotels
-
-The API allows you to search for hotels for a given location and time. The
-endpoints are designed from the perspective of a funnel; i.e. to search broadly
-for all hotels, narrow down to a particular hotel and eventually its unique
-offers. A host of parameters allow the user to filter the response as per
-his/her need. This API thus renders enormous capabilities to build solutions
-for travelers not only for the hotels space, but also complement other travel
-scenarios or enrich apps with hotel-related information. 
-
-### Search hotels by location
-
-The first endpoint `/shopping/hotel-offers` provides a list of available hotels
-in a chosen location, which is defined by a city code or a set of GPS
-coordinates. You can customize the request with parameters like chain name,
-amenities, star ratings, board type and more. 
-
-```bash
-curl https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode=LON
-```
-
-The API returns a list of `hotel-offers` objects containing the price of the
-cheapest available room as well as information including the `hotelId`, location,
-address, rating, description, amenities, contact information. 
+Let's learn how to get started and help your users book the perfect rooms at over 150,000 hotels worldwide.
 
 !!! information
-    The API returns cached prices. To get real-time prices and
-    availability for a specific hotel, you’ll need to move to the second endpoint. 
+    This page has been updated based on `Hotel Search V3` updates since MAY 2022. 
 
-###  See rates for a chosen hotel 
+## Search hotels
 
-After selecting a hotel, the next step in the booking flow is to get a list the
-available offers. Hotel offers are various combinations of rooms, services and
-prices. A standard room or a studio suite? One bed or two? With breakfast and
-free cancellation? These are the factors that make up a hotel offer.
+### Get a list of hotels by location 
+First, Users should be able to search hotels for a given location. the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) returns the list of hotels based on a city or a geographic code to answer a question such as **"what are the hotels closed to the city hall?"** `Hotel List API` has 3 endpoints to utilize based on your search criteria. it returns `hotel name`, `location`, and `hotel id` for you to move to the next steps of the hotel search. 
 
-To get a list of `hotel-offers` for your desired hotel, just pass the `hotelId`
-from the response of the 1st endpoint into the request to the 2nd endpoint:
-
-```bash
-curl https://test.api.amadeus.com/v2/shopping/hotel-offers/by-hotel?hotelId=BGLONBGB
-```
-
-Where `BGLONBGB` belongs to the `hotelId` returned by the first endpoint. The
-endpoint will return a new list of `hotel-offers` objects, together with a 
-list of `offers`:
-
+based on the search criteria, you will get the list of `hotelId` with hotel information as below.
 ```json
-"offers": [
-    {
-        "id": "Y0UE4D1MUT",
-        "checkInDate": "2022-07-01",
-        "checkOutDate": "2022-07-02",
-        "rateCode": "PRO",
-        "rateFamilyEstimated": {
-            "code": "PRO",
-            "type": "P"
-        },
-        "commission": {
-            "percentage": "4.00"
-        },
-        "boardType": "ROOM_ONLY",
-        "room": {
-            "type": "ROH",
-            "typeEstimated": {
-                "category": "STANDARD_ROOM"
-            }
+        {
+            "chainCode": "AC",
+            "iataCode": "PAR",
+            "dupeId": 700169556,
+            "name": "ACROPOLIS HOTEL PARIS BOULOGNE",
+            "hotelId": "ACPARH29",
+            "geoCode": {
+                "latitude": 48.83593,
+                "longitude": 2.24922
+            },
+            "address": {
+                "countryCode": "FR"
+            },
+            "lastUpdate": "2022-03-01T15:22:17"
         }
-    }
 ```
 
+#### Search hotels by a city or Geocode 
 
-### Get the final price and conditions
+You can specify a [IATA city code](https://www.iata.org/en/publications/directories/code-search/) or Geocode to search a more specific area to get the list of hotels. You can customize the request with parameters like radius, chain code, amenities, star ratings, and hotel source. 
 
-The third step is to confirm the final price and availability of the chosen
-offer and get the full conditions. As there are thousands of people reserving
-hotels at any given second, the availability of a given room may change between
-the moment you search and the moment you decide to book. If you don’t confirm
-the price and availability, you may receive an error when it comes time to make
-the reservation. 
+for example, 
 
-The 3rd endpoint also returns the full conditions of the offer including
-cancellation policy, accepted methods of payment and a complete description of
-what’s included in the offer.
+With by-city endpoint, Get list of hotels in Paris with a swimming pool and more than 4 stars : 
+```bash
+curl https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&amenities=SWIMMING_POOL&ratings=4,5
+```
+
+With by-geocode endpoint, Get list of hotels in Paris(latitude=41.397158 and longitude=2.160873) : 
+```bash
+curl https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873
+```
+
+#### Search hotels by hotel ids
+
+If you already know the hotel ids that you would like to know, you can use them as well to request hotel information by requesting `Hotel List API`. 
 
 ```bash
-curl https://test.api.amadeus.com/v2/shopping/hotel-offers/Y0UE4D1MUT
+curl https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?hotelIds=ACPARF58
 ```
 
-This endpoint takes the offer Id obtained in the previous step as a URL
-parameter. 
+### Autocomplete Hotel Names 
 
-Now that you have found the offer (and its Id) you want and confirmed the price and
-availability, you're ready to book! 
+If you want to serve your user better when they search hotels, `Hotel Name Autocomplete API` - to be updated 
 
+### Display Hotel Ratings
 
-## Booking the Hotel
+When users search for Hotels in a desired area, they may wonder about the rate of each hotel in detail. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) returns a rating for many of the crucial elements of a hotel; whether that be sleep quality, services, facilities, room
+comforts, value for money, location and many other variables. `Hotel Ratings API` guarantees high-quality service for your customers.
 
-The Hotel Booking API is the final step in the booking flow. By making a `POST`
-request with the offer Id returned by the Hotel Search API, the guest
-information and the payment information, you can create a booking directly on
-the hotel reservation system. 
-
-```bash
-curl https://test.api.amadeus.com/v1/booking/hotel-bookings \
---data-raw '{
-  "data": {
-    "offerId": "Y0UE4D1MUT",
-    "guests": [
-      {
-        "id": 1,
-        "name": {
-          "title": "MR",
-          "firstName": "BOB",
-          "lastName": "SMITH"
-        },
-        "contact": {
-          "phone": "+33679278416",
-          "email": "bob.smith@email.com"
-        }
-      }
-    ],
-    "payments": [
-      {
-        "id": 1,
-        "method": "creditCard",
-        "card": {
-          "vendorCode": "VI",
-          "cardNumber": "4151289722471370",
-          "expiryDate": "2023-08"
-        }
-      }
-    ],
-    "rooms": [
-      {
-        "guestIds": [
-          1
-        ],
-        "paymentId": 1,
-        "specialRequest": "I will arrive at midnight"
-      }
-    ]
-  }
-}'
-```
-
-Congratulations, you’ve just performed your first hotel booking! Once the
-reservation is made, the API will return a unique booking confirmation ID which
-you can send to your users. 
-
-### Notes about Payment
-
-The Hotel Search API returns information about the payment policy of each
-hotel. The main policy types are: 
-
-- Guarantee: the hotel will save credit card information during booking but not make any charge to the account. In the case of a no-show or out-of-policy cancellation, the hotel may charge penalties to the card. 
-- Deposit: at the time or booking or on a given deadline, the hotel will charge the guest a percentage of the total amount of the reservation. The remaining amount is paid by the traveler directly at the hotel. 
-- Prepay: the total amount of the reservation must be paid by the traveler during booking. 
-
-The current version of the Hotel Booking API only permits booking at hotels
-that accept credit cards. During the booking process, Amadeus passes the
-payment and guest information to the hotel but does not validate information.
-Be sure to validate the payment and guest information, as invalid information
-may result in the reservation being cancelled. 
-
-As soon as your application stores, transmits, or processes cardholder
-information, you will need to comply with PCI Data Security Standard (PCI DSS).
-For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants). 
-
-
-## Getting Hotel Ratings
-
-Amadeus Hotel Ratings API returns a rating for many of the crucial elements of
-a hotel’s offer; whether that be sleep quality, services, facilities, room
-comforts, value for money, location and many other variables. Hotel Ratings API
-guarantees high-quality service for your customers.
-
-The sentiment analysis, just like the one below, is displayed in a simple flow
-to allow you to easily identify the best hotels based on traveler reviews:
+The sentiment analysis, just like the one below, is displayed in a simple flow to allow you to easily identify the best hotels based on traveler reviews:
 
 ```bash
 curl https://test.api.amadeus.com/v2/e-reputation/hotel-sentiments?hotelIds=TELONMFS,ADNYCCTB,XXXYYY01
@@ -233,26 +110,412 @@ curl https://test.api.amadeus.com/v2/e-reputation/hotel-sentiments?hotelIds=TELO
   }
 ]
 ```
-With these additional filters, your booking process is made more efficient and
-you can offer your customers an enriched shopping experience, confident that
-you are offering a hotel choice that is rated highly in the areas that
-customers most appreciate.
+With these additional filters, your booking process is made more efficient and you can offer your customers an enriched shopping experience, confident that you are offering a hotel choice that is rated highly in the areas that customers most appreciate.
+
+
+## Check Availabilities and Prices
+Once users explore the list of hotels in their desired area, they would want to check the price of a specific hotel or compare the prices of hotels on the list. with the `hotelIds` that you have got from `Hotel List API`, now you can check the available rooms with real-time prices and room descriptions by requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference). 
+
+An example to request available rooms and prices of one room in Hilton Paris Opera for 1 adult with check-in date 2022-11-22 : 
+```bash
+https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=HLPAR266&adults=1&checkInDate=2022-11-22&roomQuantity=1
+```
+
+The API returns a list of `offers` objects containing the price of the cheapest available room as well as information including room description and payment policy. 
+
+!!! Note
+    the response of `Hotel Search V3` is real-time data, so you don't need an additional validation step anymore. However, As there are thousands of people reserving hotels at any given second, the availability of a given room may change between the moment you search and the moment you decide to book, it is advised that you proceed with booking **as soon as possible** or **add validation step** by searching offerid which is described next.
+
+```json
+{
+    "data": [
+        {
+            "type": "hotel-offers",
+            "hotel": {
+                "type": "hotel",
+                "hotelId": "HLPAR266",
+                "chainCode": "HL",
+                "dupeId": "700006199",
+                "name": "Hilton Paris Opera",
+                "cityCode": "PAR",
+                "latitude": 48.8757,
+                "longitude": 2.32553
+            },
+            "available": true,
+            "offers": [
+                {
+                    "id": "ZBC0IYFMFV",
+                    "checkInDate": "2022-11-22",
+                    "checkOutDate": "2022-11-23",
+                    "rateCode": "RAC",
+                    "rateFamilyEstimated": {
+                        "code": "PRO",
+                        "type": "P"
+                    },
+                    "commission": {
+                        "percentage": "8"
+                    },
+                    "room": {
+                        "type": "A07",
+                        "typeEstimated": {
+                            "category": "SUPERIOR_ROOM"
+                        },
+                        "description": {
+                            "text": "ADVANCE PURCHASE\nSUPERIOR ROOM\nFREE WIFI/AIRCON\nHD/ SAT TV/SAFE",
+                            "lang": "EN"
+                        }
+                    },
+                    "guests": {
+                        "adults": 1
+                    },
+                    "price": {
+                        "currency": "EUR",
+                        "base": "359.01",
+                        "total": "361.89",
+                        "taxes": [
+                            {
+                                "code": "TOTAL_TAX",
+                                "pricingFrequency": "PER_STAY",
+                                "pricingMode": "PER_PRODUCT",
+                                "amount": "2.88",
+                                "currency": "EUR",
+                                "included": false
+                            }
+                        ],
+                        "variations": {
+                            "average": {
+                                "base": "359.01"
+                            },
+                            "changes": [
+                                {
+                                    "startDate": "2022-11-22",
+                                    "endDate": "2022-11-23",
+                                    "base": "359.01"
+                                }
+                            ]
+                        }
+                    },
+                    "policies": {
+                        "deposit": {
+                            "acceptedPayments": {
+                                "creditCards": [
+                                    "VI",
+                                    "CA",
+                                    "AX",
+                                    "DC",
+                                    "DS",
+                                    "JC",
+                                    "CU"
+                                ],
+                                "methods": [
+                                    "CREDIT_CARD"
+                                ]
+                            }
+                        },
+                        "paymentType": "deposit",
+                        "cancellation": {
+                            "amount": "361.89",
+                            "type": "FULL_STAY",
+                            "description": {
+                                "text": "Non refundable rate",
+                                "lang": "EN"
+                            }
+                        }
+                    },
+                    "self": "https://api.amadeus.com/v3/shopping/hotel-offers/ZBC0IYFMFV",
+                    "cancelPolicyHash": "F1DC3A564AF1C421C90F7DB318E70EBC688A5A70A93B944F6628D0338F9"
+                }
+            ],
+            "self": "https://api.amadeus.com/v3/shopping/hotel-offers?hotelIds=HLPAR266&adults=1&checkInDate=2022-11-22&roomQuantity=1"
+        }
+    ]
+}
+
+```
+
+If the time between displaying prices and booking the room is long enough that the room can be booked by others, you can consider requesting `Hotel Search API` again with the `offerid` that you have got before. but this is not mandatory as you will see if the offer is available or not when you book the offer.
+
+An example to request the offer information with `offer id`: 
+```bash
+https://test.api.amadeus.com/v3/shopping/hotel-offers/ZBC0IYFMFV
+```
+
+Now that you have found the available offer (and its `offerId`) with the price, you're ready to book! 
+
+
+## Booking the Hotel
+
+The [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) is the final step in the Hotel booking flow. By making a `POST` request with the offer Id returned by the Hotel Search API, the guest information, and the payment information, you can create a booking directly on the hotel reservation system. 
+
+```bash
+curl https://test.api.amadeus.com/v1/booking/hotel-bookings \
+--data-raw '{
+  "data": {
+    "offerId": "ZBC0IYFMFV",
+    "guests": [
+      {
+        "id": 1,
+        "name": {
+          "title": "MR",
+          "firstName": "BOB",
+          "lastName": "SMITH"
+        },
+        "contact": {
+          "phone": "+33679278416",
+          "email": "bob.smith@email.com"
+        }
+      }
+    ],
+    "payments": [
+      {
+        "id": 1,
+        "method": "creditCard",
+        "card": {
+          "vendorCode": "VI",
+          "cardNumber": "4151289722471370",
+          "expiryDate": "2023-08"
+        }
+      }
+    ],
+    "rooms": [
+      {
+        "guestIds": [
+          1
+        ],
+        "paymentId": 1,
+        "specialRequest": "I will arrive at midnight"
+      }
+    ]
+  }
+}'
+```
+
+Congratulations! you’ve just performed your first hotel booking! Once the reservation is made, the API will return **a unique booking confirmation ID** which you can send to your users. 
+
+### Notes about Payment
+
+The Hotel Search API returns information about the payment policy of each hotel. The main policy types are: 
+
+- **Guarantee**: the hotel will save credit card information during booking but not make any charge to the account. In the case of a no-show or out-of-policy cancellation, the hotel may charge penalties to the card. 
+- **Deposit**: at the time of booking or on a given deadline, the hotel will charge the guest a percentage of the total amount of the reservation. The remaining amount is paid by the traveler directly at the hotel. 
+- **Prepay**: the total amount of the reservation must be paid by the traveler during booking. 
+
+The current version of the `Hotel Booking API` only permits booking at hotels that accept credit cards. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate the information. Be sure to validate the payment and guest information, as invalid information may result in the reservation being canceled. 
+
+As soon as your application stores transmits, or processes cardholder information, you will need to comply with PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants). 
+
+### Notes about the commission 
+
+To be updated
+
+## Guide for multiple hotel rooms
+
+Now that we have gone through the hotel booking flow, you may wonder how to proceed with more than 2 rooms in a hotel. 
+
+### Check availability and prices for multiple rooms 
+
+The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the `Hotel Search API` after you get `hotelid` from the `Hotel List API`. 
+
+Here is an example of a hotel search in Hilton Paris for **two rooms** and **three adults**: 
+```bash
+https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=HLPAR266&adults=3&checkInDate=2022-11-22&roomQuantity=2
+```
+
+The API will then return the available offers where roomQuantity is equal to 2.
+
+```json
+ "offers": [ 
+            { 
+                "id": "48E6C8C7DAA0BA5C22663E2A2A2B7629F5468BCBE2722FE4AB8174", 
+                "roomQuantity": "2", 
+                "checkInDate": "2022-11-22", 
+                "checkOutDate": "2022-11-23",
+```
+### Book multiple rooms with details for one guest
+
+To call the `Hotel Booking API`, you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below provides the details of one guest to book an offerId containing two rooms: 
+
+```json
+{ 
+   "data":{ 
+      "offerId":"F837D841218665647003CC9A8CA2A37CEC7276BBE14F9B9C525FBD1B7B69A8FF", 
+      "guests":[ 
+         { 
+            "name":{ 
+               "title":"MR", 
+               "firstName":"BOB", 
+               "lastName":"SMITH" 
+            }, 
+            "contact":{ 
+               "phone":"+33679278416", 
+               "email":"bob.smith@email.com" 
+            } 
+         } 
+      ], 
+      "payments":[ 
+         { 
+            "method":"creditCard", 
+            "card":{ 
+               "vendorCode":"VI", 
+               "cardNumber":"4111111111111111", 
+               "expiryDate":"2026-01" 
+            } 
+         } 
+      ] 
+   } 
+} 
+```
+Once the booking is complete, the API will return the following confirmation:
+
+```json
+{ 
+    "data": [ 
+        { 
+            "type": "hotel-booking", 
+            "id": "HA_36000507", 
+            "providerConfirmationId": "36000507", 
+            "associatedRecords": [ 
+                { 
+                    "reference": "R622XL", 
+                    "originSystemCode": "GDS" 
+                } 
+            ] 
+        }, 
+        { 
+            "type": "hotel-booking", 
+            "id": "HA_36000506", 
+            "providerConfirmationId": "36000506", 
+            "associatedRecords": [ 
+                { 
+                    "reference": "R622XL", 
+                    "originSystemCode": "GDS" 
+                } 
+            ] 
+        } 
+    ] 
+}
+```
+
+### Book multiple rooms with guest distribution
+
+One common question is how to assign guest distribution among the booked rooms. 
+
+When you call the `Hotel Booking API`, the rooms object represents the rooms. Each room contains the guests distributed per room. Specifically, each room object needs the id of the guests staying in that room.  
+
+Below is a sample request to book two rooms with guest distribution. The first room is for guest id’s 1 & 2 and the second room for guest id 3.
+
+```json
+
+{ 
+  "data": { 
+    "offerId": "4A449AE835DD68F2E7C3571740FD00B76209D7311E719E3B66DE4E1100", 
+    "guests": [ 
+      { 
+        "id": 1, 
+        "name": { 
+          "title": "MR", 
+          "firstName": "BOB", 
+          "lastName": "SMITH" 
+        }, 
+        "contact": { 
+          "phone": "+33679278416", 
+          "email": "bob.smith@email.com" 
+        } 
+      }, 
+      { 
+        "id": 2, 
+        "name": { 
+          "title": "MRS", 
+          "firstName": "EMILY", 
+          "lastName": "SMITH" 
+        }, 
+        "contact": { 
+          "phone": "+33679278416", 
+          "email": "bob.smith@email.com" 
+        } 
+      }, 
+      { 
+        "id": 3, 
+        "name": { 
+          "firstName": "JOHNY", 
+          "lastName": "SMITH" 
+        }, 
+        "contact": { 
+          "phone": "+33679278416", 
+          "email": "bob.smith@email.com" 
+        } 
+      } 
+    ], 
+    "payments": [ 
+      { 
+        "id": 1, 
+        "method": "creditCard", 
+        "card": { 
+          "vendorCode": "VI", 
+          "cardNumber": "4151289722471370", 
+          "expiryDate": "2026-08" 
+        } 
+      } 
+    ], 
+    "rooms": [ 
+      { 
+        "guestIds": [ 
+          1, 2 
+        ], 
+        "paymentId": 1, 
+        "specialRequest": "I will arrive at midnight" 
+      }, 
+      { 
+        "guestIds": [ 
+          3 
+        ], 
+        "paymentId": 1, 
+        "specialRequest": "I will arrive at midnight" 
+      } 
+    ] 
+  } 
+} 
+```
+
+The API response will be the same as when you booked multiple rooms using the details of just one guest:
+
+```json
+{ 
+    "data": [ 
+        { 
+            "type": "hotel-booking", 
+            "id": "XK_88803316", 
+            "providerConfirmationId": "88803316", 
+            "associatedRecords": [ 
+                { 
+                    "reference": "MJ6HLK", 
+                    "originSystemCode": "GDS" 
+                } 
+            ] 
+        }, 
+        { 
+            "type": "hotel-booking", 
+            "id": "XK_88803315", 
+            "providerConfirmationId": "88803315", 
+            "associatedRecords": [ 
+                { 
+                    "reference": "MJ6HLK", 
+                    "originSystemCode": "GDS" 
+                } 
+            ] 
+        } 
+    ]​ 
+```
 
 ## Common Errors
 
 ### AcceptedPayments must be creditCards 
 
-The current version of the Hotel Booking API only supports credit card
-payments, which are accepted by most hotels. The Hotel Search API returns the
-payment policy of each hotel under acceptedPayments in the policies section.
+The current version of the `Hotel Booking API` only supports credit card payments, which are accepted by most hotels. The `Hotel Search API` returns the payment policy of each hotel under acceptedPayments in the policies section.
 
 ###  Empty response from the View Room endpoint  
 
-If you get an empty response from the Hotel Search API’s second endpoint,
-then the hotel is fully booked and has no vacancy for the requested dates. If
-you don't use the checkInDate and checkOutDate parameters in the request the
-API will return results for a one-night stay starting on the current date. If
-the hotel is full, the response will be empty. 
+If you get an empty response from the Hotel Search API’s second endpoint, then the hotel is fully booked and has no vacancy for the requested dates. If you don't use the checkInDate and checkOutDate parameters in the request the API will return results for a one-night stay starting on the current date. If the hotel is full, the response will be empty. 
 
 ### No rooms available at requested property
 
@@ -268,5 +531,8 @@ the hotel is full, the response will be empty.
 }
 ```
 
-The offer of the selected Hotel is not longer available. Please select a new one.
+The offer of the selected Hotel is no longer available. Please select a new one.
 
+## Useful Resources 
+
+To be updated
