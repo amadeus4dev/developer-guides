@@ -57,7 +57,7 @@ curl https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?h
 
 ### Autocomplete Hotel Names 
 
-If you want to serve your user better when they search hotels, `Hotel Name Autocomplete API` - to be updated 
+`Hotel Name Autocomplete API` - to be updated 
 
 ### Display Hotel Ratings
 
