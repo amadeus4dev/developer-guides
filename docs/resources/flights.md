@@ -38,7 +38,7 @@ cheapest dates to fly:
 
 #### Search for destinations for a specific duration of stay
 
-For example let's say a traveler wants to spend 6 days in a city but doesn't have a strong preference for the destination. With the Flight Inspiration API we can recommend to the traveler the cheapest destinations based on the duration tine. 
+For example let's say a traveler wants to spend 6 days in a city but doesn't have a strong preference for the destination. With the Flight Inspiration API we can recommend to the traveler the cheapest destinations based on the duration time. 
 
 This can be done by using the parameter `viewBy` which returns flight destinations by `DATE`, `DESTINATION`, `DURATION`, `WEEK`, or `COUNTRY`. In our scenario we need to pass the value `DURATION` to the parameter `viewBy`, like the example below. Also, as input we give a duration of 6 days and origin Miami and that the departure date will be between the 1st and 3rd of September 2021.
 
@@ -306,6 +306,299 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 
 `Flight Offers Price` and `SeatMap Display` APIs both accept Frequent Flyer information so endusers can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
 
+### Check flight and fare availability
+
+With the `Flight Availabilities Search` you can check the flight and fare availability for any itinerary. This refers to the full inventory of fares available for an itinerary at any given time. The concept of flight availability originated the early days of flight booking as a way for agents to check what options existed for their travelers’ itineraries.
+
+Here’s an example request for a one-way flight from Mad (MIA) to Atlanta (ATL) for one traveler departing on December 12, 2022: 
+
+`POST https://test.api.amadeus.com/v1/shopping/availability/flight-availabilities`
+
+```json
+{
+    "originDestinations": [
+        {
+            "id": "1",
+            "originLocationCode": "MIA",
+            "destinationLocationCode": "ATL",
+            "departureDateTime": {
+                "date": "2021-11-01"
+            }
+        }
+    ],
+    "travelers": [
+        {
+            "id": "1",
+            "travelerType": "ADULT"
+        }
+    ],
+    "sources": [
+        "GDS"
+    ]
+}
+```
+
+The response contains a list of available flights matching our request criteria (for the sake of this example, we show the first result). Each flight availability includes descriptive data about the flight and an `availabilityClasses` list containing the available fare classes and the number of bookable seats remaining in each fare class.
+
+```json
+"data": [
+        {
+            "type": "flight-availability",
+            "id": "1",
+            "originDestinationId": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "paymentCardRequired": false,
+            "duration": "PT1H54M",
+            "segments": [
+                {
+                    "id": "1",
+                    "numberOfStops": 0,
+                    "blacklistedInEU": false,
+                    "departure": {
+                        "iataCode": "MIA",
+                        "at": "2021-11-01T05:30:00"
+                    },
+                    "arrival": {
+                        "iataCode": "ATL",
+                        "terminal": "S",
+                        "at": "2022-11-01T07:24:00"
+                    },
+                    "carrierCode": "DL",
+                    "number": "2307",
+                    "aircraft": {
+                        "code": "321"
+                    },
+                    "operating": {},
+                    "availabilityClasses": [
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "J"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "C"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "D"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "I"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "Z"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "W"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "Y"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "B"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "M"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "H"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "Q"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "K"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "L"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "U"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "T"
+                        },
+                        {
+                            "numberOfBookableSeats": 9,
+                            "class": "E"
+                        }
+                    ]
+                }
+            ]
+        },
+```
+Note that airlines’ bookable seat counters goes up to a maximum of 9, even if more seats are available in that fare class. If there are less than 9 bookable seats available, the exact number is displayed.  
+
+### Search branded fares
+
+Branded fares are airfares that bundle tickets with extras like checked bags, seat selection, refundability or loyalty points accrual. Each airline defines and packages its own branded fares and they vary from one airline to another. Branded fares not only help build brand recognition and loyalty, but also offer travelers an attractive deal as the incremental cost of the fare is usually less than that of buying the included services à la carte.  
+
+The `Branded Fares Upsell API` API receives flight offers from the Flight Offers Search and returns branded fares as flight offers which can be easily passed to the next step in the booking funnel. The booking flow is the following: 
+
+- Search for flights using Flight Offers Search. 
+- Find branded fare options for a selected flight using Branded Fares Upsell. 
+- Confirm the fare and get the final price using Flight Offers Price. 
+- Book the flight using Flight Create Orders. 
+
+Let's see an example of how to search for branded fares. 
+
+You can build the request by passing the flight-offer object from Flight Offers Search into the body of the `POST` request:
+
+```bash
+POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
+```
+
+```json
+{ 
+  "data": { 
+    "type": "flight-offers-upselling", 
+    "flightOffers": [ 
+      {
+            "type": "flight-offer",
+            "id": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2022-06-12",
+            "numberOfBookableSeats": 3,
+            "itineraries": [
+                {
+                    "duration": "PT6H10M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "MAD",
+                                "terminal": "1",
+                                "at": "2022-06-22T17:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "FCO",
+                                "terminal": "1",
+                                "at": "2022-06-22T20:05:00"
+                            },
+                            "carrierCode": "AZ",
+                            "number": "63",
+                            "aircraft": {
+                                "code": "32S"
+                            },
+                            "operating": {
+                                "carrierCode": "AZ"
+                            },
+                            "duration": "PT2H25M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "FCO",
+                                "terminal": "1",
+                                "at": "2022-06-22T21:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ATH",
+                                "at": "2022-06-23T00:50:00"
+                            },
+                            "carrierCode": "AZ",
+                            "number": "722",
+                            "aircraft": {
+                                "code": "32S"
+                            },
+                            "operating": {
+                                "carrierCode": "AZ"
+                            },
+                            "duration": "PT2H",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "81.95",
+                "base": "18.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "81.95",
+                "additionalServices": [
+                    {
+                        "amount": "45.00",
+                        "type": "CHECKED_BAGS"
+                    }
+                ]
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": false
+            },
+            "validatingAirlineCodes": [
+                "AZ"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "81.95",
+                        "base": "18.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "OOLGEU1",
+                            "class": "O",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "OOLGEU1",
+                            "brandedFare": "ECOLIGHT",
+                            "class": "O",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        } 
+    ]
+  } 
+}  
+```
+
 ### Recommend personalized destinations
 
 The `Travel Recommendations` API  provides personalized destinations based on the traveler location and an input destination, such as a previously searched flight destination or city of interest.
@@ -467,12 +760,19 @@ payment information.
         ]
     }
 ```
+## Return fare rules
+
+The `Flight Offers Price` API confirms the final price and availability of a fare. It also returns detailed fare rules, including the cancellation policy and other information. To get the fare rules, add the parameter `include=detailed-fare-rules` to your API call, as shown below: 
+
+```bash
+POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
+```
 
 ## Book a Flight
 
 Once the fare is confirmed, you’re ready to use the `Flight Create Orders` API
 to perform the actual booking. This API lets you log a reservation in the
-airlines’ systems and create a PNR, and returns a unique ID number and the
+airlines’ systems and create a [PNR](https://developers.amadeus.com/blog/what-is-pnr-booking-reference), and returns a unique ID number and the
 reservation details. If you’re using an airline consolidator, the PNR will be
 automatically sent to the consolidator for ticket issuance. [Visit the Flight
 Create Orders documentation
@@ -485,6 +785,8 @@ sign a contract with an airline consolidator or be accredited to issue tickets
 yourself. 
 
 You can see the process step to step in this [video tutorial](https://www.youtube.com/watch?v=OEX7k6d52Ic&feature=youtu.be).
+
+If you are interested in knowing more about ticket issuing in travel industry please check out this [article](https://developers.amadeus.com/blog/what-is-air-ticketing). 
 
 ## Issue a ticket
 
@@ -702,298 +1004,6 @@ If the desired flight you want to book does not permit the additional service, `
     }] 
 } 
 ```
-## Check flight and fare availability
-
-With the `Flight Availabilities Search` you can check the flight and fare availability for any itinerary. This refers to the full inventory of fares available for an itinerary at any given time. The concept of flight availability originated the early days of flight booking as a way for agents to check what options existed for their travelers’ itineraries.
-
-Here’s an example request for a one-way flight from Mad (MIA) to Atlanta (ATL) for one traveler departing on December 12, 2022: 
-
-`POST https://test.api.amadeus.com/v1/shopping/availability/flight-availabilities`
-
-```json
-{
-    "originDestinations": [
-        {
-            "id": "1",
-            "originLocationCode": "MIA",
-            "destinationLocationCode": "ATL",
-            "departureDateTime": {
-                "date": "2021-11-01"
-            }
-        }
-    ],
-    "travelers": [
-        {
-            "id": "1",
-            "travelerType": "ADULT"
-        }
-    ],
-    "sources": [
-        "GDS"
-    ]
-}
-```
-
-The response contains a list of available flights matching our request criteria (for the sake of this example, we show the first result). Each flight availability includes descriptive data about the flight and an `availabilityClasses` list containing the available fare classes and the number of bookable seats remaining in each fare class.
-
-```json
-"data": [
-        {
-            "type": "flight-availability",
-            "id": "1",
-            "originDestinationId": "1",
-            "source": "GDS",
-            "instantTicketingRequired": false,
-            "paymentCardRequired": false,
-            "duration": "PT1H54M",
-            "segments": [
-                {
-                    "id": "1",
-                    "numberOfStops": 0,
-                    "blacklistedInEU": false,
-                    "departure": {
-                        "iataCode": "MIA",
-                        "at": "2021-11-01T05:30:00"
-                    },
-                    "arrival": {
-                        "iataCode": "ATL",
-                        "terminal": "S",
-                        "at": "2022-11-01T07:24:00"
-                    },
-                    "carrierCode": "DL",
-                    "number": "2307",
-                    "aircraft": {
-                        "code": "321"
-                    },
-                    "operating": {},
-                    "availabilityClasses": [
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "J"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "C"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "D"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "I"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "Z"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "W"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "Y"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "B"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "M"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "H"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "Q"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "K"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "L"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "U"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "T"
-                        },
-                        {
-                            "numberOfBookableSeats": 9,
-                            "class": "E"
-                        }
-                    ]
-                }
-            ]
-        },
-```
-Note that airlines’ bookable seat counters goes up to a maximum of 9, even if more seats are available in that fare class. If there are less than 9 bookable seats available, the exact number is displayed.  
-
-## Book branded fares 
-
-Branded fares are airfares that bundle tickets with extras like checked bags, seat selection, refundability or loyalty points accrual. Each airline defines and packages its own branded fares and they vary from one airline to another. Branded fares not only help build brand recognition and loyalty, but also offer travelers an attractive deal as the incremental cost of the fare is usually less than that of buying the included services à la carte.  
-
-The `Branded Fares Upsell API` API receives flight offers from the Flight Offers Search and returns branded fares as flight offers which can be easily passed to the next step in the booking funnel. The booking flow is the following: 
-
-- Search for flights using Flight Offers Search. 
-- Find branded fare options for a selected flight using Branded Fares Upsell. 
-- Confirm the fare and get the final price using Flight Offers Price. 
-- Book the flight using Flight Create Orders. 
-
-Let's see an example of how to search for branded fares. 
-
-You can build the request by passing the flight-offer object from Flight Offers Search into the body of the `POST` request:
-
-```bash
-POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
-```
-
-```json
-{ 
-  "data": { 
-    "type": "flight-offers-upselling", 
-    "flightOffers": [ 
-      {
-            "type": "flight-offer",
-            "id": "1",
-            "source": "GDS",
-            "instantTicketingRequired": false,
-            "nonHomogeneous": false,
-            "oneWay": false,
-            "lastTicketingDate": "2022-06-12",
-            "numberOfBookableSeats": 3,
-            "itineraries": [
-                {
-                    "duration": "PT6H10M",
-                    "segments": [
-                        {
-                            "departure": {
-                                "iataCode": "MAD",
-                                "terminal": "1",
-                                "at": "2022-06-22T17:40:00"
-                            },
-                            "arrival": {
-                                "iataCode": "FCO",
-                                "terminal": "1",
-                                "at": "2022-06-22T20:05:00"
-                            },
-                            "carrierCode": "AZ",
-                            "number": "63",
-                            "aircraft": {
-                                "code": "32S"
-                            },
-                            "operating": {
-                                "carrierCode": "AZ"
-                            },
-                            "duration": "PT2H25M",
-                            "id": "13",
-                            "numberOfStops": 0,
-                            "blacklistedInEU": false
-                        },
-                        {
-                            "departure": {
-                                "iataCode": "FCO",
-                                "terminal": "1",
-                                "at": "2022-06-22T21:50:00"
-                            },
-                            "arrival": {
-                                "iataCode": "ATH",
-                                "at": "2022-06-23T00:50:00"
-                            },
-                            "carrierCode": "AZ",
-                            "number": "722",
-                            "aircraft": {
-                                "code": "32S"
-                            },
-                            "operating": {
-                                "carrierCode": "AZ"
-                            },
-                            "duration": "PT2H",
-                            "id": "14",
-                            "numberOfStops": 0,
-                            "blacklistedInEU": false
-                        }
-                    ]
-                }
-            ],
-            "price": {
-                "currency": "EUR",
-                "total": "81.95",
-                "base": "18.00",
-                "fees": [
-                    {
-                        "amount": "0.00",
-                        "type": "SUPPLIER"
-                    },
-                    {
-                        "amount": "0.00",
-                        "type": "TICKETING"
-                    }
-                ],
-                "grandTotal": "81.95",
-                "additionalServices": [
-                    {
-                        "amount": "45.00",
-                        "type": "CHECKED_BAGS"
-                    }
-                ]
-            },
-            "pricingOptions": {
-                "fareType": [
-                    "PUBLISHED"
-                ],
-                "includedCheckedBagsOnly": false
-            },
-            "validatingAirlineCodes": [
-                "AZ"
-            ],
-            "travelerPricings": [
-                {
-                    "travelerId": "1",
-                    "fareOption": "STANDARD",
-                    "travelerType": "ADULT",
-                    "price": {
-                        "currency": "EUR",
-                        "total": "81.95",
-                        "base": "18.00"
-                    },
-                    "fareDetailsBySegment": [
-                        {
-                            "segmentId": "13",
-                            "cabin": "ECONOMY",
-                            "fareBasis": "OOLGEU1",
-                            "class": "O",
-                            "includedCheckedBags": {
-                                "quantity": 0
-                            }
-                        },
-                        {
-                            "segmentId": "14",
-                            "cabin": "ECONOMY",
-                            "fareBasis": "OOLGEU1",
-                            "brandedFare": "ECOLIGHT",
-                            "class": "O",
-                            "includedCheckedBags": {
-                                "quantity": 0
-                            }
-                        }
-                    ]
-                }
-            ]
-        } 
-    ]
-  } 
-}  
-```
 
 ## Cancel a reservation
 
@@ -1013,14 +1023,6 @@ To call Flight Order Management, you have pass as a parameter the flight-orderId
 
 ```bash
 GET https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2fAiY
-```
-
-## Return fare rules 
-
-The `Flight Offers Price` API confirms the final price and availability of a fare. It also returns detailed fare rules, including the cancellation policy and other information. To get the fare rules, add the parameter `include=detailed-fare-rules` to your API call, as shown below: 
-
-```bash
-POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
 ```
 
 ## Common Errors
