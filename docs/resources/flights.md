@@ -726,7 +726,7 @@ We can do this by calling the `Flight Cheapest Date` API which finds the cheapes
 ```
 As you can see above in the results we have a list of dates for a roundtrip Madrid to Barcelona ordered by the cheapest price.
 
-As last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the Flight Cheapest Date API for each result contains a link to the Flight Offers Search API. For example if we want to perform a flight search for the first result we only have to take the link provided and make an API call:
+As last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the `Flight Cheapest Date` API for each result contains a link to the `Flight Offers Search` API. For example if we want to perform a flight search for the first result we only have to take the link provided and make an API call:
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false`
 
