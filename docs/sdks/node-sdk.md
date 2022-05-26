@@ -1,17 +1,18 @@
 # Node SDK
 
-Amadeus Node SDK for Self-service APIs is available with `npm`(node package manager) and Amadeus for Developers team is continuosly updating with new APIs and features. 
-you can refer [Amadeus-node GitHub page](https://github.com/amadeus4dev/amadeus-node) or [Amadeus npm page](https://www.npmjs.com/package/amadeus) for more details of change logs and issues to be fixed for up-to-date usage. 
+Amadeus Node SDK for Self-service APIs is available with `npm`(node package manager) and Amadeus for Developers team is continuously updating with new APIs and features. 
+
+You can refer to the [amadeus-node](https://github.com/amadeus4dev/amadeus-node) or [Amadeus npm package](https://www.npmjs.com/package/amadeus) for more details on the changelog.
 
 ## Installation
-This module has been tested using Node 6 and higher, though it should work with Node 4 and 5 as well. You can install it using Yarn or NPM.
+This module has been tested using [Node LTS versions](https://nodejs.org/en/about/releases/). You can install it using Yarn or NPM.
 
 ```sh
 npm install amadeus --save
 ```
 
 ## Getting Started
-To make your first API call, you will need to [register](https://developers.amadeus.com/register) for an Amadeus Developer Account and [set up your first application](https://developers.amadeus.com/my-apps).
+To make your first API call, you will need to [register](https://developers.amadeus.com/register) for an Amadeus Developers Account and [set up your first application](https://developers.amadeus.com/my-apps).
 
 ```js
 var Amadeus = require('amadeus');
@@ -45,7 +46,7 @@ var amadeus = new Amadeus({
 ```
 
 !!! warning
-    Remember that direct hard coding your credentials in your code is not the best practice due to the potential exposure them to others. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
+    Remember that hardcoding your credentials is not the best practice due to the potential exposure to others. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
 
 
 Alternatively, you can initialize by setting up environment variables. In Node, we like to use [dotenv package](https://www.npmjs.com/package/dotenv). 
@@ -131,7 +132,3 @@ amadeus.referenceData.locations.get({
 ```
 
 If a page is not available, the response will resolve to `null`.
-
-
-## Useful resources
-[Get Started amadeus Node SDK with Docker](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk)
