@@ -6,10 +6,11 @@ The Python SDK has been uploaded to the official [Python package
 repository](https://pypi.org/project/amadeus/), which makes life easier since
 you can install the SDK as a regular Python package.
 
-!!! information
-    Although the SDK works fine with Python 2.7 or 3.4+, we recommend using 3.5 or higher if possible.
+### Prerequisites
 
-It is highly recommended to use [virtualenv](https://virtualenv.pypa.io/en/latest/) when installing packages for your local projects. There are several beneficts of creating isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
+-  Amadeus for Developers API key and secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+- Python version >= 3.4
+- [virtualenv](https://virtualenv.pypa.io/en/latest/) when installing packages for your local projects. There are several beneficts of creating isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
 
 The tool can be easily installed using `pip`:
 
@@ -50,102 +51,42 @@ deactivate
 ```
 
 
-## Set up the environment
 
-Managing several Python versions locally could be a real pain. This guide
-explains how to manage our environment to easily switch between different
-Python versions using pyenv.
-
-### Why Use `pyenv`?
-
-`pyenv` is a wonderful tool for managing multiple Python versions. Even if you already have Python installed on your system, it is worth having `pyenv` installed so that you can easily try out new language features or help contribute to a project that is on a different version of Python.
-
-You can find more information on the [GitHub](https://github.com/pyenv/pyenv) project repository.
-
-### Installation
-
-Installation couldn't be easier:
-
-```text
-curl https://pyenv.run | bash
-```
-
-This will install `pyenv` along with a few plugins that are useful:
-
-* **`yenv`**: The actual `pyenv` application
-* **`pyenv-virtualenv`**: Plugin for `pyenv` and virtual environments
-* **`pyenv-update`**: Plugin for updating `pyenv`
-* **`pyenv-doctor`**: Plugin to verify that `pyenv` and build dependencies are installed
-* **`pyenv-which-ext`**: Plugin to automatically lookup system commands
-
-Add the following lines to your `.bashrc` or `.zshrc` files:
-
-```text
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-```
-
-### Basic Usage
-
-`pyenv` allows to install both specific version per project and a global one. Let's install a global Python 3.6 version:
-
-```text
-pyenv install 3.6.8
-```
-
-You can check the available versions using the following command:
-
-```text
-pyenv install --list
-```
-
-Finally, check that the new version has been installed correctly:
-
-```text
-python --version
-
-Python 3.6.8
-```
-
-
-## Step-by-Step example
+## Making your first API call 
 
 This tutorial will guide you through the process of creating a simple Python
-application which calls the Flight Inspiration Search API using the Amadeus
-for Developers Python SDK
+application which calls the Airport and Search API using the Amadeus
+for Developers Python SDK.
 
-### Requests
+### Request
 
-    ```python
-    from amadeus import Client, ResponseError
+```python
+from amadeus import Client, ResponseError
 
-    client = Client(
-        client_id='REPLACE_BY_YOUR_API_KEY',
-        client_secret='REPLACE_BY_YOUR_API_SECRET'
-    )
+amadeus = Client(
+    client_id='REPLACE_BY_YOUR_API_KEY',
+    client_secret='REPLACE_BY_YOUR_API_SECRET'
+)
 
-    try:
-        response = client.shopping.flight_destinations.get(origin='MAD')
-        print(response.data)
-    except ResponseError as error:
-        print(error)
-    ```
+try:
+    response = amadeus.reference_data.locations.get(
+    keyword='LON',
+    subType=Location.AIRPORT)    
+    print(response.data)
+except ResponseError as error:
+    print(error)
+```
 
-### Pretty printing the response
+- Once you import the amadeus library, you initialize the client by adding your credentials in the `builder` method. The library can also be initialized without any parameters when the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
+-   The authentication process is handled by the SDK and the access token is renewed every 30 minutes.
+-   The SDK uses namespaced methods to create a match between the APIs and the SDK. In this case, the API `GET /v1/reference-data/locations?keyword=LON&subType=AIRPORT` is implemented as `amadeus.reference_data.locations.get(keyword='LON',subType=Location.AIRPORT)`
 
-    ```python
-    from amadeus import Client, ResponseError
-    import json
+### Handling the response  
 
-    client = Client(
-        client_id='REPLACE_BY_YOUR_API_KEY',
-        client_secret='REPLACE_BY_YOUR_API_SECRET'
-    )
+Every API call returns a `Response` object. If the API call contained a JSON response it will parse the JSON into the `.result` attribute. If this data also contains a data key, it will make that available as the `.data` attribute. The raw body of the response is always available as the `.body` attribute.
 
-    try:
-        response = client.shopping.flight_destinations.get(origin='MAD')
-        print(json.dumps(response.data), ident=4)
-    except ResponseError as error:
-        print(error)
-    ```
+```python
+print(response.body) #=> The raw response, as a string
+print(response.result) #=> The body parsed as JSON, if the result was parsable
+print(response.data) #=> The list of locations, extracted from the JSON
+```
