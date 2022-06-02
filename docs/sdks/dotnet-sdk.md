@@ -2,22 +2,19 @@
 
 The [Amadeus .NET SDK](https://github.com/amadeus4dev/amadeus-dotnet) makes it easy to develop .NET applications with flight, hotel, and other travel data from Amadeus. In this guide, you'll install the library in your environment and make your first API call in minutes.
 
-Prerequisites
--------------
+## Prerequisites
 
 -   Amadeus for Developers API key and secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
 -   .NET 3.1 or higher: download the version of your choice from the [official website](https://dotnet.microsoft.com/en-us/download).
 -   Visual Studio: [download](https://visualstudio.microsoft.com/) the free community version of the IDE.
 
-Installing the Amadeus .NET SDK
--------------------------------
+## Installing the Amadeus .NET SDK
 
 In this section, you will create a new project and install the Amadeus SDK. Open Visual Studio and click File > New Solution > App > Console Application to create a new console application.
 
 Next, install the `amadeus-dotnet` package. Open your project's NuGet packages manager, search for the library, and install the latest version.
 
-Making your first API call
---------------------------
+## Making your first API call
 
 For this tutorial, you'll call the [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) API to fetch the online check-in URL for British Airways. Open the Program.cs file and add the following code:
 
@@ -91,8 +88,7 @@ Build and run the project and you will see the API response:
     }
 ]
 ```
-Handling the responses
-----------------------
+## Handling the responses
 
 All successful API calls return a `Resource` object. In the above example, `CheckinLink` is the resource object returned by the Flight Checkin-Links API.
 
@@ -132,8 +128,7 @@ internal void detectError() {
             }
         }
 ```
-Arbitrary API calls
--------------------
+## Arbitrary API calls
 
 You can call any API not yet supported by the SDK by making arbitrary calls. In this case, the API returns a raw `Resource`.
 
