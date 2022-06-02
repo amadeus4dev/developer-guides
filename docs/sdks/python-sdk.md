@@ -90,3 +90,22 @@ print(response.body) #=> The raw response, as a string
 print(response.result) #=> The body parsed as JSON, if the result was parsable
 print(response.data) #=> The list of locations, extracted from the JSON
 ```
+
+## Arbitrary API calls
+
+You can call any API not yet supported by the SDK by making arbitrary calls.
+
+For the `get` endpoints:
+
+```python
+amadeus.get('/v2/reference-data/urls/checkin-links', airlineCode='BA')
+
+
+```
+
+For the `post` endpoints:
+
+```python
+amadeus.post('/v1/shopping/flight-offers/pricing', body)
+
+```
