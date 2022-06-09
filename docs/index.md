@@ -12,4 +12,3 @@ This is the Amadeus for Developer documentation reference, but there are more re
 Happy coding!
 
 _The Amadeus for Developers Team_
-
