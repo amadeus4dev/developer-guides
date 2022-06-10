@@ -1,6 +1,6 @@
 # How to contribute
 
-First of all, we are so glad that you are reading this right now, we need YOU to make [Amadeus for developers documentation](https://amadeus4dev.github.io/developer-guides/) more consistent, and readable, adding missing information, correcting factual errors, or/and fixing typos. :heart_eyes::tada: Thank you! 
+First of all, we are so glad that you are reading this right now, we need YOU to make [Amadeus for developers documentation](https://amadeus4dev.github.io/developer-guides/) more consistent, and readable, adding missing information, correcting factual errors, or/and fixing typos. :heart_eyes::tada: 
 
 
 ### Did you find a typo or misleading information? 
