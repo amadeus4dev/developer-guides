@@ -1,16 +1,16 @@
 # How to contribute
 
-First of all, I am so glad that you are reading this right now, we need YOU to make [Amadeus for developers documentation](https://amadeus4dev.github.io/developer-guides/) more consistent, and readable, adding missing information, correcting factual errors, or/and fixing typos. :heart_eyes::tada: Thank you! 
+First of all, we are so glad that you are reading this right now, we need YOU to make [Amadeus for developers documentation](https://amadeus4dev.github.io/developer-guides/) more consistent, and readable, adding missing information, correcting factual errors, or/and fixing typos. :heart_eyes::tada: Thank you! 
 
 
 ### Did you find a typo or misleading information? 
-- Open up a [GitHub issue](https://github.com/amadeus4dev/developer-guides/issues) with descriptions of which sections and the reasons if necessary. 
+- Open a [GitHub issue](https://github.com/amadeus4dev/developer-guides/issues) with descriptions of which sections and the reasons if necessary. 
 
 
 ### Do you have an idea or/and contents to contribute? 
 There are 2 ways for you to contribute by spreading your ideas!  
 1. **(Recommended)** Make changes directly to [the source code in GitHub](https://github.com/amadeus4dev/developer-guides), and then open a pull request to apply your changes to the main branch. In this case, you will be able to contribute with your own words and contents directly. Check below about the documentation navigation so that you know which folders/files to update. 
-2. Open up a [GitHub issue](https://github.com/amadeus4dev/developer-guides/issues) with descritions of your ideas and contents. 
+2. Open a [GitHub issue](https://github.com/amadeus4dev/developer-guides/issues) with descriptions of your ideas and contents. 
 
 
 ### Documentation Navigation
