@@ -16,7 +16,9 @@ There are 2 ways for you to contribute by spreading your ideas!
 ### Documentation Navigation
 
 The Amadeus for Developers documentation is generated with [Mkdocs](https://www.mkdocs.org/) and each page in the documentation is based on Markdown.
-[mkdocs.yml file](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) has the navigation indicating which section is with which file. for example, API Tutorials > Flights section is with [resources/flights.md](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/docs/resources/flights.md)
+[mkdocs.yml file](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) has the navigation indicating which section is with which file. 
+
+For example, API Tutorials > Flights section is with [resources/flights.md](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/docs/resources/flights.md)
 
 ### Do you have any questions?
 Please feel free to join [our Discord channel](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) to meet our community and ask questions! 
