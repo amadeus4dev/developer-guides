@@ -119,18 +119,19 @@ amadeus.shopping.hotelOffer(hotelId: "XZY").get(params:[:],
 
 You can also make any arbitrary API call using the .get or .post methods. This is useful for calling a new API which is not yet supported by the SDK:
 
-
+```swift
 amadeus.get(path:'/v2/reference-data/urls/checkin-links', 
               params: ["airlineCode":"BA"], onCompletion: { 
                 (data,error) in 
                  .... 
     }) 
- 
+```
+
 ## Handling the responses
 
 Responses are based on [Swift closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html), which are self-contained blocks of functionality that can be passed around and used in your code. They are automatically called once an event occurs and they’re how the SDK implements asynchronous API calls. 
 
-Every API call contains an OnCompletion closure as the last argument. The closure contains two values: response and error. 
+Every API call contains an `OnCompletion` closure as the last argument. The closure contains two values: response and error. 
 
 The response object contains the JSON response from the API call as well as the http status code: 
 
