@@ -1,4 +1,4 @@
-# Riby SDK
+# Ruby SDK
 
 The [Amadeus Ruby SDK](https://github.com/amadeus4dev/amadeus-ruby) makes it easy to develop .NET applications with flight, hotel, and other travel data from Amadeus. In this guide, you'll install the library in your environment and make your first API call in minutes.
 
