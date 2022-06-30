@@ -98,7 +98,7 @@ curl https://test.api.amadeus.com/v1/reference-data/locations/pois/AF57D529B2
 
 ## Offer tours, activities, and attraction tickets
 
-The [Tours and Activities API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference) is Built in partnership with MyLittleAdventure, `Tours and Activities API` enables you to offer users the best activities in any destination, complete with a photo, description, price, and link to book the activity directly with the provider. 
+The `Tours and Activities API` is Built in partnership with MyLittleAdventure, `Tours and Activities API` enables you to offer users the best activities in any destination, complete with a photo, description, price, and link to book the activity directly with the provider. 
 
 For the API, we partnered with MyLittleAdventure which aggregates offers from over 45 of the world’s top activity platforms like Viator, GetYourGuide, Klook and Musement and applies an algorithm to identify duplicate activities across providers, compare them and return the best one. 
 
