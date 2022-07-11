@@ -22,5 +22,9 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
 
+      - name: Put env google
+          env:
+            GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_KEY }}
+
       - name: Deploy
         run: mkdocs gh-deploy --force
