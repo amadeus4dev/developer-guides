@@ -103,7 +103,7 @@ extra:
       link: https://www.linkedin.com/showcase/amadeus-for-developers
   analytics:
     provider: google
-    property: !ENV GOOGLE_KEY
+    property: G-4BPFT57T5Z
     feedback:
       title: Was this page helpful?
       ratings:
