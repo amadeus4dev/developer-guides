@@ -25,6 +25,4 @@ jobs:
       - name: Put env google
         env:
           GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
-
-      - name: Deploy
         run: mkdocs gh-deploy --force
