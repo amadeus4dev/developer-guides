@@ -44,7 +44,7 @@ mkdocs serve
 
 Now you can go to http://127.0.0.1:8000 and check out the documentation. For amy changes you make, you will just have to refresh your browser to see them.
 
-```
+
 ### Do you have any questions?
 Please feel free to join [our Discord channel](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) to meet our community and ask questions! 
 
