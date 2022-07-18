@@ -42,7 +42,7 @@ Run the server
 mkdocs serve
 ```
 
-Now you can go to http://127.0.0.1:8000 and check out the documentation. For amy changes you make, you will just have to refresh your browser to see them.
+Now you can go to http://127.0.0.1:8000 and check out the documentation. For any changes you make, you will just have to refresh your browser to see them.
 
 
 ### Do you have any questions?
