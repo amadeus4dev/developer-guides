@@ -14,11 +14,36 @@ There are 2 ways for you to contribute by spreading your ideas!
 
 
 ### Documentation Navigation
-
 The Amadeus for Developers documentation is generated with [Mkdocs](https://www.mkdocs.org/) and each page in the documentation is based on Markdown.
 [mkdocs.yml file](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) has the navigation indicating which section is with which file. 
 
 For example, API Tutorials > Flights section is with [resources/flights.md](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/docs/resources/flights.md)
+
+### How to run the project locally
+
+Clone the repository
+
+```
+git clone https://github.com/amadeus4dev/developer-guides.git
+cd developer-guides
+```
+
+Create your virtual environment and install the dependences 
+
+```
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run the server
+
+```
+mkdocs serve
+```
+
+Now you can go to http://127.0.0.1:8000 and check out the documentation. For any changes you make, you will just have to refresh your browser to see them.
+
 
 ### Do you have any questions?
 Please feel free to join [our Discord channel](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) to meet our community and ask questions! 
