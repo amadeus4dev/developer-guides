@@ -68,7 +68,7 @@ val amadeus = Amadeus.Builder(context)
     .build()
 
 scope.launch {
-  when (val checkinLinks = amadeus.referenceData.urls.checkinLinks.get(airlineCode = "LH")) {
+  when (val checkinLinks = amadeus.referenceData.airlines.get(airlineCodes = "BA")) {
     is ApiResult.Success -> {
       Log.d("Result", "${result.data}")
     }
@@ -83,7 +83,7 @@ Let's pause for a moment to take a deeper look at the code.
 
 After importing the amadeus package, initialize the client by instantiating the Amadeus class. The method receives two parameters: the API key and API secret. You can also initialize the library without arguments, in which case the API key and API secret will be read from the environment variables (REPLACE_BY_YOUR_API_KEY and REPLACE_BY_YOUR_API_SECRET). The library will manage the authentication process and the renewal of the token, so you won't have to worry about that anymore. 
 
-Once you’ve created the client, you’re ready to perform an API call. The SDK uses namespaced methods to create a match between the API and the SDK. As this example uses the Airline Code Lookup API, the call will be implemented as `referenceData.urls.checkinLinks`, followed by the method to retrieve the data (in this case, a GET).
+Once you’ve created the client, you’re ready to perform an API call. The SDK uses namespaced methods to create a match between the API and the SDK. As this example uses the Airline Code Lookup API, the call will be implemented as `referenceData.airlines`, followed by the method to retrieve the data (in this case, a GET).
 
 As you can see, we don't throw Exceptions (except for some specific cases) in the API, but we provide a `ApiResult.Error` object with all the information you need to know. Coroutines and exceptions are not good friends, so with this abstraction, you can handle every use case you want in a safe way.
 
