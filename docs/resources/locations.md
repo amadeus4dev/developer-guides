@@ -3,7 +3,7 @@
 ## Airport and City Search
 
 The Airport & City Search API finds airports and cities that match a specific
-word or string of letters. Using this API, you can automatically suggest
+word or a string of letters. Using this API, you can automatically suggest
 airports based on what the traveler enters in the search field. The API
 provides a list of airports/cities ordered by yearly passenger volume with the
 name, 3-letter IATA code, time zone and coordinates of each airport.
@@ -21,7 +21,7 @@ coordinates.
 
 The Safe Place API is the newest addition to our Self-Service API catalog.
 Created in partnership with GeoSure, the global leader in scaled location
-safety ratings, the API is powered by GeoSafeScores™ algorithm which provides
+safety ratings, the API is powered by GeoSafeScores™ algorithm, which provides
 safety and security ratings for over 65,000 cities and neighborhoods worldwide.  
 
 ### Safe Places by radius 
@@ -51,7 +51,7 @@ The last endpoint allows users to retrieve the safety rated information using th
  }, 
 ```
  
-This endpoint is useful when you want to perform a new check on a previously retrieved area. The following example, return the safety scores for the city of Barcelona using its unique id: 
+This endpoint is useful when you want to perform a new check on a previously retrieved area. The following example returns safety scores for the city of Barcelona using its unique ID: 
 
 ```bash
 curl https://test.api.amadeus.com/v1/safety/safety-rated-location?id=Q930402725", 
@@ -59,7 +59,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-location?id=Q930402725"
 
 ### Response
 
-The API returns an Overall Safety score and scores for six component categories:
+The API returns the Overall Safety score and scores for six component categories:
 
 - Women’s Safety 
 - Health & Medical Safety 
@@ -83,8 +83,8 @@ Let’s look at the response of a call to Safe Place by Radius using central Bar
 ```
 
 Safety scores range on a scale of 1-100, with 1 being the safest and 100 being
-the least safe. In this example, a “medical” score of 25 indicates that the
-health and medical conditions at the location are very self and quality medical
+the least safe. In this example, the “medical” score of 25 indicates that the
+health and medical conditions at the location are very good and quality medical
 facilities are available.   
 
 On the other hand, the “theft” score of 56 indicates an average-level risk of

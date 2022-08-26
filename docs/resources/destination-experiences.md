@@ -1,13 +1,13 @@
 # Destination Experiences
 
-With Amadeus Self-Service APIs, you can find data on over 2 million places and 150,000 activities and show travelers the best things to see and do. In the `Destination Experiences` category, we have 2 APIs available for that.
+With Amadeus Self-Service APIs, you can find data on over two million places and 150,000 activities and show travelers the best things to see and do. In the `Destination Experiences` category, we have two APIs available for that.
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [ Points of Interest  API ]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference )     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
 | [ Tours and Activities  API ]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference ) | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
 
-These 2 APIs have the same behaviors in endpoints. you can search by radius, by a square, and retrieve by id. Let's go through them one by one.
+These two APIs have the same behavior. You can search by radius or by a square, and retrieve results by ID. Let's go through them one by one.
 
 ## Show Travelers the best sights, shops, and restaurants
 
@@ -23,7 +23,7 @@ The following sample returns a list of Points of Interest for someone geolocated
 curl https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude=41.397158&longitude=2.160873
 ```
 
-In case we want to expand the area of search, we could use the radius parameter. In the following example, we increase the radius up to 3 kilometers:
+In case we want to expand the area of search, we could use the radius parameter. In the following example, we increase the radius to 3 kilometers:
 
 ```bash
 curl https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude=41.397158&longitude=2.160873&radius=3
@@ -31,7 +31,7 @@ curl https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude=41.3
 
 ### Search by a square
 
-The second endpoint works in a similar way to the radius-based endpoint: It supports also `GET` operations but it defines the area of search with a box: north, west, south, and east.
+The second endpoint works in a similar way to the radius-based endpoint. It also supports `GET` operations but it defines the area of search by a square: North, West, South, and East.
 
 The following example returns a list of points of interest for an area around Barcelona:
 
@@ -41,7 +41,7 @@ curl https://test.api.amadeus.com/v1/reference-data/locations/pois/by-square?nor
 
 ### Response
 
-For both endpoints you can expect the same response format: a list of locations with the following JSON structure:
+For both endpoints you can expect the same response format - a list of locations with the following JSON structure:
 
 ```json
 {
@@ -79,17 +79,17 @@ For both endpoints you can expect the same response format: a list of locations 
 ```
 
 - `Type` and `subType` are literals with fixed values.
-- `id` is a unique value for this point of interest, that you can use to retrieve again with the next endpoint. 
+- `id` is a unique value for this point of interest, which you can use in the next endpoint. 
 - `geoCode` is a structure that contains geolocation information: latitude and longitude of the location.
 - `name` contains the string identifying the location.
 - `category` corresponds to the category of the location and could be one of the following values: SIGHTS, BEACH_PARK, HISTORICAL, NIGHTLIFE, RESTAURANT, or SHOPPING.
-- `rank` is the position compared to other locations based on how famous is a place. 1 being the highest.
-- `tags` field is a list of words related to that location that comes directly from the different sources of data analyzed.
+- `rank` is the position compared to other locations based on how famous a place is, with 1 being the highest.
+- `tags` field is a list of words related to that location, which comes directly from the different sources of data analyzed.
 
 
-### Retrieve by id 
+### Retrieve by Id 
 
-You can also keep the unique id of each point of interest and retrieve it with the last endpoint as below.
+You can also keep the unique Id of each point of interest and retrieve it with the last endpoint as below.
 
 
 ```bash
@@ -98,17 +98,17 @@ curl https://test.api.amadeus.com/v1/reference-data/locations/pois/AF57D529B2
 
 ## Offer tours, activities, and attraction tickets
 
-The `Tours and Activities API` is Built in partnership with MyLittleAdventure, `Tours and Activities API` enables you to offer users the best activities in any destination, complete with a photo, description, price, and link to book the activity directly with the provider. 
+The `Tours and Activities API` is built in partnership with MyLittleAdventure. `Tours and Activities API` enables you to offer users the best activities in any destination, complete with a photo, description, price, and link to book the activity directly with the provider. 
 
-For the API, we partnered with MyLittleAdventure which aggregates offers from over 45 of the world’s top activity platforms like Viator, GetYourGuide, Klook and Musement and applies an algorithm to identify duplicate activities across providers, compare them and return the best one. 
+For the API, we partnered with MyLittleAdventure which aggregates offers from over 45 of the world’s top activity platforms, such as Viator, GetYourGuide, Klook and Musement and applies an algorithm to identify duplicate activities across providers, compare them and return the best one. 
 
 You can now help your users find the best things to do in over 8,000 destinations worldwide and book more than 300,000 unique activities including sightseeing tours, day trips, skip-the-line museum tickets, food tours, hop-on-hop-off bus tickets and much more. 
 
-This API shares the same endpoint design as others like the Points of Interest API.
+This API has the same design as other endpoints, such as the Points of Interest API.
 
 ### Search by radius
 
-you can search activities for a specific location by providing a latitude and longitude. The API returns activities within a 1km radius, but you can also define a custom radius. 
+You can search activities for a specific location by providing a latitude and longitude. The API returns activities within a 1km radius, but you can also define a custom radius. 
 
 ```bash
 curl https://test.api.amadeus.com/v1/shopping/activities/longitude=-3.69170868&latitude=40.41436995&radius=1   
@@ -116,7 +116,7 @@ curl https://test.api.amadeus.com/v1/shopping/activities/longitude=-3.69170868&l
 
 ### Search by a square
 
-you can search activities within a given area by providing the cardinals : north, west, south, and east. 
+You can search activities within a given area by providing the coordinates: North, West, South, and East. 
 
 ```bash
 curl https://test.api.amadeus.com/v1/shopping/activities/by-square?north=41.397158&west=2.160873&south=41.394582&east=2.177181 
@@ -158,19 +158,19 @@ Let’s look at a sample response from the Tours and Activities API:
 } 
 ```
 
-As you can see the API returns a unique activity id along with the activity name, short description, geolocation, customer rating, image, price and deep link to the provider page to complete the booking.  
+As you can see, the API returns a unique activity Id along with the activity name, short description, geolocation, customer rating, image, price and deep link to the provider page to complete the booking.  
 
 - `Type` is a literal with a fixed value.
-- `id` is a unique value for this activity, that you can use to retrieve again with the next endpoint. 
+- `id` is a unique value for this activity, that you can use in the next endpoint. 
 - `name` and `shortDescription` contains the information about the activity. 
 - `geoCode` is a structure that contains geolocation information: latitude and longitude of the location.
 - `rating` is a rating of the activity. 
 - `pictures` and `booking link` are external links to check the relevant pictures and to go to the booking URL from the activity provider.
-- `price` is the amount of the fare, and it could be alpha-numeric. Ex- 500.20 or 514.13A, `A` signifies additional collection.
+- `price` is the price of the fare, which can be alpha-numeric. Ex- 500.20 or 514.13A, `A` signifies additional collection.
 
-### Retrieve by id
+### Retrieve by Id
 
-Same as `Points of Interest API`, You can keep the unique id of each activity and retrieve it with the last endpoint as below.
+Same as `Points of Interest API`, You can keep the unique Id of each activity and retrieve it with the last endpoint as below.
 
 ```bash
 curl https://test.api.amadeus.com/v1/shopping/activities/23642

@@ -17,11 +17,11 @@ There are many JDK implementations out there, but the most used ones are:
 
 There are more implementations like [Zulu](https://www.azul.com/downloads/zulu/), [IBM JDK](https://developer.ibm.com/javasdk/support/lifecycle/), [Red Hat](https://developers.redhat.com/products/openjdk/overview/) or [AdoptOpenJDK](https://adoptopenjdk.net/).
 
-If you want to switch seamessly between flavors and versions, we recommend you to take a look to the  [sdkman](https://sdkman.io/) tool.
+If you want to switch seamessly between flavors and versions, we recommend you take a look at the [sdkman](https://sdkman.io/) tool.
 
 ## Installation
 
-The SDK can be installed by adding a `Gradle` dependency or `Maven` dependency, or by cloning the source into a project. Additionally it can be installed by downloading one of the precompiled JARs from the releases page on [GitHub](https://github.com/amadeus4dev/amadeus-java).
+The SDK can be installed by adding a `Gradle` dependency or `Maven` dependency, or by cloning the source into a project. Additionally, it can be installed by downloading one of the precompiled JARs from the releases page on [GitHub](https://github.com/amadeus4dev/amadeus-java).
 
 ### Maven
 
@@ -63,7 +63,7 @@ java -version
 
 #### macOS
 
-We recommend to use **brew** if possible. If you haven't installed brew already [install it!](http://brew.sh/)  Then install **Java** as follows:
+We recommend to use **brew** if possible. If you haven't installed brew already, [install it!](http://brew.sh/).  Now you can install **Java** as follows:
 
 ```bash
 brew cask uninstall java
@@ -73,15 +73,15 @@ brew cask install adoptopenjdk8
 
 ### Gradle
 
-Managing a Java project and its dependencies manually could be an exhausting task if you don't use the proper tools or IDEs \(Eclipse, NetBeans, IntelliJ...\). This tutorial is meant to be followed using command line. This will give us a better understanding about what's going on beneath any IDE.
+Managing a Java project and its dependencies manually could be an exhausting task if you don't use the proper tools or IDEs \(Eclipse, NetBeans, IntelliJ...\). This tutorial is meant to be followed using command line. This will give us a better understanding about what's going on behind any IDE.
 
-There are several tools which makes us life eaiser. The most interesting ones are [Gradle](https://gradle.org/) and [maven](https://maven.apache.org/).
+There are several tools which make our life eaiser. The most interesting ones are [Gradle](https://gradle.org/) and [maven](https://maven.apache.org/).
 
 Although our [Java SDK](https://github.com/amadeus4dev/amadeus-java) supports both `Gradle` and `maven`, for our example we are going to use `Gradle`. Let's see how it works.
 
 #### Installation
 
-Go ahead and install Gradle following the [instructions](https://gradle.org/install/) from the website. Make sure the `gradle` tool belongs to your `PATH` variable.
+Go ahead and install Gradle by following the [instructions](https://gradle.org/install/) from the website. Make sure the `gradle` tool belongs to your `PATH` variable.
 
 To test the Gradle installation, run `gradle` from the command line:
 
@@ -105,22 +105,22 @@ For more details see https://docs.gradle.org/4.10.2/release-notes.html
 
 This tutorial will guide you through the process of creating a simple Java
 application which calls the Flight Inspiration Search API using the Amadeus
-for Developers Java SDK
+for Developers Java SDK.
 
 ### Using the Amadeus Java SDK
 
-For this tutorial we will use Unix-based commands. Windows has similar commands for each.
+For this tutorial we will use Unix-based commands. Windows has similar commands for each task.
 
-The requirements to follow this tutorial are the following:
+The requirements to follow this tutorial include:
 
 * Your favorite editor
 * Java correctly installed \(see previous section\)
-* gradle
-* Amadeus for Developers API key
+* Gradle
+* Amadeus for Developers API key and API secret
 
 Let's do something cool by calling one of our [Flight Search APIs](https://developers.amadeus.com) from your Java code.
 
-Let's start by creating a new folder `AmadeusTest` on your `$HOME` directory. Switch to this new folder and create a subdirectory structure that will host our project:
+Let's start by creating a new folder `AmadeusTest` on your `$HOME` directory. Switch to this new folder and create a subdirectory that will host our project:
 
 ```bash
 mkdir -p src/main/java/flightsearch
@@ -144,7 +144,7 @@ Go back to the root folder `AmadeusTest` and initialize your project using `grad
 gradle init
 ```
 
-You'll notice a few new files in your root folder. You can freely add them to your version control system so everyone can build it just the same way.
+You'll notice a few new files in your root folder. You can freely add them to your version control system, so everyone can build it just the same way.
 
 Edit the `build.gradle` file with your favorite editor and add:
 
@@ -219,7 +219,7 @@ import com.amadeus.shopping.FlightDestinations;
 import com.amadeus.resources.FlightDestination;
 ```
 
-Add the SDK initialization right after the `main` class replacing "_CLIENT\_ID_" and "_CLIENT\_SECRET_" with the real values of your `client id` and `client secret`:
+Add the SDK initialization right after the `main` class, replacing "_CLIENT\_ID_" and "_CLIENT\_SECRET_" with the real values of your `client id` and `client secret`:
 
 ```java
     Amadeus amadeus = Amadeus
@@ -227,7 +227,7 @@ Add the SDK initialization right after the `main` class replacing "_CLIENT\_ID_"
             .build();
 ```
 
-Finally call the API and print out the first result of the . This call will retrieve the best offers departuring from Madrid as of today. See how the `get` method of `flightDestinations` object returns a list of `FlightDestination` objects:
+Finally call the API and print out the first result. This call will retrieve the best offers for today's departures from Madrid. See how the `get` method of `flightDestinations` object returns a list of `FlightDestination` objects:
 
 ```java
 FlightDestination[] flightDestinations = amadeus.shopping.flightDestinations.get(
@@ -264,7 +264,7 @@ public class FlightSearch {
 }
 ```
 
-Let's build and run the code to see that everything is working properly \(the output has been splitted into different lines for clarity\):
+Let's build and run the code to see that everything is working properly \(the output has been split into different lines for clarity\):
 
 ```bash
 ./gradlew run

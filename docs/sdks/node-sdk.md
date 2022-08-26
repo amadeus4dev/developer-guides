@@ -12,6 +12,7 @@ npm install amadeus --save
 ```
 
 ## Getting Started
+
 To make your first API call, you will need to [register](https://developers.amadeus.com/register) for an Amadeus Developers Account and [set up your first application](https://developers.amadeus.com/my-apps).
 
 ```js
@@ -34,6 +35,7 @@ amadeus.shopping.flightOffersSearch.get({
 ```
 
 ## Initialization
+
 The client can be initialized directly as below. Your credentials `client Id` and `Client Secret` can be found on the [Amadeus dashboard](https://developers.amadeus.com/my-apps).
 
 
@@ -55,37 +57,41 @@ Alternatively, you can initialize by setting up environment variables. In Node, 
 npm install dotenv
 ```
 
-Put your API credentials in `.env` file 
+Put your API credentials in `.env` file:
+
 ```sh
 AMADEUS_CLIENT_ID=REPLACE_BY_YOUR_API_KEY,
 AMADEUS_CLIENT_SECRET=REPLACE_BY_YOUR_API_SECRET
 ```
 
-Initialize using dotenv package
+Initialize using dotenv package:
+
 ```js
 const dotenv = require('dotenv').config();
 var amadeus = new Amadeus();
 ```
 
 !!! important
-    You will also want to add `.env` to your `.gitingore` so that your API credentials aren't included in your git repository
+    You will also want to add `.env` to your `.gitingore` so that your API credentials aren't included in your git repository.
     
 If you don't want to use another package, you can also simply export your key in terminal directly to initalize.
 
-export your credentials in terminal 
+Export your credentials in terminal:
+
 ```sh
 export AMADEUS_CLIENT_ID="REPLACE_BY_YOUR_API_KEY"
 export AMADEUS_CLIENT_SECRET="REPLACE_BY_YOUR_API_SECRET"
 
 ```
-Initialize without 
+Initialize:
+
 ```js
 var amadeus = new Amadeus();
 ```
 
 ## Moving to Production
 
-By default, the SDK environment is set to `test` environment. To switch to a `production` (pay-as-you-go) environment, please switch the hostname as follows:
+By default, the SDK environment is set to `test` environment. To switch to `production` (pay-as-you-go) environment, please change the hostname as follows:
 
 ```js
 var amadeus = new Amadeus({
@@ -134,4 +140,5 @@ amadeus.referenceData.locations.get({
 If a page is not available, the response will resolve to `null`.
 
 ## Useful resources
-For a more detailed guide on how to make your first app with Node check this [blog article](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk) or this [video tutorial](https://www.youtube.com/watch?v=rfkgJLKlI4s&feature=youtu.be) which implements a simple flight search app.
+
+For a more detailed guide on how to make your first app with Node, check this [blog article](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk) or this [video tutorial](https://www.youtube.com/watch?v=rfkgJLKlI4s&feature=youtu.be), which implements a simple flight search app.
