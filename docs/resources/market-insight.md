@@ -34,7 +34,7 @@ GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/traveled?origin
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/booked?originCityCode=NCE&period=2018-01
 ```
 
-### the busiest month/period by air traffic 
+### The busiest month/period by air traffic 
 
 `Flight Busiest Traveling Period API` returns the peak periods for travel to/from a specific city. 
 
