@@ -135,7 +135,7 @@ Response to the busines period from a given city :
 
 ### Sorting
 
-Sorting is possible for the top destinations' endpoints. 
+Sorting is enabled on the "top destinations" endpoints. 
 
 - analytics.flights.score - sort destination by flights score (decreasing)
 - analytics.travelers.score - sort destination by traveler's score (decreasing)
