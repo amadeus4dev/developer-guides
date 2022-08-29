@@ -12,7 +12,7 @@ With Amadeus Self-Service APIs, you can get insights from millions of bookings a
 
 ## Find the top destinations or the busiest period for a given city
 
-You may wonder which destination the travelers travel to the most and when is the busiest period from a given city. You can get the travel insight from a given city and month with 3 endpoints.
+You may wonder which destination the travelers travel to the most and when is the busiest period for a given city. You can get the travel insight from a given city and month with the following three endpoints.
 
 !!! information
     - The results of these 3 endpoints are based on estimated flight traffic summary data from the past 12 months. 
