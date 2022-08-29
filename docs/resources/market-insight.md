@@ -140,7 +140,7 @@ Sorting is possible for the top destinations' endpoints.
 - analytics.flights.score - sort destination by flights score (decreasing)
 - analytics.travelers.score - sort destination by traveler's score (decreasing)
 
-for example : 
+For example : 
 
 ```bash
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/traveled?originCityCode=NCE&period=2018-01&sort=analytics.travelers.score
