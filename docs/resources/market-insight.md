@@ -171,7 +171,7 @@ For a given latitude and longitude, it provides popularity scores for the follow
 - Nightlife
 
 For each category, the API provides an overall popularity score as well as scores for select subcategories, 
-like luxury shopping, vegetarian restaurants, or historical sights, among others. Location scores are on 
+such as luxury shopping, vegetarian restaurants, or historical sights. Location scores are on 
 a simple 0-100 scale and are powered by the [AVUXI TopPlace](https://www.avuxi.com/topplace/location-scores) algorithm which analyzes millions of online reviews, comments, and points of interest.
 
 !!! Notes
