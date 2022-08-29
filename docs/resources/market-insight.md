@@ -26,7 +26,7 @@ You may wonder which destination the travelers travel to the most and when is th
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/traveled?originCityCode=NCE&period=2018-01
 ```
 
-### The tops destinations by booking volume 
+### The top destinations by booking volume 
 
 `Flight Most Booked Destinations API` returns the most booked destinations from a given city. 
 
