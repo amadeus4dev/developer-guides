@@ -148,7 +148,12 @@ GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/traveled?origin
 
 ### Direction 
 
-For the busiest period of travel insight from a given city, you can specify the direction either `ARRIVING` to have statistics on travelers or `DEPARTING` for statistics on travelers leaving the city. By default, statistics are given on travelers ARRIVING the city.
+For the Flight Busiest Traveling Period insight, you can specify the direction as:
+
+- `ARRIVING` for statistics on travelers arriving in the city
+- `DEPARTING` for statistics on travelers leaving the city
+
+By default, statistics are given on travelers ARRIVING in the city.
 
 ```bash
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/busiest-period?cityCode=PAR&period=2018&direction=ARRIVING
