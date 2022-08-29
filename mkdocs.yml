@@ -75,8 +75,6 @@ nav:
         - Destination experiences: resources/destination-experiences.md
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
-        - Locations: resources/locations.md
-        - Predictions: resources/predictions.md
     - Tooling:
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
