@@ -172,7 +172,7 @@ For a given latitude and longitude, it provides popularity scores for the follow
 
 For each category, the API provides an overall popularity score as well as scores for select subcategories, 
 such as luxury shopping, vegetarian restaurants, or historical sights. Location scores are on 
-a simple 0-100 scale and are powered by the [AVUXI TopPlace](https://www.avuxi.com/topplace/location-scores) algorithm which analyzes millions of online reviews, comments, and points of interest.
+a simple 0-100 scale and are powered by the [AVUXI TopPlace](https://www.avuxi.com/topplace/location-scores) algorithm, which analyzes millions of online reviews, comments, and points of interest.
 
 !!! Notes
     - For each location, the API will return scores for a 200m., 500m., and 1500m. radius. 
