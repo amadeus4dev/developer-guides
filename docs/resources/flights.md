@@ -1039,7 +1039,7 @@ the Flight Create Orders API will be rejected by error INVALID FORMAT.
 
 ### Price discrepancy 
 
-The price of airfare fluctuates constantly. Creating an order for a flight, the price of which is no longer valid at the time of booking will trigger the
+The price of airfare fluctuates constantly. Creating an order for a flight whose price is no longer valid at the time of booking will trigger the
 following error:
 
 ```json
