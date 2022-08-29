@@ -44,7 +44,7 @@ GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/busiest-period?
 
 ### Response 
 
-The 3 endpoints return in same structure.
+The three endpoints have the same response structure.
 
 Response to the top destinations from a given city : 
 
