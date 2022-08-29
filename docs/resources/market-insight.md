@@ -129,7 +129,7 @@ Response to the busines period from a given city :
 }
 ```
 
-- `subType` is `BOOKED` or `TRAVELED` depending on the endpoint. 
+- `subType` is `BOOKED` or `TRAVELED`, depending on the endpoint. 
 - In `analytics`, the `score` in `flight` is flights to this destination as a percentage of total departures, and the `score` in `traveler` is the number of passengers traveling to the destination as a percentage of total passenger departures.
 
 
