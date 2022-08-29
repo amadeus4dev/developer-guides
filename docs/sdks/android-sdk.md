@@ -4,7 +4,7 @@ The [Amadeus Android SDK](https://github.com/amadeus4dev/amadeus-android) make
 
 ## Prerequisites
 
-- Amadeus for Developers API key and secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+- Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
 - The [Android Studio](https://developer.android.com/studio) IDE to build apps for Android applications.
 - Java version 1.8 and Kotlin version 1.3.70 minimum
 
@@ -12,7 +12,8 @@ The [Amadeus Android SDK](https://github.com/amadeus4dev/amadeus-android) make
 
 Install the`amadeus-android` SDK via Maven or Gradle 
 
-Maven
+**Maven**
+
 ```
 <dependency> 
   <groupId>com.amadeus</groupId> 
@@ -21,7 +22,8 @@ Maven
 </dependency>
 ```
 
-Gradle
+**Gradle**
+
 ```
 implementation 'com.amadeus:amadeus-android:1.2.1' 
 
@@ -81,7 +83,7 @@ scope.launch {
 
 Let's pause for a moment to take a deeper look at the code. 
 
-After importing the amadeus package, initialize the client by instantiating the Amadeus class. The method receives two parameters: the API key and API secret. You can also initialize the library without arguments, in which case the API key and API secret will be read from the environment variables (REPLACE_BY_YOUR_API_KEY and REPLACE_BY_YOUR_API_SECRET). The library will manage the authentication process and the renewal of the token, so you won't have to worry about that anymore. 
+After importing the Amadeus package, initialize the client by instantiating the Amadeus class. The method receives two parameters: the API key and API secret. You can also initialize the library without arguments, in which case the API key and API secret will be read from the environment variables (REPLACE_BY_YOUR_API_KEY and REPLACE_BY_YOUR_API_SECRET). The library will manage the authentication process and the renewal of the token, so you won't have to worry about that anymore. 
 
 Once you’ve created the client, you’re ready to perform an API call. The SDK uses namespaced methods to create a match between the API and the SDK. As this example uses the Airline Code Lookup API, the call will be implemented as `referenceData.airlines`, followed by the method to retrieve the data (in this case, a GET).
 
@@ -105,7 +107,7 @@ The SDK uses methods to map every API path to a similar path. For example, `GET 
 amadeus.referenceData.urls.checkinLinks.get(airlineCode = "BA")
 ``` 
 
-Similarly, to select a resource by ID, you can pass in the ID to the singular path. For example, `GET /v2/shopping/hotel-offers/XZY` would be: 
+Similarly, to select a resource by ID, you can pass in the Id to the singular path. For example, `GET /v2/shopping/hotel-offers/XZY` would be: 
 
 ```kotlin
 amadeus.shopping.hotelOffer("XXX").get()

@@ -4,7 +4,7 @@ The [Amadeus iOS SDK](https://github.com/amadeus4dev/amadeus-ios) makes it ea
 
 ## Prerequisites
 
--   Amadeus for Developers API key and secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+-   Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
 -  The [Xcode 11.0+](https://developer.apple.com/xcode/) IDE to build apps for iOS environments. 
 - Swift 5.0 or higher
 
@@ -67,7 +67,7 @@ amadeus.referenceData.airLines.get(
 
 Let's pause for a moment to take a deeper look at the code. 
 
-After importing the amadeus package, initialize the client by instantiating the Amadeus class. The method receives two parameters: the API key and API secret. You can also initialize the library without arguments, in which case the API key and API secret will be read from the environment variables (AMADEUS_CLIENT_ID and AMADEUS_CLIENT_SECRET).  The library will manage the authentication process and the renewal of the token, so you won't have to worry about that anymore. 
+After importing the Amadeus package, initialize the client by instantiating the Amadeus class. The method receives two parameters: the API key and API secret. You can also initialize the library without arguments, in which case the API key and API secret will be read from the environment variables (AMADEUS_CLIENT_ID and AMADEUS_CLIENT_SECRET).  The library will manage the authentication process and the renewal of the token, so you won't have to worry about that anymore. 
 
 Once you’ve created the client, you’re ready to perform an API call. The SDK uses namespaced methods to create a match between the API and the SDK. As this example uses the Airline Code Lookup API, the call will be implemented as `referenceData.Airlines`, followed by the method to retrieve the data (in this case, a GET).
 
@@ -107,7 +107,7 @@ amadeus.referenceData.urls.checkinLinks.get(params: ["airlineCode": "BA"], onCom
  }) 
 ``` 
 
-Similarly, to select a resource by ID, you can pass in the ID to the singular path. For example, `GET /v2/shopping/hotel-offers/XZY` would be: 
+Similarly, to select a resource by ID, you can pass in the Id to the singular path. For example, `GET /v2/shopping/hotel-offers/XZY` would be: 
 
 ```swift
 amadeus.shopping.hotelOffer(hotelId: "XZY").get(params:[:], 

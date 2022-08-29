@@ -4,7 +4,7 @@ The [Amadeus .NET SDK](https://github.com/amadeus4dev/amadeus-dotnet) makes it
 
 ## Prerequisites
 
--   Amadeus for Developers API key and secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+-   Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
 -   .NET 3.1 or higher: download the version of your choice from the [official website](https://dotnet.microsoft.com/en-us/download).
 -   Visual Studio: [download](https://visualstudio.microsoft.com/) the free community version of the IDE.
 
@@ -56,9 +56,9 @@ namespace amadeusTest
 }
 ```
 
-Let's pause to look at what happening in the code:
+Let's pause for a moment to take a deeper look at the code. 
 
--   Once you import the amadeus library, you initialize the client by adding your credentials in the `builder` method. We suggest adding your credentials aas ennvironment variables to avoid exposing them directly in the code. The library can be initialized without any parameters when the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
+-   Once you import the Amadeus library, you initialize the client by adding your credentials in the `builder` method. We suggest adding your credentials as ennvironment variables to avoid exposing them directly in the code. The library can be initialized without any parameters when the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
 -   The authentication process is handled by the SDK.
 -   The SDK uses namespaced methods to create a match between the APIs and the SDK. In this case, the API `GET /v2/reference-data/urls/checkin-links?airlineCode=BA` is implemented as `amadeus.referenceData.urls.checkinLinks.get(Params.with("airlineCode", "BA"));`
 

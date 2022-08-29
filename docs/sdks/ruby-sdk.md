@@ -1,6 +1,6 @@
 # Ruby SDK
 
-The [Amadeus Ruby SDK](https://github.com/amadeus4dev/amadeus-ruby) makes it easy to develop .NET applications with flight, hotel, and other travel data from Amadeus. In this guide, you'll install the library in your environment and make your first API call in minutes.
+The [Amadeus Ruby SDK](https://github.com/amadeus4dev/amadeus-ruby) makes it easy to develop Ruby applications with flight, hotel, and other travel data from Amadeus. In this guide, you'll install the library in your environment and make your first API call in minutes.
 
 ## Prerequisites
 
@@ -10,11 +10,15 @@ The [Amadeus Ruby SDK](https://github.com/amadeus4dev/amadeus-ruby) makes it 
 ## Installing the Amadeus Ruby SDK
 
 You can install it directly via the command line or via the bundler.
+
 #### Command line
+
 ```bash
 gem install amadeus
 ```
+
 #### Bundler
+
 ```rb
 gem 'amadeus'
 ```
@@ -38,11 +42,11 @@ rescue Amadeus::ResponseError => error
 end
 ```
 
-Let's pause to look at what happening in the code:
+Let's pause for a moment to take a deeper look at the code. 
 
--   Once you import the amadeus library, you initialize the client by adding your credentials in the `builder` method. We suggest adding your credentials aas ennvironment variables to avoid exposing them directly in the code. The library can be initialized without any parameters when the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
--   The authentication process is handled by the SDK.
--   The SDK uses namespaced methods to create a match between the APIs and the SDK. In this case, the API `GET /v2/reference-data/urls/checkin-links?airlineCode=BA` is implemented as `amadeus.reference_data.urls.checkin_links.get(airlineCode: 'BA')`
+- Once you import the Amadeus library, you initialize the client by adding your credentials in the `builder` method. We suggest adding your credentials aas ennvironment variables to avoid exposing them directly in the code. The library can be initialized without any parameters when the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
+- The authentication process is handled by the SDK.
+- The SDK uses namespaced methods to create a match between the APIs and the SDK. In this case, the API `GET /v2/reference-data/urls/checkin-links?airlineCode=BA` is implemented as `amadeus.reference_data.urls.checkin_links.get(airlineCode: 'BA')`
 
 This will call the API to retrieve the online check-in links for British Airways (BA).
 
@@ -72,7 +76,7 @@ Build and run the project and you will see the API response:
 ```
 ## Handling the responses
 
-Every API call returns an `Amadeus::Response` object. If the API call contained a JSON response, it will parse the JSON into `.result` attribute. If this data also contains a data key, that will be made available in `.data`attribute. The raw body of the response is always available in `.body` attribute.
+Every API call returns an `Amadeus::Response` object. If the API call contains a JSON response, it will parse the JSON into `.result` attribute. If this data also contains a data key, that will be made available in `.data`attribute. The raw body of the response is always available in `.body` attribute.
 
 ```rb
 response = amadeus.reference_data.locations.get(

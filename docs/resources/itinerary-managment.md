@@ -9,16 +9,16 @@ In the `Itinerary Management` category, you can give travelers a simple and pers
  
 ## Parse the email confirmation into JSON
 
-The `Trip Parser API` helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately thanks to our algorithm. 
+The `Trip Parser API` helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
 
 !!! information
-    `Trip Parser API` V3.0 has been released since AUG 2021 and the document is up to date. 
+    `Trip Parser API` V3.0 has been released since August 2021 and the document is up to date. 
 
 ### Encode your booking confirmation in Base64
 
-The first step to parsing is to encode your booking confirmation file in `Base64` format. This will give you the base of your API request. You mustn’t add formatting or any other elements to your booking confirmation as it will affect the parsing.  
+The first step to parsing is to encode your booking confirmation file in `Base64` format. This will give you the base of your API request. You should not add formatting or any other elements to your booking confirmation as it will affect the parsing.  
 
-There are many tools and software that you can use for Base64 encoding. Some programming languages implement encoding and decoding functionalities in their standard library. In `python`, for example, it will look something like this:  
+There are many tools and software that you can use for Base64 encoding. Some programming languages implement encoding and decoding functionalities in their standard library. In `python`, for example, it will look similar to this:  
 
 ```py
 import base64 
@@ -123,7 +123,7 @@ This will extract all the relevant data from the booking information into a stru
 
 ## Predict the trip purpose from a flight
 
-As another API in the itinerary management category, the `Trip Purpose Prediction API` predicts whether a flight search is for **business** or **leisure**. Our machine-learning models have detected which patterns of departure and arrival cities, flight dates, and search dates are associated with business trips and leisure trips. Understand why your users travel and show them the flights, fares, and ancillaries that suit them best.
+Another API in the itinerary management category, the `Trip Purpose Prediction API`, predicts whether a flight is searched for **business** or **leisure**. Our machine-learning models have detected which patterns of departure and arrival cities, flight dates, and search dates are associated with business and leisure trips. Understand why your users travel and show them the flights, fares, and ancillaries that suit them best.
 
 Below is an example to see if the flight from New York to Madrid from 2022-12-01 to 2022-12-12 is leisure or business. 
 
@@ -131,7 +131,7 @@ Below is an example to see if the flight from New York to Madrid from 2022-12-01
 GET https://test.api.amadeus.com/v1/travel/predictions/trip-purpose?originLocationCode=NYC&destinationLocationCode=MAD&departureDate=2022-12-01&returnDate=2022-12-12
 ```
 
-The result? you can probably guess it. :) 
+The result? You can probably guess it. :) 
 
 ```json
 {

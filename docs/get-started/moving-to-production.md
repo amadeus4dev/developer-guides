@@ -9,19 +9,19 @@ To request a **production key**, you must complete the following steps:
 1. [Sign in](https://developers.amadeus.com/login) to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
 2. Select the application to move to `Production` and click `Get Production environment` :
 
-![request_prod](../images/request_production_key.png)
+   ![request_prod](../images/request_production_key.png)
 
-   3. Complete the form with your personal information, billing address, and app information.
-   4. Indicate whether your application uses `Flight Create Orders` in the checkbox at the bottom of the form. This API has special access requirements detailed below in the `Moving to Production with Flight Create Orders` section of this guide.
-   5. Select your preferred method of payment \(credit card or bank transfer\) and provide the required billing information.
-   6. Sign the Terms of Service agreement provided on `Docusign`. 
+3. Complete the form with your personal information, billing address, and app information.
+4. Indicate whether your application uses `Flight Create Orders` in the checkbox at the bottom of the form. This API has special access requirements detailed below in the `Moving to Production with Flight Create Orders` section of this guide.
+5. Select your preferred method of payment \(credit card or bank transfer\) and provide the required billing information.
+6. Sign the Terms of Service agreement provided on `Docusign`. 
 
 
 Once these steps are completed, your application status will be **pending**:
 
 ![pending](../images/app_pending.png)
 
-You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that  the validation period applies to your first production application. Subsequent applications will be validated automatically.
+You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that the validation period applies to your first production application. Subsequent applications will be validated automatically.
 
 ![live](../images/app_live.png)
 
@@ -32,12 +32,12 @@ Remember that once you exceed your free transactions threshold, you will be bill
 
 ## Using the production key
 
-Once you have a production key, you make the following changes to your source code:
+Once you have a production key, you can make the following changes to your source code:
 
-1. Update the base URL for your API calls to point to `https://api.amadeus.com`.
-2. Update your `API key` and `API secret` with the new production keys.
+* Update the base URL for your API calls to point to `https://api.amadeus.com`.
+* Update your `API key` and `API secret` with the new production keys.
 
-If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), add `hostname='production'` in the client together with your API key and API secret as shown below example in [python SDK](https://github.com/amadeus4dev/amadeus-python):
+If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), add `hostname='production'` to the `Client` together with your API key and API secret as shown below example in [python SDK](https://github.com/amadeus4dev/amadeus-python):
 
 ```python
 from amadeus import Client, ResponseError
@@ -61,6 +61,7 @@ except ResponseError as error:
 
 
 ## Moving to production with the Flight Create Orders API
+
 Applications using `Flight Create Orders` must meet special requirements before moving to `Production`. The requirements are detailed in the following section.
 
 ### Requirements
@@ -70,7 +71,7 @@ Applications using `Flight Create Orders` must meet special requirements before 
    tickets via an airline consolidator (an entity that acts as a host agency
    for non-certified agents). The Amadeus for Developers team can assist you in finding a consolidator in your region. 
 
-2. **There are no restrictions in your country**. Though we are working to make Self-Service flight booking available worldwide, `Flight Create Orders` is currently not available to companies in the following countries: 
+2. **There are no restrictions in your country**. Though we are working to make Self-Service flight booking available worldwide, `Flight Create Orders` API is currently not available to companies in the following countries: 
 
    *Algeria, Bangladesh, Bhutan, Bulgaria, Croatia, Egypt, Finland, Iceland, India,
 Iran, Iraq, Jordan, Kuwait, Kosovo, Lebanon, Libya, Madagascar, Maldives,
