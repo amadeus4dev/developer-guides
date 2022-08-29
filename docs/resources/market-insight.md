@@ -15,7 +15,7 @@ With Amadeus Self-Service APIs, you can get insights from millions of bookings a
 You may wonder which destination the travelers travel to the most and when is the busiest period for a given city. You can get the travel insight from a given city and month with the following three endpoints.
 
 !!! information
-    - The results of these 3 endpoints are based on estimated flight traffic summary data from the past 12 months. 
+    - The results of these three endpoints are based on estimated flight traffic summary data from the past 12 months. 
     - Flight traffic summary data is based on bookings made over Amadeus systems.
 
 ### The top destinations by passenger volume 
