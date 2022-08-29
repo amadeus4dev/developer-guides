@@ -1,6 +1,6 @@
 # Market insights
 
-With Amadeus Self-Service APIs, you can get insights from millions of bookings and our technology partners.  In the `Market insights` category, we have 4 APIs available.
+With Amadeus Self-Service APIs, you can get insights from millions of bookings and our technology partners.  In the `Market insights` category, we have four APIs available.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
