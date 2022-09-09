@@ -73,7 +73,7 @@ There are several ways to customise an SDK created by the OpenAPI Generator:
 
 ##### Configuration file
 
-There is anumber of configuration options that the OpenAPI Generator supports for [Ruby](https://openapi-generator.tech/docs/generators/ruby#config-options).
+There is a number of configuration options that the OpenAPI Generator supports for [Ruby](https://openapi-generator.tech/docs/generators/ruby#config-options).
 
 To apply them, we need to create a JSON file with the required parameters and define it when running the OpenAPI Generator. Let's create a file called `config.json` with the following contents:
 
