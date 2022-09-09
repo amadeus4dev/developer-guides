@@ -150,7 +150,7 @@ docker run --rm \
   -o /local/city_search_ruby
 ```
 
-in this way, all models in our SDK will be prefixed with `Amadeus`, e.g. `AmadeusComponent`.
+In this way, all models in our SDK will be prefixed with `Amadeus`, e.g. `AmadeusComponent`.
 
 ### Conclusion
 
