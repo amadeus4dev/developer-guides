@@ -154,4 +154,4 @@ In this way, all models in our SDK will be prefixed with `Amadeus`, e.g. `Amadeu
 
 ### Conclusion
 
-In this tutorial we have seen how easy it is to generate a basic SDK from our API specification files using the OpenAPI Generator. We took Ruby as an example, but the OpenAPI Generator supports [many other languages](https://openapi-generator.tech/docs/generators), so you can easily find a solution that meets yor requirements.
+In this tutorial we have seen how easy it is to generate a basic SDK from our API specification files using the OpenAPI Generator. We took Ruby as an example, but the OpenAPI Generator supports [many other languages](https://openapi-generator.tech/docs/generators), so you can easily find a solution that meets your requirements.
