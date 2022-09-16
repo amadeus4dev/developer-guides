@@ -6,11 +6,11 @@ The [Amadeus Android SDK](https://github.com/amadeus4dev/amadeus-android) make
 
 - Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
 - The [Android Studio](https://developer.android.com/studio) IDE to build apps for Android applications.
-- Java version 1.8 and Kotlin version 1.3.70 minimum
+- Java version 1.8 and Kotlin version 1.3.70 minimum.
 
 ## Installation 
 
-Install the`amadeus-android` SDK via Maven or Gradle 
+Install the`amadeus-android` SDK via Maven or Gradle. 
 
 **Maven**
 

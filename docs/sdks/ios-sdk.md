@@ -6,7 +6,7 @@ The [Amadeus iOS SDK](https://github.com/amadeus4dev/amadeus-ios) makes it ea
 
 -   Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
 -  The [Xcode 11.0+](https://developer.apple.com/xcode/) IDE to build apps for iOS environments. 
-- Swift 5.0 or higher
+- Swift 5.0 or higher.
 
 ## Installation 
 

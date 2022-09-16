@@ -2,7 +2,7 @@
 
 With Amadeus Self-Service APIs, you can get insights from millions of bookings and our technology partners.  In the `Market insights` category, we have four APIs available.
 
-| APIs                                                                                                                                                          | Description                                                                             |
+| **APIs**                                                                                                                                                          | **Description**                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [ Flight Most Traveled Destinations  API]( https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference ) | See the top destinations by passenger volume for a given city and month.                |
 | [ Flight Most Booked Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference )           | See the top destinations by booking volume for a given city and month.                  |

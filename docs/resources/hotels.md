@@ -5,7 +5,7 @@ The [Amadeus Hotel APIs](https://developers.amadeus.com/self-service/category/ho
 Let's learn how to get started and help your users book the perfect rooms at over 150,000 hotels worldwide.
 
 !!! information
-    This page has been updated based on `Hotel Search V3` updates since MAY 2022. 
+    This page has been updated based on `Hotel Search V3` updates from May 2022. 
 
 ## Search hotels
 
@@ -61,7 +61,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?ho
 
 ### Autocomplete Hotel Names 
 
-`Hotel Name Autocomplete API` - to be updated 
+`Hotel Name Autocomplete API`
 
 ### Display Hotel Ratings
 
@@ -311,9 +311,6 @@ The current version of the `Hotel Booking API` only permits booking at hotels th
 
 As soon as your application stores transmits, or processes cardholder information, you will need to comply with PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants). 
 
-### Notes about the commission 
-
-To be updated
 
 ## Guide for multiple hotel rooms
 
@@ -540,7 +537,3 @@ If you get an empty response from the Hotel Search API’s second endpoint, then
 ```
 
 The offer for the selected Hotel is no longer available. Please select a new one.
-
-## Useful Resources 
-
-To be updated

@@ -51,8 +51,8 @@ Let's highlight some information that you'll get from both Travel Restrictions A
     Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/). 
 
 !!! information
-   - the data for Travel Restrictions API comes from [Riskline](https://riskline.com/) and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 
-   - the data for Safe Place API comes from [GeoSure](https://geosureglobal.com/) GeoSafeScores algorithm, which analyzes crime, health and economic data, official travel alerts, local reporting, and a variety of other sources. 
+     - Data for Travel Restrictions API comes from [Riskline](https://riskline.com/) and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 
+     - Data for Safe Place API comes from [GeoSure](https://geosureglobal.com/) GeoSafeScores algorithm, which analyzes crime, health and economic data, official travel alerts, local reporting, and a variety of other sources. 
  
 
 ### Get summary of the destination + Safety score

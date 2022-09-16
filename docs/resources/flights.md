@@ -105,7 +105,7 @@ the API provides a list of flight offers with prices, fare details, airline
 names, baggage allowances and departure terminals.
 
 !!!warning
-    - Flights from low-cost carriers and American Airlines are currently unavailable.
+    Flights from low-cost carriers and American Airlines are currently unavailable.
 
 The Flight Offers Search API starts the booking cycle with a search for the
 best fares. The API returns a list of the cheapest flights given a city/airport

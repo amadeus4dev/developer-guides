@@ -2,7 +2,7 @@
 
 With Amadeus Self-Service APIs, you can find data on over two million places and 150,000 activities and show travelers the best things to see and do. In the `Destination Experiences` category, we have two APIs available for that.
 
-| APIs                                                                                                                                                 | Description                                                                                                               |
+| **APIs**                                                                                                                                                 | **Description**                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [ Points of Interest  API ]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference )     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
 | [ Tours and Activities  API ]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference ) | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
