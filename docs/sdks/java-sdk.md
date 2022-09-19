@@ -19,7 +19,7 @@ The SDK can be installed easily in your favourite build system like `Maven` or `
 </dependency>
 ```
 
-### Gradle
+### Maven
 
 ```
 compile "com.amadeus:amadeus-java:6.3.0"
