@@ -2,7 +2,7 @@ theme:
   name: null
   custom_dir: 'material'
   highlightjs: true
-  logo: assets/logo.png
+  logo: assets/logo.svg
 
   language: en
   icon:
@@ -75,8 +75,6 @@ nav:
         - Destination experiences: resources/destination-experiences.md
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
-        - Locations: resources/locations.md
-        - Predictions: resources/predictions.md
     - Tooling:
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
@@ -96,4 +94,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/amadeus4dev
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/UjXwf4F
+      link: https://discord.com/invite/cVrFBqx
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/amadeus4dev
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/showcase/amadeus-for-developers
+  analytics:
+    provider: google
+    property: G-4BPFT57T5Z

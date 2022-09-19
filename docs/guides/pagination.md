@@ -1,7 +1,7 @@
 # Pagination
 
-Amadeus for Developers Self-Service APIs can often return a lot of results. When calling the [Flight Offers Search
-API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search), for example, you may get a response hundreds of pages long.
+Amadeus for Developers Self-Service APIs can often return a lot of results. For example, when calling the [Flight Offers Search
+API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search), you may get a response hundreds of pages long.
 That's where **pagination** comes in. Using pagination, you can split the results into different pages to make the responses easier to handle.
 
 Not all Amadeus Self-Service APIs support pagination. Below you can find the APIs that support pagination:

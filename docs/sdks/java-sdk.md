@@ -9,6 +9,7 @@ You can refer to the [amadeus-java](https://github.com/amadeus4dev/amadeus-java)
 
 The SDK can be installed easily in your favourite build system like `Maven` or `Gradle`:
 
+
 ### Maven
 
 ```xml
@@ -33,13 +34,13 @@ compile "com.amadeus:amadeus-java:6.3.0"
 
 This tutorial will guide you through the process of creating a simple Java
 application which calls the Flight Inspiration Search API using the Amadeus
-for Developers Java SDK
+for Developers Java SDK.
 
 ### Using the Amadeus Java SDK
 
-For this tutorial we will use Unix-based commands. Windows has similar commands for each.
+For this tutorial we will use Unix-based commands. Windows has similar commands for each task.
 
-The requirements to follow this tutorial are the following:
+The requirements to follow this tutorial include:
 
 * Your favorite editor
 * Java installed
@@ -129,10 +130,12 @@ Amadeus amadeus = Amadeus.builder(System.getenv()).build();
 In order to use the method `amadeus.shopping.flightDestinations.get()`
 you need to pass a `Params` object like the example:
 
+
 ```java
 Params params = Params.with("origin", "MAD");
 FlightDestination[] flightDestinations = amadeus.shopping.flightDestinations.get(params);
 ```
+
 The method `amadeus.shopping.flightDestinations.get()` will return an Array with the results:
 
 ```java

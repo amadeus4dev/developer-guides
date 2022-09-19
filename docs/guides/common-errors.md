@@ -30,7 +30,7 @@ Occurs when using a grant type other than `client credentials`. For more informa
 
 **401 Unauthorized - Invalid access token**
 
-The access token provided in the Authorization header is expired or not longer valid. You must generate a new token.
+Occurs when the access token provided in the Authorization header is expired or not longer valid. You must generate a new token.
 
 ```json
 {
@@ -48,7 +48,7 @@ The access token provided in the Authorization header is expired or not longer v
 
 **401 Unauthorized -  Invalid client**
 
-The client credentials have an invalid format and are not recognized.
+Occurs when the client credentials have an invalid format and are not recognized.
 
 ```json
 {
@@ -63,7 +63,7 @@ The client credentials have an invalid format and are not recognized.
 
 **400 Bad request - Invalid format**
 
-An input query parameter is incorrect. In the example below, the Airport & City Search API returns an error because the location parameter is not in the expected IATA standard.
+Occurs when an input query parameter is incorrect. In the example below, the Airport & City Search API returns an error because the location parameter is not in the expected IATA standard.
 
 ```json
 {
@@ -85,7 +85,7 @@ An input query parameter is incorrect. In the example below, the Airport & City 
 
 **404 Not found - Resource not found**
 
-The endpoint or URL does not exist. Make sure you are calling a valid endpoint and that there are no spelling errors.
+Occurs when the endpoint or URL does not exist. Make sure you are calling a valid endpoint and that there are no spelling errors.
 
 ```json
 {

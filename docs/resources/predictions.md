@@ -4,8 +4,8 @@
 
 We used historical flight delay data to train a machine learning model to predict whether a flight will be on time or delayed.
 
-Calling the API is simple: you need to input basic flight information about the
-flight, carrier, airports and flight number and you can begin calling. Check
+Calling the API is simple. You need to input basic information about the
+flight, including the carrier, airports and flight number to begin calling. Check
 out our API reference page to see the swagger with all the parameters.
 
 Here’s an example for a flight from Frankfurt to Brussels:
@@ -77,6 +77,6 @@ flights and departure airports.
 The Trip Purpose Prediction API predicts whether a flight search is for
 business or leisure. Our machine-learning models have detected which patterns
 of departure and arrival cities, flight dates and search dates are associated
-with business trips and leisure trips. Understand why your users and traveling
+with business and leisure trips. Understand why your users are traveling
 and show them the flights, fares and ancillaries that suit them best.
 
