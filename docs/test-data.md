@@ -59,6 +59,5 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | ----------- | ----------- |
 | [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser) |  No data restrictions in test. |
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction)  | No data restrictions in test. |
-| [AI-generated Photos](https://developers.amadeus.com/self-service/category/trip/api-doc/ai-generated-photos) | No data restrictions in test. |
 | [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations)  | No data restrictions in test. |
 
