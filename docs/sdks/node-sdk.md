@@ -141,4 +141,4 @@ If a page is not available, the response will resolve to `null`.
 
 ## Useful resources
 
-For a more detailed guide on how to make your first app with Node, check this [blog article](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk) or this [video tutorial](https://www.youtube.com/watch?v=rfkgJLKlI4s&feature=youtu.be), which implements a simple flight search app.
+For a more detailed guide on how to make your first app with Node, check this [blog article](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk) or this [video tutorial](https://www.youtube.com/watch?v=rfkgJLKlI4s&feature=youtu.be), which implements a simple flight search app. 

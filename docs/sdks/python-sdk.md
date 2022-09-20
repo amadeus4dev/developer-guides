@@ -106,4 +106,4 @@ For the `post` endpoints:
 ```python
 amadeus.post('/v1/shopping/flight-offers/pricing', body)
 
-```
+``` 
