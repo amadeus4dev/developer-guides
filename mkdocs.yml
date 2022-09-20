@@ -56,18 +56,15 @@ copyright: Copyright © Amadeus IT Group S.A.
 
 nav:
     - Home: index.md
-    - Getting Started:
-        - Making your first API call: get-started/first-api-call.md
-        - Pricing: get-started/pricing.md
-        - Self-Service vs Enterprise: get-started/self-service-enterprise.md
-        - Moving to production: get-started/moving-to-production.md
-    - API General:
-        - Authorization: guides/authorization.md
-        - Common errors: guides/common-errors.md
-        - Pagination: guides/pagination.md
-        - Rate limits: guides/api-rate-limits.md
-        - Test data collection: guides/api-data-collection.md
-        - OpenAPI: guides/open-api.md
+    - Quick Start: quick-start.md
+    - Pricing: pricing.md
+    - Free Test Data Collection: test-data.md
+    - API Keys:
+       - Authorization: API-Keys/authorization.md
+       - Production: API-Keys/moving-to-production.md
+    - Rate Limits: api-rate-limits.md
+    - Pagination: pagination.md
+    - Common Errors: common-errors.md
     - API Tutorials:
         - Covid-19 & travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
@@ -75,16 +72,13 @@ nav:
         - Destination experiences: resources/destination-experiences.md
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
-    - Tooling:
+    - SDK Tutorials:
+        - Amadeus SDK overview: sdks/sdk-overview.md
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
         - Java SDK: sdks/java-sdk.md
-        - .NET SDK: sdks/dotnet-sdk.md
-        - Ruby SDK: sdks/ruby-sdk.md
-        - iOS SDK: sdks/ios-sdk.md
-        - Android SDK: sdks/android-sdk.md
-        - OpenAPI specification: sdks/specification.md
-    - Code Examples:
+        - Using OpenAPI Generator: sdks/openapi-generator.md
+    - Examples and Prototypes:
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
     
