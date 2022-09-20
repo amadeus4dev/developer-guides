@@ -5,11 +5,9 @@
 The first step to start using Amadeus Self-Service APIs is to register and create an account:
 
 * Open the [Amadeus Developers Portal](https://developers.amadeus.com/).
-* Click on [register](https://developers.amadeus.com/register).
+* Click on [Register](https://developers.amadeus.com/register).
 * Complete the form using a valid email address and click on the `Create account` button. An automatic confirmation email will be sent to the email address you provided.
 * In the confirmation email you receive, click on `Activate your account`. 
-
-![email_confirmation](../images/email_confirmation.png)
 
 You can now log in to the portal with your new credentials! Welcome to **Amadeus for Developers**!
 
@@ -34,7 +32,7 @@ All you need to do, is to attach an alphanumeric string called **token** to your
     ![api_key3](../images/api_key3.png)
 
 !!! important
-    **Test environment** 
+    **Test environment** <br>
     At this stage, you are using the testing environment, where you will enjoy a fixed number of free API call quotas per month for all your applications. When you reach the limit, you will receive an error message. This environment will help you build and test your app for free and get ready for deploying it to the market.
 
 ## Step 3: Calling the API
@@ -52,7 +50,7 @@ curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
 ```
 
 !!! warning
-    Please take a look at our [Authorization guide](../guides/authorization.md) to understand how the process works in depth.
+    Please take a look at our [Authorization guide](API-Keys/authorization.md) to understand how the process works in depth.
 
 According to the documentation, you need to use `v1/shopping/flight-destinations` as the endpoint, followed by the mandatory query parameter `origin`. As you want to filter the offers to those cheaper than 200 EUR, you need to add the `maxPrice` parameter to your query as well.
 

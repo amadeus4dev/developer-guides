@@ -1,4 +1,4 @@
-# Authorization
+# Authorizing your application
 
 Amadeus for Developers uses `OAuth` to authenticate access requests. `OAuth` generates an `access token` which grants the client permission to access a protected resource. 
 
@@ -16,7 +16,7 @@ Once you have created an app and received your `API Key` and  `API Secret`, you 
 The body of the request is encoded as `x-www-form-urlencoded`, where the keys and values are encoded in key-value tuples separated by '&', with a '=' between
 the key and the value:
 
-| Key | Value |
+| **Key** | **Value** |
 | ----------- | ----------- |
 | `grant_type`      | The value `client_credentials`        |
 | `client_id`       | The `API Key` for the application     |
@@ -52,7 +52,7 @@ The authorization server will respond with a JSON object:
 ```
 The response will contain the following parameters:
 
-| Parameter      | Description |
+| **Parameter**      | **Description** |
 | ----------- | ----------- |
 | `type`      | The type of resource. The value will be `amadeusOAuth2Token`. |
 | `username`       | Your username \(email address\).        |
