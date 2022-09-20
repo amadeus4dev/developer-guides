@@ -50,7 +50,7 @@ curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
 ```
 
 !!! warning
-    Please take a look at our [Authorization guide](../guides/authorization.md) to understand how the process works in depth.
+    Please take a look at our [Authorization guide](API-Keys/authorization.md) to understand how the process works in depth.
 
 According to the documentation, you need to use `v1/shopping/flight-destinations` as the endpoint, followed by the mandatory query parameter `origin`. As you want to filter the offers to those cheaper than 200 EUR, you need to add the `maxPrice` parameter to your query as well.
 
