@@ -36,6 +36,4 @@ The following APIs are currently limited to **20 transactions per second** and *
 
 [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction)
 
-[AI-Generated Photos](https://developers.amadeus.com/self-service/category/trip/api-doc/ai-generated-photos)
-
 [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations)
