@@ -127,7 +127,7 @@ Amadeus amadeus = Amadeus.builder(System.getenv()).build();
 ```
 
 In order to use the method `amadeus.shopping.flightDestinations.get()`,
-you need to pass a `Params` object like the example:
+you need to pass a `Params` object as in the below example:
 
 
 ```java
