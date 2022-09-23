@@ -82,7 +82,7 @@ public class FlightSearch {
 }
 ```
 
-but before testing the example, export your credentials in your terminal:
+Before testing the example, export your credentials in your terminal:
 
 ```bash
 export AMADEUS_CLIENT_ID=YOUR_CLIENT_ID
