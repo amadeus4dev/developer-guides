@@ -44,7 +44,7 @@ The requirements to follow this tutorial include:
 
 * Your favorite editor
 * Java installed
-* A build system like `Maven`
+* A build automation tool, such as `Maven`
 * Amadeus for Developers API key
 
 Let's do something cool by calling one of our [Flight Search APIs](https://developers.amadeus.com) from your Java code.
