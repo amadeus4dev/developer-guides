@@ -49,7 +49,7 @@ The requirements to follow this tutorial include:
 
 Let's do something cool by calling one of our [Flight Search APIs](https://developers.amadeus.com) from your Java code.
 
-In order to help you, we have just created a small Maven skeleton ready to use
+To help you get started, we have created a small [Maven skeleton](https://github.com/amadeus4dev/amadeus-java-getting-started) that is ready to use. 
 [here](https://github.com/amadeus4dev/amadeus-java-getting-started)
 
 Let's create a class `FlightSearch.java` in the package `edu.amadeus.sdk` with the following content:
