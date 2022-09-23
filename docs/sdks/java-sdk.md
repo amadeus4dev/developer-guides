@@ -89,7 +89,7 @@ export AMADEUS_CLIENT_ID=YOUR_CLIENT_ID
 export AMADEUS_CLIENT_SECRET=YOUR_CLIENT_SECRET
 ```
 
-Let's build and run the code to see that everything is working properly:
+Let's build and run the code to make sure that everything is working properly:
 
 ```bash
 ./mvnw compile exec:java -Dexec.mainClass="edu.amadeus.sdk.FlightSearch"
