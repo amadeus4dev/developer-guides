@@ -143,4 +143,4 @@ System.out.println(flightDestinations[0]);
 
 Now that you've tried out this example and know
 how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/) in this
-SDK and learn new ways to use it.
+SDK and discover new ways to use it.
