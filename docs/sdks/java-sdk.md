@@ -119,7 +119,7 @@ FlightDestination(type=flight-destination, origin=MAD, destination=OPO, departur
 ```
 
 As you see in the example, the main method 
-instantiate an Amadeus object, taking the credentials from the 
+instantiates an Amadeus object, taking the credentials from the following
 environment:
 
 ```java
