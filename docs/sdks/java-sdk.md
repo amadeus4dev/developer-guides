@@ -7,7 +7,7 @@ You can refer to the [Amadeus Java SDK](https://github.com/amadeus4dev/amadeus-j
 
 ## Installation
 
-The SDK can be installed easily in your favourite build system like `Maven` or `Gradle`:
+The SDK can be easily installed using your preferred build automation tool, such as `Maven` or `Gradle`:
 
 
 ### Maven
