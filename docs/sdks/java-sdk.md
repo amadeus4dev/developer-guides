@@ -141,6 +141,6 @@ The method `amadeus.shopping.flightDestinations.get()` will return an Array with
 System.out.println(flightDestinations[0]);
 ```
 
-If you experimented with this example, and you understood
+Now that you've tried out this example and know
 how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/) in this
 SDK and learn new ways to use it.
