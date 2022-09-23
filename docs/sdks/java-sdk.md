@@ -1,6 +1,6 @@
 # Java SDK
 
-Amadeus Java SDK for Self-service APIs is available as a `Maven` dependency
+Amadeus Java SDK for the Self-Service APIs is available as a `Maven` dependency,
 which the Amadeus for Developers team is continuously updating as the new APIs and features get released.
 
 You can refer to the [Amadeus Java SDK](https://github.com/amadeus4dev/amadeus-java) or [Amadeus Maven dependency](https://mvnrepository.com/artifact/com.amadeus/amadeus-java) for the detailed changelog.
