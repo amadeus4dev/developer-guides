@@ -118,7 +118,7 @@ FlightDestination(type=flight-destination, origin=MAD, destination=OPO, departur
 [INFO] ------------------------------------------------------------------------
 ```
 
-If you observe in the example, the main method, 
+As you see in the example, the main method 
 instantiate an Amadeus object, taking the credentials from the 
 environment:
 
