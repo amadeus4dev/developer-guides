@@ -23,7 +23,7 @@ When writing step-by-step instructions, start each step with a verb. For example
 !!! warning
     This text box is used to describe an action that can potentially inflict damage to your system or business.
 
-!!!information
+!!! information
     This text box is used to provide any supplementary information about your topic.
 
 #### Page names and navigation paths
