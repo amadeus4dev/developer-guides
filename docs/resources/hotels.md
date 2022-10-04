@@ -61,7 +61,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?ho
 
 ### Autocomplete Hotel Names 
 
-Your application can also display the list of autocompleted hotel names when users attempt to search hotels with keywords. 
+Your application can also display a list of suggested hotel names based on keywords used in the search query. 
 
 [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference) will provide a list of up to 20 hotels whose names most closely match for a given text string. For each hotel result, the API also provides descriptive data including hotel name, address, geocode, property type, IATA hotel code and an Amadeus hotel ID. 
 
