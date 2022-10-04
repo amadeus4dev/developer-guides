@@ -17,7 +17,7 @@ If your API request is invalid, you will receive a `Client Error` response with 
 
 **400 Bad request - Unsupported grant type**
 
-Occurs when using a grant type other than `client credentials`. For more information, read our [Authorization Guide](../guides/authorization.md).
+Occurs when using a grant type other than `client credentials`. For more information, read our [Authorization Guide](API-Keys/authorization.md).
 
 ```json
 {

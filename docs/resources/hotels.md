@@ -61,7 +61,60 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?ho
 
 ### Autocomplete Hotel Names 
 
-`Hotel Name Autocomplete API` - to be updated 
+Your application can also display a list of suggested hotel names based on keywords used in the search query. 
+
+[Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference) provides a list of up to 20 hotels whose names most closely match the search query string. For each hotel in the results, the API also provides descriptive data, including the hotel name, address, geocode, property type, IATA hotel code and the Amadeus hotel ID. 
+
+`Hotel ID` can be easily passed to the `Hotel Search API` to retrieve information on rates and rooms. 
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&subType=HOTEL_LEISURE
+```
+
+```json
+{
+    "data": [
+        {
+            "id": 2969353,
+            "name": "BEST WESTERN PREMIER OPERA FAUBOURG PARI",
+            "iataCode": "PAR",
+            "subType": "HOTEL_LEISURE",
+            "relevance": 70,
+            "type": "location",
+            "hotelIds": [
+                "TEPARCFG"
+            ],
+            "address": {
+                "cityName": "PARIS",
+                "countryCode": "FR"
+            },
+            "geoCode": {
+                "latitude": 48.86821,
+                "longitude": 2.40085
+            }
+        },
+        {
+            "id": 3012697,
+            "name": "HOTEL PARI MAHAL",
+            "iataCode": "SXR",
+            "subType": "HOTEL_LEISURE",
+            "relevance": 70,
+            "type": "location",
+            "hotelIds": [
+                "TKSXRAHS"
+            ],
+            "address": {
+                "cityName": "SRINAGAR",
+                "countryCode": "IN"
+            },
+            "geoCode": {
+                "latitude": 34.08106,
+                "longitude": 74.83126
+            }
+        },
+
+```
+
 
 ### Display Hotel Ratings
 
