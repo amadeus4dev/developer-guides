@@ -51,7 +51,7 @@ When using a `parameter_name` in the text, put it between backticks ``.
 
 #### Amadeus API names
 
-When mentioning an Amadeus API, use a link to the [API catalogue](https://developers.amadeus.com/self-service) in the `[link](url)` format.
+When mentioning an Amadeus API, use a link to the [API catalogue](https://developers.amadeus.com/self-service) in the `[API name](url)` format.
 
 
 ### Did you find a typo or misleading information? 
