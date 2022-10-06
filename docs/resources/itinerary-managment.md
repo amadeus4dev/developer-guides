@@ -4,12 +4,12 @@ In the `Itinerary Management` category, you can give travelers a simple and pers
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [ Trip Parser  API ](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) | Build a single itinerary with information from different booking confirmation emails.                                                 |
-| [ Trip Purpose Prediction API ](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference) | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
+| [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) | Build a single itinerary with information from different booking confirmation emails.                                                 |
+| [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference) | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
  
 ## Parse the email confirmation into JSON
 
-The `Trip Parser API` helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
+The [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
 
 !!! information
     `Trip Parser API` V3.0 has been released since August 2021 and the document is up to date. 
@@ -123,7 +123,7 @@ This will extract all the relevant data from the booking information into a stru
 
 ## Predict the trip purpose from a flight
 
-Another API in the itinerary management category, the `Trip Purpose Prediction API`, predicts whether a flight is searched for **business** or **leisure**. Our machine-learning models have detected which patterns of departure and arrival cities, flight dates, and search dates are associated with business and leisure trips. Understand why your users travel and show them the flights, fares, and ancillaries that suit them best.
+Another API in the itinerary management category, the [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference), predicts whether a flight is searched for **business** or **leisure**. Our machine-learning models have detected which patterns of departure and arrival cities, flight dates, and search dates are associated with business and leisure trips. Understand why your users travel and show them the flights, fares, and ancillaries that suit them best.
 
 Below is an example to see if the flight from New York to Madrid from 2022-12-01 to 2022-12-12 is leisure or business. 
 

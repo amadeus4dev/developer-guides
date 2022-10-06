@@ -4,8 +4,8 @@ With Amadeus Self-Service APIs, you can get insights from millions of bookings a
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [ Flight Most Traveled Destinations  API]( https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference ) | See the top destinations by passenger volume for a given city and month.                |
-| [ Flight Most Booked Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference )           | See the top destinations by booking volume for a given city and month.                  |
+| [Flight Most Traveled Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference) | See the top destinations by passenger volume for a given city and month.                |
+| [Flight Most Booked Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference)           | See the top destinations by booking volume for a given city and month.                  |
 | [Flight Busiest Traveling Period  API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period/api-reference)        | See monthly air traffic levels by city to understand season trends.                     |
 | [Location Score API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score/api-reference)                               | Assess a neighborhood’s popularity for sightseeing, shopping, eating out, or nightlife. |
 
@@ -20,7 +20,7 @@ You may wonder which destination the travelers travel to the most and when is th
 
 ### The top destinations by passenger volume 
 
-`Flight Most Traveled Destinations API` returns the most visited destinations from a given city. 
+[Flight Most Traveled Destinations  API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference) returns the most visited destinations from a given city. 
 
 ```bash
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/traveled?originCityCode=NCE&period=2018-01
@@ -28,7 +28,7 @@ GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/traveled?origin
 
 ### The top destinations by booking volume 
 
-`Flight Most Booked Destinations API` returns the most booked destinations from a given city. 
+[Flight Most Booked Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference) returns the most booked destinations from a given city. 
 
 ```bash
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/booked?originCityCode=NCE&period=2018-01
@@ -36,7 +36,7 @@ GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/booked?originCi
 
 ### The busiest month/period by air traffic 
 
-`Flight Busiest Traveling Period API` returns the peak periods for travel to/from a specific city. 
+[Flight Busiest Traveling Period  API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period/api-reference) returns the peak periods for travel to/from a specific city. 
 
 ```bash
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/busiest-period?cityCode=NCE&period=2018
@@ -161,7 +161,7 @@ GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/busiest-period?
 
 ## Find insight within a given city
 
-Apart from the top destinations and busiest period insight in a city, you can also help users gain insights into a neighborhood, hotel, or vacation rental with the `Location Scores API`. 
+Apart from the top destinations and busiest period insight in a city, you can also help users gain insights into a neighborhood, hotel, or vacation rental with the [Location Score API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score/api-reference). 
 
 For a given latitude and longitude, it provides popularity scores for the following leisure and tourism categories:
 

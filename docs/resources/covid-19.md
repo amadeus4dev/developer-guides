@@ -1,23 +1,21 @@
 # COVID-19 and Travel Safety 
 
 
-
 "Can I travel to South Korea? Thailand? or Costa Rica? Do I need to have a PCR test? before the flight? after I arrive? How many days of quarantine are required? Where can I find this information?" 
 
 Don't worry, with Amadeus Self-Service APIs, you will be able to get detailed information on **number of COVID-19 cases, entry requirements, safety scores and a lot more** with some extra data about the searched destination using just one single API.
 
 And even more, **safety information** can be retrieved for the destination you would like to visit so that you will be aware of where you are heading to. 
 
+There are two APIs to get this information.
+
+| APIs                                                                                                                                                          | Description                                                                             |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [Amadeus Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) | Provides up-to-date data on COVID-19 caseloads and travel restrictions for over 200 countries and territories, as well as hundreds of cities and regions worldwide.                |
+| [Amadeus Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place)          |  Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety.                  |
 
 
 ## Search by an area
-
-There are two APIs to get this information: 
-
-1. [Amadeus Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) for COVID-19 related information 
-2. [Amadeus Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) for Safety information
-
-
 
 [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) can be searched **by a country, city, or region**. 
 
