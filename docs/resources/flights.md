@@ -319,7 +319,7 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 ```
 #### Search using loyalty programs
 
-`Flight Offers Price` and `SeatMap Display` APIs both accept Frequent Flyer information so end-users can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information, such as passenger name, email or phone number to validate the account. If the validation fails, your user won’t receive their loyalty program advantages.
+[Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) and [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) both accept Frequent Flyer information so end-users can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information, such as passenger name, email or phone number to validate the account. If the validation fails, your user won’t receive their loyalty program advantages.
 
 ### Check flight and fare availability
 
