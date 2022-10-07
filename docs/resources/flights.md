@@ -12,7 +12,8 @@
 | [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
 | [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) | Confirms the availability and final price (including taxes and fees) of flights returned by the Flight Offers Search API. |
 | [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) | Provides a unique booking ID and reservation details once the reservation is completed. |
-| [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) | Checks the latest status of a reservation, shows post-booking modifications like ticket information or form of payment and lets you cancel reservations. |
+| [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) | Checks the latest status of a reservation, shows post-booking modifications like ticket information or form of payment and lets you cancel reservations. |
+| [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) | Shows airplane cabin plan from a Flight Offer in order for the traveler to be able to choose their seat during the flight booking flow. |
 
 ## How to search flights
 
