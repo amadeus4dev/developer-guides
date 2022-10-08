@@ -330,7 +330,7 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 
 #### Airport Routes
 
-[Airport Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) shows all destinations from a given airport. To follow up on our previous example, let's check where we can fly to from Madrid (MAD). The options are obviously quite broad, so we can limit the maximum number of results by 10. Keep in mind that this limit will apply from the beginning of results list in the alphabetical order of the airport IATA codes.
+[Airport Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) shows all destinations from a given airport. To follow up on our previous example, let's check where we can fly to from Madrid (MAD). The options are obviously quite broad, so we can limit the maximum number of results to 10. Keep in mind that this limit will apply from the beginning of the results list in the alphabetical order of the airport IATA codes.
 
 The request will look like this:
 
@@ -555,7 +555,7 @@ Note that airlines’ bookable seat counters goe up to a maximum of 9, even if m
 
 ### Analyse the flight price
 
-With the [Flight Price Analysis API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis) we can check how the flight fare compares compares to historical fares for the same flight and whether the price we're getting is below or above average. All we need to do, is to provide the departure and destination airports, enter the departure date and specify the fair currency. For example, ff we are flying from Madrid (MAD) to Paris (CDG), our query will look as follows:
+With the [Flight Price Analysis API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis) we can check how the flight fare compares compares to historical fares for the same flight and whether the price we're getting is below or above average. All we need to do, is to provide the departure and destination airports, enter the departure date and specify the fair currency. For example, if we are flying from Madrid (MAD) to Paris (CDG), our query will look as follows:
 
 ```bash
 curl --request GET \
@@ -614,7 +614,7 @@ This request will return the following response:
 }
 ```
 
-Now we can see that a reasonable price for our journey should be somewhere between 52.84 USD and 525.35 USD. If we manage to secure the tickets at 214.69 USD, we'd cut a pretty good deal.
+Now we can see that a reasonable price for our journey should be somewhere between 52.84 USD and 525.35 USD. Even if we manage to secure the tickets at 214.69 USD, we'd cut a pretty good deal.
 
 
 ### Search branded fares
@@ -776,9 +776,9 @@ POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 
 ### Flight delay prediction
 
-Now that we got ourselves a good deal on the tickets, we'd want to make sure there's no surprises when we get to the airport. The [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) can helps with that. This API can estimate the probability of our flight being delayed.
+Now that we got ourselves a good deal on the tickets, we'd want to make sure there's no surprises when we get to the airport. The [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) can help us with that. This API can estimate the probability of our flight being delayed.
 
-Let's take the following flight as our example. We are flying from Madrid (MAD) to Paris (SDG) on 12 December 2021 at 18:20 with the Turkish Airlines (TK) on an Airbus A321-100/200 (IATA carrier code - 321). Our flight number is 1816 and we should be arriving in Paris at 20:25. According to ISO8610, our flight duration in ISO 8601 is H2. This is what our query will look like:
+Let's take the following flight as an example. We are flying from Madrid (MAD) to Paris (SDG) on 12 December 2021 at 18:20 with Turkish Airlines (TK) on an Airbus A321-100/200 (IATA carrier code - 321). Our flight number is 1816 and we should be arriving in Paris at 20:25. According to ISO8610, our flight duration in ISO 8601 is H2. This is what our query will look like:
 
 ```bash
 curl --request GET \
@@ -834,7 +834,7 @@ It doesn't look bad at all, but we need to be aware of a 39 percent chance that 
 
 ### Airport on-time performance
 
-It's good to know about any potential delays to our flight, but how about the reliability of the actual airport that we selected? The [Airport On-Time Performance ](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance/api-reference) can help us with just that. This API can make an educated guess, based on an array of historical data, whether a particular airport is prone to delays on a given date.
+It's good to know about any potential delays to our flight, but how about the reliability of the actual airport that we selected? The [Airport On-Time Performance ](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance/api-reference) can help us with just that. This API can make an educated guess, based on an analysis of historical data, whether a particular airport is prone to delays on a given date.
 
 We can now check how our deprature airport in Madrid can handle the busy period of December 2021. This is what our query will look like:
 
@@ -844,7 +844,7 @@ curl --request GET \
      --url https://test.api.amadeus.com/v1/airport/predictions/on-time?airportCode=MAD&date=2021-12-12 \
 ```
 
-The result is pretty straightforward:
+The result is quite clear:
 
 ```json
 {
@@ -862,7 +862,7 @@ The result is pretty straightforward:
   }
 ```
 
-With a 79 percent probability, we can be assured that the airport will run smoothly on our travel date.
+With a 79 percent probability, we can be confident that the airport will run smoothly on our travel date.
 
 ### On-demand flight status
 
@@ -951,7 +951,7 @@ Here we can see all the entire flight schedule with the corresponsing times. Tha
 
 ### Recommend personalized destinations
 
-The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations)  provides personalized destinations based on the traveler's location and an input destination, such as a previously searched flight destination or city of interest.
+The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) provides personalized destinations based on the traveler's location and an input destination, such as a previously searched flight destination or city of interest.
 
 For example, for a traveler based in San Francisco who has searched for multiple flights to Barcelona, what other similar destinations the API could recommend? The API takes as input the country of the traveler and the IATA code of the city that was searched, in our case this will be US and BCN respectively. 
 
@@ -976,7 +976,7 @@ The response will look like this:
  }
 ```
 
- If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The Travel Recommendations API has returned links to both APIs. 
+If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The Travel Recommendations API has returned links to both APIs. 
 
 ### Recommend nearby destinations 
 
