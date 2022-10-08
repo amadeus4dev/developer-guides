@@ -1,6 +1,5 @@
 # Airlines
 
-With Amadeus Self-Service APIs, you can get insights from millions of bookings and our technology partners.  In the `Market insights` category, we have four APIs available.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
