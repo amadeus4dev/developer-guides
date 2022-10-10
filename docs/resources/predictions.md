@@ -2,9 +2,9 @@
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) | Provides delay probabilities for possible delay lengths.                |
-| [Airport On-Time Performance API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance) | Returns the estimated percentage of on-time flight departures for a given airport and date. |
-| [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction) | Provides insight into traveler motivation by predicting whether a trip is for business or leisure.  |
+| [Flight Delay Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) | Provides delay probabilities for possible delay lengths.                |
+| [Airport On-Time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance) | Returns the estimated percentage of on-time flight departures for a given airport and date. |
+| [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction) | Provides insight into traveler motivation by predicting whether a trip is for business or leisure.  |
 
 ## Flight Delay Prediction API
 
