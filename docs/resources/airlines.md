@@ -3,8 +3,9 @@
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Flight Check-in Links  API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) |  Simplifies the check-in process by providing direct links to the airline check-in page.                |
-| [Airline Code Lookup API](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup)           | Finds the name of an airline by its IATA or ICAO airline codes.                  |
+| [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) |  Simplifies the check-in process by providing direct links to the airline check-in page.                |
+| [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup)           | Finds the name of an airline by its IATA or ICAO airline codes.                  |
+| [Airline Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airline-routes) | Finds all destinations served by a given airline.
 
 
 ## Get a direct link to the airline check-in page
@@ -82,5 +83,45 @@ The response is pretty straightforward:
       "commonName": "BRITISH A/W"
     }
   ]
+}
+```
+
+#### Get routes for a specific airline
+
+The [Airline Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airline-routes) shows all destinations for a given airline. To follow up on our previous example, let's check what destinations the British Airways fly to. There's definitely plenty of options, so we can limit the maximum number of results to two for the sake of simplicity. Keep in mind that this limit will apply from the beginning of the results list in the alphabetical order of the city names.
+
+The request will look like this:
+
+```bash
+curl --request GET \
+     --header 'Authorization: Bearer <token>' \
+     --url https://test.api.amadeus.com/v1/airline/destinations?airlineCode=BA&max=2 \
+```
+
+So we can see the the following results:
+
+```json
+{
+  "data": [
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "Bangalore",
+      "iataCode": "BLR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "Paris",
+      "iataCode": "PAR"
+    }
+  ],
+  "meta": {
+    "count": "2",
+    "sort": "iataCode",
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/airline/destinations?airlineCode=BA&max=2"
+    }
+  }
 }
 ```
