@@ -4,10 +4,10 @@ With Amadeus Self-Service APIs, you can get insights from millions of bookings a
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Flight Most Traveled Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference) | See the top destinations by passenger volume for a given city and month.                |
-| [Flight Most Booked Destinations API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference)           | See the top destinations by booking volume for a given city and month.                  |
-| [Flight Busiest Traveling Period  API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period/api-reference)        | See monthly air traffic levels by city to understand season trends.                     |
-| [Location Score API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score/api-reference)                               | Assess a neighborhood’s popularity for sightseeing, shopping, eating out, or nightlife. |
+| [Flight Most Traveled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference) | See the top destinations by passenger volume for a given city and month.                |
+| [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference)           | See the top destinations by booking volume for a given city and month.                  |
+| [Flight Busiest Traveling Period](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period/api-reference)        | See monthly air traffic levels by city to understand season trends.                     |
+| [Location Score](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score/api-reference)                               | Assess a neighborhood’s popularity for sightseeing, shopping, eating out, or nightlife. |
 
 
 ## Find the top destinations or the busiest period for a given city
