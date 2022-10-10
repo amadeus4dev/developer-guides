@@ -6,18 +6,20 @@
 | [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search)          |  Provides a list of flight options with dates and prices, and allows you to order by price, departure date or duration.                  |
 | [Flight Offers Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) | Lets you can search flights between two cities, perform multi-city searches for longer itineraries and access one-way combinable fares to offer the cheapest options possible. |
 | [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) | Uses Artificial Intelligence and Amadeus historical flight booking data to identify which flights in search results are most likely to be booked. |
+| [Flight Offers Price](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) | Confirms the availability and final price (including taxes and fees) of flights returned by the Flight Offers Search API. |
+| [Seatmap Display](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) | Shows airplane cabin plan from a Flight Offer in order for the traveler to be able to choose their seat during the flight booking flow. |
+| [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) | Finds all destinations served by a given airport. |
 | [Flight Availabilities Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-availabilities-search) | Provides a list of flights with seats for sale on a given itinerary and the quantity of seats available in different fare classes. |
 | [Branded Fares Upsell](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell) | Provides the branded fares available for a given flight, along with pricing and a fare description. |
 | [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) | Uses Artificial Intelligence trained on Amadeus historical flight search data to determine which destinations are also popular among travelers with similar profiles, and provides a list of recommended destinations with name, IATA code, coordinates and similarity score. |
 | [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
-| [Flight Offers Price](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) | Confirms the availability and final price (including taxes and fees) of flights returned by the Flight Offers Search API. |
 | [Flight Create Orders](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) | Provides a unique booking ID and reservation details once the reservation is completed. |
 | [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) | Checks the latest status of a reservation, shows post-booking modifications like ticket information or form of payment and lets you cancel reservations. |
-| [Seatmap Display](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) | Shows airplane cabin plan from a Flight Offer in order for the traveler to be able to choose their seat during the flight booking flow. |
+
 
 ## How to search flights
 
-### Inspirational Search
+### Search to get flight inspirations
 
 The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) provides a list of destinations from a given airport that is ordered by price and can be filtered by departure date or maximum price. The following request retrieves a list of destinations from Boston:
 
@@ -26,10 +28,10 @@ GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
 ```
 
 !!!information
-    This API returns cached prices. Once a destination is chosen, use the Flight Offers Search API to get real-time pricing and availability.
+    This API returns cached prices. Once a destination is chosen, use the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to get real-time pricing and availability.
 
-The API provides a link to Flight Offers Search to search for flights once a
-destination is chosen and a link to Flight Cheapest Date Search to check the
+The API provides a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to search for flights once a
+destination is chosen and a link to the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to check the
 cheapest dates to fly:
 
 ```json
@@ -53,7 +55,7 @@ cheapest dates to fly:
 
 #### Search for destinations for a specific duration of stay
 
-For example, let's say a traveler wants to spend six days in a city but doesn't have a strong preference for the destination. With the Flight Inspiration API we can recommend the traveler the cheapest destinations based on the stay duration. 
+For example, let's say a traveler wants to spend six days in a city but doesn't have a strong preference for the destination. With the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) we can recommend the traveler the cheapest destinations based on the stay duration. 
 
 This can be done using the parameter `viewBy` which returns flight destinations by `DATE`, `DESTINATION`, `DURATION`, `WEEK`, or `COUNTRY`. In our scenario we need to pass the value `DURATION` to the parameter `viewBy`, like in the example below. Also, as input we give a duration of six days and origin Miami. The departure date will be between the 1st and 3rd of September 2021.
 
@@ -90,16 +92,16 @@ This can be done using the parameter `viewBy` which returns flight destinations
         }
 ```
 
-As you can see, all the recommendations have a duration of six days and are sorted by the lowest price. The API also provides link to the Flight Offers Search for each result in order to check for available flights.
+As you can see, all the recommendations have a duration of six days and are sorted by the lowest price. The API also provides link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) for each result in order to check for available flights.
 
-### Flexible Search on dates
+### Search for cheapest flights regardless of the dates
 
 The [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) finds the cheapest dates to travel from one
 city to another. The API provides a list of flight options with dates and prices,
 and allows you to order by price, departure date or duration.
 
 !!!information
-    This API returns cached prices. Once the dates are chosen, use the Flight Offers Search API to get real-time pricing and availability.
+    This API returns cached prices. Once the dates are chosen, use the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to get real-time pricing and availability.
 
 The following example retrieves a list of `flight-date` objects containing pricing information given the origin and destination, and a range of dates:
 
@@ -107,10 +109,10 @@ The following example retrieves a list of `flight-date` objects containing prici
 GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
 ```
 
-The API provides a link to Flight Offers Search to search for flights once a
+The API provides a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to search for flights once a
 destination is chosen, in order to proceed with the booking flow.
 
-### Offers Search
+### Search for best flight offers
 
 The [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) searches over 500 airlines to find the cheapest
 flights for a given itinerary. The API lets you search flights between two
@@ -122,7 +124,7 @@ names, baggage allowances and departure terminals.
 !!!warning
     - Flights from low-cost carriers and American Airlines are currently unavailable.
 
-The Flight Offers Search API starts the booking cycle with a search for the
+The [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search)  starts the booking cycle with a search for the
 best fares. The API returns a list of the cheapest flights given a city/airport
 of departure, a city/airport of arrival, the number and type of passengers and
 travel dates. The results are complete with airline name and fares as well as
@@ -174,7 +176,7 @@ information such as itineraries, price, pricing options, etc.
   ]
 ```
 
-#### Include or exclude specific airlines 
+#### Search for flights including or excluding specific airlines 
 
 If you want your search to return flights with only specified airlines, you can use the parameter `includedAirlineCodes` to consider specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens only with Aegean Airlines (A3): 
 
@@ -184,7 +186,7 @@ With the parameter `excludedAirlineCodes` you can ignore specific airlines. For 
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06`
 
-#### Find the best flight option
+#### Search for the best flight option
 
 The [Flight Choice Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) predicts the flight your users will choose.
 Our machine-learning models have analyzed historical interactions with the
@@ -192,7 +194,7 @@ Our machine-learning models have analyzed historical interactions with the
 chosen. Boost conversions and create a personalized experience by filtering out
 the noise and showing your users the flights which are best for them.
 
-Here is a quick cURL example piping Flight Offers Search API results directly to the prediction API.
+Here is a quick cURL example piping the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) results directly to the prediction API.
 
 Let’s look at flight offers for a Madrid-New York round trip (limiting to four options for this test illustration)
 
@@ -244,15 +246,14 @@ addition of the `choiceProbability` field for each flight offer element.
 }
 ```
 
-#### Multi-city Searches
+#### Search for flight offers for multiple cities
 
 Many travelers take advantage of their international trips to visit several
 destinations. Multi-city search is a functionality that lets you search for
 consecutive one-way flights between multiple destinations in a single request.
 The returned flights are packaged as a complete, bookable itinerary. 
 
-To perform multi-city searches, you must use the `POST` method of `Flight
-Offers Search API`. The API lets you search for up to six origin and
+To perform multi-city searches, you must use the `POST` method of the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The API lets you search for up to six origin and
 destination city pairs.
 
 In the following example, we’ll fly from Madrid to Paris, where we’ll spend a couple of
@@ -319,9 +320,96 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 ```
 #### Search using loyalty programs
 
-[Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) and [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) both accept Frequent Flyer information so end-users can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information, such as passenger name, email or phone number to validate the account. If the validation fails, your user won’t receive their loyalty program advantages.
+The [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) and the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) both accept Frequent Flyer information so end-users can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information, such as passenger name, email or phone number to validate the account. If the validation fails, your user won’t receive their loyalty program advantages.
 
-### Check flight and fare availability
+#### Search for routes from a specific airport
+
+The [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) shows all destinations from a given airport. To follow up on our previous example, let's check where we can fly to from Madrid (MAD). The options are obviously quite broad, so we can limit the maximum number of results to 10. Keep in mind that this limit will apply from the beginning of the results list in the alphabetical order of the airport IATA codes.
+
+The request will look like this:
+
+```bash
+curl --request GET \
+     --header 'Authorization: Bearer <token>' \
+     --url https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=MAD&max=10 \
+```
+
+So we can see the the following results:
+
+```json
+{
+  "meta": {
+    "count": 10,
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=MAD&max=10"
+    }
+  },
+  "data": [
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ALBACETE",
+      "iataCode": "ABC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LANZAROTE",
+      "iataCode": "ACE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MALAGA",
+      "iataCode": "AGP"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ALGHERO",
+      "iataCode": "AHO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ALICANTE",
+      "iataCode": "ALC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ALGIERS",
+      "iataCode": "ALG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AMMAN",
+      "iataCode": "AMM"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AMSTERDAM",
+      "iataCode": "AMS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ASUNCION",
+      "iataCode": "ASU"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ATHENS",
+      "iataCode": "ATH"
+    }
+  ]
+}
+```
+
+### Search for flight and fare availability
 
 With the [Flight Availabilities Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-availabilities-search) you can check the flight and fare availability for any itinerary. This refers to the full inventory of fares available for an itinerary at any given time. The concept of flight availability originated in the early days of flight booking as a way for agents to check what options existed for their travelers’ itineraries.
 
@@ -462,16 +550,16 @@ Note that airlines’ bookable seat counters goe up to a maximum of 9, even if m
 
 Branded fares are airfares that bundle tickets with extras, such as checked bags, seat selection, refundability or loyalty points accrual. Each airline defines and packages its own branded fares and they vary from one airline to another. Branded fares not only help build brand recognition and loyalty, but also offer travelers an attractive deal as the incremental cost of the fare is usually less than that of buying the included services à la carte.  
 
-The [Branded Fares Upsell API](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell) receives flight offers from the Flight Offers Search and returns branded fares as flight offers which can be easily passed to the next step in the booking funnel. The booking flow is the following: 
+The [Branded Fares Upsell API](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell) receives flight offers from the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) and returns branded fares as flight offers which can be easily passed to the next step in the booking funnel. The booking flow is the following: 
 
-- Search for flights using the Flight Offers Search. 
-- Find branded fare options for a selected flight using the Branded Fares Upsell. 
-- Confirm the fare and get the final price using the Flight Offers Price. 
-- Book the flight using the Flight Create Orders. 
+- Search for flights using the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). 
+- Find branded fare options for a selected flight using the [Branded Fares Upsell API](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell). 
+- Confirm the fare and get the final price using the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price). 
+- Book the flight using the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). 
 
 Let's see an example of how to search for branded fares. 
 
-You can build the request by passing the flight-offer object from the Flight Offers Search into the body of the `POST` request:
+You can build the request by passing the flight-offer object from the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) into the body of the `POST` request:
 
 ```bash
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
@@ -615,7 +703,7 @@ POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 }  
 ```
 
-### Recommend personalized destinations
+### Search for personalized destination recommendations
 
 The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations)  provides personalized destinations based on the traveler's location and an input destination, such as a previously searched flight destination or city of interest.
 
@@ -642,16 +730,17 @@ The response will look like this:
  }
 ```
 
- If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The Travel Recommendations API has returned links to both APIs. 
+ If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) has returned links to both APIs. 
 
-### Recommend nearby destinations 
+
+### Search for recommended nearby destinations 
 
 With the [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) you can find the closest major airports to a starting point. By default, results are sorted by relevance but they can also be sorted by `distance`, `flights`, `travelers` using the parameter `sort`.
 
 !!!information
     To get the latitude and longitude of a city you can use the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) using the city's IATA code.
 
-Let's call the Airport Nearest Relevant API to find airports within the 500km radius of Madrid.
+Let's call the [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) to find airports within the 500km radius of Madrid.
 
 `GET https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=40.416775&longitude=-3.703790&radius=500`
 
@@ -742,7 +831,9 @@ We can do this by calling the [Flight Cheapest Date Search API](https://develope
 ```
 As you can see above, in the results we have a list of dates for a roundtrip from Madrid to Barcelona ordered by the lowest price.
 
-In the last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search)   for each result contains a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). For example, if we want to perform a flight search for the first result, we only have to take the link provided and make an API call:
+
+In the last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) for each result contains a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). For example, if we want to perform a flight search for the first result, we only have to take the link provided and make an API call:
+
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false`
 
@@ -755,9 +846,9 @@ thousands of bookings occurring every minute. During this step, you can also
 add ancillary products like extra bags or legroom. For that you can use the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price).
 
 Once a flight has been selected, you’ll need to confirm the availability and
-price of the fare. This is where the Flight Offers Price API comes in. This API
+price of the fare. This is where the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) comes in. This API
 returns the final fare price \(including taxes and fees\) of flights from the
-Flight Offers Search API as well as pricing for ancillary products and the
+[Flight Offers Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) as well as pricing for ancillary products and the
 payment information that will be needed to make the final booking. 
 
 The body to be sent via `POST` is built by a new object of type
@@ -796,7 +887,7 @@ page](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cr
 for more details on this API.
 
 Remember, you need to be able to issue a ticket to make bookings with our
-Flight Create Order API. To access the API in production, you need to either
+[Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
 yourself. 
 
@@ -819,9 +910,9 @@ only certain accredited parties can issue tickets. In the next section, we’ll
 go into detail about your options for managing this final step in the booking
 process.
 
-## The aircraft cabin layout
+## View the aircraft cabin layout
 
-With the SeatMap Display API you can view the aircraft cabin layout: 
+With the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) you can view the aircraft cabin layout: 
 
 - `deckConfiguration` - the dimensions of the passenger deck in (x,y) coordinates, including the location of the wings, exit rows, and cabins. These dimensions form a grid on which you will later place facilities and seats.
 - `facilities` - the (x,y) coordinates of aircraft facilities, such as bathrooms or galleys.
@@ -833,7 +924,7 @@ Check out this [video tutorial](https://youtu.be/uTOQjGsZLfI) for more details.
 
 ### Display in-flight amenities
 
-Both endpoints of the SeatMap Display API return information about the following in-flight amenities:
+Both endpoints of the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) return information about the following in-flight amenities:
 
 - Seat
 - Wi-fi
@@ -844,7 +935,7 @@ Both endpoints of the SeatMap Display API return information about the followi
 
 ### Select a seat 
 
-Requests to either endpoint of SeatMap Display will return a list of seating options with their characteristics, pricing, and coordinates. Let's look at an example response:
+Requests to either endpoint of the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) will return a list of seating options with their characteristics, pricing, and coordinates. Let's look at an example response:
 
 ```json
 {
@@ -879,17 +970,17 @@ Requests to either endpoint of SeatMap Display will return a list of seating opt
               },
 ```
 
-For each seat, the SeatMap Display API provides a seatAvailabilityStatus so you can indicate which seats are currently available for booking. Seats may have one of three availability statuses:
+For each seat, the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) provides a seatAvailabilityStatus so you can indicate which seats are currently available for booking. Seats may have one of three availability statuses:
 
 - `AVAILABLE` – the seat is not occupied and is available to book.
 - `BLOCKED` – the seat is not occupied but isn’t available to book for the user. This is usually due to the passenger type (e.g., children may not sit in exit rows) or their fare class (e.g., some seats may be reserved for flyers in higher classes).
 - `OCCUPIED` – the seat is  occupied and unavailable to book.
 
-If a flight is fully booked, the API returns an OCCUPIED status for all seats. In most cases, fully booked flights are filtered out during search with Flight Offers Search or when confirming the price with Flight Offers Price. Flight Create Orders returns an error message if you try to book an unavailable seat. For more information on the booking flow, check out how to build a flight booking engine.
+If a flight is fully booked, the API returns an OCCUPIED status for all seats. In most cases, fully booked flights are filtered out during search with the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) or when confirming the price with the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price). The [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) returns an error message if you try to book an unavailable seat. For more information on the booking flow, check out how to build a flight booking engine.
 
 Once your user has selected their seat, the next step is to add the desired seat to the flight offer and prepare them for booking.
 
-In the above example response, seat `20D` is indicated as `AVAILABLE`. For your user to be able to book the seat, you must add the seat to the flightOffer object and call `Flight Offers Price` to get a final order summary with the included seat.
+In the above example response, seat `20D` is indicated as `AVAILABLE`. For your user to be able to book the seat, you must add the seat to the flightOffer object and call [Flight Offers Price](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) to get a final order summary with the included seat.
 
 To include the seat in the `flightOffer` object, add it to `fareDetailsBySegment` → `additionalServices` → `chargeableSeatNumber`, as shown below:
 
@@ -911,7 +1002,7 @@ To include the seat in the `flightOffer` object, add it to `fareDetailsBySegme
           ]
 ```
 
-Flight Offers Price then returns the `flightOffer` object with the price of the chosen seat included within `additionalServices`:
+The [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) then returns the `flightOffer` object with the price of the chosen seat included within `additionalServices`:
 
 ```json
 "additionalServices":
@@ -923,7 +1014,7 @@ Flight Offers Price then returns the `flightOffer` object with the price of the 
 
 You can use the same process to select seats for multiple passengers. For each passenger, you must add the selected seats in `fareDetailsBySegment` for each `travelerId` within the flight offer.
 
-At this point, you now have a priced `flightOffer` which includes your user's selected seat. The final step is to book the flight using `Flight Create Orders API`. To do this, simply pass the `flightOffer` object into a request to the Flight Create Orders API, which will book the flight and return an order summary and a booking Id.
+At this point, you now have a priced `flightOffer` which includes your user's selected seat. The final step is to book the flight using the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). To do this, simply pass the `flightOffer` object into a request to the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders), which will book the flight and return an order summary and a booking Id.
 
 ## Add additional baggage
 
@@ -931,7 +1022,9 @@ At this point, you now have a priced `flightOffer` which includes your user's se
 
 The first step is to find the desired flight offer using the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). Each flight offer contains an `additionalServices` field with the types of additional services available, in this case bags, and the maximum price of the first additional bag. Note that at this point, the price is for informational purposes only.  
 
-To get the final price of the added baggage with the airline policy and the traveler's tier level taken into account, you must call [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price). To do this, add the `include=bags` parameter in the path of the Flight Offers Price API: 
+
+To get the final price of the added baggage with the airline policy and the traveler's tier level taken into account, you must call the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price). To do this, add the `include=bags` parameter in the path of the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price): 
+
 
 ```bash
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=bags 
@@ -1008,9 +1101,11 @@ Fill in `chargeableCheckedBags` with the desired quantity (or weight, depending 
 
 ### Confirm the final price and book
 
-Once you’ve added the desired bags to the flight order, you need to call Flight Offers Price API to get the final price of the flight with all additional services included. Once this is done, you can then call the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) to book the flight. If you want to add different numbers of bags for different itineraries, you can do it following the same flow. 
 
-If the desired flight you want to book, does not permit the additional service, [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) will reject the booking and return the following error:
+Once you’ve added the desired bags to the flight order, you need to call the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) to get the final price of the flight with all additional services included. Once this is done, you can then call the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) to book the flight. If you want to add different numbers of bags for different itineraries, you can do it following the same flow. 
+
+If the desired flight you want to book, does not permit the additional service, the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) will reject the booking and return the following error:
+
 
 ```json
 { 
@@ -1025,9 +1120,9 @@ If the desired flight you want to book, does not permit the additional service, 
 
 ## Cancel a reservation
 
-Just as you can help users book a flight with the Flight Create Orders, you can now also help them cancel their reservations with the [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) API. However, you have a limited window of time to cancel via API. If you’re working with an airline consolidator for ticketing, cancellations via API are generally only allowed while the order is queued for ticketing. Once the ticket has been issued, you’ll have to contact your consolidator directly to handle the cancellation.
+Just as you can help users book a flight with the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders), you can now also help them cancel their reservations with the [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) API. However, you have a limited window of time to cancel via API. If you’re working with an airline consolidator for ticketing, cancellations via API are generally only allowed while the order is queued for ticketing. Once the ticket has been issued, you’ll have to contact your consolidator directly to handle the cancellation.
 
-To call the Flight Order Management, you have pass as a parameter the flight-orderId from the Flight Create Orders API, such as:
+To call the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management), you have pass as a parameter the flight-orderId from the Flight Create Orders API, such as:
 
 ```bash
 DELETE https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2fAiY
@@ -1035,9 +1130,9 @@ DELETE https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp
 
 ## View reservation details
 
-With the Flight Order Management API you can consult and check your flight reservation. 
+With the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) you can consult and check your flight reservation. 
 
-To call Flight Order Management, you have pass as a parameter the flight-orderId from the Flight Create Orders API, such as:
+To call the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management), you have pass as a parameter the flight-orderId from the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders), such as:
 
 ```bash
 GET https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2fAiY
@@ -1050,7 +1145,7 @@ GET https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2f
 Self-Service users must work with an airline consolidator that can issue
 tickets on your behalf. In that case, the payment is not processed by the API
 but directly between you and the consolidator. Adding a form of payment to
-the Flight Create Orders API will be rejected by error INVALID FORMAT.
+the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) will be rejected by error INVALID FORMAT.
 
 ### Price discrepancy 
 
@@ -1070,7 +1165,7 @@ following error:
 }
 ```
 
-If you receive this error, reconfirm the fare price with the Flight Offers Price API before booking.
+If you receive this error, reconfirm the fare price with the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) before booking.
 
 
 The following is a common error in the test environment, as you can perform many bookings without restrictions (no real payment), but the inventory is a copy of the real one, so if you book many seats, the inventory will be empty and you won't be able to book anymore.
