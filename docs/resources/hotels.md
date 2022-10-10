@@ -2,14 +2,11 @@
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Amadeus Hotel APIs](https://developers.amadeus.com/self-service/category/hotel) | Lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings.                |
-| [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) | Returns the name, address, geoCode, and time zone for each hotel bookable in Amadeus. |
-| [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) | Uses sentiment analysis of hotel reviews to provide an overall hotel ratings and ratings for categories like location, comfort, service, staff, internet, food, facilities, pool or sleep quality. |
-| [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) | Provides a list of the cheapest hotels in a given location with detailed information on each hotel and the option to filter by category, chain, facilities or budget range.  |
-| [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) | Lets you complete bookings at over 150,000 hotels and accommodations around the world. |
-
-
-The [Amadeus Hotel APIs](https://developers.amadeus.com/self-service/category/hotel) lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings. 
+| [Hotel](https://developers.amadeus.com/self-service/category/hotel) | Lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings.                |
+| [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) | Returns the name, address, geoCode, and time zone for each hotel bookable in Amadeus. |
+| [Hotel Ratangs](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) | Uses sentiment analysis of hotel reviews to provide an overall hotel ratings and ratings for categories like location, comfort, service, staff, internet, food, facilities, pool or sleep quality. |
+| [Hotel Search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) | Provides a list of the cheapest hotels in a given location with detailed information on each hotel and the option to filter by category, chain, facilities or budget range.  |
+| [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) | Lets you complete bookings at over 150,000 hotels and accommodations around the world. |
 
 Let's learn how to get started and help your users book the perfect rooms at over 150,000 hotels worldwide.
 
