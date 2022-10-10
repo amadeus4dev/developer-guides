@@ -11,8 +11,8 @@ There are two APIs to get this information.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Amadeus Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) | Provides up-to-date data on COVID-19 caseloads and travel restrictions for over 200 countries and territories, as well as hundreds of cities and regions worldwide.                |
-| [Amadeus Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place)          |  Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety.                  |
+| [Travel Restrictions](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) | Provides up-to-date data on COVID-19 caseloads and travel restrictions for over 200 countries and territories, as well as hundreds of cities and regions worldwide.                |
+| [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place)          |  Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety.                  |
 
 
 ## Search by an area
