@@ -1,8 +1,14 @@
 # Locations
 
+| APIs                                                                                                                                                 | Description                                                                                                               |
+|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) |  Finds airports and cities that match a specific word or string of letters.                                                 |
+| [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Finds the closest major airports to a starting point. |
+| [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) | Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety. |
+
 ## Airport and City Search
 
-The Airport & City Search API finds airports and cities that match a specific
+The [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) finds airports and cities that match a specific
 word or a string of letters. Using this API, you can automatically suggest
 airports based on what the traveler enters in the search field. The API
 provides a list of airports/cities ordered by yearly passenger volume with the
@@ -10,7 +16,7 @@ name, 3-letter IATA code, time zone and coordinates of each airport.
 
 ## Airport Nearest Relevant
 
-The Airport Nearest Relevant API finds the closest major airports to a starting
+The [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) finds the closest major airports to a starting
 point. The API provides a list of commercial airports within a 500km (311mi)
 radius of a given point that are ordered by relevance, which considers their
 distance from the starting point and their yearly flight traffic. For each
@@ -19,7 +25,7 @@ coordinates.
 
 ## Safe Rates
 
-The Safe Place API is the newest addition to our Self-Service API catalog.
+The [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) is the newest addition to our Self-Service API catalog.
 Created in partnership with GeoSure, the global leader in scaled location
 safety ratings, the API is powered by GeoSafeScores™ algorithm, which provides
 safety and security ratings for over 65,000 cities and neighborhoods worldwide.  
