@@ -4,8 +4,8 @@ With Amadeus Self-Service APIs, you can find data on over two million places and
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Points of Interest  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference)     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
-| [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference) | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
+| [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference)     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
+| [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference) | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
 
 These two APIs have the same behavior. You can search by radius or by a square, and retrieve results by ID. Let's go through them one by one.
 
