@@ -4,8 +4,8 @@ In the `Itinerary Management` category, you can give travelers a simple and pers
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) | Build a single itinerary with information from different booking confirmation emails.                                                 |
-| [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference) | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
+| [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) | Build a single itinerary with information from different booking confirmation emails.                                                 |
+| [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference) | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
  
 ## Parse the email confirmation into JSON
 
