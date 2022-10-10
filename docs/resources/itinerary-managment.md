@@ -11,8 +11,6 @@ In the `Itinerary Management` category, you can give travelers a simple and pers
 
 The [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
 
-!!! information
-    `Trip Parser API` V3.0 has been released since August 2021 and the document is up to date. 
 
 ### Encode your booking confirmation in Base64
 
