@@ -1,6 +1,12 @@
 # Hotels
 
-The [Amadeus Hotel APIs](https://developers.amadeus.com/self-service/category/hotel) lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings. 
+| APIs                                                                                                                                                          | Description                                                                             |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [Hotel](https://developers.amadeus.com/self-service/category/hotel) | Lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings.                |
+| [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) | Returns the name, address, geoCode, and time zone for each hotel bookable in Amadeus. |
+| [Hotel Ratangs](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) | Uses sentiment analysis of hotel reviews to provide an overall hotel ratings and ratings for categories like location, comfort, service, staff, internet, food, facilities, pool or sleep quality. |
+| [Hotel Search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) | Provides a list of the cheapest hotels in a given location with detailed information on each hotel and the option to filter by category, chain, facilities or budget range.  |
+| [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) | Lets you complete bookings at over 150,000 hotels and accommodations around the world. |
 
 Let's learn how to get started and help your users book the perfect rooms at over 150,000 hotels worldwide.
 
@@ -53,7 +59,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?l
 
 #### Search hotels by hotel ids
 
-If you already know the Id of a hotel that you would like to check, you can use it to call the `Hotel List API`. 
+If you already know the Id of a hotel that you would like to check, you can use it to call the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference). 
 
 ```bash
 GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?hotelIds=ACPARF58
@@ -118,7 +124,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&
 
 ### Display Hotel Ratings
 
-When users search for hotels in a desired area, they may wonder about the hotel rating. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) returns ratings for many crucial elements of a hotel, such as sleep quality, services, facilities, room comfort, value for money, location and many others. `Hotel Ratings API` guarantees high-quality service for your customers.
+When users search for hotels in a desired area, they may wonder about the hotel rating. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) returns ratings for many crucial elements of a hotel, such as sleep quality, services, facilities, room comfort, value for money, location and many others. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) guarantees high-quality service for your customers.
 
 The sentiment analysis, just like the one below, is displayed in a simple flow to allow you to easily identify the best hotels based on traveler reviews:
 
@@ -172,7 +178,7 @@ With these additional filters, your booking process becomes more efficient and y
 
 ## Check Availabilities and Prices
 
-Once users have explored the list of hotels in their desired area, they would want to check the price of a specific hotel or compare the prices of hotels on the list. With the `hotelIds` that you got from `Hotel List API`, you now can check the available rooms with real-time prices and room descriptions by calling the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference). 
+Once users have explored the list of hotels in their desired area, they would want to check the price of a specific hotel or compare the prices of hotels on the list. With the `hotelIds` that you got from [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference), you now can check the available rooms with real-time prices and room descriptions by calling the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference). 
 
 An example to request available rooms and prices for one room in Hilton Paris Opera for one adult with check-in date 2022-11-22:
 
@@ -292,7 +298,7 @@ The API returns a list of `offers` objects containing the price of the cheapest 
 
 ```
 
-If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting `Hotel Search API` again with the `offerid` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
+If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) again with the `offerid` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
 
 An example to request the offer information with `offer id`: 
 
@@ -360,13 +366,10 @@ The Hotel Search API returns information about the payment policy of each hotel.
 - **Deposit**: at the time of booking or by a given deadline, the hotel will charge the guest a percentage of the total amount of the reservation. The remaining amount is paid by the traveler directly at the hotel. 
 - **Prepay**: the total amount of the reservation fee must be paid by the traveler when making the booking. 
 
-The current version of the `Hotel Booking API` only permits booking at hotels that accept credit cards. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate this information. Be sure to validate the payment and guest information, as invalid information may result in the reservation being canceled. 
+The current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) only permits booking at hotels that accept credit cards. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate this information. Be sure to validate the payment and guest information, as invalid information may result in the reservation being canceled. 
 
 As soon as your application stores transmits, or processes cardholder information, you will need to comply with PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants). 
 
-### Notes about the commission 
-
-To be updated
 
 ## Guide for multiple hotel rooms
 
@@ -374,7 +377,7 @@ Now that we have gone through the hotel booking flow, you may wonder how to proc
 
 ### Check availability and prices for multiple rooms 
 
-The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the `Hotel Search API` using the `hotelid` that you got from the `Hotel List API`. 
+The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) using the `hotelid` that you got from the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference). 
 
 Here is an example of a search in Hilton Paris for **two rooms** for **three adults**: 
 
@@ -394,7 +397,7 @@ The API will then return the available offers where `roomQuantity`is equal to 2.
 ```
 ### Book multiple rooms with details for one guest
 
-To call the `Hotel Booking API`, you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below provides details of one guest to book two rooms by `offerId`: 
+To call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference), you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below provides details of one guest to book two rooms by `offerId`: 
 
 ```json
 { 
@@ -461,7 +464,7 @@ Once the booking is complete, the API will return the following confirmation:
 
 One common question is how to assign guest distribution among the booked rooms. 
 
-When you call the `Hotel Booking API`, the `rooms` object represents the rooms. Each room contains guests distributed per room. Specifically, each `room` object needs IDs of the guests staying in that room.  
+When you call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference), the `rooms` object represents the rooms. Each room contains guests distributed per room. Specifically, each `room` object needs IDs of the guests staying in that room.  
 
 Below is a sample request to book two rooms with guest distribution. The first room is for guest ID’s `1` & `2` and the second room for guest Id `3`.
 
@@ -572,7 +575,7 @@ The API response will be the same as when you booked multiple rooms using the de
 
 ### AcceptedPayments must be creditCards 
 
-The current version of the `Hotel Booking API` only supports credit card payments, which are accepted by most hotels. The `Hotel Search API` returns the payment policy of each hotel under `acceptedPayments` in the policies section.
+The current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) only supports credit card payments, which are accepted by most hotels. The [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) returns the payment policy of each hotel under `acceptedPayments` in the policies section.
 
 ###  Empty response from the View Room endpoint  
 
@@ -594,6 +597,3 @@ If you get an empty response from the Hotel Search API’s second endpoint, then
 
 The offer for the selected Hotel is no longer available. Please select a new one.
 
-## Useful Resources 
-
-To be updated

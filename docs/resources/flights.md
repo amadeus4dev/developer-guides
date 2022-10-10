@@ -732,6 +732,7 @@ The response will look like this:
 
  If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) has returned links to both APIs. 
 
+
 ### Search for recommended nearby destinations 
 
 With the [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) you can find the closest major airports to a starting point. By default, results are sorted by relevance but they can also be sorted by `distance`, `flights`, `travelers` using the parameter `sort`.
@@ -830,7 +831,9 @@ We can do this by calling the [Flight Cheapest Date Search API](https://develope
 ```
 As you can see above, in the results we have a list of dates for a roundtrip from Madrid to Barcelona ordered by the lowest price.
 
+
 In the last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) for each result contains a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). For example, if we want to perform a flight search for the first result, we only have to take the link provided and make an API call:
+
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false`
 
@@ -1019,7 +1022,9 @@ At this point, you now have a priced `flightOffer` which includes your user's se
 
 The first step is to find the desired flight offer using the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). Each flight offer contains an `additionalServices` field with the types of additional services available, in this case bags, and the maximum price of the first additional bag. Note that at this point, the price is for informational purposes only.  
 
+
 To get the final price of the added baggage with the airline policy and the traveler's tier level taken into account, you must call the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price). To do this, add the `include=bags` parameter in the path of the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price): 
+
 
 ```bash
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=bags 
@@ -1096,9 +1101,11 @@ Fill in `chargeableCheckedBags` with the desired quantity (or weight, depending 
 
 ### Confirm the final price and book
 
+
 Once you’ve added the desired bags to the flight order, you need to call the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) to get the final price of the flight with all additional services included. Once this is done, you can then call the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) to book the flight. If you want to add different numbers of bags for different itineraries, you can do it following the same flow. 
 
 If the desired flight you want to book, does not permit the additional service, the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) will reject the booking and return the following error:
+
 
 ```json
 { 

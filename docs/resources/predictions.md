@@ -1,10 +1,16 @@
 # Predictions
 
+| APIs                                                                                                                                                          | Description                                                                             |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [Flight Delay Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) | Provides delay probabilities for possible delay lengths.                |
+| [Airport On-Time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance) | Returns the estimated percentage of on-time flight departures for a given airport and date. |
+| [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction) | Provides insight into traveler motivation by predicting whether a trip is for business or leisure.  |
+
 ## Flight Delay Prediction API
 
 We used historical flight delay data to train a machine learning model to predict whether a flight will be on time or delayed.
 
-Calling the API is simple. You need to input basic information about the
+Calling the [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) is simple. You need to input basic information about the
 flight, including the carrier, airports and flight number to begin calling. Check
 out our API reference page to see the swagger with all the parameters.
 
@@ -66,7 +72,7 @@ make that choice.
 
 ## Airport On-Time Performance
 
-The Airport On-Time Performance API estimates the percentage of an airport’s
+The [Airport On-Time Performance API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance) estimates the percentage of an airport’s
 flights that will leave on time. We’ve harnessed Amadeus historical data to
 predict the best airports for an speedy, stress-free flight. Give users
 meaningful context and empower them to make better choices about connecting
@@ -74,7 +80,7 @@ flights and departure airports.
 
 ## Trip Purpose Prediction
 
-The Trip Purpose Prediction API predicts whether a flight search is for
+The [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction) predicts whether a flight search is for
 business or leisure. Our machine-learning models have detected which patterns
 of departure and arrival cities, flight dates and search dates are associated
 with business and leisure trips. Understand why your users are traveling
