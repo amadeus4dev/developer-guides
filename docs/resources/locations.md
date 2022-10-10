@@ -2,9 +2,9 @@
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) |  Finds airports and cities that match a specific word or string of letters.                                                 |
-| [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Finds the closest major airports to a starting point. |
-| [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) | Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety. |
+| [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) |  Finds airports and cities that match a specific word or string of letters.                                                 |
+| [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Finds the closest major airports to a starting point. |
+| [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) | Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety. |
 
 ## Airport and City Search
 
