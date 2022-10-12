@@ -1,5 +1,10 @@
 # Hotels
 
+The **Hotels** category contains APIs that can help you find the right hotel and complete the booking.
+
+!!! information
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
+
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [Hotel](https://developers.amadeus.com/self-service/category/hotel) | Lets you search, compare and book rooms at over 350 of the world’s top hotel chains and enrich your product with detailed information, descriptions, and ratings.                |

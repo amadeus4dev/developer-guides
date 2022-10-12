@@ -1,5 +1,10 @@
 # Flights
 
+The **Flights** category contains a wide array of APIs that can help you manage flights, from searching for flight options to actually booking a flight.
+
+!!! information
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
+
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | Provides a list of destinations from a given city that is ordered by price and can be filtered by departure date or maximum price.                |
@@ -322,7 +327,7 @@ curl https://test.api.amadeus.com/v2/shopping/flight-offers \
 
 The [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) and the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) both accept Frequent Flyer information so end-users can benefit from their loyalty program. When adding Frequent Flyer information, please remember that each airline policy is different, and some require additional information, such as passenger name, email or phone number to validate the account. If the validation fails, your user won’t receive their loyalty program advantages.
 
-#### Search for routes from a specific airport
+### Search for routes from a specific airport
 
 The [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) shows all destinations from a given airport. To follow up on our previous example, let's check where we can fly to from Madrid (MAD). The options are obviously quite broad, so we can limit the maximum number of results to 10. Keep in mind that this limit will apply from the beginning of the results list in the alphabetical order of the airport IATA codes.
 

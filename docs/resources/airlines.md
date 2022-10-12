@@ -1,5 +1,9 @@
 # Airlines
 
+We have three APIs that provide information on airlines, from a list of available destinations to the check-in process. We have grouped them into the **Airlines** category.
+
+!!! information
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|

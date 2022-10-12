@@ -7,7 +7,10 @@ Don't worry, with Amadeus Self-Service APIs, you will be able to get detailed in
 
 And even more, **safety information** can be retrieved for the destination you would like to visit so that you will be aware of where you are heading to. 
 
-There are two APIs to get this information.
+There are two APIs to get this information, which we have grouped into the **COVID-19 and Travel Safety** category.
+
+!!! information
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
