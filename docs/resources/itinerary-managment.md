@@ -1,11 +1,15 @@
 # Itinerary Management
 
-In the `Itinerary Management` category, you can give travelers a simple and personalized way to view their itinerary. 
+In the **Itinerary Management** category, you can give travelers a simple and personalized way to view their itinerary. 
+
+!!! information
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) | Build a single itinerary with information from different booking confirmation emails.                                                 |
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference) | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
+| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) | Finds cities that match a specific word or string of letters. |
  
 ## Parse the email confirmation into JSON
 
@@ -151,3 +155,63 @@ The result? You can probably guess it. :)
 }
 ```
 
+## Find a city by keywords
+
+If you are unsure of the exact spelling of a city, you can reach out to the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search). This API uses a keyword, which is a string containing a minimum of 3 and a maximum of 10 characters, to search for a city whose name contains this keyword. It is not critical whether you enter the entire city name or only a part of it. For example, `Paris`, `Par` or `ari` will all return `Paris` in the search results.
+
+There are two optional parameters to help you make the query more precise - `countryCode` and `max`. The `countryCode` is a string for the ISO 3166 Alpha-2 code of the country where you need to locate a city, for example, `FR` for France. The `max` is an integer that defines the maximum number of search results.
+
+You can also include a list of airports for each city returned in the search results. To do this, you need to add `AIRPORTS` to the include field, which is an array of strings defining additional resources for your search.
+
+Let's check out the results for keyword `PAR`. We will limit the search scope to `FR` and the number of results to two.
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/cities?countryCode=FR&keyword=PAR&max=2
+```
+
+The results are probably rather predictable:
+
+```json
+{
+  "meta": {
+    "count": 2,
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/reference-data/locations/cities?countryCode=FR&keyword=PAR&max=2"
+    }
+  },
+  "data": [
+    {
+      "type": "location",
+      "subType": "city",
+      "name": "Paris",
+      "iataCode": "PAR",
+      "address": {
+        "countryCode": "FR",
+        "stateCode": "FR-75"
+      },
+      "geoCode": {
+        "latitude": 48.85341,
+        "longitude": 2.3488
+      }
+    },
+    {
+      "type": "location",
+      "subType": "city",
+      "name": "Le Touquet-Paris-Plage",
+      "iataCode": "LTQ",
+      "address": {
+        "countryCode": "FR",
+        "stateCode": "FR-62"
+      },
+      "geoCode": {
+        "latitude": 50.52432,
+        "longitude": 1.58571
+      }
+    }
+  ]
+}
+```
+
+First of all we see the French capital at the top of the list. The second result refers to the town Le Touquet-Paris-Plage, whose official name contains three letters that match our keyword. If we want to see more results, we can always adjust the `max` number of results.
+
+The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) retrieves any city that matches a keyword.
