@@ -28,6 +28,7 @@ The **Flights** category contains a wide array of APIs that can help you manage 
 | [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) | Finds airports and cities that match a specific word or a string of letters. |
 | [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
 | [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) | Finds all destinations served by a given airport. |
+| [Airport On-Time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance) | Predicts an airport's overall performance based on the delay of all flights during a day. |
 | **Airlines** |
 | [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) |  Simplifies the check-in process by providing direct links to the airline check-in page.                |
 | [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup)           | Finds the name of an airline by its IATA or ICAO airline codes.                  |
@@ -1299,8 +1300,37 @@ To get this information, just send a query with the IATA carrier code, flight nu
 
 For any traveller it's quite important to know how far in advance they should get to the airport. The [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) estimates the probability of a specific flight being delayed. 
 
+## Check the on-time performance of an airport
+
+Another way to get prepared for any delays, is checking the on-time performance of the actual airport. The [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) estimates the probability of a specific flight being delayed. 
+
+The search query is very simple. In our query we only need to provide our flight departure date and the departure airport. For example, JFK on 12 December 2022.
 
 
+```bash
+GET https://test.api.amadeus.com/v1/airport/predictions/on-time?airportCode=JFK&date=2022-12-12 
+```
+
+This is the result:
+
+```json
+{
+  "data": {
+    "id": "JFK20221212",
+    "probability": "0.928",
+    "result": "0.77541769",
+    "subType": "on-time",
+    "type": "prediction"
+  },
+  "meta": {
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/airport/predictions/on-time?airportCode=JFK&date=2022-12-12"
+    }
+  }
+}
+```
+
+The `probability` parameter shows the probability of the airport running smoothly. In our example, this metric means that there is a 92.8% chance that there will be no delays.
 
 ## Get a direct link to the airline check-in page
 
