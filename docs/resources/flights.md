@@ -7,25 +7,34 @@ The **Flights** category contains a wide array of APIs that can help you manage 
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | Provides a list of destinations from a given city that is ordered by price and can be filtered by departure date or maximum price.                |
-| [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search)          |  Provides a list of flight options with dates and prices, and allows you to order by price, departure date or duration.                  |
+| **Flight booking** |
 | [Flight Offers Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) | Lets you can search flights between two cities, perform multi-city searches for longer itineraries and access one-way combinable fares to offer the cheapest options possible. |
-| [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) | Uses Artificial Intelligence and Amadeus historical flight booking data to identify which flights in search results are most likely to be booked. |
 | [Flight Offers Price](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) | Confirms the availability and final price (including taxes and fees) of flights returned by the Flight Offers Search API. |
-| [Seatmap Display](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) | Shows airplane cabin plan from a Flight Offer in order for the traveler to be able to choose their seat during the flight booking flow. |
-| [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) | Finds all destinations served by a given airport. |
-| [Flight Availabilities Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-availabilities-search) | Provides a list of flights with seats for sale on a given itinerary and the quantity of seats available in different fare classes. |
-| [Branded Fares Upsell](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell) | Provides the branded fares available for a given flight, along with pricing and a fare description. |
-| [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) | Uses Artificial Intelligence trained on Amadeus historical flight search data to determine which destinations are also popular among travelers with similar profiles, and provides a list of recommended destinations with name, IATA code, coordinates and similarity score. |
-| [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
 | [Flight Create Orders](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) | Provides a unique booking ID and reservation details once the reservation is completed. |
 | [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) | Checks the latest status of a reservation, shows post-booking modifications like ticket information or form of payment and lets you cancel reservations. |
+| [Seatmap Display](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) | Shows airplane cabin plan from a Flight Offer in order for the traveler to be able to choose their seat during the flight booking flow. |
+| [Branded Fares Upsell](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell) | Provides the branded fares available for a given flight, along with pricing and a fare description. |
+| [Flight Price Analysis](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis) | Uses an Artificial Intelligence algorithm trained on Amadeus historical flight booking data to show how current flight prices compare to historical fares and whether the price of a flight is below or above average.  |
+| [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) | Uses Artificial Intelligence and Amadeus historical flight booking data to identify which flights in search results are most likely to be booked. |
+| **Flight inspiration** |
+| [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | Provides a list of destinations from a given city that is ordered by price and can be filtered by departure date or maximum price.                |
+| [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search)          |  Provides a list of flight options with dates and prices, and allows you to order by price, departure date or duration.                  |
+| [Flight Availabilities Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-availabilities-search) | Provides a list of flights with seats for sale on a given itinerary and the quantity of seats available in different fare classes. |
+| [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) | Uses Artificial Intelligence trained on Amadeus historical flight search data to determine which destinations are also popular among travelers with similar profiles, and provides a list of recommended destinations with name, IATA code, coordinates and similarity score. |
+| **Flight schedule** |
+| [On Demand Flight Status](https://developers.amadeus.com/self-service/category/air/api-doc/on-demand-flight-status) | Pprovides real-time flight schedule data including up-to-date departure and arrival times, terminal and gate information, flight duration and real-time delay status. Help travelers track the live status of their flight and enjoy a stress-free trip. |
+| [Flight Delay Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) | Provides delay probabilities for four possible delay lengths |
+| **Airport** |
+| [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) | Finds airports and cities that match a specific word or a string of letters. |
+| [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
+| [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) | Finds all destinations served by a given airport. |
+| **Airlines** |
 | [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) |  Simplifies the check-in process by providing direct links to the airline check-in page.                |
 | [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup)           | Finds the name of an airline by its IATA or ICAO airline codes.                  |
 | [Airline Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airline-routes) | Finds all destinations served by a given airline. |
 
 
-## How to search flights
+## Search flights
 
 ### Search to get flight inspirations
 
@@ -194,7 +203,7 @@ With the parameter `excludedAirlineCodes` you can ignore specific airlines. For 
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06`
 
-#### Search for the best flight option
+### Search for the best flight option
 
 The [Flight Choice Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction) predicts the flight your users will choose.
 Our machine-learning models have analyzed historical interactions with the
@@ -416,6 +425,80 @@ So we can see the the following results:
   ]
 }
 ```
+
+### Search for routes for a specific airline
+
+The [Airline Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airline-routes) shows all destinations for a given airline. To follow up on our previous example, let's check what destinations the British Airways fly to. There's definitely plenty of options, so we can limit the maximum number of results to two for the sake of simplicity. Keep in mind that this limit will apply from the beginning of the results list in the alphabetical order of the city names.
+
+The request will look like this:
+
+```bash
+curl --request GET \
+     --header 'Authorization: Bearer <token>' \
+     --url https://test.api.amadeus.com/v1/airline/destinations?airlineCode=BA&max=2 \
+```
+
+So we can see the the following results:
+
+```json
+{
+  "data": [
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "Bangalore",
+      "iataCode": "BLR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "Paris",
+      "iataCode": "PAR"
+    }
+  ],
+  "meta": {
+    "count": "2",
+    "sort": "iataCode",
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/airline/destinations?airlineCode=BA&max=2"
+    }
+  }
+}
+```
+
+### Look up the airline ICAO code by the IATA code
+
+If we need to know the IATA code for a particular airline but only have the airline's ICAO code, the [Airline Code Lookup API](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup) can help us out. Just specify the IATA code in the query and send out the request:
+
+```bash
+curl --request GET \
+     --header 'Authorization: Bearer <token>' \
+     --url https://test.api.amadeus.com/v1/reference-data/airlines?airlineCodes=BA \
+```
+
+The response is pretty straightforward:
+
+```json
+{
+  "meta": {
+    "count": 1,
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/reference-data/airlines?airlineCodes=BA"
+    }
+  },
+  "data": [
+    {
+      "type": "airline",
+      "iataCode": "BA",
+      "icaoCode": "BAW",
+      "businessName": "BRITISH AIRWAYS",
+      "commonName": "BRITISH A/W"
+    }
+  ]
+}
+```
+
+
 
 ### Search for flight and fare availability
 
@@ -845,6 +928,85 @@ In the last step, we want to let the traveler perform a flight search for any of
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false`
 
+
+### Search for a city that has an airport
+
+The [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) finds airports and cities that match a specific word or a string of letters. Using this API, you can automatically suggest
+airports based on what the traveler enters in the search field. The API provides a list of airports/cities ordered by yearly passenger volume with the name, 3-letter IATA code, time zone and coordinates of each airport. 
+
+The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) retrieves any city that matches a search keyword.
+
+
+### Compare the flight price to histrocal fares
+
+When booking a flight, travelers need to be confident that they're getting a good deal. You can compare a flight price to historical fares for the same flight route using the [Flight Price Analysis API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis). It uses an Artificial Intelligence algorithm trained on Amadeus historical flight booking data to show how current flight prices compare to historical fares and whether the price of a flight is below or above average.
+
+Let's see how it works. In our example we will be flying from Madrid (MAD) to Paris (CDG) on 12 December 2022. We will check prices in Euros for a one way ticket.
+
+```bash
+GET https://test.api.amadeus.com/v1/analytics/itinerary-price-metrics?originIataCode=MAD&destinationIataCode=CDG&departureDate=2021-03-21&currencyCode=EUR&oneWay=true
+```
+
+This is what we get in the response:
+
+```json
+{
+  "warnings": [
+    {
+      "code": 22443,
+      "title": "WARNING",
+      "detail": "Unsupported currency code. Supported currencies are CAD,HKD,ISK,PHP,DKK,HUF,CZK,AUD,RON,SEK,IDR,INR,BRL,RUB,HRK,JPY,THB,CHF,SGD,PLN,BGN,TRY,CNY,NOK,NZD,ZAR,USD,MXN,ILS,GBP,KRW,MYR"
+    }
+  ],
+  "data": [
+    {
+      "type": "itinerary-price-metric",
+      "origin": {
+        "iataCode": "MAD"
+      },
+      "destination": {
+        "iataCode": "CDG"
+      },
+      "departureDate": "2022-12-12",
+      "transportType": "FLIGHT",
+      "currencyCode": "EUR",
+      "oneWay": true,
+      "priceMetrics": [
+        {
+          "amount": "29.59",
+          "quartileRanking": "MINIMUM"
+        },
+        {
+          "amount": "76.17",
+          "quartileRanking": "FIRST"
+        },
+        {
+          "amount": "129.24",
+          "quartileRanking": "MEDIUM"
+        },
+        {
+          "amount": "185.59",
+          "quartileRanking": "THIRD"
+        },
+        {
+          "amount": "198.15",
+          "quartileRanking": "MAXIMUM"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "count": 1,
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/analytics/flight-price-metrics?originIataCode=MAD&destinationIataCode=CDG&departureDate=2022-12-12&currencyCode=EUR&oneWay=True"
+    }
+  }
+}
+```
+
+Here we can see that the lowest price for such ticket should be 29.59 Euros and the highest 198.15 Euros. The first, medium and trird choices give you an idea about the possible price ranges for this flight.
+
+
 ## Confirm Fares
 
 The availability and price of airfare fluctuate, so it’s important to confirm
@@ -1126,6 +1288,67 @@ If the desired flight you want to book, does not permit the additional service, 
 } 
 ```
 
+## Check the flight status
+
+The [On-Demand Flight Status API](https://developers.amadeus.com/self-service/category/air/api-doc/on-demand-flight-status) provides real-time flight schedule data including up-to-date departure and arrival times, terminal and gate information, flight duration and real-time delay status.
+
+To get this information, just send a query with the IATA carrier code, flight number and scheduled departure date, and you'll be up to date about your flight schedule.
+
+
+## Check for any flight delays
+
+For any traveller it's quite important to know how far in advance they should get to the airport. The [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction) estimates the probability of a specific flight being delayed. 
+
+
+
+
+## Get a direct link to the airline check-in page
+
+Suppose we are building an app with an integrated check-in flow for a particular airline. In this case, we can leverage the [Flight Check-in Links  API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) to generate a link to the airline's official check-in page in a required language for both web and mobile platforms. The only parameter that we need to provide in our search query is the airline's IATA code. If required, we can request the links in a specific language, such as UK English (en-GB). This is what our request would look like:
+
+
+```bash
+curl --request GET \
+     --header 'Authorization: Bearer <token>' \
+     --url https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airlineCode=BA&language=en-GB \
+```
+
+This is what we get in the response:
+
+```json
+{
+  "meta": {
+    "count": 3,
+    "links": {
+      "self": "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airlineCode=BA&language=EN-GB"
+    }
+  },
+  "data": [
+    {
+      "type": "checkin-link",
+      "id": "BAEN-GBAll",
+      "href": "https://www.britishairways.com/travel/olcilandingpageauthreq/public/en_gb",
+      "channel": "All"
+    },
+    {
+      "type": "checkin-link",
+      "id": "BAEN-GBMobile",
+      "href": "https://www.britishairways.com/travel/olcilandingpageauthreq/public/en_gb/device-mobile",
+      "channel": "Mobile"
+    },
+    {
+      "type": "checkin-link",
+      "id": "BAEN-GBWeb",
+      "href": "https://www.britishairways.com/travel/olcilandingpageauthreq/public/en_gb",
+      "channel": "Web"
+    }
+  ]
+}
+```
+
+Here we've got a dedicated link for web applications, a dedicated link for mobile applications and a link that works on all platforms.
+
+
 ## Cancel a reservation
 
 Just as you can help users book a flight with the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders), you can now also help them cancel their reservations with the [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) API. However, you have a limited window of time to cancel via API. If you’re working with an airline consolidator for ticketing, cancellations via API are generally only allowed while the order is queued for ticketing. Once the ticket has been issued, you’ll have to contact your consolidator directly to handle the cancellation.
@@ -1204,3 +1427,5 @@ There are two things to consider regarding payments for flight booking:
 
 - The payment between you (the app owner) and your customers (for the services provided + the price of the flight ticket). You decide how to collect this payment, it is not included in the API. A third party payment gateway, such as Stripe will be an easier solution for this.
 - The payment between you and the consolidator (to be able to pay the airline and issue the flight ticket). This will be done between you and your consolidator of choice, and is to be agreed with the consolidator.
+
+
