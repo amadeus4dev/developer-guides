@@ -20,6 +20,9 @@ The **Flights** category contains a wide array of APIs that can help you manage 
 | [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant) | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
 | [Flight Create Orders](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) | Provides a unique booking ID and reservation details once the reservation is completed. |
 | [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management) | Checks the latest status of a reservation, shows post-booking modifications like ticket information or form of payment and lets you cancel reservations. |
+| [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links) |  Simplifies the check-in process by providing direct links to the airline check-in page.                |
+| [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup)           | Finds the name of an airline by its IATA or ICAO airline codes.                  |
+| [Airline Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airline-routes) | Finds all destinations served by a given airline. |
 
 
 ## How to search flights
