@@ -73,7 +73,7 @@ Applications using `Flight Create Orders` must meet special requirements before 
 
 2. **There are no restrictions in your country**. Though we are working to make Self-Service flight booking available worldwide, `Flight Create Orders` API is currently not available to companies in the following countries: 
 
-   *Algeria, Bangladesh, Bhutan, Bulgaria, Croatia, Egypt, Finland, Iceland, India,
+   *Algeria, Bangladesh, Bhutan, Bulgaria, Croatia, Egypt, Finland, Iceland,
 Iran, Iraq, Jordan, Kuwait, Kosovo, Lebanon, Libya, Madagascar, Maldives,
 Montenegro, Morocco, Nepal, Pakistan, Palestine, Qatar, Saudi Arabia, Serbia, Sri Lanka, Sudan, Syria, Tahiti, Tunisia, United Arab Emirates and
 Yemen* 
@@ -96,6 +96,4 @@ To add `Flight Create Orders` to an application currently in production, select 
 
 Then request production access to `Flight Create Orders` by clicking the **Request** button located under **Actions**:
 
-![request_prod_booking_list](../images/api_request_list.png)
-
-
+![request_prod_booking_list](../images/api_request_list.png) 
