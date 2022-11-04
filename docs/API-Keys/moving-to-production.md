@@ -98,6 +98,4 @@ To add `Flight Create Orders` to an application currently in production, select 
 
 Then request production access to `Flight Create Orders` by clicking the **Request** button located under **Actions**:
 
-![request_prod_booking_list](../images/api_request_list.png)
-
-
+![request_prod_booking_list](../images/api_request_list.png) 
