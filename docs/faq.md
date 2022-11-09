@@ -256,6 +256,6 @@ We love feedback from our community and it helps us create the best possible pro
 
 ### What exactly is the booking code?
 
-The booking code is the 10 character identifier of a product, room or a rate. It is sent in response to a multisingleavailabilty request. If the channel is sending a pricing request or a sell afterwards, the booking code will have to be including in the request as it allows the recognition of the rate to be booked.
+The booking code is the 10 character identifier of a product, room or a rate. It is sent in response to a multisingleavailabilty request. If the channel is sending a pricing request or a sell afterwards, the booking code will have to be including in the request as it allows the recognition of the rate to be booked. 
 
 
