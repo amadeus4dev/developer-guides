@@ -81,6 +81,7 @@ nav:
     - Examples and Prototypes:
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
+    - FAQ: faq.md 
     
 
 extra:
