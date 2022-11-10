@@ -15,7 +15,7 @@ This page provides help with the most common questions about Amadeus Self-servic
 | [Flight Create Orders API](#flight-create-orders-api) |        <ul><li>[How are tickets issued for flights booked with Flight Create Orders in Self-Service?](#how-are-tickets-issued-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[How can I retrieve booking made with Flight Create Orders in Self-Service?](#how-can-i-retrieve-booking-made-with-flight-create-orders-in-self-service)</li><li>[Does Amadeus pay a commission for flights booked with Flight Create Orders in Self-Service?](#does-amadeus-pay-a-commission-for-flights-booked-with-flight-create-orders-in-self-service)</li></ul>                 |
 | [Airline consolidators](#airline-consolidators) |    <ul><li>[What is an airline consolidator?](#what-is-an-airline-consolidator)</li><li>[How are payments handled with my consolidator?](#how-are-payments-handled-with-my-consolidator)</li><li>[How do I handle cancellations, changes and post-booking services for bookings made with Flight Create Orders in Self-Service?](#how-do-i-handle-cancellations-changes-and-post-booking-services-for-bookings-made-with-flight-create-orders-in-self-service)</li><li>[How do I handle refunds for flights booked with Flight Create Orders in Self-Service?](#how-do-i-handle-refunds-for-flights-booked-with-flight-create-orders-in-self-service)</li></ul>            |
 | [Technical support](#technical-support) |          <ul><li>[What kind of support does Amadeus for Developers offer?](#what-kind-of-support-does-amadeus-for-developers-offer)</li><li>[Where do I go for Self-Service technical support? What does it cost?](#where-do-i-go-for-self-service-technical-support-what-does-it-cost)</li><li>[Do you offer phone support for Self-Service APIs?](#do-you-offer-phone-support-for-self-service-apis)</li><li>[How can I report bugs or suggest improvements to the Self-Service section?](#how-can-i-report-bugs-or-suggest-improvements-to-the-self-service-section)</li></ul>          |
-| [Booking code](#booking-code) |         <ul><li>[What exactly is the booking code?](#what-exactly-is-the-booking-code)</li></ul>        |
+
 
 
 ## Account registration
@@ -251,11 +251,3 @@ We do not currently offer phone support for Self-Service APIs. If you need assis
 ### How can I report bugs or suggest improvements to the Self-Service section?
 
 We love feedback from our community and it helps us create the best possible product for all users! If you want to report a bug or suggest improvements, please go to the Support section and get in touch using the Contact form.
-
-## Booking code
-
-### What exactly is the booking code?
-
-The booking code is the 10 character identifier of a product, room or a rate. It is sent in response to a multisingleavailabilty request. If the channel is sending a pricing request or a sell afterwards, the booking code will have to be including in the request as it allows the recognition of the rate to be booked. 
-
-
