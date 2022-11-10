@@ -202,7 +202,7 @@ You can consult booking made through Flight Create Orders using the Flight Order
 
 ### Does Amadeus pay a commission for flights booked with Flight Create Orders in Self-Service?
 
-Generally, Amadeus does not offer booking commissions for new Self-Service users.
+Generally, Amadeus does not offer booking commissions for Self-Service users.
 
 ## Airline consolidators
 
