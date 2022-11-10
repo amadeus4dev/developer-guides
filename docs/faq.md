@@ -174,7 +174,7 @@ If you wish to keep using the APIs, you can either move your app to production a
 
 ### Is the data returned in the Self-Service test environment accurate?
 
-The information returned in test environment is from limited data collections. This is done as a security measure to protect our data and our customers. When you move to production, you will get access to complete and live data.
+The information returned in test environment is from [limited data collections](https://amadeus4dev.github.io/developer-guides/test-data/). This is done as a security measure to protect our data and our customers. When you move to production, you will get access to complete and live data.
 
 ## Flight Inspiration Search
 
