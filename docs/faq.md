@@ -92,7 +92,7 @@ If you are already in production, you should have received an email with the leg
 
 ### I am not a travel agent and have no experience in the travel industry, can I still use the Self-Service APIs?
 
-Our Self-Service offer is designed for newcomers to Amadeus, there are no prerequisites. Any developer who wishes to connect to Amadeus travel data can do so in a quick and easy way via our Self-Service offer.  For more details, please check our Get Started guide.
+Our Self-Service offer is designed for newcomers to Amadeus, there are no prerequisites. Any developer who wishes to connect to Amadeus travel data can do so in a quick and easy way via our Self-Service offer.  For more details, please check our [Get Started guide](https://developers.amadeus.com/get-started/get-started-with-amadeus-apis-334).
 
 
 ## API keys
