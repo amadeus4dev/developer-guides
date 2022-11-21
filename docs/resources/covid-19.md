@@ -274,7 +274,7 @@ From the response of Travel Restrictions API, you can get information on:
 
 #### Area restrictions
 
-These are the general restrictions in the area:
+These are the general restrictions in the area according to the confirmed information on a given date:
 
 ```json
     "areaRestrictions": [
@@ -287,6 +287,8 @@ These are the general restrictions in the area:
 ```
 
 #### Area access restrictions
+
+These are the restrictions applying to entering or leaving an area.
 
 ##### Area access restrictions to transportation
 
