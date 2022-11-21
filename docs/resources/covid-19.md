@@ -61,9 +61,9 @@ The following languages are currently supported:
 
 [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) can be searched by a given location using:
 
-* Latitude, longitude and optionally a radius;
-* Square information (North, West, South, and East;
-* Amadeus location Id.
+* Latitude, longitude and optionally a radius
+* Square information (North, West, South, and East
+* Amadeus location Id
 
 Each of these options has a dedicated endpoint.
 
