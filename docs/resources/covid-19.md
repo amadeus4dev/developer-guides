@@ -149,7 +149,7 @@ From the response of [Travel Restrictions API](https://developers.amadeus.com/se
     }
 ```
 
-If you include a city in the search query, the response will include the `subAreas` array. This array includes the `area` object describing the city woth its name, IATA code, geocoordinates, area type and a summary. The disease risk level is shown specifically for the city. The disease infection rate, however, is shown on the country level. For NYC in US, this would be:
+If you include a city in the search query, the response will include the `subAreas` array. This array includes the `area` object describing the city with its name, IATA code, geocoordinates, area type and a summary. The disease risk level is shown specifically for the city. The disease infection rate, however, is shown on the country level. For NYC in US, this would be:
 
 ```json
 "subAreas": [
