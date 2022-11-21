@@ -39,7 +39,7 @@ curl https://test.api.amadeus.com/v1/duty-of-care/diseases/covid19-area-report?c
 !!! information
     The country code (2 letters) is defined by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and the city code (3 letters) is defined by [IATA](https://www.iata.org/en/publications/directories/code-search/). You can also use [Airport & City Search API](https://developers.amadeus.com/self-service/category/air) to get this information. 
 
-The results can be requisted in different languages by passing the ISO language code as an optional query parameter `language`.
+The results can be requested in different languages by passing the ISO language code as an optional query parameter `language`.
 
 ```bash
 curl https://test.api.amadeus.com/v1/duty-of-care/diseases/covid19-area-report?countryCode=FR&cityCode=PAR&language=FR
