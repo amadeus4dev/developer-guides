@@ -155,12 +155,48 @@ city to another. The API provides a list of flight options with dates and prices
 and allows you to order by price, departure date or duration.
 
 !!!information
+    The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) uses dynamic cache data. This cache data is created daily based on the most trending options that are derived from past searches and bookings. In this way, only the most trending options are included in the response.
+
+!!!information
     This API returns cached prices. Once the dates are chosen, use the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to get real-time pricing and availability.
 
-The following example retrieves a list of `flight-date` objects containing pricing information given the origin and destination, and a range of dates:
+
+The `origin` and `destination` are the two mandatory query parameters:
+
+```bash
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MAD&destination=MUC
+```
+
+We can further refine our search query by the departure dates, one-way/round-trip, trip duration, connecting flights or maximum price.
+
+The API supports one or multiple departure dates in the query provided the dates are speficied in the ISO 8601 YYYY-MM-DD format and separated by a comma:
 
 ```bash
 GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CHI&departureDate=2022-08-15,2022-08-28
+```
+
+If the `oneWay` parameter set to `true`, only one way flight options will be provided in the response. Alternatively, if the `oneWay` parameter set to `false`, the search results will show round-trip flights. Otherwise, both flight options will be included in the results. For example, the following request shows one-way flights out of Boston:
+
+```bash
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&oneWay=true
+```
+
+One-way journeys can be optionally refined by the journey duration provided in days with the `duration` parameter:
+
+```bash
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&oneWay=true&duration=2
+```
+
+The `nonStop` parameter filters the search query to direct flights only:
+
+```bash
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&nonStop=true
+```
+
+If you need to cap the maximum ticket price, just specify the maximum price in decimals using the `maxPrice` parameter:
+
+```bash
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&maxPrice=100
 ```
 
 The API provides a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to search for flights once a
