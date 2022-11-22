@@ -71,7 +71,7 @@ The `nonStop` parameter filters the search query to direct flights only:
 GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS&nonStop=true
 ```
 
-If you need to cap the maximum ticket price, just specify the manumum price in decimals using the `maxPrice` parameter:
+If you need to cap the maximum ticket price, just specify the maximum price in decimals using the `maxPrice` parameter:
 
 ```bash
 GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS&maxPrice=100
