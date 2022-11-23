@@ -155,7 +155,7 @@ city to another. The API provides a list of flight options with dates and prices
 and allows you to order by price, departure date or duration.
 
 !!!information
-    The [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) uses dynamic cache data. This cache data is created daily based on the most trending options that are derived from past searches and bookings. In this way, only the most trending options are included in the response.
+    The [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) uses dynamic cache data. This cache data is created daily based on the most trending options that are derived from past searches and bookings. In this way, only the most trending options are included in the response.
 
 !!!information
     This API returns cached prices. Once the dates are chosen, use the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) to get real-time pricing and availability.
