@@ -200,7 +200,7 @@ The minimum `GET` request has following mandatory query parameters:
 GET https://test.api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
 ```
 
-Let's have a look at all the optional parameters that we can use to refine the search query. One or more of these parameters can be used in addidtion to the mandatory query parameters.
+Let's have a look at all the optional parameters that we can use to refine the search query. One or more of these parameters can be used in addition to the mandatory query parameters.
 
 Return date in the ISO 8601 YYYY-MM-DD format, same as the departure date:
 
@@ -208,13 +208,13 @@ Return date in the ISO 8601 YYYY-MM-DD format, same as the departure date:
 GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22&returnDate=2022-07-26&adults=1
 ```
 
-Number of children travelling, same as the nu,ber of adults:
+Number of children travelling, same as the number of adults:
 
 ```bash
 GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&children=1
 ```
 
-Number of infants travelling, same as the nu,ber of adults:
+Number of infants travelling, same as the number of adults:
 
 ```bash
 GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&infants=1
