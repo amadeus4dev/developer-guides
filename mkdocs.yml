@@ -82,6 +82,8 @@ nav:
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
     - FAQ: faq.md 
+    - Migration guides:
+        - Hotel search: migration-guides/hotel-search.md
     
 
 extra:
