@@ -50,7 +50,7 @@ The only mandatory query parameter is the IATA code of the origin as in the foll
 GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS
 ```
 
-The departure date is an optional parameter, which needs to be provided in the YYYY-MM-DD:
+The departure date is an optional parameter, which needs to be provided in the YYYY-MM-DD format:
 
 ```bash
 GET https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS&departureDate=2022-12-12
@@ -225,11 +225,70 @@ The API comes in two flavors:
 - Simple version: GET operation with few parameters but which is quicker to integrate.
 - On steroids: POST operation offering the full functionalities of the API.
 
-The minimum `GET` request has following parameters:
+The minimum `GET` request has following mandatory query parameters:
+
+* IATA code for the origin location
+* IATA code for the destination location
+* Departure date in the ISO 8601 YYYY-MM-DD format
+* Number of adult travellers
 
 ```bash
 GET https://test.api.amadus.com/v2/shopping/flight-offers?adults=1&originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22
 ```
+
+Let's have a look at all the optional parameters that we can use to refine the search query. One or more of these parameters can be used in addition to the mandatory query parameters.
+
+Return date in the ISO 8601 YYYY-MM-DD format, same as the departure date:
+
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-22&returnDate=2022-07-26&adults=1
+```
+
+Number of children travelling, same as the number of adults:
+
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&children=1
+```
+
+Number of infants travelling, same as the number of adults:
+
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&infants=1
+```
+
+Travel class, which includes economy, premium economy, business or first:
+
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&travelClass=ECONOMY
+```
+
+We can limit the search to a specific airline by providing its IATA airline code, such as BA for the British Airways:
+
+
+https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&includedAirlineCodes=BA
+
+Alternatively, we can exclude an airline from the search in a similar way:
+
+https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&excludedAirlineCodes=BA
+
+The `nonStop` parameter filters the search query to direct flights only:
+
+https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&nonStop=true
+
+The `currencyCode` defines the currency in which we will see the offer prices:
+
+https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&currencyCode=EUR
+
+We can limit the maximum price to a certain amount and specify the currency as described above:
+
+
+https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&maxPrice=500&currencyCode=EUR
+
+The maximum number of results retrieved can be limited using the `max` parameter in the search query:
+
+https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&max=1
+
+
 
 The API returns a list of `flight-offer` objects (up to 250), including
 information such as itineraries, price, pricing options, etc.
@@ -264,6 +323,69 @@ information such as itineraries, price, pricing options, etc.
       }
     }
   ]
+```
+
+
+The `POST` endpoint consumes JSON data in the format described below. So, instead of constructing a search query, we can specify all the required parameters in the payload and pass it onto the API in the request body.
+
+```json
+{
+  "currencyCode": "USD",
+  "originDestinations": [
+    {
+      "id": "1",
+      "originLocationCode": "RIO",
+      "destinationLocationCode": "MAD",
+      "departureDateTimeRange": {
+        "date": "2022-11-01",
+        "time": "10:00:00"
+      }
+    },
+    {
+      "id": "2",
+      "originLocationCode": "MAD",
+      "destinationLocationCode": "RIO",
+      "departureDateTimeRange": {
+        "date": "2022-11-05",
+        "time": "17:00:00"
+      }
+    }
+  ],
+  "travelers": [
+    {
+      "id": "1",
+      "travelerType": "ADULT"
+    },
+    {
+      "id": "2",
+      "travelerType": "CHILD"
+    }
+  ],
+  "sources": [
+    "GDS"
+  ],
+  "searchCriteria": {
+    "maxFlightOffers": 2,
+    "flightFilters": {
+      "cabinRestrictions": [
+        {
+          "cabin": "BUSINESS",
+          "coverage": "MOST_SEGMENTS",
+          "originDestinationIds": [
+            "1"
+          ]
+        }
+      ],
+      "carrierRestrictions": {
+        "excludedCarrierCodes": [
+          "AA",
+          "TP",
+          "AZ"
+        ]
+      }
+    }
+  }
+}
 ```
 
 #### Search for flights including or excluding specific airlines 
