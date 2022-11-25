@@ -84,6 +84,7 @@ nav:
     - FAQ: faq.md 
     - Migration guides:
         - Hotel search: migration-guides/hotel-search.md
+        - Travel restrictions: migration-guides/travel-restrictions.md
     
 
 extra:
