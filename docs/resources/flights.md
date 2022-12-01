@@ -851,6 +851,9 @@ You can build the request by passing the flight-offer object from the [Flight Of
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 ```
 
+Please not that the `X-HTTP-Method-Override` header parameter is required to make this call.
+
+
 ```json
 { 
   "data": { 
@@ -989,6 +992,142 @@ POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 }  
 ```
 
+The API will procide the following JSON in the response:
+
+```json
+{
+"meta": {
+"count": 5},
+"data": [
+{
+"type": "flight-offer",
+"id": "2",
+"source": "GDS",
+"instantTicketingRequired": false,
+"paymentCardRequired": false,
+"lastTicketingDate": "2022-11-30",
+"itineraries": [
+{
+"segments": [
+{
+"departure": {
+"iataCode": "MAD",
+"terminal": "2",
+"at": "2022-12-01T07:10:00"},
+"arrival": {
+"iataCode": "ORY",
+"at": "2022-12-01T09:05:00"},
+"carrierCode": "UX",
+"number": "1027",
+"aircraft": {
+"code": "333"},
+"operating": {
+"carrierCode": "UX"},
+"duration": "PT1H55M",
+"id": "7",
+"numberOfStops": 0,
+"blacklistedInEU": false}
+]
+}
+],
+"price": {
+"currency": "EUR",
+"total": "228.38",
+"base": "210.00",
+"fees": [
+{
+"amount": "0.00",
+"type": "TICKETING"}
+],
+"grandTotal": "228.38"},
+"pricingOptions": {
+"fareType": [
+"PUBLISHED"],
+"includedCheckedBagsOnly": false,
+"refundableFare": false,
+"noRestrictionFare": false,
+"noPenaltyFare": false},
+"validatingAirlineCodes": [
+"UX"],
+"travelerPricings": [
+{
+"travelerId": "1",
+"fareOption": "STANDARD",
+"travelerType": "ADULT",
+"price": {
+"currency": "EUR",
+"total": "228.38",
+"base": "210.00",
+"taxes": [
+{
+"amount": "3.27",
+"code": "QV"},
+{
+"amount": "0.63",
+"code": "OG"},
+{
+"amount": "14.48",
+"code": "JD"}
+]
+},
+"fareDetailsBySegment": [
+{
+"segmentId": "7",
+"cabin": "ECONOMY",
+"fareBasis": "KYYO5L",
+"brandedFare": "LITE",
+"class": "K",
+"includedCheckedBags": {
+"quantity": 0},
+"amenities": [
+{
+"code": "0L5",
+"description": "CARRY ON HAND BAGGAGE",
+"isChargeable": false,
+"amenityType": "BAGGAGE"},
+{
+"code": "0CC",
+"description": "FIRST PREPAID BAG",
+"isChargeable": true,
+"amenityType": "BAGGAGE"},
+{
+"code": "0GO",
+"description": "PREPAID BAG",
+"isChargeable": true,
+"amenityType": "BAGGAGE"},
+{
+"code": "059",
+"description": "CHANGEABLE TICKET",
+"isChargeable": true,
+"amenityType": "BRANDED_FARES"},
+{
+"code": "0B5",
+"description": "PRE RESERVED SEAT ASSIGNMENT",
+"isChargeable": true,
+"amenityType": "PRE_RESERVED_SEAT"},
+{
+"code": "0G6",
+"description": "PRIORITY BOARDING",
+"isChargeable": true,
+"amenityType": "TRAVEL_SERVICES"}
+]
+}
+],
+"dictionaries": {
+"locations": {
+"MAD": {
+"cityCode": "MAD",
+"countryCode": "ES"},
+"ORY": {
+"cityCode": "PAR",
+"countryCode": "FR"}
+}
+}
+}
+```
+
+
+
 ### Search for personalized destination recommendations
 
 The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations)  provides personalized destinations based on the traveler's location and an input destination, such as a previously searched flight destination or city of interest.
@@ -1015,6 +1154,21 @@ The response will look like this:
      }
  }
 ```
+
+The only required parameter for the [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) is the city code. So, the API is capable of suggesting flight based on that input alone:
+
+```bash
+https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=PAR
+```
+
+You can also narrow the query down by using the `destinationCountryCodes` parameter, which supports one or more IATA country codes, separated by a comma:
+
+
+```bash
+https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=PAR&destinationCountryCodes=US
+
+```
+
 
  If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) has returned links to both APIs. 
 
