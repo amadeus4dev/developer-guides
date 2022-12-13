@@ -988,6 +988,10 @@ POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
   } 
 }  
 ```
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/y3CNy8sdpzE)
+
 
 ### Search for personalized destination recommendations
 
@@ -1131,6 +1135,10 @@ airports based on what the traveler enters in the search field. The API provides
 
 The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) retrieves any city that matches a search keyword.
 
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/WoF2D1k5Y_I)
+
 
 ### Compare the flight price to histrocal fares
 
@@ -1254,11 +1262,12 @@ for more details on this API.
 Remember, you need to be able to issue a ticket to make bookings with our
 [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
-yourself. 
+yourself.
 
-You can see the process step to step in this [video tutorial](https://www.youtube.com/watch?v=OEX7k6d52Ic&feature=youtu.be).
+You can see the process step to step in this video tutorial.
 
-If you are interested in knowing more about issuing tickets in travel industry, please check out this [article](https://developers.amadeus.com/blog/what-is-air-ticketing). 
+![type:video](https://www.youtube.com/embed/OEX7k6d52Ic)
+
 
 ## Issue a ticket
 
@@ -1275,6 +1284,8 @@ only certain accredited parties can issue tickets. In the next section, we’ll
 go into detail about your options for managing this final step in the booking
 process.
 
+If you are interested in knowing more about issuing tickets in travel industry, please check out this [article](https://developers.amadeus.com/blog/what-is-air-ticketing). 
+
 ## View the aircraft cabin layout
 
 With the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) you can view the aircraft cabin layout: 
@@ -1285,7 +1296,10 @@ With the [Seatmap Display API](https://developers.amadeus.com/self-service/categ
 
 To help you build a more consistent display, the API returns a uniform width for all cabins and classes. Rows with special seating like business class or extra-legroom seats have fewer seats per row (e.g., 4 seats for width of 7 coordinates) than economy rows (e.g. 7 seats for a width of 7 coordinates).
 
-Check out this [video tutorial](https://youtu.be/uTOQjGsZLfI) for more details. 
+
+You can see the more details about the aircraft cabin layout in the video below. 
+
+![type:video](https://www.youtube.com/embed/uTOQjGsZLfI)
 
 ### Display in-flight amenities
 
@@ -1481,7 +1495,12 @@ If the desired flight you want to book, does not permit the additional service, 
         "detail": "Error booking additional services" 
     }] 
 } 
+
+
 ```
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/YtbT2Uwq2BQ)
 
 ## Check the flight status
 

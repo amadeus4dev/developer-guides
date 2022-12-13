@@ -1,6 +1,6 @@
 # Java SDK
 
-Amadeus Java SDK for the Self-Service APIs is available as a `Maven` dependency,
+Amadeus Java SDK for the Self-Service APIs is available as a `Maven` dependency, 
 which the Amadeus for Developers team is continuously updating as the new APIs and features get released.
 
 You can refer to the [Amadeus Java SDK](https://github.com/amadeus4dev/amadeus-java) or [Amadeus Maven dependency](https://mvnrepository.com/artifact/com.amadeus/amadeus-java) for the detailed changelog.
@@ -28,7 +28,7 @@ compile "com.amadeus:amadeus-java:6.3.0"
 
 **Further information:**
 
-- https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest
+You can check the library in the [Maven repository](https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest) for futher information.
 
 ## Step-by-step example
 
@@ -144,3 +144,9 @@ System.out.println(flightDestinations[0]);
 Now that you've tried out this example and know
 how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/) in this
 SDK and discover new ways to use it.
+
+## Video Tutorial
+
+You can also check the video tutorial on how to get started with the Java SDK.
+
+![type:video](https://www.youtube.com/embed/qCBj_mDkDjc)
