@@ -107,3 +107,9 @@ For the `post` endpoints:
 amadeus.post('/v1/shopping/flight-offers/pricing', body)
 
 ```
+
+## Video Tutorial
+
+You can also check the video tutorial on how to get started with the Python SDK.
+
+![type:video](https://www.youtube.com/embed/R8LolxJTzQk)

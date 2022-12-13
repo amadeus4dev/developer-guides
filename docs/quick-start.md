@@ -96,3 +96,11 @@ The response returns a `JSON` object containing a list of destinations matching 
 
 Congratulations! You have just made your first Amadeus for Developers API call!
 
+## Video Tutorial
+
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/o3SqVZJTqd8)
+
+
+

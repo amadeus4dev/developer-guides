@@ -139,6 +139,8 @@ amadeus.referenceData.locations.get({
 
 If a page is not available, the response will resolve to `null`.
 
-## Useful resources
+## Video Tutorial
 
-For a more detailed guide on how to make your first app with Node, check this [blog article](https://developers.amadeus.com/blog/get-started-amadeus-node-sdk) or this [video tutorial](https://www.youtube.com/watch?v=rfkgJLKlI4s&feature=youtu.be), which implements a simple flight search app.
+You can also check the video tutorial on how to get started with the Node SDK.
+
+![type:video](https://www.youtube.com/embed/rfkgJLKlI4s)
