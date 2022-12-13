@@ -7,7 +7,7 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
-| [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | Cached data including most origin cities. |
+| [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | Cached data including most origin and destination cities. |
 | [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) | Cached data including most origin and destination cities. |
 | [Flight Availabilities Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-availabilities-search)  | Cached data including most origin and destination cities/airports. |
 | [Airport Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) |  Static dataset containing all airport routes in November 2021. |
