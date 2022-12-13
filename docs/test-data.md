@@ -7,8 +7,8 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
-| [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md). |
-| [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md). |
+| [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search) | Cached data including most origin cities. |
+| [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) | Cached data including most origin and destination cities. |
 | [Flight Availabilities Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-availabilities-search)  | Cached data including most origin and destination cities/airports. |
 | [Airport Routes](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes) |  Static dataset containing all airport routes in November 2021. |
 | [Flight Offers Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) |  Cached data including most origin and destination cities/airports. |
