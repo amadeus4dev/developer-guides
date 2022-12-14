@@ -22,9 +22,93 @@ Let's learn how to get started and help your users book the perfect rooms at ove
 
 ### Get a list of hotels by location 
 
-First, users should be able to search hotels for a given location. The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) returns the list of hotels based on a city or a geographic code. To answer a question, such as **"what are the hotels closed to the city hall?"** the `Hotel List API` has three endpoints to utilize based on your search criteria. It returns `hotel name`, `location`, and `hotel id` for you to proceed to the next steps of the hotel search. 
+First, users should be able to search hotels for a given location. The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) returns a list of hotels based on a city, a geographic code or the unique Amadeus hotel Id. To answer a question, such as **"what are the hotels closed to the city hall?"** the `Hotel List API` has three endpoints to utilize based on your search criteria. It returns `hotel name`, `location`, and `hotel id` for you to proceed to the next steps of the hotel search. 
 
-Based on the search criteria, you will get the list of `hotelId` with hotel information as in the example below.
+The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) contains the following endpoints:
+
+* `GET ​/reference-data​/locations​/hotels​/by-city` - searches hotels by a city code
+* `GET ​/reference-data​/locations​/hotels​/by-geocode` - searches hotels by geographic coordinates
+* `GET /reference-data​/locations​/hotels​/by-hotels` - searches hotels by a unique Amadeus hotel Id
+
+
+#### Search hotels by a city  
+
+You can specify an [IATA city code](https://www.iata.org/en/publications/directories/code-search/) or Geocode to search a more specific area to get the list of hotels. You can customize the request using parameters, such as radius, chain code, amenities, star ratings, and hotel source. 
+
+To search a hotel by a city code, the IATA city code is the only required query parameter:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&amenities=&ratings=
+```
+
+To include places within a certain radius of the queried city, you can use the optional `radius` parameter in conjunction with the `radiusUnit` parameter that defines the unit of measurement for the radius. For example, to look for places within 100 km from Paris:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&radius=100&radiusUnit=KM&amenities=&ratings=
+```
+
+Another way to narrow down our search query is to limit the search to a specific hotel chain. To do this, we need to pass the hotel chain code (which is a two letters string) as the `chainCodes` parameter, such as EM for Marriott:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=EM&amenities=&ratings=
+```
+
+If you are looking for hotels with certain amenities, such as a spa or a swimming pool, you can use the `amenities` parameter, which is an enum with the following options:
+
+* FITNESS_CENTER
+* AIR_CONDITIONING
+* RESTAURANT
+* PARKING
+* PETS_ALLOWED
+* AIRPORT_SHUTTLE
+* BUSINESS_CENTER
+* DISABLED_FACILITIES
+* WIFI
+* MEETING_ROOMS
+* NO_KID_ALLOWED
+* TENNIS
+* GOLF
+* KITCHEN
+* ANIMAL_WATCHING
+* BABY-SITTING
+* BEACH
+* CASINO
+* JACUZZI
+* SAUNA
+* SOLARIUM
+* MASSAGE
+* VALET_PARKING
+* BAR or LOUNGE
+* KIDS_WELCOME
+* NO_PORN_FILMS
+* MINIBAR
+* TELEVISION
+* WI-FI_IN_ROOM
+* ROOM_SERVICE
+* GUARDED_PARKG
+* SERV_SPEC_MENU
+
+The query to find a hotel in Paris with a swimming pool will look like this:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=SWIMMING_POOL&ratings=
+```
+
+If stars rating is important for the search, you can include up to four values separated by comma in the `ratings` parameter:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=&ratings=5
+```
+
+
+The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=&ratings=&hotelSource=ALL
+```
+
+
+The response will also include a dedicated Amadeus `hotelId`:
 
 ```json
         {
@@ -44,23 +128,102 @@ Based on the search criteria, you will get the list of `hotelId` with hotel info
         }
 ```
 
-#### Search hotels by a city or Geocode 
 
-You can specify an [IATA city code](https://www.iata.org/en/publications/directories/code-search/) or Geocode to search a more specific area to get the list of hotels. You can customize the request using parameters, such as radius, chain code, amenities, star ratings, and hotel source. 
-
-For example: 
-
-Using the `by-city` endpoint, get a list of hotels in Paris with a swimming pool and more than four stars:
-
-```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&amenities=SWIMMING_POOL&ratings=4,5
-```
+#### Search hotels by Geocode 
 
 Using the `by-geocode` endpoint, get a list of hotels in Paris (latitude=41.397158 and longitude=2.160873):
 
 ```bash
 GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873
 ```
+
+To include places within a certain radius of the queried city, you can use the optional `radius` parameter in conjunction with the `radiusUnit` parameter that defines the unit of measurement for the radius. For example, to look for places within 100 km from Paris:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&radius=100&radiusUnit=KM&amenities=&ratings=
+```
+
+Another way to narrow down our search query is to limit the search to a specific hotel chain. To do this, we need to pass the hotel chain code (which is a two letters string) as the `chainCodes` parameter, such as EM for Marriott:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=EM&amenities=&ratings=
+```
+
+If you are looking for hotels with certain amenities, such as a spa or a swimming pool, you can use the `amenities` parameter, which is an enum with the following options:
+
+* FITNESS_CENTER
+* AIR_CONDITIONING
+* RESTAURANT
+* PARKING
+* PETS_ALLOWED
+* AIRPORT_SHUTTLE
+* BUSINESS_CENTER
+* DISABLED_FACILITIES
+* WIFI
+* MEETING_ROOMS
+* NO_KID_ALLOWED
+* TENNIS
+* GOLF
+* KITCHEN
+* ANIMAL_WATCHING
+* BABY-SITTING
+* BEACH
+* CASINO
+* JACUZZI
+* SAUNA
+* SOLARIUM
+* MASSAGE
+* VALET_PARKING
+* BAR or LOUNGE
+* KIDS_WELCOME
+* NO_PORN_FILMS
+* MINIBAR
+* TELEVISION
+* WI-FI_IN_ROOM
+* ROOM_SERVICE
+* GUARDED_PARKG
+* SERV_SPEC_MENU
+
+The query to find a hotel in Paris with a swimming pool will look like this:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=&amenities=SWIMMING_POOL&ratings=
+```
+
+If stars rating is important for the search, you can include up to four values separated by comma in the `ratings` parameter:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=&amenities=&ratings=5
+```
+
+
+The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=&amenities=&ratings=&hotelSource=ALL
+```
+
+
+The response will also include a dedicated Amadeus `hotelId`:
+
+```json
+        {
+            "chainCode": "AC",
+            "iataCode": "PAR",
+            "dupeId": 700169556,
+            "name": "ACROPOLIS HOTEL PARIS BOULOGNE",
+            "hotelId": "ACPARH29",
+            "geoCode": {
+                "latitude": 48.83593,
+                "longitude": 2.24922
+            },
+            "address": {
+                "countryCode": "FR"
+            },
+            "lastUpdate": "2022-03-01T15:22:17"
+        }
+```
+
 
 #### Search hotels by hotel ids
 
@@ -76,7 +239,8 @@ Your application can also display a list of suggested hotel names based on keywo
 
 [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference) provides a list of up to 20 hotels whose names most closely match the search query string. For each hotel in the results, the API also provides descriptive data, including the hotel name, address, geocode, property type, IATA hotel code and the Amadeus hotel ID. 
 
-`Hotel ID` can be easily passed to the `Hotel Search API` to retrieve information on rates and rooms. 
+The two mandatory query parameters for this API are the `keyword` and `subtype`. The keyword can be anything from four to fourty letters. The sub type is the category of search, which cab be either `HOTEL_LEISURE` to target aggregators or `HOTEL_GDS` to target the chains directly.
+
 
 ```bash
 GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&subType=HOTEL_LEISURE
@@ -126,6 +290,23 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&
 
 ```
 
+We can narrow the search down to a country specified by a code in the ISO 3166-1 alpha-2 format:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&subType=HOTEL_LEISURE&countryCode=FR
+```
+
+We can request the results in various languages, although if a language is not supported, the results will be shown in English by default:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&subType=HOTEL_LEISURE&lang=FR
+```
+
+We can also define the maximum number of results by using the `max` parameter:
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&subType=HOTEL_LEISURE&countryCode=FR&lang=EN&max=20
+```
 
 ### Display Hotel Ratings
 
