@@ -86,9 +86,25 @@ nav:
     - Migration guides:
         - Hotel search: migration-guides/hotel-search.md
         - Travel restrictions: migration-guides/travel-restrictions.md
-    
 
 extra:
+  analytics:
+    provider: google
+    property: G-4BPFT57T5Z
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/.icons/material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/.icons/material/emoticon-sad-outline
+          name: This page could be improved
+          data: -1
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our feedback form</a>.  
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/amadeus4dev
@@ -98,6 +114,4 @@ extra:
       link: https://twitter.com/amadeus4dev
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/showcase/amadeus-for-developers
-  analytics:
-    provider: google
-    property: G-4BPFT57T5Z
+
