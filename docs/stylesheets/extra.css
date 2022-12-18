@@ -1,3 +1,12 @@
+:root {
+    /* Primary color shades */
+    --md-primary-fg-color:        #005EB8;
+    --md-primary-fg-color--light: #005EB8;
+    --md-primary-fg-color--dark:  #00A9E0;
+
+    --md-accent-fg-color:         #005EB8;
+    --md-accent-fg-color--transparent:   #00A9E0;
+  }
 
 @font-face {
     font-family: 'Amadeus';

@@ -1,60 +1,99 @@
+#Project info 
+site_name: Amadeus for Developers
+site_url: https://developers.amadeus.com
+site_description: Amadeus for Developers Self-Service APIs Documentation
+site_author: Amadeus for Developers
+
+#Repository
+repo_name: amadeus4dev/developer-guides
+repo_url: https://github.com/amadeus4dev/developer-guides
+
+#Copyright
+copyright: Copyright © Amadeus IT Group S.A.
+
+#Configuration 
 theme:
-  name: null
-  custom_dir: 'material'
-  highlightjs: true
-  logo: assets/logo.svg
-
-  language: en
-  icon:
-    logo: logo
-
+  name: material
   features:
-    - foo
-
-  # 404 page
-  static_templates:
-    - 404.html
-
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes 
+    - toc.follow
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Amadeus
     code: Source Sans Pro
-
-  favicon: icons/favicon.ico
-
-  palette:
-    scheme: default
-    primary: blue
-    accent: blue
-
-  include_search_page: false
-  search_index_only: true
+  favicon: assets/favicon.ico
+  logo: assets/logo.svg
 
 markdown_extensions:
   - admonition
-  - meta
-  - codehilite:
-      linenums: true
-  - pymdownx.tabbed
+  - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
 
 plugins:
   - search
   - git-revision-date-localized
   - mkdocs-video
 
+#Customization
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  # analytics:
+  #   provider: google
+  #   property: G-4BPFT57T5Z
+    # feedback:
+    #   title: Was this page helpful?
+    #   ratings:
+    #     - icon: material/.icons/material/emoticon-happy-outline
+    #       name: This page was helpful
+    #       data: 1
+    #       note: >-
+    #         Thanks for your feedback!
+    #     - icon: material/.icons/material/emoticon-sad-outline
+    #       name: This page could be improved
+    #       data: -1
+    #       note: >- 
+    #         Thanks for your feedback! Help us improve this page by
+    #         using our feedback form</a>.  
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/amadeus4dev
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/cVrFBqx
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/amadeus4dev
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/showcase/amadeus-for-developers
+
+#Additional CSS
 extra_css:
-  - css/amadeus.css
+  - stylesheets/extra.css
 
-site_name: Amadeus for Developers
-site_url: https://developers.amadeus.com
-site_description: Amadeus for Developers Documentation
-site_author: Amadeus for Developers
-
-repo_name: amadeus4dev/developer-guides
-repo_url: https://github.com/amadeus4dev/developer-guides
-
-copyright: Copyright © Amadeus IT Group S.A.
-
+#Page tree
 nav:
     - Home: index.md
     - Quick Start: quick-start.md
@@ -86,32 +125,3 @@ nav:
     - Migration guides:
         - Hotel search: migration-guides/hotel-search.md
         - Travel restrictions: migration-guides/travel-restrictions.md
-
-extra:
-  analytics:
-    provider: google
-    property: G-4BPFT57T5Z
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/.icons/material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/.icons/material/emoticon-sad-outline
-          name: This page could be improved
-          data: -1
-          note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our feedback form</a>.  
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/amadeus4dev
-    - icon: fontawesome/brands/discord
-      link: https://discord.com/invite/cVrFBqx
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/amadeus4dev
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/showcase/amadeus-for-developers
-
