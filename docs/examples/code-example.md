@@ -325,7 +325,7 @@ DELETE
 === "Python"
 
     ```python
-    --8<-- "hhttps://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Python%20SDK/airport_on_time_performance.py"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Python%20SDK/airport_on_time_performance.py"
     ```
 
 === "Node"
@@ -340,7 +340,7 @@ DELETE
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Java%20SDK/AirportOnTime.java"
     ```
 
-    ### Flight Choice Prediction
+### Flight Choice Prediction
 
 === "Python"
 
