@@ -539,3 +539,85 @@ By Id
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airline_code_lookup/v1/get/Java%20SDK/AirlineCodeLookup.java"
     ```
+
+## Trip 
+
+### City Search
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Python%20SDK/city_search.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Node%20SDK/city_search.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Java%20SDK/CitySearch.java"
+    ```
+
+### Trip Parser
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Python%20SDK/trip_parser.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Node%20SDK/trip_parser.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Java%20SDK/TripParser.java"
+    ```
+
+### Trip Purpose Prediction
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Python%20SDK/trip_purpose_prediction.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Node%20SDK/trip_purpose_prediction.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Java%20SDK/TripPurposePrediction.java"
+    ```
+
+### Travel Recommendations
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Python%20SDK/travel_recommendations.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Node%20SDK/travel_recommendations.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Java%20SDK/TravelRecommendations.java"
+    ```
