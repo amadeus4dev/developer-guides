@@ -1,10 +1,8 @@
 # Code Examples
 
-For you to try Amadeus Self-Service APIs quicker and better, we have code examples **per SDK** and **per API endpoint**
- 
-You can simply copy and paste the code into your project to request Amadeus Self-Service APIs. 
+To help you get up and running with the Amadeus Self-Service APIs as smoothly as possible, we have provided code examples for **each SDK** and **API endpoint**. Simply copy and paste these examples into your project to make API requests. 
 
-Please feel free to check and try out, raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples) if you have any questions or suggestion.
+If you have any questions or ideas for improvement, don't hesitate to raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples).
 
 ## Flights 
 

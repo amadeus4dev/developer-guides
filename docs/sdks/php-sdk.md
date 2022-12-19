@@ -1,7 +1,7 @@
 # PHP SDK
 
-!!! danger
-    This SDK is maintained by the developer community only. The Amadeus for Developers team doesn't support or maintain it. 
+!!! warning
+    The Amadeus PHP SDK is maintained independently by the developer community and is not supported or maintained by the Amadeus for Developers team.
 
 ### Prerequisites
 
