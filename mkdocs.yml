@@ -117,7 +117,7 @@ nav:
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
     - SDK Tutorials:
-        - Amadeus SDK overview: sdks/sdk-overview.md
+        - sdks/index.md
         - Node SDK: sdks/node-sdk.md
         - Python SDK: sdks/python-sdk.md
         - Java SDK: sdks/java-sdk.md
