@@ -340,27 +340,7 @@ DELETE
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Java%20SDK/AirportOnTime.java"
     ```
 
-### Flight Choice Prediction
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_choice_prediction/v2/post/Python%20SDK/flight_choice_prediction.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_choice_prediction/v2/post/Node%20SDK/flight_choice_prediction.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_choice_prediction/v2/post/Java%20SDK/FlightChoicePrediction.java"
-    ```
-
-### Flight Choice Prediction
+    ### Flight Choice Prediction
 
 === "Python"
 
@@ -399,7 +379,6 @@ DELETE
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/on_demand_flight_status/v2/get/Java%20SDK/OnDemandFlightStatus.java"
     ```
-
 ### Flight Most Traveled Destinations
 
 === "Python"
@@ -439,25 +418,24 @@ DELETE
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_busiest_traveling_period/v1/get/Java%20SDK/FlightBusiestPeriod.java"
     ```
-
 ### Flight Most Booked Destinations
 
 === "Python"
 
     ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_most_traveled_destinations/v1/get/Python%20SDK/flight_most_booked_destinations.py"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_most_booked_destinations/v1/get/Python%20SDK/flight_most_booked_destinations.py"
     ```
 
 === "Node"
 
     ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_most_traveled_destinations/v1/get/Node%20SDK/flight_most_booked_destinations.js"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_most_booked_destinations/v1/get/Node%20SDK/flight_most_booked_destinations.js"
     ```
 
 === "Java"
 
     ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_most_traveled_destinations/v1/get/Java%20SDK/FlightMostBookedDestinations.java"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_most_booked_destinations/v1/get/Java%20SDK/FlightMostBookedDestinations.java"
     ```
 
 ### Flight CheckIn Links
@@ -478,4 +456,86 @@ DELETE
 
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_checkin_links/v2/get/Java%20SDK/FlightCheckinLinks.java"
+    ```
+
+### Airport Nearest Relevant
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_nearest_relevant_airport/v1/get/Python%20SDK/airport_nearest_relevant_airport.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_nearest_relevant_airport/v1/get/Node%20SDK/airport_nearest_relevant_airport.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_nearest_relevant_airport/v1/get/Java%20SDK/AirportNearest.java"
+    ```
+
+### Airport & City Search
+
+By keyword
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_and_city_search/v1/get/locations/Python%20SDK/airport_and_city_search.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_and_city_search/v1/get/locations/Node%20SDK/airport_and_city_search.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_and_city_search/v1/get/locations/Java%20SDK/AirportCitySearch.java"
+    ```
+
+By Id
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_and_city_search/v1/get/locations_locationsid/Python%20SDK/airport_and_city_search.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_and_city_search/v1/get/locations_locationsid/Node%20SDK/airport_and_city_search.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_and_city_search/v1/get/locations_locationsid/Java%20SDK/AirportCitySearch.java"
+    ```
+
+### Airline Code Lookup
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airline_code_lookup/v1/get/Python%20SDK/airline_code_lookup.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airline_code_lookup/v1/get/Node%20SDK/airline_code_lookup.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airline_code_lookup/v1/get/Java%20SDK/AirlineCodeLookup.java"
     ```
