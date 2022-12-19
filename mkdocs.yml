@@ -44,6 +44,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.snippets:
+      url_download: true
   - pymdownx.highlight:
       anchor_linenums: true
       linenums: true
