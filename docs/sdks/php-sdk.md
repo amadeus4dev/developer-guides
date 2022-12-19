@@ -1,6 +1,7 @@
 # Python SDK
 
-This SDK is maintained by the developer community only. The Amadeus for Developers team doesn't support or maintain it. 
+!!! danger
+    This SDK is maintained by the developer community only. The Amadeus for Developers team doesn't support or maintain it. 
 
 ### Prerequisites
 
