@@ -1,9 +1,7 @@
 name: deploy
-
 on:
   push:
     branches: [ master ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,15 +10,12 @@ jobs:
         python-version: [ 3.8 ]
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-
       - name: Install requirements
         run: pip install -r requirements.txt
-
-      - name: Deploy
+      - name: Mkdocs Deployment
         run: mkdocs gh-deploy --force
