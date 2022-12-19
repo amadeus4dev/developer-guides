@@ -14,6 +14,7 @@ copyright: Copyright © Amadeus IT Group S.A.
 #Configuration 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - navigation.instant
     - navigation.tracking
@@ -23,14 +24,15 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - announce.dismiss
   palette:
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/weather-night 
         name: Switch to dark mode
     - scheme: slate
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
   font:
     text: Amadeus
@@ -62,23 +64,23 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-  # analytics:
-  #   provider: google
-  #   property: G-4BPFT57T5Z
-    # feedback:
-    #   title: Was this page helpful?
-    #   ratings:
-    #     - icon: material/.icons/material/emoticon-happy-outline
-    #       name: This page was helpful
-    #       data: 1
-    #       note: >-
-    #         Thanks for your feedback!
-    #     - icon: material/.icons/material/emoticon-sad-outline
-    #       name: This page could be improved
-    #       data: -1
-    #       note: >- 
-    #         Thanks for your feedback! Help us improve this page by
-    #         using our feedback form</a>.  
+  analytics:
+    provider: google
+    property: G-Z1Z88HQZR9
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: -1
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our feedback form</a>.  
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/amadeus4dev
