@@ -36,7 +36,7 @@ try {
                         array(
                             "originLocationCode" => "PAR",
                             "destinationLocationCode" => "MAD",
-                            "departureDate" => "2022-12-29",
+                            "departureDate" => "2023-08-29",
                             "adults" => 1
                         )
                     );
