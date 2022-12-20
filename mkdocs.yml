@@ -68,7 +68,7 @@ extra:
       make our documentation better.
   analytics:
     provider: google
-    property: G-4BPFT57T5Z
+    property: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
     feedback:
       title: Was this page helpful?
       ratings:
