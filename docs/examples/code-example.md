@@ -4,6 +4,90 @@ To help you get up and running with the Amadeus Self-Service APIs as smoothly as
 
 If you have any questions or ideas for improvement, don't hesitate to raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples).
 
+## COVID-19 & Travel safety 
+
+### Travel Restrictions
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_restrictions/v2/get/Python%20SDK/travel_restrictions.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_restrictions/v2/get/Node%20SDK/travel_restrictions.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_restrictions/v2/get/Java%20SDK/TravelRestrictions.java"
+    ```
+
+### Safe Place
+
+By geolocation
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations/Python%20SDK/safe_place.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations/NodeSDK/safe_place.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations/Java%20SDK/SafePlace.java"
+    ```
+
+By square
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_by_square/Python%20SDK/safe_place.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_by_square/Node%20SDK/safe_place.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_by_square/Java%20SDK/SafePlace.java"
+    ```
+
+By Id
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_safety_rated_locationId/Python%20SDK/safe_place.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_safety_rated_locationId/Node%20SDK/safe_place.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_safety_rated_locationId/Java%20SDK/SafePlace.java"
+    ```
+
 ## Flights 
 
 ### Airline Routes
@@ -538,87 +622,172 @@ By Id
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airline_code_lookup/v1/get/Java%20SDK/AirlineCodeLookup.java"
     ```
 
-## Trip 
+## Hotel 
 
-### City Search
+### Hotel List 
+
+By geolocation
 
 === "Python"
 
     ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Python%20SDK/city_search.py"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_geocode/Python%20SDK/hotel_list.py"
     ```
 
 === "Node"
 
     ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Node%20SDK/city_search.js"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_geocode/Node%20SDK/hotel_list.js"
     ```
 
 === "Java"
 
     ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Java%20SDK/CitySearch.java"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_geocode/Java%20SDK/HotelList.java"
     ```
 
-### Trip Parser
+By city
 
 === "Python"
 
     ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Python%20SDK/trip_parser.py"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_city/Python%20SDK/hotel_list.py"
     ```
 
 === "Node"
 
     ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Node%20SDK/trip_parser.js"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_city/Node%20SDK/hotel_list.js"
     ```
 
 === "Java"
 
     ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Java%20SDK/TripParser.java"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_city/Java%20SDK/HotelList.java"
     ```
 
-### Trip Purpose Prediction
+By hotel
 
 === "Python"
 
     ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Python%20SDK/trip_purpose_prediction.py"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_hotels/Python%20SDK/hotel_list.py"
     ```
 
 === "Node"
 
     ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Node%20SDK/trip_purpose_prediction.js"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_hotels/Node%20SDK/hotel_list.js"
     ```
 
 === "Java"
 
     ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Java%20SDK/TripPurposePrediction.java"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_list/v1/get/hotels_by_hotels/Java%20SDK/HotelList.java"
     ```
 
-### Travel Recommendations
+### Hotel Search 
+
+By hotel
 
 === "Python"
 
     ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Python%20SDK/travel_recommendations.py"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_search/v3/get/hotel_offers/Python%20SDK/hotel_search.py"
     ```
 
 === "Node"
 
     ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Node%20SDK/travel_recommendations.js"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_search/v3/get/hotel_offers/Node%20SDK/hotel_search.js"
     ```
 
 === "Java"
 
     ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Java%20SDK/TravelRecommendations.java"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_search/v3/get/hotel_offers/Java%20SDK/HotelSearch.java"
     ```
+
+By offer
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_search/v3/get/hotel_offers_offerId/Python%20SDK/hotel_search.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_search/v3/get/hotel_offers_offerId/Node%20SDK/hotel_search.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_search/v3/get/hotel_offers_offerId/Java%20SDK/HotelSearch.java"
+    ```
+
+### Hotel Booking
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_booking/v1/post/Python%20SDK/hotel_booking.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_booking/v1/post/Node%20SDK/hotel_booking.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_booking/v1/post/Java%20SDK/HotelBookings.java"
+    ```
+
+### Hotel Ratings
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_ratings/v2/get/Python%20SDK/hotel_ratings.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_ratings/v2/get/Node%20SDK/hotel_ratings.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_ratings/v2/get/Java%20SDK/HotelRatings.java"
+    ```
+
+### Hotel Name Autocomplete
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_name_autocomplete/v1/get/Python%20SDK/hotel_name_autocomplete.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_name_autocomplete/v1/get/Node%20SDK/hotel_name_autocomplete.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/hotel_name_autocomplete/v1/get/Java%20SDK/HotelNameAutocomplete.java"
+    ```
+
 ## Destination Content 
 
 ### Points of Interest
@@ -764,4 +933,86 @@ By Id
 
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/location_score/v1/get/Java%20SDK/LocationScore.java"
+    ```
+
+## Trip 
+
+### City Search
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Python%20SDK/city_search.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Node%20SDK/city_search.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Java%20SDK/CitySearch.java"
+    ```
+
+### Trip Parser
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Python%20SDK/trip_parser.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Node%20SDK/trip_parser.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Java%20SDK/TripParser.java"
+    ```
+
+### Trip Purpose Prediction
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Python%20SDK/trip_purpose_prediction.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Node%20SDK/trip_purpose_prediction.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Java%20SDK/TripPurposePrediction.java"
+    ```
+
+### Travel Recommendations
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Python%20SDK/travel_recommendations.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Node%20SDK/travel_recommendations.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Java%20SDK/TravelRecommendations.java"
     ```
