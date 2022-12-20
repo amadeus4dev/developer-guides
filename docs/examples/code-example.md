@@ -537,3 +537,150 @@ By Id
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airline_code_lookup/v1/get/Java%20SDK/AirlineCodeLookup.java"
     ```
+
+## Destination Content 
+
+### Points of Interest
+
+By geolocation
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois/Python%20SDK/points_of_interest.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois/Node%20SDK/points_of_interest.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois/Java%20SDK/PointsOfInterest.java"
+    ```
+
+By square
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois_by_square/Python%20SDK/points_of_interest.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois_by_square/Node%20SDK/points_of_interest.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois_by_square/Java%20SDK/PointsOfInterest.java"
+    ```
+
+By Id
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois_poisId/Python%20SDK/points_of_interest.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois_poisId/Node%20SDK/points_of_interest.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/points_of_interest/v1/get/pois_poisId/Java%20SDK/PointsOfInterest.java"
+    ```
+
+### Tours and Activities
+
+By geolocation
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities/Python%20SDK/tours_and_activities.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities/Node%20SDK/tous_activities.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities/Java%20SDK/ToursActivities.java"
+    ```
+
+By square
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities_by_square/Python%20SDK/tours_and_activities.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities_by_square/Node%20SDK/tours_activities.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities_by_square/Java%20SDK/ToursActivities.java"
+    ```
+
+By Id
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities_retrieve/Python%20SDK/tours_and_activities.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities_retrieve/Node%20SDK/tours_activities.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/tours_and_activities/v1/get/tours_and_activities_retrieve/Java%20SDK/ToursActivities.java"
+    ```
+
+
+### Location Score
+
+=== "Python"
+
+    ```python
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/location_score/v1/get/Python%20SDK/location_score.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/location_score/v1/get/Node%20SDK/location_score.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/location_score/v1/get/Java%20SDK/LocationScore.java"
+    ```
