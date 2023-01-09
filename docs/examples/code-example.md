@@ -244,6 +244,13 @@ POST
     ``` javascript
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_availabilities_search/v1/post/Node%20SDK/flight_availabilities.js"
     ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_availabilities_search/v1/post/Java%20SDK/FlightAvailabilities.java"
+    ```
+
 ### Branded Upsell 
 
 === "Python"
@@ -255,7 +262,13 @@ POST
 === "Node"
 
     ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/branded_fares_upsell/v1/post/Node%20SDK/branded_fares_upsell.sh"
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/branded_fares_upsell/v1/post/Node%20SDK/branded_fares_upsell.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/branded_fares_upsell/v1/post/Java%20SDK/BrandedFaresUpsell.java"
     ```
 
 ### SeatMap Display
