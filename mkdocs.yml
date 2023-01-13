@@ -116,13 +116,13 @@ nav:
         - Destination experiences: resources/destination-experiences.md
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
-    - SDK Tutorials:
-        - sdks/index.md
-        - Node SDK: sdks/node-sdk.md
-        - Python SDK: sdks/python-sdk.md
-        - Java SDK: sdks/java-sdk.md
-        - PHP SDK: sdks/php-sdk.md
-        - Using OpenAPI Generator: sdks/openapi-generator.md
+    - Programming:
+        - programming/index.md
+        - Node: programming/node.md
+        - Python: programming/python.md
+        - Java: programming/java.md
+        - PHP: programming/php.md
+        - Using OpenAPI Generator: programming/openapi-generator.md
     - Examples and Prototypes:
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
