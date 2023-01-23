@@ -213,7 +213,7 @@ asyncio.run(main())
 
 ## OpenAPI Generator
 
-In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification). In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
+In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI Generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification). In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
 
 Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/programming/openapi-generator/#step-1-setting-up-the-openapi-generator) with the OpenAPI Generator.
 
