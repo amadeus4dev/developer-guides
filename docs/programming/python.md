@@ -210,3 +210,110 @@ async def main():
 
 asyncio.run(main())
 ```
+
+## OpenAPI Generator
+
+In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI Generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification). In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
+
+Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/programming/openapi-generator/#step-1-setting-up-the-openapi-generator) with the OpenAPI Generator.
+
+### Call the Authorization endpoint
+
+You will now learn how to call the POST `https://test.api.amadeus.com/v1/security/oauth2/token` endpoint in order to get the Amadeus access token. 
+
+Open your terminal and generate the Python client with the following command:
+
+```
+docker run --rm \
+  -v ${PWD}:/local openapitools/openapi-generator-cli generate \
+  -i /local/Authorizaton_v1_swagger_specification.yaml  \
+  -g python \
+  -o /local/auth
+```
+In your local directory you will see the folder `auth` which contains the generated library. 
+
+You can install the library using pip:
+
+```
+pip install openapi-client
+```
+
+Then create a file `auth.py` and add the following code to generate an Amadeus access token.
+
+```python
+import openapi_client
+from openapi_client.apis.tags import o_auth2_access_token_api
+from openapi_client.model.amadeus_o_auth2_token import AmadeusOAuth2Token
+ 
+auth_configuration = openapi_client.Configuration()
+with openapi_client.ApiClient(auth_configuration) as api_client:
+    api_instance = o_auth2_access_token_api.OAuth2AccessTokenApi(api_client)
+
+    body = dict(
+        grant_type="client_credentials",
+        client_id="YOUR_API_KEY",
+        client_secret="YOUR_API_SECRET",
+    )
+    api_response = api_instance.oauth2_token(
+        body=body,
+    )
+
+print(api_response.body['access_token'])
+```
+
+The code uses the library we have generated to get an OAuth2 access token. With the `o_auth2_access_token_api.OAuth2AccessTokenApi()` we are able to call the `oauth2_token()` method.
+
+The body of the request is being created by passing the `grant_type`, `client_id` and `client_secret` to the `oauth2_token()` method. If you want to know more about how to get the access token check thr [authorization guide](https://amadeus4dev.github.io/developer-guides/API-Keys/authorization/?h=authori). 
+
+### Call the Flight Offers Search API
+
+Now let's call the Flight Offers Search API. Since thr OpenAPI Generator works with OAS3 you will have to convert the flight search specification to version 3 using the swagger editor (https://editor.swagger.io/). To do the convertion, navigate to the top menu and select `Edit` then `Convert to OAS 3`.
+
+The process is the same as above. You need to generate the library:
+
+```
+  docker run --rm \
+  -v ${PWD}:/local openapitools/openapi-generator-cli generate \
+  -i /local/FlightOffersSearch_v2_swagger_specification.yaml \
+  -g python \
+  -o /local/flights
+```
+
+and then install it in your environment:
+
+```
+pip install openapi-client
+```
+
+Then create a file `flights.py` and add the following code:
+
+```python
+import openapi_client
+from openapi_client.apis.tags import shopping_api
+
+flight_configuration = openapi_client.Configuration()
+api_client = openapi_client.ApiClient(flight_configuration)
+api_client.default_headers['Authorization'] = 'Bearer YOUR_ACCESS_TOKEN'
+
+api_instance = shopping_api.ShoppingApi(api_client)
+
+query_params = {
+    'originLocationCode': "MAD",
+    'destinationLocationCode': "BCN",
+    'departureDate': "2023-05-02",
+    'adults': 1,
+    'max': 2
+}
+try:
+    api_response = api_instance.get_flight_offers(
+        query_params=query_params,
+    )
+    print(api_response.body)
+except openapi_client.ApiException as e:
+    print("Exception: %s\n" % e)
+```
+
+The above code uses the generated library to to search for flight offers. It creates an instance of the `shopping_api.ShoppingApi` class and setting the default headers to include the access token.
+
+Then it is calling the `get_flight_offers()` method to make the API request. 
+
