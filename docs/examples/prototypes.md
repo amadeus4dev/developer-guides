@@ -5,7 +5,7 @@ We have prototypes available in [Amadeus for Developers GitHub](https://github.c
 
 There are two types of prototypes (demo apps) available. 
 
-* [Amadeus official prototype](#amadeus-official-prototypes-or-demo-apps) are managed by Amadeus for Developers team and updated frequently to the latest version of APIs and SDKs. 
+* [Amadeus official prototypes](#amadeus-official-prototypes-or-demo-apps) are managed by Amadeus for Developers team and updated frequently to the latest version of APIs and SDKs. 
 * [Community prototypes](#prototypes-from-community) are examples or demo apps that have been built and managed by developer community and it is not supported or maintained by Amadeus for Developers team. 
 
 
@@ -36,12 +36,7 @@ There are two types of prototypes (demo apps) available.
 
 ## Prototypes from community
 
-We have many additional prototypes that developers in our community built and shared! 
-
-Explore them in [GitHub](https://github.com/amadeus4dev) when searching by the keyword `prototype`, `demo` or `example`. 
-
-Below you can see our blog articles related to the external prototypes available in GitHub.  
-
+We have many additional prototypes that developers in our community built and shared! Explore them in [Amadeus for Developers -Examples GitHub](https://github.com/amadeus4dev-examples){:target="\_blank"}. 
 
 
 | Use Cases                  | Blog Link                                                                                                                                                                                                                                                  |
