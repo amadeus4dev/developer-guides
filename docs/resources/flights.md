@@ -996,134 +996,145 @@ The API will procide the following JSON in the response:
 
 ```json
 {
-"meta": {
-"count": 5},
-"data": [
-{
-"type": "flight-offer",
-"id": "2",
-"source": "GDS",
-"instantTicketingRequired": false,
-"paymentCardRequired": false,
-"lastTicketingDate": "2022-11-30",
-"itineraries": [
-{
-"segments": [
-{
-"departure": {
-"iataCode": "MAD",
-"terminal": "2",
-"at": "2022-12-01T07:10:00"},
-"arrival": {
-"iataCode": "ORY",
-"at": "2022-12-01T09:05:00"},
-"carrierCode": "UX",
-"number": "1027",
-"aircraft": {
-"code": "333"},
-"operating": {
-"carrierCode": "UX"},
-"duration": "PT1H55M",
-"id": "7",
-"numberOfStops": 0,
-"blacklistedInEU": false}
-]
-}
-],
-"price": {
-"currency": "EUR",
-"total": "228.38",
-"base": "210.00",
-"fees": [
-{
-"amount": "0.00",
-"type": "TICKETING"}
-],
-"grandTotal": "228.38"},
-"pricingOptions": {
-"fareType": [
-"PUBLISHED"],
-"includedCheckedBagsOnly": false,
-"refundableFare": false,
-"noRestrictionFare": false,
-"noPenaltyFare": false},
-"validatingAirlineCodes": [
-"UX"],
-"travelerPricings": [
-{
-"travelerId": "1",
-"fareOption": "STANDARD",
-"travelerType": "ADULT",
-"price": {
-"currency": "EUR",
-"total": "228.38",
-"base": "210.00",
-"taxes": [
-{
-"amount": "3.27",
-"code": "QV"},
-{
-"amount": "0.63",
-"code": "OG"},
-{
-"amount": "14.48",
-"code": "JD"}
-]
-},
-"fareDetailsBySegment": [
-{
-"segmentId": "7",
-"cabin": "ECONOMY",
-"fareBasis": "KYYO5L",
-"brandedFare": "LITE",
-"class": "K",
-"includedCheckedBags": {
-"quantity": 0},
-"amenities": [
-{
-"code": "0L5",
-"description": "CARRY ON HAND BAGGAGE",
-"isChargeable": false,
-"amenityType": "BAGGAGE"},
-{
-"code": "0CC",
-"description": "FIRST PREPAID BAG",
-"isChargeable": true,
-"amenityType": "BAGGAGE"},
-{
-"code": "0GO",
-"description": "PREPAID BAG",
-"isChargeable": true,
-"amenityType": "BAGGAGE"},
-{
-"code": "059",
-"description": "CHANGEABLE TICKET",
-"isChargeable": true,
-"amenityType": "BRANDED_FARES"},
-{
-"code": "0B5",
-"description": "PRE RESERVED SEAT ASSIGNMENT",
-"isChargeable": true,
-"amenityType": "PRE_RESERVED_SEAT"},
-{
-"code": "0G6",
-"description": "PRIORITY BOARDING",
-"isChargeable": true,
-"amenityType": "TRAVEL_SERVICES"}
-]
-}
-],
-"dictionaries": {
-"locations": {
-"MAD": {
-"cityCode": "MAD",
-"countryCode": "ES"},
-"ORY": {
-"cityCode": "PAR",
-"countryCode": "FR"}
-}
-}
-}
+	"meta": {
+		"count": 5
+	},
+	"data": [{
+				"type": "flight-offer",
+				"id": "2",
+				"source": "GDS",
+				"instantTicketingRequired": false,
+				"paymentCardRequired": false,
+				"lastTicketingDate": "2022-11-30",
+				"itineraries": [{
+					"segments": [{
+						"departure": {
+							"iataCode": "MAD",
+							"terminal": "2",
+							"at": "2022-12-01T07:10:00"
+						},
+						"arrival": {
+							"iataCode": "ORY",
+							"at": "2022-12-01T09:05:00"
+						},
+						"carrierCode": "UX",
+						"number": "1027",
+						"aircraft": {
+							"code": "333"
+						},
+						"operating": {
+							"carrierCode": "UX"
+						},
+						"duration": "PT1H55M",
+						"id": "7",
+						"numberOfStops": 0,
+						"blacklistedInEU": false
+					}]
+				}],
+				"price": {
+					"currency": "EUR",
+					"total": "228.38",
+					"base": "210.00",
+					"fees": [{
+						"amount": "0.00",
+						"type": "TICKETING"
+					}],
+					"grandTotal": "228.38"
+				},
+				"pricingOptions": {
+					"fareType": [
+						"PUBLISHED"
+					],
+					"includedCheckedBagsOnly": false,
+					"refundableFare": false,
+					"noRestrictionFare": false,
+					"noPenaltyFare": false
+				},
+				"validatingAirlineCodes": [
+					"UX"
+				],
+				"travelerPricings": [{
+							"travelerId": "1",
+							"fareOption": "STANDARD",
+							"travelerType": "ADULT",
+							"price": {
+								"currency": "EUR",
+								"total": "228.38",
+								"base": "210.00",
+								"taxes": [{
+										"amount": "3.27",
+										"code": "QV"
+									},
+									{
+										"amount": "0.63",
+										"code": "OG"
+									},
+									{
+										"amount": "14.48",
+										"code": "JD"
+									}
+								]
+							},
+							"fareDetailsBySegment": [{
+								"segmentId": "7",
+								"cabin": "ECONOMY",
+								"fareBasis": "KYYO5L",
+								"brandedFare": "LITE",
+								"class": "K",
+								"includedCheckedBags": {
+									"quantity": 0
+								},
+								"amenities": [{
+										"code": "0L5",
+										"description": "CARRY ON HAND BAGGAGE",
+										"isChargeable": false,
+										"amenityType": "BAGGAGE"
+									},
+									{
+										"code": "0CC",
+										"description": "FIRST PREPAID BAG",
+										"isChargeable": true,
+										"amenityType": "BAGGAGE"
+									},
+									{
+										"code": "0GO",
+										"description": "PREPAID BAG",
+										"isChargeable": true,
+										"amenityType": "BAGGAGE"
+									},
+									{
+										"code": "059",
+										"description": "CHANGEABLE TICKET",
+										"isChargeable": true,
+										"amenityType": "BRANDED_FARES"
+									},
+									{
+										"code": "0B5",
+										"description": "PRE RESERVED SEAT ASSIGNMENT",
+										"isChargeable": true,
+										"amenityType": "PRE_RESERVED_SEAT"
+									},
+									{
+										"code": "0G6",
+										"description": "PRIORITY BOARDING",
+										"isChargeable": true,
+										"amenityType": "TRAVEL_SERVICES"
+									}
+								]
+							}],
+							"dictionaries": {
+								"locations": {
+									"MAD": {
+										"cityCode": "MAD",
+										"countryCode": "ES"
+									},
+									"ORY": {
+										"cityCode": "PAR",
+										"countryCode": "FR"
+									}
+								}
+							}
+						}
 ```
 
 
