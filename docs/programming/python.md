@@ -116,6 +116,10 @@ You can also check the video tutorial on how to get started with the Python SDK.
 
 ![type:video](https://www.youtube.com/embed/R8LolxJTzQk)
 
+### Managing Amadeus API rate limits using the Python SDK
+
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service) have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/) in place to protect against abuse by third parties. You can find Rate limit example in Python using the Amadeus Python SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Python){:target="\_blank"}. 
+
 ## Python Async API calls
 
 In a synchronous program, each step is completed before moving on to the next one. However, an asynchronous program may not wait for each step to be completed. Asynchronous functions can pause and allow other functions to run while waiting for a result. This enables concurrent execution and gives the feeling of working on multiple tasks at the same time.

@@ -144,3 +144,7 @@ If a page is not available, the response will resolve to `null`.
 You can also check the video tutorial on how to get started with the Node SDK.
 
 ![type:video](https://www.youtube.com/embed/rfkgJLKlI4s)
+
+## Managing Amadeus API rate limits using the Node SDK
+
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service) have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/) in place to protect against abuse by third parties. You can find Rate limit example in Node using the Amadeus Node SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"}. 
