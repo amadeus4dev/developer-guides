@@ -124,7 +124,7 @@ nav:
         - PHP: programming/php.md
         - Using OpenAPI Generator: programming/openapi-generator.md
     - Examples and Prototypes:
-        - Code examples: examples/code-example.md
+        # - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
     - FAQ: faq.md 
     - Migration guides:
