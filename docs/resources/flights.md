@@ -326,7 +326,7 @@ information such as itineraries, price, pricing options, etc.
 ```
 
 
-The `POST` endpoint consumes JSON data in the format described below. So, instead of constructing a search query, we can specify all the required parameters in the payload and pass it onto the API in the request body.
+The `POST` endpoint consumes JSON data in the format described below. So, instead of constructing a search query, we can specify all the required parameters in the payload and pass it onto the API in the request body. In addition to this, a `X-HTTP-Method-Override` header parameter is required.
 
 ```json
 {
@@ -406,7 +406,7 @@ Our machine-learning models have analyzed historical interactions with the
 chosen. Boost conversions and create a personalized experience by filtering out
 the noise and showing your users the flights which are best for them.
 
-Here is a quick cURL example piping the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) results directly to the prediction API.
+Here is a quick cURL example piping the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) results directly to the prediction API. Please note that a `X-HTTP-Method-Override` header parameter is required.
 
 Let’s look at flight offers for a Madrid-New York round trip (limiting to four options for this test illustration)
 
@@ -417,6 +417,7 @@ curl --request GET \
 | curl --request POST \
        --header 'content-type: application/json' \
        --header 'Authorization: Bearer <token>' \
+       --header 'X-HTTP-Method-Override: POST' \
        --url https://test.api.amadeus.com/v2/shopping/flight-offers/prediction --data @-
 ```
 
@@ -847,7 +848,7 @@ The [Branded Fares Upsell API](https://developers.amadeus.com/self-service/categ
 
 Let's see an example of how to search for branded fares. 
 
-You can build the request by passing the flight-offer object from the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) into the body of the `POST` request:
+You can build the request by passing the flight-offer object from the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search) into the body of the `POST` request including the mandatory `X-HTTP-Method-Override` header parameter:
 
 ```bash
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
@@ -1220,7 +1221,7 @@ payment information that will be needed to make the final booking.
 
 The body to be sent via `POST` is built by a new object of type
 `flight-offers-pricing` composed by a list of `flight-offers` (up to 6) +
-payment information.
+payment information. In addition to this, a `X-HTTP-Method-Override` header parameter is required.
 
 ```json
 {
@@ -1236,7 +1237,7 @@ payment information.
 ```
 ## Return fare rules
 
-The [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) confirms the final price and availability of a fare. It also returns detailed fare rules, including the cancellation policy and other information. To get the fare rules, add the parameter `include=detailed-fare-rules` to your API call, as shown below: 
+The [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price) confirms the final price and availability of a fare. It also returns detailed fare rules, including the cancellation policy and other information. In addition to this, a `X-HTTP-Method-Override` header parameter is required. To get the fare rules, add the parameter `include=detailed-fare-rules` to your API call, as shown below: 
 
 ```bash
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
