@@ -1,11 +1,12 @@
 # Prototypes 
 
 Would you like to explore the applications that you could build with Amadeus Self-Service APIs?
-We have prototypes available in [GitHub](https://github.com/amadeus4dev).
+We have prototypes available in [Amadeus for Developers GitHub](https://github.com/amadeus4dev).
 
 
 Check the following prototypes (examples or demos), which are based on **use case** for your convenience: 
 
+example to [another head](#another-head)
 
 
 
@@ -58,3 +59,5 @@ Below you can see our blog articles related to the external prototypes available
 | Destination Experiences    | [Get nearby places using Amadeus APIs in iOS](https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api)                                                                                                       |
 
 
+
+## another head
