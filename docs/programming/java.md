@@ -150,3 +150,7 @@ SDK and discover new ways to use it.
 You can also check the video tutorial on how to get started with the Java SDK.
 
 ![type:video](https://www.youtube.com/embed/qCBj_mDkDjc)
+
+## Managing Amadeus API rate limits using the Java SDK
+
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service) have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/) in place to protect against abuse by third parties. You can find Rate limit example in Java using the Amadeus Java SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Java){:target="\_blank"}. 
