@@ -38,19 +38,19 @@ You can specify an [IATA city code](https://www.iata.org/en/publications/directo
 To search a hotel by a city code, the IATA city code is the only required query parameter:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&amenities=&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR
 ```
 
 To include places within a certain radius of the queried city, you can use the optional `radius` parameter in conjunction with the `radiusUnit` parameter that defines the unit of measurement for the radius. For example, to look for places within 100 km from Paris:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&radius=100&radiusUnit=KM&amenities=&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&radius=100&radiusUnit=KM
 ```
 
 Another way to narrow down our search query is to limit the search to a specific hotel chain. To do this, we need to pass the hotel chain code (which is a two letters string) as the `chainCodes` parameter, such as EM for Marriott:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=EM&amenities=&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=EM
 ```
 
 If you are looking for hotels with certain amenities, such as a spa or a swimming pool, you can use the `amenities` parameter, which is an enum with the following options:
@@ -91,20 +91,20 @@ If you are looking for hotels with certain amenities, such as a spa or a swimmin
 The query to find a hotel in Paris with a swimming pool will look like this:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=SWIMMING_POOL&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=SWIMMING_POOL
 ```
 
 If stars rating is important for the search, you can include up to four values separated by comma in the `ratings` parameter:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=&ratings=5
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&ratings=5
 ```
 
 
 The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=&ratings=&hotelSource=ALL
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&hotelSource=ALL
 ```
 
 
@@ -140,13 +140,13 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?l
 To include places within a certain radius of the queried city, you can use the optional `radius` parameter in conjunction with the `radiusUnit` parameter that defines the unit of measurement for the radius. For example, to look for places within 100 km from Paris:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&radius=100&radiusUnit=KM&amenities=&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&radius=100&radiusUnit=KM
 ```
 
 Another way to narrow down our search query is to limit the search to a specific hotel chain. To do this, we need to pass the hotel chain code (which is a two letters string) as the `chainCodes` parameter, such as EM for Marriott:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=EM&amenities=&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=EM
 ```
 
 If you are looking for hotels with certain amenities, such as a spa or a swimming pool, you can use the `amenities` parameter, which is an enum with the following options:
@@ -193,14 +193,14 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?l
 If stars rating is important for the search, you can include up to four values separated by comma in the `ratings` parameter:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=&amenities=&ratings=5
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&ratings=5
 ```
 
 
 The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=&amenities=&ratings=&hotelSource=ALL
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&hotelSource=ALL
 ```
 
 
@@ -239,7 +239,7 @@ Your application can also display a list of suggested hotel names based on keywo
 
 [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference) provides a list of up to 20 hotels whose names most closely match the search query string. For each hotel in the results, the API also provides descriptive data, including the hotel name, address, geocode, property type, IATA hotel code and the Amadeus hotel ID. 
 
-The two mandatory query parameters for this API are the `keyword` and `subtype`. The keyword can be anything from four to fourty letters. The sub type is the category of search, which cab be either `HOTEL_LEISURE` to target aggregators or `HOTEL_GDS` to target the chains directly.
+The two mandatory query parameters for this API are the `keyword` and `subtype`. The keyword can be anything from four to fourty letters. The sub type is the category of search, which can be either `HOTEL_LEISURE` to target aggregators or `HOTEL_GDS` to target the chains directly.
 
 
 ```bash
