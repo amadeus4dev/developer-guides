@@ -68,7 +68,7 @@ amadeus-travel-restrictions-node ([Link to GitHub](https://github.com/amadeus4de
 We have many other prototypes or demo apps that developers in our community built and shared! Explore them in [Amadeus for Developers -Examples GitHub](https://github.com/amadeus4dev-examples){:target="\_blank"} 
 
 !!! warning
-    Projects from communities are examples that have been built and managed by developer community and it is not supported or maintained by Amadeus for Developers team. the projects may not up-to-date. 
+    Projects from communities are examples that have been built and managed by developer community and it is not supported or maintained by Amadeus for Developers team. The projects may not up-to-date. 
 
 !!! danger
     The list of community projects is working in progress.
