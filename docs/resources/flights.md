@@ -1174,8 +1174,8 @@ https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT&keyword
 
 In addition to that, we can select how detailed the response will be. This is done by the optional `view` parameter, which can be:
 
-* `LIGHT` - to only show the IATACode, name, detailedName, cityName and countryName
-* `FULL` - to add on top of the LIGHT information the timeZoneOffset, geocode, detailed address and travelers.score
+* `LIGHT` - to only show the iataCode, name, detailedName, cityName and countryName
+* `FULL` - to add on top of the LIGHT information the timeZoneOffset, geoCode, detailed address and travelers.score
 
 The default option is `FULL`:
 
