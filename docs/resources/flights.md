@@ -851,6 +851,9 @@ You can build the request by passing the flight-offer object from the [Flight Of
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 ```
 
+Please not that the `X-HTTP-Method-Override` header parameter is required to make this call.
+
+
 ```json
 { 
   "data": { 
@@ -988,6 +991,157 @@ POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
   } 
 }  
 ```
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/y3CNy8sdpzE)
+
+
+The API will procide the following JSON in the response:
+
+```json
+{
+	"meta": {
+		"count": 5
+	},
+	"data": [{
+				"type": "flight-offer",
+				"id": "2",
+				"source": "GDS",
+				"instantTicketingRequired": false,
+				"paymentCardRequired": false,
+				"lastTicketingDate": "2022-11-30",
+				"itineraries": [{
+					"segments": [{
+						"departure": {
+							"iataCode": "MAD",
+							"terminal": "2",
+							"at": "2022-12-01T07:10:00"
+						},
+						"arrival": {
+							"iataCode": "ORY",
+							"at": "2022-12-01T09:05:00"
+						},
+						"carrierCode": "UX",
+						"number": "1027",
+						"aircraft": {
+							"code": "333"
+						},
+						"operating": {
+							"carrierCode": "UX"
+						},
+						"duration": "PT1H55M",
+						"id": "7",
+						"numberOfStops": 0,
+						"blacklistedInEU": false
+					}]
+				}],
+				"price": {
+					"currency": "EUR",
+					"total": "228.38",
+					"base": "210.00",
+					"fees": [{
+						"amount": "0.00",
+						"type": "TICKETING"
+					}],
+					"grandTotal": "228.38"
+				},
+				"pricingOptions": {
+					"fareType": [
+						"PUBLISHED"
+					],
+					"includedCheckedBagsOnly": false,
+					"refundableFare": false,
+					"noRestrictionFare": false,
+					"noPenaltyFare": false
+				},
+				"validatingAirlineCodes": [
+					"UX"
+				],
+				"travelerPricings": [{
+							"travelerId": "1",
+							"fareOption": "STANDARD",
+							"travelerType": "ADULT",
+							"price": {
+								"currency": "EUR",
+								"total": "228.38",
+								"base": "210.00",
+								"taxes": [{
+										"amount": "3.27",
+										"code": "QV"
+									},
+									{
+										"amount": "0.63",
+										"code": "OG"
+									},
+									{
+										"amount": "14.48",
+										"code": "JD"
+									}
+								]
+							},
+							"fareDetailsBySegment": [{
+								"segmentId": "7",
+								"cabin": "ECONOMY",
+								"fareBasis": "KYYO5L",
+								"brandedFare": "LITE",
+								"class": "K",
+								"includedCheckedBags": {
+									"quantity": 0
+								},
+								"amenities": [{
+										"code": "0L5",
+										"description": "CARRY ON HAND BAGGAGE",
+										"isChargeable": false,
+										"amenityType": "BAGGAGE"
+									},
+									{
+										"code": "0CC",
+										"description": "FIRST PREPAID BAG",
+										"isChargeable": true,
+										"amenityType": "BAGGAGE"
+									},
+									{
+										"code": "0GO",
+										"description": "PREPAID BAG",
+										"isChargeable": true,
+										"amenityType": "BAGGAGE"
+									},
+									{
+										"code": "059",
+										"description": "CHANGEABLE TICKET",
+										"isChargeable": true,
+										"amenityType": "BRANDED_FARES"
+									},
+									{
+										"code": "0B5",
+										"description": "PRE RESERVED SEAT ASSIGNMENT",
+										"isChargeable": true,
+										"amenityType": "PRE_RESERVED_SEAT"
+									},
+									{
+										"code": "0G6",
+										"description": "PRIORITY BOARDING",
+										"isChargeable": true,
+										"amenityType": "TRAVEL_SERVICES"
+									}
+								]
+							}],
+							"dictionaries": {
+								"locations": {
+									"MAD": {
+										"cityCode": "MAD",
+										"countryCode": "ES"
+									},
+									"ORY": {
+										"cityCode": "PAR",
+										"countryCode": "FR"
+									}
+								}
+							}
+						}
+```
+
+
 
 ### Search for personalized destination recommendations
 
@@ -1016,10 +1170,20 @@ The response will look like this:
  }
 ```
 
-The city code is the only required query parameter for the [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations):
+
+
+
+The only required parameter for the [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) is the city code. So, the API is capable of suggesting flight based on that input alone:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=PAR
+https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=PAR
+```
+
+You can also narrow the query down by using the `destinationCountryCodes` parameter, which supports one or more IATA country codes, separated by a comma:
+
+
+```bash
+https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=PAR&destinationCountryCodes=US
 ```
 
 To expand the example of the San Francisco-based traveler searching for multiple flights to Barcelona, we can specify the destination country as well:
@@ -1029,7 +1193,7 @@ https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=B
 ```
 
 
- If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) has returned links to both APIs. 
+If you want to take it to the next level, you can call the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search) to let the users know not only the recommended destinations but also what are the cheapest dates to visit any of these cities. For real-time flights, you can also call the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search). The [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations) has returned links to both APIs. 
 
 
 ### Search for recommended nearby destinations 
@@ -1145,6 +1309,11 @@ airports based on what the traveler enters in the search field. The API provides
 The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) retrieves any city that matches a search keyword.
 
 The [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) has two endpoints:
+
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/WoF2D1k5Y_I)
+
 
 * `GET ​/reference-data​/locations` to return a list of airports and cities by a keyword
 * `GET ​/reference-data​/locations//reference-data/locations/{locationId}` to return an airport or city by Id
@@ -1391,11 +1560,12 @@ for more details on this API.
 Remember, you need to be able to issue a ticket to make bookings with our
 [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). To access the API in production, you need to either
 sign a contract with an airline consolidator or be accredited to issue tickets
-yourself. 
+yourself.
 
-You can see the process step to step in this [video tutorial](https://www.youtube.com/watch?v=OEX7k6d52Ic&feature=youtu.be).
+You can see the process step to step in this video tutorial.
 
-If you are interested in knowing more about issuing tickets in travel industry, please check out this [article](https://developers.amadeus.com/blog/what-is-air-ticketing). 
+![type:video](https://www.youtube.com/embed/OEX7k6d52Ic)
+
 
 ## Issue a ticket
 
@@ -1412,6 +1582,8 @@ only certain accredited parties can issue tickets. In the next section, we’ll
 go into detail about your options for managing this final step in the booking
 process.
 
+If you are interested in knowing more about issuing tickets in travel industry, please check out this [article](https://developers.amadeus.com/blog/what-is-air-ticketing). 
+
 ## View the aircraft cabin layout
 
 With the [Seatmap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display) you can view the aircraft cabin layout: 
@@ -1422,7 +1594,10 @@ With the [Seatmap Display API](https://developers.amadeus.com/self-service/categ
 
 To help you build a more consistent display, the API returns a uniform width for all cabins and classes. Rows with special seating like business class or extra-legroom seats have fewer seats per row (e.g., 4 seats for width of 7 coordinates) than economy rows (e.g. 7 seats for a width of 7 coordinates).
 
-Check out this [video tutorial](https://youtu.be/uTOQjGsZLfI) for more details. 
+
+You can see the more details about the aircraft cabin layout in the video below. 
+
+![type:video](https://www.youtube.com/embed/uTOQjGsZLfI)
 
 ### Display in-flight amenities
 
@@ -1618,7 +1793,12 @@ If the desired flight you want to book, does not permit the additional service, 
         "detail": "Error booking additional services" 
     }] 
 } 
+
+
 ```
+You can see the process step to step in this video tutorial.
+
+![type:video](https://www.youtube.com/embed/YtbT2Uwq2BQ)
 
 ## Check the flight status
 
