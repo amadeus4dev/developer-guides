@@ -127,7 +127,8 @@ nav:
     - Examples and Prototypes:
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
-    - FAQ: faq.md 
+    - FAQ: faq.md
+    - Glossary: glossary.md 
     - Migration guides:
         - Hotel search: migration-guides/hotel-search.md
         - Travel restrictions: migration-guides/travel-restrictions.md
