@@ -82,7 +82,7 @@ git clone https://github.com/amadeus4dev/developer-guides.git
 cd developer-guides
 ```
 
-Create your virtual environment and install the dependences 
+Create your virtual environment and install the dependences by running the following in `bash`:
 
 ```
 virtualenv venv
