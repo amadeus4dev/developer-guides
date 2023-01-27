@@ -31,7 +31,7 @@ This page provides help with the most common terminology used across Amadeus Sel
 | GDS (Global Distribution System) | A computerized system used by travel agents and airlines to search for and book flights, hotels, rental cars, and other travel-related services |
 | IATA | [International Air Transport Association](https://www.iata.org){:target="\_blank"}  |
 | IATA Code             | [Code](https://www.iata.org/en/publications/directories/code-search/){:target="\_blank"}  used by IATA to identify locations, airlines and aircraft. For example, the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}  returns IATA codes for cities as the `iataCode` parameter.     |
-| ICAO |  [International Civil Aviation Organization](https://www.icao.int/) |
+| ICAO |  [International Civil Aviation Organization](https://www.icao.int/){:target="\_blank"} |
 | ISO8601 date format               | PnYnMnDTnHnMnS format, e.g. PT2H10M.      |
 | Layover | A stopover in a destination en route to the final destination. |
 | Location Id           | Amadeus-defined identifier that you can see in the search results when querying Self-Service APIs that retrieve information on geographical locations.                                                                            |
