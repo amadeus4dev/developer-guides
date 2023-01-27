@@ -1338,7 +1338,7 @@ To narrow the search down, we can use an optional parameter `countryCode`, which
 https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT&keyword=M&countryCode=US
 ```
 
-The [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) supports [pagination](pagination.md) and dynamic sorting. The dynamic sorting enables you to sort by the results by the number of travelers by airport or city where the airports and cities with the highest traffic will be on top of the list:
+The [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) supports [pagination](../pagination.md) and dynamic sorting. The dynamic sorting enables you to sort by the results by the number of travelers by airport or city where the airports and cities with the highest traffic will be on top of the list:
 
 ```bash
 https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT&keyword=M&countryCode=US&sort=analytics.travelers.score
