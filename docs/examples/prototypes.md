@@ -1,45 +1,77 @@
 # Prototypes 
 
 Would you like to explore the applications that you could build with Amadeus Self-Service APIs?
-We have prototypes available in [GitHub](https://github.com/amadeus4dev).
+We have prototypes available in [Amadeus for Developers GitHub](https://github.com/amadeus4dev).
+
+There are two types of prototypes (demo apps) available. 
+
+* [Official prototypes](#amadeus-official-prototypes-or-demo-apps) are managed by Amadeus for Developers team and updated frequently to the latest version of APIs and SDKs. 
+* [Community prototypes](#prototypes-from-community) are examples or demo apps that have been built and managed by developer community and it is not supported or maintained by Amadeus for Developers team. 
 
 
-Check the following prototypes (examples or demos), which are based on **use case** for your convenience: 
+## Official Prototypes
+
+| Use Cases                                             | Amadeus APIs used                                                                                           | Technology               | Details                                                                         |
+|-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|--------------------------|---------------------------------------------------------------------------------|
+| Flight booking engine                                 | Flight Offers Search, Flight Offers Price, Flight Create Order, Airport & City Search, Travel Restrictions  | Python, django           | [amadeus-flight-booking-django](#amadeus-flight-booking-django)                 |
+| Hotel Booking engine                                  | Hotel Search, Hotel Booking                                                                                 | Python, django           | [amadeus-hotel-booking-django](#amadeus-hotel-booking-django)                   |
+| Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Node, Vue                | [amadeus-flight-booking-node](#amadeus-flight-booking-node)                   |
+| Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Python, django           | [amadeus-flight-price-analysis-django](#amadeus-flight-price-analysis-django)   |
+| Map with Hotels, Point of interests and Safety scores | Hotel Search, Points of Interest, Safe Place                                                                | Python, django, HERE map | [amadeus-hotel-area-safety-pois-django](#amadeus-hotel-area-safety-pois-django) |
+| Covid-19 info map                                     | Travel Restrictions                                                                                         | Node, express            | [amadeus-travel-restrictions-node](#amadeus-travel-restrictions-node)           |
 
 
+### amadeus-flight-booking-django
+amadeus-flight-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../programming/python.md) and demonstrates the end-to-end flight booking process (Flight booking engine), which works in conjunction with three APIs: [Flight Offer Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"}, [Flight Offer Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"} and [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). 
+
+It also uses [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} to autocomplete the origin and destination with IATA code, and [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} to return COVID-19 travel restriction information for destination country. 
+
+![amadeus-flight-booking-django](../images/amadeus-flight-booking-django.png)
+![amadeus-flight-booking-django-2](../images/amadeus-flight-booking-django-2.png)
+
+### amadeus-hotel-booking-django
+amadeus-hotel-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-hotel-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../programming/python.md). It demonstrates the end-to-end Hotel booking process (Hotel booking engine), which works in conjunction with three APIs: [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}, [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} and [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"}. 
+
+![amadeus-hotel-booking-django](../images/amadeus-hotel-booking-django.png)
+
+### amadeus-flight-booking-node 
+amadeus-flight-booking-node ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-node){:target="\_blank"}) is built by Node, Vue and [Node SDK](../programming/node.md). 
 
 
-| Use Cases                   | Amadeus APIs used                                                                                                | Technology           | GitHub Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Airport & City autocomplete | Airport & City Search                                                                                      | Node, express, React | [amadeus-airport-city-search-mern](https://github.com/amadeus4dev/amadeus-airport-city-search-mern)                     |
-| Airport & City autocomplete | Airport & City Search                                                                                      | django               | [Live-Airport-City-Search](https://github.com/amadeus4dev/Live-Airport-City-Search)                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Covid-19                    | Travel Restrictions                                                                                        | Node, express        | [amadeus-travel-restrictions-node](https://github.com/amadeus4dev/amadeus-travel-restrictions-node)                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Flight booking              | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                       | Node, Vue            | [amadeus-flight-booking-node](https://github.com/amadeus4dev/amadeus-flight-booking-node)                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Flight booking              | Flight Offers Search, Flight Offers Price, Flight Create Order, Airport & City Search, Travel Restrictions | Python, django       | [amadeus-flight-booking-django](https://github.com/amadeus4dev/amadeus-flight-booking-django)                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Flight Search               | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                       | Python, django       | [amadeus-flight-price-analysis-django](https://github.com/amadeus4dev/amadeus-flight-price-analysis-django)                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Flight Search               | Flight Offers Search, Flight Choice Prediction, Trip Purpose Prediction and Airport & City Search          | Python, django       | [amadeus-smart-flight-search-django](https://github.com/amadeus4dev/amadeus-smart-flight-search-django)                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Flight Search               | Flight Offers Search                                                                                       | PHP, wordpress       | [amadeus-flight-search-wordpress-plugin](https://github.com/amadeus4dev/amadeus-flight-search-wordpress-plugin) |
-| Hotel Booking               | Hotel Search, Hotel Booking                                                                                | Kotlin               | [amadeus-hotel-booking-android](https://github.com/amadeus4dev/amadeus-hotel-booking-android)                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Hotel Booking               | Hotel Search, Hotel Booking                                                                                | Python, django       | [amadeus-hotel-booking-django](https://github.com/amadeus4dev/amadeus-hotel-booking-django)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Hotel Booking               | Hotel Search, Hotel Booking                                                                                | Roby on Rails        | [amadeus-hotel-booking-rubyonrails](https://github.com/amadeus4dev/amadeus-hotel-booking-rubyonrails)                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Hotel Search                | Hotel Search, Points of Interest, Safe Place                                                               | Python, django       | [amadeus-hotel-area-safety-pois-django](https://github.com/amadeus4dev/amadeus-hotel-area-safety-pois-django)                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Hotel Search                | Hotel Search                                                                                               | Swift                | [amadeus-hotel-search-swift](https://github.com/amadeus4dev/amadeus-hotel-search-swift)                                       |
-| Itinarary Management        | Trip Purpose Prediction                                                                                    | Python, django       | [amadeus-trip-purpose-django](https://github.com/amadeus4dev/amadeus-trip-purpose-django)                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| On demand flight status     | On-Demand Flight Status                                                                                    | Python               | [amadeus-async-flight-status](https://github.com/amadeus4dev/amadeus-async-flight-status)                                |
+### amadeus-flight-price-analysis-django
+amadeus-flight-price-analysis-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-price-analysis-django){:target="\_blank"}) is built with Django and [Python SDK](../programming/python.md). It retrieves flight offers using the Flight Offers Search API for a given itinerary. Then it displays if the cheapest available flight is a good deal based on the Flight Price Analysis API. We finally predict if the trip is for business or leisure using the Trip Purpose Prediction API.
 
+![amadeus-flight-price-analysis-django](../images/amadeus-flight-price-analysis-django.png)
 
+### amadeus-hotel-area-safety-pois-django
+amadeus-hotel-area-safety-pois-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-hotel-area-safety-pois-django){:target="\_blank"}) built by Django and [Python SDK](../programming/python.md), It demonstrate the safety information, POIs and tours for a chosen hotel on the map, using the following APIs:
 
+* [Hotel Search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}: shows hotels on the map
+* [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}: shows POIs around the hotel
+* [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"}: shows safety information for the area each hotel is located
+* [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"}: shows bookable tours and activities around the hotel
+* [HERE Maps](https://developer.here.com/){:target="\_blank"}: displays a map with markers and text bubbles
 
+![amadeus-hotel-area-safety-pois-django](../images/amadeus-hotel-area-safety-pois-django.png)
 
-### Prototypes from community
+### amadeus-travel-restrictions-node
 
-We have many additional prototypes that developers in our community built and shared! 
+amadeus-travel-restrictions-node ([Link to GitHub](https://github.com/amadeus4dev/amadeus-travel-restrictions-node){:target="\_blank"}) built by Node, Express and [Node SDK](../programming/node.md), It demonstrate Travel Restrictions for USA displayed on a map. We use the following APIs:
 
-Explore them in [GitHub](https://github.com/amadeus4dev) when searching by the keyword `prototype`, `demo` or `example`. 
+* [Travel Restrictions](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"}: returns Travel Restrictions
+* [HERE Maps for JavaScript](https://developer.here.com/): displays a map with markers and text bubbles
 
-Below you can see our blog articles related to the external prototypes available in GitHub.  
+![amadeus-travel-restrictions-node](../images/amadeus-travel-restrictions-node.png)
 
+## Prototypes from community 
 
+We have many other prototypes or demo apps that developers in our community built and shared! Explore them in [Amadeus for Developers -Examples GitHub](https://github.com/amadeus4dev-examples){:target="\_blank"} 
+
+!!! warning
+    Projects from communities are examples that have been built and managed by developer community and it is not supported or maintained by Amadeus for Developers team. The projects may not up-to-date. 
+
+!!! danger
+    The list of community projects is working in progress.
 
 | Use Cases                  | Blog Link                                                                                                                                                                                                                                                  |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -56,5 +88,3 @@ Below you can see our blog articles related to the external prototypes available
 | Hotel Booking           | [Hotel booking app with Node.js and React - Part 1](https://developers.amadeus.com/blog/react-hotel-booking-app-part1)                                                                                                                       |
 | Hotel Booking              | [Hotel booking app with Node.js and React - Part 2](https://developers.amadeus.com/blog/react-hotel-booking-app-part2)                                                                                                                       |
 | Destination Experiences    | [Get nearby places using Amadeus APIs in iOS](https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api)                                                                                                       |
-
-
