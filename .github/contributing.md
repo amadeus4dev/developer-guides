@@ -82,7 +82,7 @@ git clone https://github.com/amadeus4dev/developer-guides.git
 cd developer-guides
 ```
 
-Create your virtual environment and install the dependences by running the following in `bash`:
+Create your virtual environment and install the dependences by running:
 
 ```
 virtualenv venv
@@ -104,7 +104,7 @@ mkdocs serve
 
 Now you can go to http://127.0.0.1:8000 and check out the documentation. For any changes you make, you will just have to refresh your browser to see them.
 
-**NOTE:** If you encounter a problem starting MkDocs, upgrade it by running `pip install -U mkdocs`.
+**NOTE:** If you encounter a problem starting MkDocs, upgrade it by running `pip install -U mkdocs`. If this does not help, try running the commands from a different terminal, for example, from 'bash' instead of 'zsh'.
 
 ### Do you have any questions?
 Please feel free to join [our Discord channel](https://github.com/amadeus4dev/developer-guides/blob/dcd481558da870a539a49f5564e8cb4e5e159835/mkdocs.yml) to meet our community and ask questions! 
