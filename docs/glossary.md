@@ -2,18 +2,18 @@
 
 This page provides help with the most common terminology used across Amadeus Self-service APIs.
 
-### [COVID-19 and travel safety](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety)
+### [COVID-19 and travel safety](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety){:target="\_blank"} 
 
 | Term | Definition |
 |----|----|
 | Riskline  | Amadeus' travel restrictions data provider.    |
 
-### [Air](https://developers.amadeus.com/self-service/category/air) and [Trip](https://developers.amadeus.com/self-service/category/trip)
+### [Air](https://developers.amadeus.com/self-service/category/air){:target="\_blank"}  and [Trip](https://developers.amadeus.com/self-service/category/trip){:target="\_blank"} 
 
 | Term | Definition |
 |----|----|
 | Additional Baggage | Luggage beyond the standard allowance provided by an airline, subject to additional fees. |
-| Aircraft Code         | [IATA aircraft code](http://www.flugzeuginfo.net/table_accodes_iata_en.php).              |
+| Aircraft Code         | [IATA aircraft code](http://www.flugzeuginfo.net/table_accodes_iata_en.php){:target="\_blank"} .              |
 | Airline Code          | Airline code following IATA or ICAO standard - e.g. 1X; AF or ESY.  |  
 | Airline consolidators | Wholesalers of air tickets that usually partner with airlines to get negotiated rates for air tickets, and then resell the air tickets to travel agents or consumers. |
 | Amadeus Office ID | An identification number assigned to travel agencies to access Amadeus system and book reservations. |
@@ -27,11 +27,11 @@ This page provides help with the most common terminology used across Amadeus Sel
 | Direct flight | A flight that goes from one destination to another without any stops in between. |
 | Fare | The price of a ticket for a particular flight or travel itinerary. |
 | Fare Rules | The terms and conditions that apply to a specific airline ticket or fare, including restrictions and information on refunds, cancellations, changes, baggage, seat assignments, upgrades, and frequent flyer programs. |
-| Flight Order Id       | Unique identifier returned by the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). |
+| Flight Order Id       | Unique identifier returned by the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"} . |
 | GDS (Global Distribution System) | A computerized system used by travel agents and airlines to search for and book flights, hotels, rental cars, and other travel-related services |
-| IATA | [International Air Transport Association](www.iata.org) |
-| IATA Code             | [Code](https://www.iata.org/en/publications/directories/code-search/) used by IATA to identify locations, airlines and aircraft. For example, the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) returns IATA codes for cities as the `iataCode` parameter.     |
-| ICAO |  [International Civil Aviation Organization](https://www.icao.int/) |
+| IATA | [International Air Transport Association](https://www.iata.org){:target="\_blank"}  |
+| IATA Code             | [Code](https://www.iata.org/en/publications/directories/code-search/){:target="\_blank"}  used by IATA to identify locations, airlines and aircraft. For example, the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}  returns IATA codes for cities as the `iataCode` parameter.     |
+| ICAO |  [International Civil Aviation Organization](https://www.icao.int/){:target="\_blank"} |
 | ISO8601 date format               | PnYnMnDTnHnMnS format, e.g. PT2H10M.      |
 | Layover | A stopover in a destination en route to the final destination. |
 | Location Id           | Amadeus-defined identifier that you can see in the search results when querying Self-Service APIs that retrieve information on geographical locations.                                                                            |
@@ -44,17 +44,17 @@ This page provides help with the most common terminology used across Amadeus Sel
 | Ticketing | The process of issuing a travel document, typically a paper or electronic ticket, that confirms that a passenger has purchased a seat on a flight, train, bus, or other form of transportation. It can be refundable or non-refundable, one-way or round-trip, and open-jaw. |
 | Travel Classes | Differentiation of service level and amenities offered to passengers on an aircraft or train, like first class, business class, economy class. |
 
-### [Hotel](https://developers.amadeus.com/self-service/category/hotel)
+### [Hotel](https://developers.amadeus.com/self-service/category/hotel){:target="\_blank"} 
 
 | Term | Definition |
 |----|----|
 | Hotel Ids             | Amadeus Property Codes (8 chars). Comma-separated list of Amadeus Hotel Ids (max. 3). Amadeus Hotel Ids are found in the Hotel Search response (parameter name is `hotelId`).                                                     |
 
-### [Destination content](https://developers.amadeus.com/self-service/category/destination-content)
+### [Destination content](https://developers.amadeus.com/self-service/category/destination-content){:target="\_blank"} 
 
 | Term | Definition |
 |----|----|
 | Avuxi | Amadeus' data provider on locations popularity. |
-| Activity Id           | [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference) returns a unique activity Id along with the activity name, short description, geolocation, customer rating, image, price and deep link to the provider page to complete the booking. |
+| Activity Id           | [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"}  returns a unique activity Id along with the activity name, short description, geolocation, customer rating, image, price and deep link to the provider page to complete the booking. |
 | GeoSure | Amadeus's provider od data on locations crime rate, health and economic data, official travel alerts, local reporting and a variety of other sources.    |
 | GeoSure GeoSafeScores | Algorithm that analyzes crime, health and economic data, official travel alerts, local reporting and a variety of other sources.    |
