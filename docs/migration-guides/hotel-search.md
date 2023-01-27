@@ -117,8 +117,8 @@ You can easily integrate the new [Hotel Search API](https://developers.amadeus.c
 
 -	How can I get the hotel image/address/contact details/rating/amenities?
     *	Due to legal constraints we, unfortunately, can no longer distribute hotel images and specific details through our Self-Service APIs. 
-    *	As a workaround we recommend using [Leonardo](https://www.leonardoworldwide.com/), our trusted data provider.
-    *	Also, we have built a [Python tutorial](https://github.com/amadeus4dev/amadeus-hotel-address-python) on getting the hotel address with reverse geocoding and Google Places API.
+    *	As a workaround we recommend using [Leonardo](https://www.leonardoworldwide.com/){:target="\_blank"}, our trusted data provider.
+    *	Also, we have built a [Python tutorial](https://github.com/amadeus4dev/amadeus-hotel-address-python/){:target="\_blank"} on getting the hotel address with reverse geocoding and Google Places API.
 
 -	How can I use the data without the cache data control?
     * The [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) v3 is using live data directly while avoiding the need to build cache and add any extra validation mechanisms to the data.
