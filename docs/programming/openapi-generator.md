@@ -1,16 +1,16 @@
 # Generating SDKs from Amadeus OpenAPI specification using the OpenAPI Generator
 
-The [OpenAPI Generator](https://openapi-generator.tech/) is an open-source project for generating REST API clients, server stubs, documentation and schemas based on the OpenAPI specification.
+The [OpenAPI Generator](https://openapi-generator.tech/){:target="\_blank"} is an open-source project for generating REST API clients, server stubs, documentation and schemas based on the OpenAPI specification.
 
 At Amadeus, we are following the contract-first approach to API development, which is at the core of the OpenAPI Generator's design philosophy. In this way, we only need to create or update an OpenAPI specification for a particluar API, and the OpenAPI Generator will automatically generate the SDKs in various programming languages and create the required API documentation.
 
 ## Amadeus OpenAPI specification
 
-We have a [dedicated GitHub repository](https://github.com/amadeus4dev/amadeus-open-api-specification) where you can find OpenAPI specification files for all our Self-Serving APIs. The OpenAPI Generator can easily consume these files to output a dedicated SDK for any of the [languages](https://openapi-generator.tech/docs/generators) that it supports.
+We have a [dedicated GitHub repository](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"} where you can find OpenAPI specification files for all our Self-Serving APIs. The OpenAPI Generator can easily consume these files to output a dedicated SDK for any of the [languages](https://openapi-generator.tech/docs/generators){:target="\_blank"} that it supports.
 
 ### How to create an SDK from Amadeus OpenAPI specification
 
-If you are not familiar with the OpenAPI Generator, the following tutorial may help you get started. We will take Ruby as an example and show you the steps to create a turnkey SDK based on the specification for your required Amadeus API. We will use the [City Search API](https://github.com/amadeus4dev/amadeus-open-api-specification/blob/main/spec/json/CitySearch_v1_swagger_specification.json) in our example.
+If you are not familiar with the OpenAPI Generator, the following tutorial may help you get started. We will take Ruby as an example and show you the steps to create a turnkey SDK based on the specification for your required Amadeus API. We will use the [City Search API](https://github.com/amadeus4dev/amadeus-open-api-specification/blob/main/spec/json/CitySearch_v1_swagger_specification.json){:target="\_blank"} in our example.
 
 
 #### Step 1. Setting up the OpenAPI Generator
@@ -18,11 +18,11 @@ If you are not familiar with the OpenAPI Generator, the following tutorial may h
 !!! information
     The current stable release version of the OpenAPI Generator at the time of writing this document is 6.0.1.
 
-There are many ways to [set up](https://openapi-generator.tech/docs/installation) the OpenAPI Generator. To eliminate the need for any system dependencies, we will run the OpenAPI Generator as a Docker container. As a prerequisite to this, we need to install the [Docker Desktop](https://docs.docker.com/desktop/) on our host and start running it.
+There are many ways to [set up](https://openapi-generator.tech/docs/installation){:target="\_blank"} the OpenAPI Generator. To eliminate the need for any system dependencies, we will run the OpenAPI Generator as a Docker container. As a prerequisite to this, we need to install the [Docker Desktop](https://docs.docker.com/desktop/){:target="\_blank"} on our host and start running it.
 
 #### Step 2. Downloading the OpenAPI specification for the City Search API
 
-Navigate to the [Amadeus OpenAPI Specification](https://github.com/amadeus4dev/amadeus-open-api-specification) and download the JSON file for the [City Search API specification](https://github.com/amadeus4dev/amadeus-open-api-specification/blob/main/spec/json/CitySearch_v1_swagger_specification.json). 
+Navigate to the [Amadeus OpenAPI Specification](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"} and download the JSON file for the [City Search API specification](https://github.com/amadeus4dev/amadeus-open-api-specification/blob/main/spec/json/CitySearch_v1_swagger_specification.json){:target="\_blank"}. 
 
 !!! information
     You can use both JSON and YAML files with the OpenAPI Generator. 
@@ -73,7 +73,7 @@ There are several ways to customise an SDK created by the OpenAPI Generator:
 
 ##### Configuration file
 
-There is a number of configuration options that the OpenAPI Generator supports for [Ruby](https://openapi-generator.tech/docs/generators/ruby#config-options).
+There is a number of configuration options that the OpenAPI Generator supports for [Ruby](https://openapi-generator.tech/docs/generators/ruby#config-options){:target="\_blank"}.
 
 To apply them, we need to create a JSON file with the required parameters and define it when running the OpenAPI Generator. Let's create a file called `config.json` with the following contents:
 
@@ -122,7 +122,7 @@ This command will upload the SDK to a repository `AmadeusCitySearch` by the user
 
 ##### Mustache template
 
-To customise the SDK beyond the custom parameters, we can use mustache templates. The [GitHub repository](https://github.com/OpenAPITools/openapi-generator) of the OpenAPI Generator contains default mustache templates at `tree/master/modules/openapi-generator/src/main/resources/`. For our Ruby Client SDK, we will need the [api_client_spec template](https://github.com/OpenAPITools/openapi-generator/blob/master/modules/openapi-generator/src/main/resources/ruby-client/api_client_spec.mustache).
+To customise the SDK beyond the custom parameters, we can use mustache templates. The [GitHub repository](https://github.com/OpenAPITools/openapi-generator){:target="\_blank"} of the OpenAPI Generator contains default mustache templates at `tree/master/modules/openapi-generator/src/main/resources/`. For our Ruby Client SDK, we will need the [api_client_spec template](https://github.com/OpenAPITools/openapi-generator/blob/master/modules/openapi-generator/src/main/resources/ruby-client/api_client_spec.mustache){:target="\_blank"}.
 
 Download the template and customise it as required. After that, attach the template to the OpenAPI `run` command as follows:
 
@@ -154,4 +154,4 @@ In this way, all models in our SDK will be prefixed with `Amadeus`, e.g. `Amadeu
 
 ### Conclusion
 
-In this tutorial we have seen how easy it is to generate a basic SDK from our API specification files using the OpenAPI Generator. We took Ruby as an example, but the OpenAPI Generator supports [many other languages](https://openapi-generator.tech/docs/generators), so you can easily find a solution that meets your requirements.
+In this tutorial we have seen how easy it is to generate a basic SDK from our API specification files using the OpenAPI Generator. We took Ruby as an example, but the OpenAPI Generator supports [many other languages](https://openapi-generator.tech/docs/generators){:target="\_blank"}, so you can easily find a solution that meets your requirements.

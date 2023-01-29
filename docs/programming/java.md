@@ -3,7 +3,7 @@
 Amadeus Java SDK for the Self-Service APIs is available as a `Maven` dependency, 
 which the Amadeus for Developers team is continuously updating as the new APIs and features get released.
 
-You can refer to the [Amadeus Java SDK](https://github.com/amadeus4dev/amadeus-java) or [Amadeus Maven dependency](https://mvnrepository.com/artifact/com.amadeus/amadeus-java) for the detailed changelog.
+You can refer to the [Amadeus Java SDK](https://github.com/amadeus4dev/amadeus-java){:target="\_blank"} or [Amadeus Maven dependency](https://mvnrepository.com/artifact/com.amadeus/amadeus-java){:target="\_blank"} for the detailed changelog.
 
 ## Installation
 
@@ -28,7 +28,7 @@ compile "com.amadeus:amadeus-java:6.3.0"
 
 **Further information:**
 
-You can check the library in the [Maven repository](https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest) for futher information.
+You can check the library in the [Maven repository](https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest){:target="\_blank"} for futher information.
 
 ## Step-by-step example
 
@@ -47,9 +47,9 @@ The requirements to follow this tutorial include:
 * A build automation tool, such as `Maven`
 * Amadeus for Developers API key
 
-Let's do something cool by calling one of our [Flight Search APIs](https://developers.amadeus.com) from your Java code.
+Let's do something cool by calling one of our [Flight Search APIs](https://developers.amadeus.com){:target="\_blank"} from your Java code.
 
-To help you get started, we have created a small [Maven skeleton](https://github.com/amadeus4dev/amadeus-java-getting-started) that is ready to use. 
+To help you get started, we have created a small [Maven skeleton](https://github.com/amadeus4dev/amadeus-java-getting-started){:target="\_blank"} that is ready to use. 
 
 Let's create a class `FlightSearch.java` in the package `edu.amadeus.sdk` with the following content:
 
@@ -142,7 +142,7 @@ System.out.println(flightDestinations[0]);
 ```
 
 Now that you've tried out this example and know
-how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/) in this
+how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/){:target="\_blank"} in this
 SDK and discover new ways to use it.
 
 ## Video Tutorial
@@ -153,4 +153,4 @@ You can also check the video tutorial on how to get started with the Java SDK.
 
 ## Managing Amadeus API rate limits using the Java SDK
 
-[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service) have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/) in place to protect against abuse by third parties. You can find Rate limit example in Java using the Amadeus Java SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Java){:target="\_blank"}. 
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Java using the Amadeus Java SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Java){:target="\_blank"}. 

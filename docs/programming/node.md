@@ -2,10 +2,10 @@
 
 Amadeus Node SDK for Self-service APIs is available with `npm`(node package manager) and Amadeus for Developers team is continuously updating with new APIs and features. 
 
-You can refer to the [amadeus-node](https://github.com/amadeus4dev/amadeus-node) or [Amadeus npm package](https://www.npmjs.com/package/amadeus) for more details on the changelog.
+You can refer to the [amadeus-node](https://github.com/amadeus4dev/amadeus-node){:target="\_blank"} or [Amadeus npm package](https://www.npmjs.com/package/amadeus){:target="\_blank"} for more details on the changelog.
 
 ## Installation
-This module has been tested using [Node LTS versions](https://nodejs.org/en/about/releases/). You can install it using Yarn or NPM.
+This module has been tested using [Node LTS versions](https://nodejs.org/en/about/releases/){:target="\_blank"}. You can install it using Yarn or NPM.
 
 ```sh
 npm install amadeus --save
@@ -13,7 +13,7 @@ npm install amadeus --save
 
 ## Getting Started
 
-To make your first API call, you will need to [register](https://developers.amadeus.com/register) for an Amadeus Developers Account and [set up your first application](https://developers.amadeus.com/my-apps).
+To make your first API call, you will need to [register](https://developers.amadeus.com/register){:target="\_blank"} for an Amadeus Developers Account and [set up your first application](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 
 ```js
 var Amadeus = require('amadeus');
@@ -36,7 +36,7 @@ amadeus.shopping.flightOffersSearch.get({
 
 ## Initialization
 
-The client can be initialized directly as below. Your credentials `client Id` and `Client Secret` can be found on the [Amadeus dashboard](https://developers.amadeus.com/my-apps).
+The client can be initialized directly as below. Your credentials `client Id` and `Client Secret` can be found on the [Amadeus dashboard](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 
 
 ```js
@@ -48,10 +48,10 @@ var amadeus = new Amadeus({
 ```
 
 !!! warning
-    Remember that hardcoding your credentials is not the best practice due to the potential exposure to others. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
+    Remember that hardcoding your credentials is not the best practice due to the potential exposure to others. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage){:target="\_blank"}.
 
 
-Alternatively, you can initialize by setting up environment variables. In Node, we like to use [dotenv package](https://www.npmjs.com/package/dotenv). 
+Alternatively, you can initialize by setting up environment variables. In Node, we like to use [dotenv package](https://www.npmjs.com/package/dotenv){:target="\_blank"}. 
 
 ```sh
 npm install dotenv
@@ -147,4 +147,4 @@ You can also check the video tutorial on how to get started with the Node SDK.
 
 ## Managing Amadeus API rate limits using the Node SDK
 
-[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service) have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/) in place to protect against abuse by third parties. You can find Rate limit example in Node using the Amadeus Node SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"}. 
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Node using the Amadeus Node SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"}. 

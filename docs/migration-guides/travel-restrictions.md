@@ -1,33 +1,33 @@
 # Introducing the Travel Restrictions API v2 : Get more travel safety data
 
-Many things have changed in the travel industry since we [introduced](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api) our [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) in the summer of last year.
+Many things have changed in the travel industry since we [introduced](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api){:target="\_blank"} our [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} in the summer of last year.
 
 With the successful rollout of the COVID-19 vaccination programme and the continuous improvement of testing technology, public health safety measures have been continuously refined. 
 
-To keep up with these developments, we have expanded the scope of the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) to ensure that our customers get the most relevant information on the latest COVID-19 safety and travel regulations.
+To keep up with these developments, we have expanded the scope of the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} to ensure that our customers get the most relevant information on the latest COVID-19 safety and travel regulations.
 
 In this blog post, we would like to highlight the most notable additions to the original API.
 
 ## How to use Travel Restrictions API
 
-The new edition of the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) is located in the same Self-Service and Enterprise catalogues.
+The new edition of the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} is located in the same Self-Service and Enterprise catalogues.
 
-If you are already using the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions), just change the prefix of the base URL from v1 to v2.
+If you are already using the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"}, just change the prefix of the base URL from v1 to v2.
 
-If you are new to the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions):
+If you are new to the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"}:
 
-1. [Sign-up for a free account](https://developers.amadeus.com/register) 
+1. [Sign-up for a free account](https://developers.amadeus.com/register){:target="\_blank"} 
 
-2. Create a new project in your [Self-Service Workspace](https://developers.amadeus.com/my-apps) to get your API key 
+2. Create a new project in your [Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"} to get your API key 
 
 3. Follow the steps in our [Authentication Guide](/API-Keys/authorization.md) to generate your access token 
 
-4. Make your first call using the [API reference](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions/api-reference) or the tool of your choice. 
+4. Make your first call using the [API reference](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions/api-reference){:target="\_blank"} or the tool of your choice. 
 
 In our test environment, you’ll have access to sample data and 200 free requests per month to build your app, with live data available once you move to production. To help you along the way, you can also check out our client libraries and code samples on GitHub and get support straight from the Amadeus developer relations team on Discord.
 
 ### Get responses in multiple languages
-The new [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) can show the search results in several languages. This is enabled by the new query parameter language, which currently supports English (EN), Spanish (ES), French (FR), German (DE), Japanese (JA), Korean (KO), Thai (TH), Bahasa (ID), and Chinese (ZH).
+The new [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} can show the search results in several languages. This is enabled by the new query parameter language, which currently supports English (EN), Spanish (ES), French (FR), German (DE), Japanese (JA), Korean (KO), Thai (TH), Bahasa (ID), and Chinese (ZH).
 
 ### New object for travel test conditions and rules
 
@@ -113,6 +113,6 @@ We have also renamed several existing parameters to provide more clarity about t
 
 ## Get the most out of your travel safety data
 
-To get the most out of the new [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions), we recommend combining it with other Amadeus APIs. For example, if you are planning a journey, you can use the [Flight Offers Search API](https://developers.amadeus.com/blog/migrate-to-the-new-flight-offers-search-api) and the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list) to explore the tickets and accommodation options. Once you know where to go and where to stay, reach out to the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) for any advice on the latest COVID-19 safety and travel requirements that are relevant to your plan and maximise the safety of your journey by running your destination choice by the Safe Place API.
+To get the most out of the new [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"}, we recommend combining it with other Amadeus APIs. For example, if you are planning a journey, you can use the [Flight Offers Search API](https://developers.amadeus.com/blog/migrate-to-the-new-flight-offers-search-api){:target="\_blank"} and the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"} to explore the tickets and accommodation options. Once you know where to go and where to stay, reach out to the [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} for any advice on the latest COVID-19 safety and travel requirements that are relevant to your plan and maximise the safety of your journey by running your destination choice by the Safe Place API.
 
 Collaboration and technology are key to drive our industry towards a brighter future. Together, let’s rebuild travel.

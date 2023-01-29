@@ -3,17 +3,17 @@
 In the **Itinerary Management** category, you can give travelers a simple and personalized way to view their itinerary. 
 
 !!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) | Build a single itinerary with information from different booking confirmation emails.                                                 |
-| [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference) | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
-| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) | Finds cities that match a specific word or string of letters. |
+| [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference){:target="\_blank"} | Build a single itinerary with information from different booking confirmation emails.                                                 |
+| [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference){:target="\_blank"} | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
+| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} | Finds cities that match a specific word or string of letters. |
  
 ## Parse the email confirmation into JSON
 
-The [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference) helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
+The [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference){:target="\_blank"} helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
 
 
 ### Encode your booking confirmation in Base64
@@ -125,7 +125,7 @@ This will extract all the relevant data from the booking information into a stru
 
 ## Predict the trip purpose from a flight
 
-Another API in the itinerary management category, the [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference), predicts whether a flight is searched for **business** or **leisure**. Our machine-learning models have detected which patterns of departure and arrival cities, flight dates, and search dates are associated with business and leisure trips. Understand why your users travel and show them the flights, fares, and ancillaries that suit them best.
+Another API in the itinerary management category, the [Trip Purpose Prediction API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference){:target="\_blank"}, predicts whether a flight is searched for **business** or **leisure**. Our machine-learning models have detected which patterns of departure and arrival cities, flight dates, and search dates are associated with business and leisure trips. Understand why your users travel and show them the flights, fares, and ancillaries that suit them best.
 
 Below is an example to see if the flight from New York to Madrid from 2022-12-01 to 2022-12-12 is leisure or business. 
 
@@ -157,7 +157,7 @@ The result? You can probably guess it. :)
 
 ## Find a city by keywords
 
-If you are unsure of the exact spelling of a city, you can reach out to the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search). This API uses a keyword, which is a string containing a minimum of 3 and a maximum of 10 characters, to search for a city whose name contains this keyword. It is not critical whether you enter the entire city name or only a part of it. For example, `Paris`, `Par` or `ari` will all return `Paris` in the search results.
+If you are unsure of the exact spelling of a city, you can reach out to the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}. This API uses a keyword, which is a string containing a minimum of 3 and a maximum of 10 characters, to search for a city whose name contains this keyword. It is not critical whether you enter the entire city name or only a part of it. For example, `Paris`, `Par` or `ari` will all return `Paris` in the search results.
 
 There are two optional parameters to help you make the query more precise - `countryCode` and `max`. The `countryCode` is a string for the ISO 3166 Alpha-2 code of the country where you need to locate a city, for example, `FR` for France. The `max` is an integer that defines the maximum number of search results.
 
@@ -214,4 +214,4 @@ The results are probably rather predictable:
 
 First of all we see the French capital at the top of the list. The second result refers to the town Le Touquet-Paris-Plage, whose official name contains three letters that match our keyword. If we want to see more results, we can always adjust the `max` number of results.
 
-The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search) only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search) retrieves any city that matches a keyword.
+The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} retrieves any city that matches a keyword.

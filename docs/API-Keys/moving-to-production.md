@@ -6,7 +6,7 @@ When your application is ready to be deployed to the Real World™, you can requ
 
 To request a **production key**, you must complete the following steps:
 
-1. [Sign in](https://developers.amadeus.com/login) to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
+1. [Sign in](https://developers.amadeus.com/login){:target="\_blank"} to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 2. Select the application to move to `Production` and click `Get Production environment` :
 
    ![request_prod](../images/request_production_key.png)
@@ -28,7 +28,7 @@ You will receive a notification that your application is validated and the statu
 > Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more information.
 
 
-Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions every month. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps).
+Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions every month. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 
 ## Using the production key
 
@@ -37,7 +37,7 @@ Once you have a production key, you can make the following changes to your sourc
 * Update the base URL for your API calls to point to `https://api.amadeus.com`.
 * Update your `API key` and `API secret` with the new production keys.
 
-If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev), add `hostname='production'` to the `Client` together with your API key and API secret as shown below example in [python SDK](https://github.com/amadeus4dev/amadeus-python):
+If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev){:target="\_blank"}, add `hostname='production'` to the `Client` together with your API key and API secret as shown below example in [python SDK](https://github.com/amadeus4dev/amadeus-python){:target="\_blank"}:
 
 ```python
 from amadeus import Client, ResponseError
@@ -82,7 +82,7 @@ Yemen*
    regulations and many areas (notably, California and France) have special
    requirements.
 
-[Contact us](https://developers.amadeus.com/support/contact-us-self-service) for questions about the above requirements or assistance with local regulations and airline consolidators in your region.
+[Contact us](https://developers.amadeus.com/support/contact-us-self-service){:target="\_blank"} for questions about the above requirements or assistance with local regulations and airline consolidators in your region.
 
 If you meet the above requirements, you are ready to move your application 
 to production. 

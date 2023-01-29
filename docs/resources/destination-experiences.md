@@ -3,18 +3,18 @@
 With Amadeus Self-Service APIs, you can find data on over two million places and 150,000 activities and show travelers the best things to see and do. In the **Destination Experiences** category, we have two APIs available for that.
 
 !!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference)     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
-| [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference) | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
+| [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference){:target="\_blank"}     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
+| [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"} | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
 
 These two APIs have the same behavior. You can search by radius or by a square, and retrieve results by ID. Let's go through them one by one.
 
 ## Show Travelers the best sights, shops, and restaurants
 
-The [Points of Interest  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference) relies on AVUXI’s GeoPopularity algorithm, which analyses and ranks geolocated data from more than 60 sources, including comments, photos, and reviews from millions of users.
+The [Points of Interest  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference){:target="\_blank"} relies on AVUXI’s GeoPopularity algorithm, which analyses and ranks geolocated data from more than 60 sources, including comments, photos, and reviews from millions of users.
 
 ### Search by radius
 
@@ -101,7 +101,7 @@ curl https://test.api.amadeus.com/v1/reference-data/locations/pois/AF57D529B2
 
 ## Offer tours, activities, and attraction tickets
 
-The [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference)  is built in partnership with MyLittleAdventure. [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference) enables you to offer users the best activities in any destination, complete with a photo, description, price, and link to book the activity directly with the provider. 
+The [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"}  is built in partnership with MyLittleAdventure. [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"} enables you to offer users the best activities in any destination, complete with a photo, description, price, and link to book the activity directly with the provider. 
 
 For the API, we partnered with MyLittleAdventure which aggregates offers from over 45 of the world’s top activity platforms, such as Viator, GetYourGuide, Klook and Musement and applies an algorithm to identify duplicate activities across providers, compare them and return the best one. 
 
@@ -173,7 +173,7 @@ As you can see, the API returns a unique activity Id along with the activity nam
 
 ### Retrieve by Id
 
-Same as [Points of Interest  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference), you can keep the unique Id of each activity and retrieve it with the last endpoint as below.
+Same as [Points of Interest  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference){:target="\_blank"}, you can keep the unique Id of each activity and retrieve it with the last endpoint as below.
 
 ```bash
 curl https://test.api.amadeus.com/v1/shopping/activities/23642

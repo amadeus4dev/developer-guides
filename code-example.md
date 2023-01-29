@@ -2,7 +2,7 @@
 
 To help you get up and running with the Amadeus Self-Service APIs as smoothly as possible, we have provided code examples for **each SDK** and **API endpoint**. Simply copy and paste these examples into your project to make API requests. 
 
-If you have any questions or ideas for improvement, don't hesitate to raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples).
+If you have any questions or ideas for improvement, don't hesitate to raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples){:target="\_blank"}.
 
 ## COVID-19 & Travel safety 
 

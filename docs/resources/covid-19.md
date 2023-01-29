@@ -10,19 +10,19 @@ And even more, **safety information** can be retrieved for the destination you w
 There are two APIs to get this information, which we have grouped into the **COVID-19 and Travel Safety** category.
 
 !!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Travel Restrictions](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) | Provides up-to-date data on COVID-19 caseloads and travel restrictions for over 200 countries and territories, as well as hundreds of cities and regions worldwide.                |
-| [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place)          |  Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety.                  |
+| [Travel Restrictions](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} | Provides up-to-date data on COVID-19 caseloads and travel restrictions for over 200 countries and territories, as well as hundreds of cities and regions worldwide.                |
+| [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"}          |  Provides updated safety and security ratings for over 65,000 cities and neighborhoods worldwide, helping travelers consult and compare destination safety.                  |
 
 
 ## Search by an area
 
 ### Travel Restrictions
 
-[Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions) can be searched **by a country** and narrowed down to a city, if required.
+[Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"} can be searched **by a country** and narrowed down to a city, if required.
 
 The ISO country code is the only mandatory query parameter:
 
@@ -37,7 +37,7 @@ curl https://test.api.amadeus.com/v1/duty-of-care/diseases/covid19-area-report?c
 ```
 
 !!! information
-    The country code (2 letters) is defined by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and the city code (3 letters) is defined by [IATA](https://www.iata.org/en/publications/directories/code-search/). You can also use [Airport & City Search API](https://developers.amadeus.com/self-service/category/air) to get this information. 
+    The country code (2 letters) is defined by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2){:target="\_blank"} and the city code (3 letters) is defined by [IATA](https://www.iata.org/en/publications/directories/code-search/){:target="\_blank"}. You can also use [Airport & City Search API](https://developers.amadeus.com/self-service/category/air){:target="\_blank"} to get this information. 
 
 The results can be requested in different languages by passing the ISO language code as an optional query parameter `language`.
 
@@ -59,7 +59,7 @@ The following languages are currently supported:
 
 ### Safe Place
 
-[Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) can be searched by a given location using:
+[Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"} can be searched by a given location using:
 
 * Latitude, longitude and optionally a radius
 * Square information (North, West, South, and East
@@ -102,7 +102,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/by-square?nor
 
 #### Location Id
 
-The location Id is an Amdeus-defined identifier that you can see in the search results when queritung the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) by latitude/longitude/radius or square information. You can then use this Id as a shortcut to query the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) for a specific location:
+The location Id is an Amdeus-defined identifier that you can see in the search results when queritung the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"} by latitude/longitude/radius or square information. You can then use this Id as a shortcut to query the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"} for a specific location:
 
 
 ```bash
@@ -117,16 +117,16 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930400878
 Let's highlight some information that you'll get from both Travel Restrictions API and Safe Place API. 
 
 !!! Warning
-    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/). 
+    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/){:target="\_blank"}. 
 
 !!! information
-   - the data for Travel Restrictions API comes from [Riskline](https://riskline.com/) and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 
-   - the data for Safe Place API comes from [GeoSure](https://geosureglobal.com/) GeoSafeScores algorithm, which analyzes crime, health and economic data, official travel alerts, local reporting, and a variety of other sources. 
+   - the data for Travel Restrictions API comes from [Riskline](https://riskline.com/){:target="\_blank"} and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 
+   - the data for Safe Place API comes from [GeoSure](https://geosureglobal.com/){:target="\_blank"} GeoSafeScores algorithm, which analyzes crime, health and economic data, official travel alerts, local reporting, and a variety of other sources. 
  
 
 ### Get summary of the destination + Safety score
 
-From the response of [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions): 
+From the response of [Travel Restrictions API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions){:target="\_blank"}: 
 
 ```json
 "area": {
@@ -212,7 +212,7 @@ From the response of Safe Place API, you will get an overall safety score and sc
 
 **Safety scores range on a scale of 1-100, with 1 being the safest and 100 being the least safe.** In this example of Seoul, South Korea, a “politicalFreedom” score of 28 indicates that the potential for infringement of political rights or political unrest is less likely to happen at this location.  
 
-Each location found by the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) is shown with its Amadeus location Id, which can be used in subsequent search queries:
+Each location found by the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"} is shown with its Amadeus location Id, which can be used in subsequent search queries:
 
 ```json
 "type": "safety-rated-location",
@@ -716,6 +716,6 @@ These are the restrictions applying to entering or leaving an area.
 
 
 ## Available blog articles 
-[Keep Travelers informed with Amadeus Travel Restrictions API](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api)
+[Keep Travelers informed with Amadeus Travel Restrictions API](https://developers.amadeus.com/blog/-introducing-amadeus-covid-19-travel-restrictions-api){:target="\_blank"}
 
-[How to build a neighborhood safety map in Python with Amadeus Safe Place](https://developers.amadeus.com/blog/neighborhood-safety-map-python)
+[How to build a neighborhood safety map in Python with Amadeus Safe Place](https://developers.amadeus.com/blog/neighborhood-safety-map-python){:target="\_blank"}

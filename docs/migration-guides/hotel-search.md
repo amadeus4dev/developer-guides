@@ -1,12 +1,12 @@
-Are you still using the old version of the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search)? This guide will help you migrate to the new version of the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) and leverage its advantages right from the start.
+Are you still using the old version of the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"}? This guide will help you migrate to the new version of the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} and leverage its advantages right from the start.
 
 ## How is the Hotel Search API v3 different to v2.1?
 
 The main difference between the two API versions is that the v2.1 endpoint `/shopping/hotel-offers/by-hotel` has been integrated into the v3 `/shopping/hotel-offers/ endpoint`. All hotel offers in the Hotel Search v3 are now queried by hotel’s unique Amadeus Id, which renders the v2.1 endpoint `/shopping/hotel-offers/by-hotel` obsolete.
 
-We also have a new API to help you ensure a seamless migration – the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list). This API returns a list of hotels by a unique Amadeus hotel Id, IATA city code or geographic coordinates.
+We also have a new API to help you ensure a seamless migration – the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}. This API returns a list of hotels by a unique Amadeus hotel Id, IATA city code or geographic coordinates.
 
-The diagram below shows a high-level overview of the differences between the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) v2.1 and v3.
+The diagram below shows a high-level overview of the differences between the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} v2.1 and v3.
  
 ![overview](../images/hotel-search.png) 
 
@@ -110,7 +110,7 @@ The address, contact, amenities, media values have been removed.
 
 ## Use case inspirations
 
-You can easily integrate the new [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) in your hotel booking engine or combine it with other APIs in our Hotel category, such as the [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings) or [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete). Whatever your use case might be, the Amadeus Self-Service APIs will help your business achieve the competitive advantage in the travel industry.
+You can easily integrate the new [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} in your hotel booking engine or combine it with other APIs in our Hotel category, such as the [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings){:target="\_blank"} or [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete){:target="\_blank"}. Whatever your use case might be, the Amadeus Self-Service APIs will help your business achieve the competitive advantage in the travel industry.
 
 
 ## FAQ
@@ -121,7 +121,7 @@ You can easily integrate the new [Hotel Search API](https://developers.amadeus.c
     *	Also, we have built a [Python tutorial](https://github.com/amadeus4dev/amadeus-hotel-address-python/){:target="\_blank"} on getting the hotel address with reverse geocoding and Google Places API.
 
 -	How can I use the data without the cache data control?
-    * The [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) v3 is using live data directly while avoiding the need to build cache and add any extra validation mechanisms to the data.
+    * The [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} v3 is using live data directly while avoiding the need to build cache and add any extra validation mechanisms to the data.
 
 -	How do I get the hotel rating?
-    * We offer data on hotel rating via our Hotel Rating API. Please bear in mind that this rating information is based on the sentiment analysis and not the star rating system. You can, however, retrieve a list of hotels by their star rating using the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list) with the required star rating as an additional query parameter.
+    * We offer data on hotel rating via our Hotel Rating API. Please bear in mind that this rating information is based on the sentiment analysis and not the star rating system. You can, however, retrieve a list of hotels by their star rating using the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"} with the required star rating as an additional query parameter.

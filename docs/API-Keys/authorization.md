@@ -8,7 +8,7 @@ The method to acquire a token is called **grant**. There are different types of 
 
 Once you have created an app and received your `API Key` and  `API Secret`, you can generate an access token by sending a `POST` request to the authorization server:
 
-[https://test.api.amadeus.com/v1/security/oauth2/token/](https://test.api.amadeus.com/v1/security/oauth2/token/)
+[https://test.api.amadeus.com/v1/security/oauth2/token/](https://test.api.amadeus.com/v1/security/oauth2/token/){:target="\_blank"}
 
 !!!information
     Remember that your `API Key` and  `API Secret` should be kept private. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
@@ -82,7 +82,7 @@ To retrieve a token using your favourite programming language, send a `POST` req
 
 There are different strategies to maintain your token updated, like checking the time remaining until expiration before each API call or capturing the `unauthorized` error when the token expires. In both cases, you must request a new token.
 
-To simplify managing the authentication process, you can use the [Amadeus for Developers SDKs](https://github.com/amadeus4dev) available on GitHub. The `SDKs`
+To simplify managing the authentication process, you can use the [Amadeus for Developers SDKs](https://github.com/amadeus4dev){:target="\_blank"} available on GitHub. The `SDKs`
 automatically fetch and store the `access_token` and set the headers in all API
 calls.
 

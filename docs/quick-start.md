@@ -4,8 +4,8 @@
 
 The first step to start using Amadeus Self-Service APIs is to register and create an account:
 
-* Open the [Amadeus Developers Portal](https://developers.amadeus.com/).
-* Click on [Register](https://developers.amadeus.com/register).
+* Open the [Amadeus Developers Portal](https://developers.amadeus.com/){:target="\_blank"}.
+* Click on [Register](https://developers.amadeus.com/register){:target="\_blank"}.
 * Complete the form using a valid email address and click on the `Create account` button. An automatic confirmation email will be sent to the email address you provided.
 * In the confirmation email you receive, click on `Activate your account`. 
 
@@ -20,9 +20,9 @@ To start using the APIs, you need to tell the system that you are allowed to do 
 
 All you need to do, is to attach an alphanumeric string called **token** to your calls. This token will identify you as a valid user.  Each token is generated from two parameters: `API Key` and `API Secret`. Once your account has been verified, you can get your API key and API Secret by following these steps:
 
-* Sign in to the [Developers Portal](https://developers.amadeus.com/signin).
-* Click on your username \(located in the top right corner of the [Developers portal](https://developers.amadeus.com/) page\) 
-* Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps). 
+* Sign in to the [Developers Portal](https://developers.amadeus.com/signin){:target="\_blank"}.
+* Click on your username \(located in the top right corner of the [Developers portal](https://developers.amadeus.com/){:target="\_blank"} page\) 
+* Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}. 
     ![api_key1](images/api_key1.png)
 
 * Click on **Create New App** button.
@@ -37,7 +37,7 @@ All you need to do, is to attach an alphanumeric string called **token** to your
 
 ## Step 3: Calling the API
 
-For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search/api-reference), which returns a list of destinations from a given origin along with the cheapest price for each destination.
+For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search/api-reference){:target="\_blank"}, which returns a list of destinations from a given origin along with the cheapest price for each destination.
 
 ### Creating the Request
 
