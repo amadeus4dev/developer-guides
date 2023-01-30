@@ -18,7 +18,7 @@ There are two types of prototypes (demo apps) available.
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Node, Vue                | [amadeus-flight-booking-node](#amadeus-flight-booking-node)                   |
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Python, django           | [amadeus-flight-price-analysis-django](#amadeus-flight-price-analysis-django)   |
 | Map with Hotels, Point of interests and Safety scores | Hotel Search, Points of Interest, Safe Place                                                                | Python, django, HERE map | [amadeus-hotel-area-safety-pois-django](#amadeus-hotel-area-safety-pois-django) |
-| Covid-19 info map                                     | Travel Restrictions                                                                                         | Node, express            | [amadeus-travel-restrictions-node](#amadeus-travel-restrictions-node)           |
+| Covid-19 info map                                     | Travel Restrictions                                                                                         | Node, Express            | [amadeus-travel-restrictions-node](#amadeus-travel-restrictions-node)           |
 
 
 ### amadeus-flight-booking-django
@@ -79,7 +79,7 @@ We have many other prototypes or demo apps that developers in our community buil
 | Flight Search with Artificial intelligence | Flight Offers Search, Flight Choice Prediction, Trip Purpose Prediction and Airport & City Search | Python, django       | [amadeus-smart-flight-search-django](#amadeus-smart-flight-search-django)                                                                              |
 | Flight Search                              | Flight Offers Search                                                                              | PHP, wordpress       | [amadeus-flight-search-wordpress-plugin](#amadeus-flight-search-wordpress-plugin)                                                                           |
 | Flight Booking engine                      | Flight Offers Search, Flight Offers price, Flight Create Orders, Airport & City Search             | Java, React          | [amadeus_java_flight_api](#amadeus_java_flight_api)                                                                                          |
-| Airport & City autocomplete                | Airport & City Search                                                                             | Node, express, React | [amadeus-airport-city-search-mern](#amadeus-airport-city-search-mern)                                                                                 |
+| Airport & City autocomplete                | Airport & City Search                                                                             | Node, Express, React | [amadeus-airport-city-search-mern](#amadeus-airport-city-search-mern)                                                                                 |
 | Flight Seatmap display                     | SeatMap Display                                                                                   | React                | [amadeus-seatmap](#amadeus-seatmap)                                                                                                  |
 | Hotel booking engine                       | Hotel Search, Hotel Booking                                                                       | React Native         | [AmadeusNodeServer, AmadeusHotelBookingPart1](#amadeusnodeserver-amadeushotelbookingpart1)                                                                      |
 | Hotel booking engine                       | Airport & City Search, Hotel Search, Hotel Booking                                                | Node, React          | [Building-a-Hotel-Booking-App-in-NodeJS-and-React](#building-a-hotel-booking-app-in-nodejs-and-react) |
@@ -88,9 +88,9 @@ We have many other prototypes or demo apps that developers in our community buil
 | Flight Booking engine              | Flight Offers Search, Flight Offers price, Flight Create Orders, Airport & City Search             | Node, Angular        | [Flight-booking-frontend and backend](#flight-booking-frontend-and-backend)                                                                                                                                                                   |
 | Flight Search backend                      | Flight Offers Search, Airport & City Search                                                        | Bootstrap, Vanila JS | [Building-a-Flight-Search-Form-with-Bootstrap-and-the-Amadeus-API](#building-a-flight-search-form-with-bootstrap-and-the-amadeus-api)                                          |
 | Map nearby                                 | Points of Interests                                                                                | Android              | [Amadeus_POI_Android](#amadeus_poi_android)                                                                                              |
-| Hotel booking engine                       | Hotel Search, Hotel Booking                                                                       | Roby on Rails        | [amadeus-hotel-booking-rubyonrails](#amadeus-hotel-booking-rubyonrails)                                                                                |
+| Hotel booking engine                       | Hotel Search, Hotel Booking                                                                       | Ruby on Rails        | [amadeus-hotel-booking-rubyonrails](#amadeus-hotel-booking-rubyonrails)                                                                                |
 | Flight status notification service         | On-Demand Flight Status                                                                           | Python               | [amadeus-async-flight-status](#amadeus-async-flight-status)                                                                                      |
-| Flight Calendar search                     | Airport & City Search, Flight Offers Search                                                                                                  | Node                 | [FlightSearchCalendar](#flightsearchcalendar)                                                                                             |
+| Flight Calendar search                     | Airport & City Search, Flight Offers Search                                                                                                  | Node, Svelte                 | [FlightSearchCalendar](#flightsearchcalendar)                                                                                             |
 | Airport & City autocomplete                | Airport & City Search                                                                             | Node and Express     | [Live-Airport-City-Search](#live-airport-city-search)                                                                                         |
 
 
@@ -119,16 +119,16 @@ This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus
 
 ### amadeus-flight-search-wordpress-plugin
 
-This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-flight-search-wordpress-plugin){:target="\_blank"})  demonstrated how to build a basic flight search feature using the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} with WordPress plugin.
+This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-flight-search-wordpress-plugin){:target="\_blank"})  demonstrated how to create a WordPress plugin to build a basic flight search feature using [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"}.
 
 ![amadeus-flight-search-wordpress-plugin](../images/amadeus-flight-search-wordpress-plugin.png)
 
 ### amadeus_java_flight_api
 
-This app ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus_java_flight_api){:target="\_blank"}) is an example of how to use the Amadeus Flight APIs to search and book a flight The application uses a Spring backend and a React frontend.
+This app ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus_java_flight_api){:target="\_blank"}) is an example of how to use the Amadeus Flight APIs to search and book a flight. The application uses a Spring backend and a React frontend.
 
 ### amadeus-airport-city-search-mern
-This application ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-airport-city-search-mern){:target="\_blank"}) implements airport and city name autocomplete box powered by the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}. The solution itself will be comprised of a simple Node.js and Express backend that connects to the Amadeus API with [Node SDK](../programming/node.md), and a small React app that talks to a Node/Express backend and use it to obtain the airport name data from Amadeus.
+This application ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-airport-city-search-mern){:target="\_blank"}) implements airport and city name autocomplete box powered by the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}. It consists of a simple Node and Express backend that connects to the Amadeus API with [Node SDK](../programming/node.md), and a small React app that talks to a Node/Express backend and use it to obtain the airport name data from Amadeus.
 
 ### amadeus-seatmap
 This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-seatmap){:target="\_blank"}) demonstrates how to display a flight seatmap using [SeatMap Display API](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display){:target="\_blank"} with React. 
@@ -138,7 +138,7 @@ This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus
 ![amadeus-seatmap](../images/amadeus-seatmap.png)
 
 ### AmadeusNodeServer, AmadeusHotelBookingPart1
-This prototype is consisted of 2 Github repositories ([GitHub to Node Server](https://github.com/amadeus4dev-examples/AmadeusNodeServer){:target="\_blank"} and [GitHub to React Native](https://github.com/amadeus4dev-examples/AmadeusHotelBookingPart1){:target="\_blank"}). It demonstrates a Hotel booking application in iOS using React Native. There is a series of blogs to elaborate further to build an app with this prototype. 
+This prototype consists of 2 Github repositories ([GitHub to Node Server](https://github.com/amadeus4dev-examples/AmadeusNodeServer){:target="\_blank"} and [GitHub to React Native](https://github.com/amadeus4dev-examples/AmadeusHotelBookingPart1){:target="\_blank"}). It demonstrates a Hotel booking application in iOS using React Native. There is a series of blogs to elaborate further to build an app with this prototype. 
 
 * [Building an iOS hotel booking app with React Native - Part 1](https://developers.amadeus.com/blog/react-native-hotel-booking-app){:target="\_blank"}
 * [Building an iOS hotel booking app with React Native - Part 2](https://developers.amadeus.com/blog/react-native-hotel-booking-app-part-2){:target="\_blank"} 
@@ -164,7 +164,7 @@ This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/MyPlace
 
 ### Building-a-Hotel-Booking-App-in-NodeJS-and-React
 
-This prototype consists of 2 code sets ([Github to Backend](https://github.com/amadeus4dev-examples/Building-a-Hotel-Booking-App-in-NodeJS-and-React-Part-1){:target="\_blank"} and [Github to Frontend](https://github.com/amadeus4dev-examples/Building-a-Hotel-Booking-App-in-NodeJS-and-React-Part-2){:target="\_blank"}). It demonstrates a complete hotel booking app using Node.js on the backend and React for the frontend. 
+This prototype consists of 2 code sets ([Github to Backend](https://github.com/amadeus4dev-examples/Building-a-Hotel-Booking-App-in-NodeJS-and-React-Part-1){:target="\_blank"} and [Github to Frontend](https://github.com/amadeus4dev-examples/Building-a-Hotel-Booking-App-in-NodeJS-and-React-Part-2){:target="\_blank"}). It demonstrates a complete hotel booking app using Node on the backend and React for the frontend. 
 
 * [Building a hotel booking app with Node.js and React - Part 1](https://developers.amadeus.com/blog/react-hotel-booking-app-part1){:target="\_blank"}
 
@@ -173,7 +173,7 @@ This prototype consists of 2 code sets ([Github to Backend](https://github.com/a
 ![Building-a-Hotel-Booking-App-in-NodeJS-and-React](../images/Building-a-Hotel-Booking-App-in-NodeJS-and-React.jpg)
 
 ### Flight-booking-frontend and backend
-This prototype consists of 2 code sets ([Github to Backend](https://github.com/amadeus4dev-examples/flight-booking-backend){:target="\_blank"} and [Github to Frontend](https://github.com/amadeus4dev-examples/flight-booking-backend){:target="\_blank"}). It demonstrates a complete flight booking application using Node.js in the backend and Angular for the front end.
+This prototype consists of 2 code sets ([Github to Backend](https://github.com/amadeus4dev-examples/flight-booking-backend){:target="\_blank"} and [Github to Frontend](https://github.com/amadeus4dev-examples/flight-booking-backend){:target="\_blank"}). It demonstrates a complete flight booking application using Node in the backend and Angular for the front end.
 
 * [Build a flight booking app with Angular and Node.js - Part 1](https://developers.amadeus.com/blog/flight-booking-app-angular-1){:target="\_blank"}
 * [Build a flight booking app with Angular and Node.js - Part 2](https://developers.amadeus.com/blog/flight-booking-app-angular-2){:target="\_blank"}
