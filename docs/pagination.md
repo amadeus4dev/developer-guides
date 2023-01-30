@@ -1,24 +1,24 @@
 # Pagination on Self-Service APIs
 
-Amadeus for Developers Self-Service APIs can often return a lot of results. For example, when calling the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place), you may get a response hundreds of pages long.
+Amadeus for Developers Self-Service APIs can often return a lot of results. For example, when calling the [Safe Place API](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"}, you may get a response hundreds of pages long.
 That's where **pagination** comes in. Using pagination, you can split the results into different pages to make the responses easier to handle.
 
 Not all Amadeus Self-Service APIs support pagination. The following APIs currently support pagination:
 
 
-* [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place) 
-* [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest)
-* [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant)
-* [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search)
-* [Hotel Search v2](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search) 
-* [Flight Most Travelled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations)
-* [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations)
+* [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"} 
+* [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}
+* [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant){:target="\_blank"}
+* [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}
+* [Hotel Search v2](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} 
+* [Flight Most Travelled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations){:target="\_blank"}
+* [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations){:target="\_blank"}
 
 ## Accessing paginated results
 
 ### Using SDKs
 
-[Amadeus for Developers SDKs](https://github.com/amadeus4dev) make it simple to access paginated results. If the API endpoint supports pagination, you can get page results using the the `.next`, `.previous`, `.last` and
+[Amadeus for Developers SDKs](https://github.com/amadeus4dev){:target="\_blank"} make it simple to access paginated results. If the API endpoint supports pagination, you can get page results using the the `.next`, `.previous`, `.last` and
 `.first` methods.
 
 Example in `Node`:
@@ -76,5 +76,5 @@ You can access the next page of the results using the value of `meta/links/next`
 
 Note that indexing elements between pages is done via the `page[offset]` query
 parameter. For example, `page[offset]=18`. The `next` and `last` returned in the example above encode the special characters `[]` as `%5B` and `%5D`. This is called [percent
-encoding](https://en.wikipedia.org/wiki/Percent-encoding) and is used to
+encoding](https://en.wikipedia.org/wiki/Percent-encoding){:target="\_blank"} and is used to
 encode special characters in the url parameter values.

@@ -5,12 +5,12 @@
 
 ### Prerequisites
 
--  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+-  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 - PHP version >= 7.4
 
 ## Installation
 
-The PHP SDK has been uploaded to the official [PHP package repository](https://getcomposer.org/).
+The PHP SDK has been uploaded to the official [PHP package repository](https://getcomposer.org/){:target="\_blank"}.
 
 ```
 composer require amadeus4dev/amadeus-php

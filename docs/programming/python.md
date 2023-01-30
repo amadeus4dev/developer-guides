@@ -5,14 +5,14 @@
 ### Installation
 
 You can call the Amadeus APIs using the Python SDK. The Python SDK has been uploaded to the official [Python package
-repository](https://pypi.org/project/amadeus/), which makes life easier since
+repository](https://pypi.org/project/amadeus/){:target="\_blank"}, which makes life easier since
 you can install the SDK as a regular Python package.
 
 #### Prerequisites
 
--  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+-  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 - Python version >= 3.4
-- [virtualenv](https://virtualenv.pypa.io/en/latest/) when installing packages for your local projects. There are several beneficts of creating isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
+- [virtualenv](https://virtualenv.pypa.io/en/latest/){:target="\_blank"} when installing packages for your local projects. There are several beneficts of creating isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
 
 The tool can be easily installed using `pip`:
 
@@ -118,7 +118,7 @@ You can also check the video tutorial on how to get started with the Python SDK.
 
 ### Managing Amadeus API rate limits using the Python SDK
 
-[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service) have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/) in place to protect against abuse by third parties. You can find Rate limit example in Python using the Amadeus Python SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Python){:target="\_blank"}. 
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Python using the Amadeus Python SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Python){:target="\_blank"}. 
 
 ## Python Async API calls
 
@@ -126,7 +126,7 @@ In a synchronous program, each step is completed before moving on to the next on
 
 In this guide we are going to show you how to make async API calls in Python to improve the performance of your Python applications.
 
-For all these examples we are going to call the [Flight-Checkin Links API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links). 
+For all these examples we are going to call the [Flight-Checkin Links API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links){:target="\_blank"}. 
 
 ### Prerequisites
 
@@ -134,11 +134,11 @@ To follow along with the tutorial you will need the followings:
 
 - Python version >= 3.8
     
-- Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register) and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps).
+- Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
     
-- `aiohttp`: you will use the [aiohttp](https://docs.aiohttp.org/en/stable/) library to make asynchronous API calls. You can install it using the command `pip install aiohttp`.
+- `aiohttp`: you will use the [aiohttp](https://docs.aiohttp.org/en/stable/){:target="\_blank"} library to make asynchronous API calls. You can install it using the command `pip install aiohttp`.
     
-- `requests`: you will use the [requests](https://requests.readthedocs.io/en/latest/) library for synchronous requests. You can install it using the command `pip install requests`.
+- `requests`: you will use the [requests](https://requests.readthedocs.io/en/latest/){:target="\_blank"} library for synchronous requests. You can install it using the command `pip install requests`.
 
 - `amadeus`: the Amadeus Pthon SDK. You can install it using the command `pip install amadeus`.
 
@@ -217,9 +217,9 @@ asyncio.run(main())
 
 ## OpenAPI Generator
 
-In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI Generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification). In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
+In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI Generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}. In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
 
-Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/programming/openapi-generator/#step-1-setting-up-the-openapi-generator) with the OpenAPI Generator.
+Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/programming/openapi-generator/#step-1-setting-up-the-openapi-generator){:target="\_blank"} with the OpenAPI Generator.
 
 ### Call the Authorization endpoint
 
@@ -267,11 +267,11 @@ print(api_response.body['access_token'])
 
 The code uses the library we have generated to get an OAuth2 access token. With the `o_auth2_access_token_api.OAuth2AccessTokenApi()` we are able to call the `oauth2_token()` method.
 
-The body of the request is being created by passing the `grant_type`, `client_id` and `client_secret` to the `oauth2_token()` method. If you want to know more about how to get the access token check thr [authorization guide](https://amadeus4dev.github.io/developer-guides/API-Keys/authorization/?h=authori). 
+The body of the request is being created by passing the `grant_type`, `client_id` and `client_secret` to the `oauth2_token()` method. If you want to know more about how to get the access token check the [authorization guide](https://amadeus4dev.github.io/developer-guides/API-Keys/authorization/?h=authori). 
 
 ### Call the Flight Offers Search API
 
-Now let's call the Flight Offers Search API. Since thr OpenAPI Generator works with OAS3 you will have to convert the flight search specification to version 3 using the swagger editor (https://editor.swagger.io/). To do the convertion, navigate to the top menu and select `Edit` then `Convert to OAS 3`.
+Now let's call the Flight Offers Search API. Since thr OpenAPI Generator works with OAS3 you will have to convert the flight search specification to version 3 using the swagger editor (https://editor.swagger.io/){:target="\_blank"}. To do the convertion, navigate to the top menu and select `Edit` then `Convert to OAS 3`.
 
 The process is the same as above. You need to generate the library:
 

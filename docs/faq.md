@@ -22,11 +22,11 @@ This page provides help with the most common questions about Amadeus Self-servic
 
 ### How do I change my password?
 
-To change your password, sign in to the [Developers portal](https://developers.amadeus.com/) and click on **My Account** in the top right corner of the screen. You'll find the option to change your password at the bottom of the page. Please remember that we never send your password in any correspondence.
+To change your password, sign in to the [Developers portal](https://developers.amadeus.com/){:target="\_blank"} and click on **My Account** in the top right corner of the screen. You'll find the option to change your password at the bottom of the page. Please remember that we never send your password in any correspondence.
 
 ## I registered but never received a confirmation email? What should I do?
 
-If you haven't received a confirmation mail, it is often because the email address was entered incorrectly. Please sign in to the [Developers portal](https://developers.amadeus.com/) and visit the **My Account** section to confirm that the email address used to create the account is correct. If so, please check your spam folder for an email from noreply@amadeus.com.
+If you haven't received a confirmation mail, it is often because the email address was entered incorrectly. Please sign in to the [Developers portal](https://developers.amadeus.com/){:target="\_blank"} and visit the **My Account** section to confirm that the email address used to create the account is correct. If so, please check your spam folder for an email from noreply@amadeus.com.
 
 ## Self-Service vs Enterprise
 
@@ -42,7 +42,7 @@ The **Enterprise** offer provides access to the full Amadeus APIs catalog, tailo
 
 ### Can I use APIs from both Self-Service and Enterprise?
 
-Yes, you can use APIs from both catalogs, but please keep in mind that the requirements and conditions of each offer are very different. Please check our [Get Started guide](https://developers.amadeus.com/get-started/get-started-with-amadeus-apis-334) for more information.
+Yes, you can use APIs from both catalogs, but please keep in mind that the requirements and conditions of each offer are very different. Please check our [Get Started guide](https://developers.amadeus.com/get-started/get-started-with-amadeus-apis-334){:target="\_blank"} for more information.
 
 ## Self-Service APIs
 
@@ -55,26 +55,26 @@ If you need to increase the number of monthly API calls, please consider moving 
 
 ### How do I access the Self-Service APIs documentation?
 
-Check our [Amadeus for Developers docs portal](https://amadeus4dev.github.io/developer-guides/) for links to interactive reference documentation for each API and helpful guides covering topics such as authorization, pagination and common errors. On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/), you can also find code samples and SDKs.
+Check our [Amadeus for Developers docs portal](https://amadeus4dev.github.io/developer-guides/) for links to interactive reference documentation for each API and helpful guides covering topics such as authorization, pagination and common errors. On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"}, you can also find code samples and SDKs.
 
 ### Do you provide SDKs?
 
-Yes! On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/) you can find open-source SDKs in various languages. Alternatively, you can use [OpenAPI Generator](https://amadeus4dev.github.io/developer-guides/sdks/openapi-generator/) to create an SDK from our [OpenAPI files](https://github.com/amadeus4dev/amadeus-open-api-specification).
+Yes! On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"} you can find open-source SDKs in various languages. Alternatively, you can use [OpenAPI Generator](https://amadeus4dev.github.io/developer-guides/sdks/openapi-generator/){:target="\_blank"} to create an SDK from our [OpenAPI files](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}.
 
 ### Where can I see code examples for Amadeus Self-Service APIs?
 
-Code examples for all Amadeus Self-Service APIs are available in our [GitHub](https://github.com/amadeus4dev/amadeus-code-examples).
+Code examples for all Amadeus Self-Service APIs are available in our [GitHub](https://github.com/amadeus4dev/amadeus-code-examples){:target="\_blank"}.
 
 ### How do I make my first Self-Service API call?
 
-On the [Get Started with Self-Service APIs](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335) page you can find information on creating an account, getting your API key and making your first call.
+On the [Get Started with Self-Service APIs](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335){:target="\_blank"} page you can find information on creating an account, getting your API key and making your first call.
  
 
 ### How do I move Self-Service APIs from test to production?
 
-To launch your application to production, please follow the steps described in our [Moving to production](https://amadeus4dev.github.io/developer-guides/API-Keys/moving-to-production/) guide.
+To launch your application to production, please follow the steps described in our [Moving to production](https://amadeus4dev.github.io/developer-guides/API-Keys/moving-to-production/){:target="\_blank"} guide.
 
-You will be asked to sign a contract and provide billing information before receiving your new API key. When you move to production, you will maintain the same free monthly request quota you enjoyed in test. When you reach your monthly threshold, you will be billed for the additional API calls you make at the rates shown on our [Pricing page](https://developers.amadeus.com/pricing).
+You will be asked to sign a contract and provide billing information before receiving your new API key. When you move to production, you will maintain the same free monthly request quota you enjoyed in test. When you reach your monthly threshold, you will be billed for the additional API calls you make at the rates shown on our [Pricing page](https://developers.amadeus.com/pricing){:target="\_blank"}.
 
 ### How do I delete my application built using Self-Service APIs?
 
@@ -86,13 +86,13 @@ We are constantly expanding our Self-Service API catalog with new APIs from all 
 
 ### What are the terms of service for Amadeus Self-Service APIs?
 
-To find out more about our terms and conditions for the test environment, please visit our [Terms and Conditions page](https://developers.amadeus.com/legal/terms-of-use).
+To find out more about our terms and conditions for the test environment, please visit our [Terms and Conditions page](https://developers.amadeus.com/legal/terms-of-use){:target="\_blank"}.
 
-If you are already in production, you should have received an email with the legal terms regulating API usage in the production environment. If you have not received this information, please [contact us](https://developers.amadeus.com/support/contact-us-self-service).
+If you are already in production, you should have received an email with the legal terms regulating API usage in the production environment. If you have not received this information, please [contact us](https://developers.amadeus.com/support/contact-us-self-service){:target="\_blank"}.
 
 ### I am not a travel agent and have no experience in the travel industry, can I still use the Self-Service APIs?
 
-Our Self-Service offer is designed for newcomers to Amadeus, there are no prerequisites. Any developer who wishes to connect to Amadeus travel data can do so in a quick and easy way via our Self-Service offer.  For more details, please check our [Get Started guide](https://developers.amadeus.com/get-started/get-started-with-amadeus-apis-334).
+Our Self-Service offer is designed for newcomers to Amadeus, there are no prerequisites. Any developer who wishes to connect to Amadeus travel data can do so in a quick and easy way via our Self-Service offer.  For more details, please check our [Get Started guide](https://developers.amadeus.com/get-started/get-started-with-amadeus-apis-334){:target="\_blank"}.
 
 
 ## API keys
@@ -101,17 +101,17 @@ Our Self-Service offer is designed for newcomers to Amadeus, there are no prereq
 
 An API key is a unique reference number which identifies your application to Amadeus. The API key is part of the authorization process and must be sent with each API request. If you have multiple applications using Amadeus APIs, each application must have its own API key. For more details, check our [Authorization guide](https://amadeus4dev.github.io/developer-guides/API-Keys/authorization/).
 
-Your API keys are also used to track usage. To avoid unwanted charges, please do no share or post them in public repositories. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
+Your API keys are also used to track usage. To avoid unwanted charges, please do no share or post them in public repositories. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage){:target="\_blank"}.
 
 ### How do I get my Self-Service API key?
 
-To get a Self-Service API key, simply create an account in the [Amadeus for Developers portal](https://developers.amadeus.com/). Next, visit the **My Self-Service Workspace** area and create your first application. An API key will be generated automatically. Remember, your API key is private and should not be shared publicly.
+To get a Self-Service API key, simply create an account in the [Amadeus for Developers portal](https://developers.amadeus.com/){:target="\_blank"}. Next, visit the **My Self-Service Workspace** area and create your first application. An API key will be generated automatically. Remember, your API key is private and should not be shared publicly.
 
 ### Why is my Self-Service API key not working?
 
 If your API key is not working, please verify that it is the same exact key that was provided in the **My Self-Service Workspace**.
 
-Please keep in mind that we automatically revoke API keys that are publicly searchable. This is done to protect users against unwanted usage bills. As a general rule, you should not put your API keys in the source code you commit to GitHub or other public repositories. Instead, you should store your keys as environment variables rather than hard-coding them in your script. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
+Please keep in mind that we automatically revoke API keys that are publicly searchable. This is done to protect users against unwanted usage bills. As a general rule, you should not put your API keys in the source code you commit to GitHub or other public repositories. Instead, you should store your keys as environment variables rather than hard-coding them in your script. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage){:target="\_blank"}.
 
 ### How long is my Self-Service access token valid for?
 
@@ -121,7 +121,7 @@ The access token is valid for 1800 seconds (30mins). If you get an authenticatio
 
 Storing your API keys or any other sensitive information in a public repository must be avoided at all costs to prevent malicious access to your APIs, which could result in unwanted usage bills.
 
-In order to protect our users, we automatically revoke API keys that are publicly searchable. We recommend that you store your keys as environment variables rather than hard-coding them in your script. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
+In order to protect our users, we automatically revoke API keys that are publicly searchable. We recommend that you store your keys as environment variables rather than hard-coding them in your script. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage){:target="\_blank"}.
 
 ### Why has my API key been revoked?
 
@@ -133,13 +133,13 @@ We automatically revoke publicly searchable API keys to prevent unwanted charges
 
 It is free to test and prototype with Self-Service APIs and you will enjoy a free monthly request quota in both the test and production environments.
 
-When you exceed your free request quota in production, you will be billed for the additional calls you make at the rates indicated on our [Pricing page](https://developers.amadeus.com/pricing), with no additional fees. Please note that prices vary from one API to another.
+When you exceed your free request quota in production, you will be billed for the additional calls you make at the rates indicated on our [Pricing page](https://developers.amadeus.com/pricing){:target="\_blank"}, with no additional fees. Please note that prices vary from one API to another.
 
 You can check your monthly usage and select your preferred payment method (credit card or bank transfer) in your Self-Service Workspace.
 
 ### How do I request a refund of my Self-Service usage bill?
 
-If you're a Self-Service API user, please send your refund requests via the [contact us](https://developers.amadeus.com/support/contact-us-self-service) and our team will carefully analyse them. You will be notified if your refund is approved and be reimbursed within the following days (please note that refund processing times may vary depending on your bank).
+If you're a Self-Service API user, please send your refund requests via the [contact us](https://developers.amadeus.com/support/contact-us-self-service){:target="\_blank"} and our team will carefully analyse them. You will be notified if your refund is approved and be reimbursed within the following days (please note that refund processing times may vary depending on your bank).
 
 ## Test collection
 
@@ -174,7 +174,7 @@ If you wish to keep using the APIs, you can either move your app to production a
 
 ### Is the data returned in the Self-Service test environment accurate?
 
-The information returned in test environment is from [limited data collections](https://amadeus4dev.github.io/developer-guides/test-data/). This is done as a security measure to protect our data and our customers. When you move to production, you will get access to complete and live data.
+The information returned in test environment is from [limited data collections](https://amadeus4dev.github.io/developer-guides/test-data/){:target="\_blank"}. This is done as a security measure to protect our data and our customers. When you move to production, you will get access to complete and live data.
 
 ## Flight Inspiration Search
 

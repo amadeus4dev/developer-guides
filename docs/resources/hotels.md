@@ -3,15 +3,15 @@
 The **Hotels** category contains APIs that can help you find the right hotel and complete the booking.
 
 !!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service) is currently organised by categories that are different to what you see on this page.
+    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) | Returns the name, address, geoCode, and time zone for each hotel bookable in Amadeus. |
-| [Hotel Ratangs](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) | Uses sentiment analysis of hotel reviews to provide an overall hotel ratings and ratings for categories like location, comfort, service, staff, internet, food, facilities, pool or sleep quality. |
-| [Hotel Search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) | Provides a list of the cheapest hotels in a given location with detailed information on each hotel and the option to filter by category, chain, facilities or budget range.  |
-| [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) | Lets you complete bookings at over 150,000 hotels and accommodations around the world. |
-| [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference) | Provides a list of up to 20 hotels whose names most closely match the search query string. |
+| [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} | Returns the name, address, geoCode, and time zone for each hotel bookable in Amadeus. |
+| [Hotel Ratangs](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference){:target="\_blank"} | Uses sentiment analysis of hotel reviews to provide an overall hotel ratings and ratings for categories like location, comfort, service, staff, internet, food, facilities, pool or sleep quality. |
+| [Hotel Search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} | Provides a list of the cheapest hotels in a given location with detailed information on each hotel and the option to filter by category, chain, facilities or budget range.  |
+| [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"} | Lets you complete bookings at over 150,000 hotels and accommodations around the world. |
+| [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference){:target="\_blank"} | Provides a list of up to 20 hotels whose names most closely match the search query string. |
 
 Let's learn how to get started and help your users book the perfect rooms at over 150,000 hotels worldwide.
 
@@ -22,9 +22,9 @@ Let's learn how to get started and help your users book the perfect rooms at ove
 
 ### Get a list of hotels by location 
 
-First, users should be able to search hotels for a given location. The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) returns a list of hotels based on a city, a geographic code or the unique Amadeus hotel Id. To answer a question, such as **"what are the hotels closed to the city hall?"** the `Hotel List API` has three endpoints to utilize based on your search criteria. It returns `hotel name`, `location`, and `hotel id` for you to proceed to the next steps of the hotel search. 
+First, users should be able to search hotels for a given location. The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} returns a list of hotels based on a city, a geographic code or the unique Amadeus hotel Id. To answer a question, such as **"what are the hotels closed to the city hall?"** the `Hotel List API` has three endpoints to utilize based on your search criteria. It returns `hotel name`, `location`, and `hotel id` for you to proceed to the next steps of the hotel search. 
 
-The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) contains the following endpoints:
+The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} contains the following endpoints:
 
 * `GET ​/reference-data​/locations​/hotels​/by-city` - searches hotels by a city code
 * `GET ​/reference-data​/locations​/hotels​/by-geocode` - searches hotels by geographic coordinates
@@ -33,7 +33,7 @@ The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/
 
 #### Search hotels by a city  
 
-You can specify an [IATA city code](https://www.iata.org/en/publications/directories/code-search/) or Geocode to search a more specific area to get the list of hotels. You can customize the request using parameters, such as radius, chain code, amenities, star ratings, and hotel source. 
+You can specify an [IATA city code](https://www.iata.org/en/publications/directories/code-search/){:target="\_blank"} or Geocode to search a more specific area to get the list of hotels. You can customize the request using parameters, such as radius, chain code, amenities, star ratings, and hotel source. 
 
 To search a hotel by a city code, the IATA city code is the only required query parameter:
 
@@ -101,7 +101,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?city
 ```
 
 
-The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
+The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
 
 ```bash
 GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&hotelSource=ALL
@@ -197,7 +197,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?l
 ```
 
 
-The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference) comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
+The source data for the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} comes from BEDBANK for aggregators and DIRECTCHAIN for GDS/Distribution. You can select both sources or include/ exclude a particular source:
 
 ```bash
 GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&hotelSource=ALL
@@ -227,7 +227,7 @@ The response will also include a dedicated Amadeus `hotelId`:
 
 #### Search hotels by hotel ids
 
-If you already know the Id of a hotel that you would like to check, you can use it to call the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference). 
+If you already know the Id of a hotel that you would like to check, you can use it to call the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"}. 
 
 ```bash
 GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?hotelIds=ACPARF58
@@ -237,7 +237,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?ho
 
 Your application can also display a list of suggested hotel names based on keywords used in the search query. 
 
-[Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference) provides a list of up to 20 hotels whose names most closely match the search query string. For each hotel in the results, the API also provides descriptive data, including the hotel name, address, geocode, property type, IATA hotel code and the Amadeus hotel ID. 
+[Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference){:target="\_blank"} provides a list of up to 20 hotels whose names most closely match the search query string. For each hotel in the results, the API also provides descriptive data, including the hotel name, address, geocode, property type, IATA hotel code and the Amadeus hotel ID. 
 
 The two mandatory query parameters for this API are the `keyword` and `subtype`. The keyword can be anything from four to fourty letters. The sub type is the category of search, which can be either `HOTEL_LEISURE` to target aggregators or `HOTEL_GDS` to target the chains directly.
 
@@ -310,7 +310,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotel?keyword=PARI&
 
 ### Display Hotel Ratings
 
-When users search for hotels in a desired area, they may wonder about the hotel rating. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) returns ratings for many crucial elements of a hotel, such as sleep quality, services, facilities, room comfort, value for money, location and many others. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference) guarantees high-quality service for your customers.
+When users search for hotels in a desired area, they may wonder about the hotel rating. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference){:target="\_blank"} returns ratings for many crucial elements of a hotel, such as sleep quality, services, facilities, room comfort, value for money, location and many others. [Hotel Ratings API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings/api-reference){:target="\_blank"} guarantees high-quality service for your customers.
 
 The sentiment analysis, just like the one below, is displayed in a simple flow to allow you to easily identify the best hotels based on traveler reviews:
 
@@ -364,7 +364,7 @@ With these additional filters, your booking process becomes more efficient and y
 
 ## Check Availabilities and Prices
 
-Once users have explored the list of hotels in their desired area, they would want to check the price of a specific hotel or compare the prices of hotels on the list. With the `hotelIds` that you got from [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference), you now can check the available rooms with real-time prices and room descriptions by calling the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference). 
+Once users have explored the list of hotels in their desired area, they would want to check the price of a specific hotel or compare the prices of hotels on the list. With the `hotelIds` that you got from [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"}, you now can check the available rooms with real-time prices and room descriptions by calling the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"}. 
 
 An example to request available rooms and prices for one room in Hilton Paris Opera for one adult with check-in date 2022-11-22:
 
@@ -484,7 +484,7 @@ The API returns a list of `offers` objects containing the price of the cheapest 
 
 ```
 
-If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) again with the `offerid` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
+If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} again with the `offerid` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
 
 An example to request the offer information with `offer id`: 
 
@@ -497,7 +497,7 @@ Now that you have found the available offer (and its `offerId`) with the price, 
 
 ## Booking the Hotel
 
-The [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) is the final step in the hotel booking flow. By making a `POST` request with the offer Id returned by the Hotel Search API, the guest information, and the payment information, you can create a booking directly in the hotel reservation system. 
+The [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"} is the final step in the hotel booking flow. By making a `POST` request with the offer Id returned by the Hotel Search API, the guest information, and the payment information, you can create a booking directly in the hotel reservation system. 
 
 ```bash
 POST https://test.api.amadeus.com/v1/booking/hotel-bookings \
@@ -552,9 +552,9 @@ The Hotel Search API returns information about the payment policy of each hotel.
 - **Deposit**: at the time of booking or by a given deadline, the hotel will charge the guest a percentage of the total amount of the reservation. The remaining amount is paid by the traveler directly at the hotel. 
 - **Prepay**: the total amount of the reservation fee must be paid by the traveler when making the booking. 
 
-The current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) only permits booking at hotels that accept credit cards. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate this information. Be sure to validate the payment and guest information, as invalid information may result in the reservation being canceled. 
+The current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"} only permits booking at hotels that accept credit cards. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate this information. Be sure to validate the payment and guest information, as invalid information may result in the reservation being canceled. 
 
-As soon as your application stores transmits, or processes cardholder information, you will need to comply with PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants). 
+As soon as your application stores transmits, or processes cardholder information, you will need to comply with PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants){:target="\_blank"}. 
 
 
 ## Guide for multiple hotel rooms
@@ -563,7 +563,7 @@ Now that we have gone through the hotel booking flow, you may wonder how to proc
 
 ### Check availability and prices for multiple rooms 
 
-The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) using the `hotelid` that you got from the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference). 
+The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} using the `hotelid` that you got from the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"}. 
 
 Here is an example of a search in Hilton Paris for **two rooms** for **three adults**: 
 
@@ -583,7 +583,7 @@ The API will then return the available offers where `roomQuantity`is equal to 2.
 ```
 ### Book multiple rooms with details for one guest
 
-To call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference), you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below provides details of one guest to book two rooms by `offerId`: 
+To call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"}, you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below provides details of one guest to book two rooms by `offerId`: 
 
 ```json
 { 
@@ -650,7 +650,7 @@ Once the booking is complete, the API will return the following confirmation:
 
 One common question is how to assign guest distribution among the booked rooms. 
 
-When you call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference), the `rooms` object represents the rooms. Each room contains guests distributed per room. Specifically, each `room` object needs IDs of the guests staying in that room.  
+When you call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"}, the `rooms` object represents the rooms. Each room contains guests distributed per room. Specifically, each `room` object needs IDs of the guests staying in that room.  
 
 Below is a sample request to book two rooms with guest distribution. The first room is for guest ID’s `1` & `2` and the second room for guest Id `3`.
 
@@ -761,7 +761,7 @@ The API response will be the same as when you booked multiple rooms using the de
 
 ### AcceptedPayments must be creditCards 
 
-The current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference) only supports credit card payments, which are accepted by most hotels. The [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference) returns the payment policy of each hotel under `acceptedPayments` in the policies section.
+The current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"} only supports credit card payments, which are accepted by most hotels. The [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} returns the payment policy of each hotel under `acceptedPayments` in the policies section.
 
 ###  Empty response from the View Room endpoint  
 
