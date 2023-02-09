@@ -124,6 +124,7 @@ nav:
         - Java: programming/java.md
         - PHP: programming/php.md
         - Using OpenAPI Generator: programming/openapi-generator.md
+        - Using Postman collection: programming/postman.md
     - Examples and Prototypes:
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
