@@ -103,4 +103,8 @@ You can see the process step to step in this video tutorial.
 ![type:video](https://www.youtube.com/embed/o3SqVZJTqd8)
 
 
+## Postman collection
+
+To start testing our APIs without any additional configuration, have a look at our dedicated [Postman collection](./programming/postman.md).
+
 
