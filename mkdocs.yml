@@ -135,3 +135,4 @@ nav:
     - Migration guides:
         - migration-guides/index.md
         - Hotel search: migration-guides/hotel-search.md
+        - Travel restrictions: migration-guides/travel-restrictions.md
