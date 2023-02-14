@@ -105,12 +105,14 @@ nav:
     - Pricing: pricing.md
     - Free Test Data Collection: test-data.md
     - API Keys:
+       - API-Keys/index.md
        - Authorization: API-Keys/authorization.md
        - Production: API-Keys/moving-to-production.md
     - Rate Limits: api-rate-limits.md
     - Pagination: pagination.md
     - Common Errors: common-errors.md
     - API Tutorials:
+        - resources/index.md
         - Covid-19 & travel Safety: resources/covid-19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
@@ -126,10 +128,12 @@ nav:
         - Using OpenAPI Generator: programming/openapi-generator.md
         - Using Postman collection: programming/postman.md
     - Examples and Prototypes:
+        - examples/index.md
         - Code examples: examples/code-example.md
         - Prototypes: examples/prototypes.md
     - FAQ: faq.md
     - Glossary: glossary.md 
     - Migration guides:
+        - migration-guides/index.md
         - Hotel search: migration-guides/hotel-search.md
         - Travel restrictions: migration-guides/travel-restrictions.md
