@@ -130,6 +130,7 @@ nav:
     - Examples and Prototypes:
         - examples/index.md
         - Code examples: examples/code-example.md
+        - Interactive examples: examples/live-examples.md
         - Prototypes: examples/prototypes.md
     - FAQ: faq.md
     - Glossary: glossary.md 
