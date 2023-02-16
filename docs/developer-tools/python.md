@@ -11,7 +11,7 @@ you can install the SDK as a regular Python package.
 #### Prerequisites
 
 -  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
-- Python version >= 3.4
+- Python version >= 3.8
 - [virtualenv](https://virtualenv.pypa.io/en/latest/){:target="\_blank"} when installing packages for your local projects. There are several beneficts of creating isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
 
 The tool can be easily installed using `pip`:
@@ -116,7 +116,7 @@ You can also check the video tutorial on how to get started with the Python SDK.
 
 ![type:video](https://www.youtube.com/embed/R8LolxJTzQk)
 
-### Managing Amadeus API rate limits using the Python SDK
+### Managing API rate limits
 
 [Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Python using the Amadeus Python SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Python){:target="\_blank"}. 
 
@@ -219,7 +219,7 @@ asyncio.run(main())
 
 In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI Generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}. In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
 
-Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/programming/openapi-generator/#step-1-setting-up-the-openapi-generator){:target="\_blank"} with the OpenAPI Generator.
+Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/developer-tools/openapi-generator/#step-1-setting-up-the-openapi-generator){:target="\_blank"} with the OpenAPI Generator.
 
 ### Call the Authorization endpoint
 

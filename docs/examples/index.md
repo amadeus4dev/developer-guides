@@ -5,6 +5,6 @@ To facilitate a smooth and efficient start, or to spark creativity in using our 
 | **Asset**      | **Link** | 
 | ----------- | ----------- | 
 | Code examples | [For each SDK and API endpoint](./code-example.md) |
-| Interactive code examples | [Flight Search and Hotel Search](./live-example.md) |
-| Prototypes | <ul><li>[Official prototypes](./prototypes.md#amadeus-official-prototypes-or-demo-apps)</li><li>[Community prototypes](./prototypes.md#prototypes-from-community)</li></ul>   |
+| Interactive code examples | [Flight Search and Hotel Search](./live-examples.md) |
+| Prototypes | [Official prototypes](./prototypes.md#amadeus-official-prototypes-or-demo-apps)<br>[Community prototypes](./prototypes.md#prototypes-from-community)   |
 

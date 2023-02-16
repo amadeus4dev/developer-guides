@@ -101,39 +101,39 @@ extra_css:
 #Page tree
 nav:
     - Home: index.md
-    - Quick Start: quick-start.md
+    - Quick start: quick-start.md
     - Pricing: pricing.md
-    - Free Test Data Collection: test-data.md
-    - API Keys:
+    - Free test data collection: test-data.md
+    - API keys:
        - API-Keys/index.md
        - Authorization: API-Keys/authorization.md
        - Production: API-Keys/moving-to-production.md
-    - Rate Limits: api-rate-limits.md
+    - Rate limits: api-rate-limits.md
     - Pagination: pagination.md
-    - Common Errors: common-errors.md
+    - Common errors: common-errors.md
     - API Tutorials:
         - resources/index.md
-        - Covid-19 & travel Safety: resources/covid-19.md
+        - Covid-19 & travel safety: resources/covid-19.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
         - Destination experiences: resources/destination-experiences.md
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
-    - Programming:
-        - programming/index.md
-        - Node: programming/node.md
-        - Python: programming/python.md
-        - Java: programming/java.md
-        - PHP: programming/php.md
-        - Using OpenAPI Generator: programming/openapi-generator.md
-        - Using Postman collection: programming/postman.md
-    - Examples and Prototypes:
+    - Developer tools:
+        - developer-tools/index.md
+        - Node: developer-tools/node.md
+        - Python: developer-tools/python.md
+        - Java: developer-tools/java.md
+        - PHP: developer-tools/php.md
+        - OpenAPI Generator: developer-tools/openapi-generator.md
+        - Postman collection: developer-tools/postman.md
+    - Examples and prototypes:
         - examples/index.md
         - Code examples: examples/code-example.md
         - Interactive examples: examples/live-examples.md
         - Prototypes: examples/prototypes.md
     - FAQ: faq.md
-    - Glossary: glossary.md 
+    - Glossary: glossary.md
     - Migration guides:
         - migration-guides/index.md
         - Hotel search: migration-guides/hotel-search.md

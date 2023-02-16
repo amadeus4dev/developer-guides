@@ -105,6 +105,6 @@ You can see the process step to step in this video tutorial.
 
 ## Postman collection
 
-To start testing our APIs without any additional configuration, have a look at our dedicated [Postman collection](./programming/postman.md).
+To start testing our APIs without any additional configuration, have a look at our dedicated [Postman collection](./developer-tools/postman.md).
 
 

@@ -1,36 +1,36 @@
-# Java SDK
+# Java
 
-Amadeus Java SDK for the Self-Service APIs is available as a `Maven` dependency, 
-which the Amadeus for Developers team is continuously updating as the new APIs and features get released.
+## Java SDK
+
+Amadeus Java SDK for the Self-Service APIs is available as a `Maven` dependency, which the Amadeus for Developers team is continuously updating as the new APIs and features get released.
 
 You can refer to the [Amadeus Java SDK](https://github.com/amadeus4dev/amadeus-java){:target="\_blank"} or [Amadeus Maven dependency](https://mvnrepository.com/artifact/com.amadeus/amadeus-java){:target="\_blank"} for the detailed changelog.
 
-## Installation
+### Installation
 
 The SDK can be easily installed using your preferred build automation tool, such as `Maven` or `Gradle`:
 
-
-### Maven
+#### Maven
 
 ```xml
 <dependency>
   <groupId>com.amadeus</groupId>
   <artifactId>amadeus-java</artifactId>
-  <version>6.3.0</version>
+  <version>7.0.0</version>
 </dependency>
 ```
 
-### Gradle
+#### Gradle
 
 ```
-compile "com.amadeus:amadeus-java:6.3.0"
+compile "com.amadeus:amadeus-java:7.0.0"
 ```
 
 **Further information:**
 
 You can check the library in the [Maven repository](https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest){:target="\_blank"} for futher information.
 
-## Step-by-step example
+### Step-by-step example
 
 This tutorial will guide you through the process of creating a simple Java
 application which calls the Flight Inspiration Search API using the Amadeus
@@ -145,12 +145,12 @@ Now that you've tried out this example and know
 how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/){:target="\_blank"} in this
 SDK and discover new ways to use it.
 
-## Video Tutorial
+### Video Tutorial
 
 You can also check the video tutorial on how to get started with the Java SDK.
 
 ![type:video](https://www.youtube.com/embed/qCBj_mDkDjc)
 
-## Managing Amadeus API rate limits using the Java SDK
+### Managing API rate limits
 
 [Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Java using the Amadeus Java SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Java){:target="\_blank"}. 

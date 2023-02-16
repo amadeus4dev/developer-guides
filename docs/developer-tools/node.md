@@ -1,17 +1,19 @@
-# Node SDK
+# Node
+
+## Node SDK
 
 Amadeus Node SDK for Self-service APIs is available with `npm`(node package manager) and Amadeus for Developers team is continuously updating with new APIs and features. 
 
 You can refer to the [amadeus-node](https://github.com/amadeus4dev/amadeus-node){:target="\_blank"} or [Amadeus npm package](https://www.npmjs.com/package/amadeus){:target="\_blank"} for more details on the changelog.
 
-## Installation
+### Installation
 This module has been tested using [Node LTS versions](https://nodejs.org/en/about/releases/){:target="\_blank"}. You can install it using Yarn or NPM.
 
 ```sh
 npm install amadeus --save
 ```
 
-## Getting Started
+### Getting Started
 
 To make your first API call, you will need to [register](https://developers.amadeus.com/register){:target="\_blank"} for an Amadeus Developers Account and [set up your first application](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 
@@ -34,7 +36,7 @@ amadeus.shopping.flightOffersSearch.get({
 });
 ```
 
-## Initialization
+### Initialization
 
 The client can be initialized directly as below. Your credentials `client Id` and `Client Secret` can be found on the [Amadeus dashboard](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 
@@ -89,7 +91,7 @@ Initialize:
 var amadeus = new Amadeus();
 ```
 
-## Moving to Production
+### Moving to Production
 
 By default, the SDK environment is set to `test` environment. To switch to `production` (pay-as-you-go) environment, please change the hostname as follows:
 
@@ -99,7 +101,7 @@ var amadeus = new Amadeus({
 });
 ```
 
-## Promises
+### Promises
 
 Every API call returns a `Promise` that either resolves or rejects. 
 
@@ -121,7 +123,7 @@ amadeus.referenceData.urls.checkinLinks.get({
 });
 ```
 
-## Pagination
+### Pagination
 
 If an API endpoint supports pagination, the other pages are available under the `.next`, `.previous`, `.last` and `.first` methods.
 
@@ -139,12 +141,12 @@ amadeus.referenceData.locations.get({
 
 If a page is not available, the response will resolve to `null`.
 
-## Video Tutorial
+### Video Tutorial
 
 You can also check the video tutorial on how to get started with the Node SDK.
 
 ![type:video](https://www.youtube.com/embed/rfkgJLKlI4s)
 
-## Managing Amadeus API rate limits using the Node SDK
+### Managing API rate limits
 
 [Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Node using the Amadeus Node SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"}. 

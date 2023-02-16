@@ -6,7 +6,7 @@ Follow this tutorial to test Amadeus Self-Service APIs using our dedicated Postm
 
 Before you begin, you need to:
 
-* Register your application with Amadeus for Developers as described in [Making your first API call](./quick-start.md).
+* Register your application with Amadeus for Developers as described in [Making your first API call](../quick-start.md).
 * Create a new Postman account or use your existing Postman account.
 
 ## Fork the collection
