@@ -1,23 +1,25 @@
-# PHP SDK
+# PHP
+
+## PHP SDK
 
 !!! warning
     The Amadeus PHP SDK is maintained independently by the developer community and is not supported or maintained by the Amadeus for Developers team.
 
-### Prerequisites
+#### Prerequisites
 
 -  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 - PHP version >= 7.4
 
-## Installation
+### Installation
 
 The PHP SDK has been uploaded to the official [PHP package repository](https://getcomposer.org/){:target="\_blank"}.
 
 ```
 composer require amadeus4dev/amadeus-php
 ```
-## Making your first API call 
+### Making your first API call 
 
-### Request
+#### Request
 
 ```php
 <?php declare(strict_types=1);
@@ -71,7 +73,7 @@ try {
 }
 ```
 
-### Handling the response  
+#### Handling the response  
 
 Every API call returns a `Response` object which contains raw response body in string format:
 
@@ -97,7 +99,7 @@ $locations[0]->getResponse()->getBodyAsJsonObject();
 $locations[0]->getResponse()->getData();
 ```
 
-## Arbitrary API calls
+### Arbitrary API calls
 
 You can call any API not yet supported by the SDK by making arbitrary calls.
 
