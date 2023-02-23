@@ -388,6 +388,7 @@ The `POST` endpoint consumes JSON data in the format described below. So, instea
 }
 ```
 
+
 #### Search for flights including or excluding specific airlines 
 
 If you want your search to return flights with only specified airlines, you can use the parameter `includedAirlineCodes` to consider specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens only with Aegean Airlines (A3): 
@@ -397,6 +398,10 @@ If you want your search to return flights with only specified airlines, you can 
 With the parameter `excludedAirlineCodes` you can ignore specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens ignoring both Aegean Airlines (A3) and Iberia (IB):
 
 `GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06`
+
+#### Interactive code examples
+
+Check out this [interactive code example](https://amadeus4dev.github.io/developer-guides/examples/live-examples/#flight-search-form) which provides a flight search form to help you build your app. You can easily customize it and use the Flight Offers Search API to get the cheapest flight offers.
 
 ### Search for the best flight option
 
