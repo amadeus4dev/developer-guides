@@ -1,6 +1,29 @@
 # Free test data collection of Self-Service APIs
 
-To build and test your applications, Amadeus for Developers provides a `Test Environment` with limited data collections. To access live data, you must move to `Production Environment`. The table below details the test data collection for each Self-Service API.
+Amadeus for Developers offers a `test environment` with free limited data. This allows developers to build and test their applications before deploying them to production. To access real-time data, you will need to move to the [production environment](https://amadeus4dev.github.io/developer-guides/API-Keys/moving-to-production/){:target="\_blank"}.
+
+!!! warning
+    It is important to note that the test environment protects our customers and data and it's exclusively intended for development purposes.
+
+### Test vs Production
+
+The test environment has the following differences with the production:
+
+| |**Billing** | **Rate Limits** | **Data** | **Base URL** |
+| ----------- | ----------- | ----------- | ----------- |  ----------- |
+| **Test**  | Free monthly quota | 10 TPS | Limited, cached | test.api.amadeus.com
+| **Production**  | Unlimited | 40 TPS | Unlimited, real-time | api.amadeus.com
+
+Check out the [rate limits guide](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} and [pricing page](https://developers.amadeus.com/pricing){:target="\_blank"} if you want to get more information on the specific topics.
+
+### API usage
+
+To make sure you don't pass your monthly quota, you can go to **My Self-Service Workspace > API usage and quota** and review how many transactions you've performed. In case you pass the limit, you will need to wait for the new month and your quota will be renewed. 
+
+!!! information
+    It may take up to 12 minutes to display your most recent API calls.
+
+The table below details the available test data for each Self-Service API:
 
 ## Air
 
@@ -62,4 +85,7 @@ To build and test your applications, Amadeus for Developers provides a `Test Env
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction){:target="\_blank"}  | No data restrictions in test. |
 | [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations){:target="\_blank"}  | No data restrictions in test. |
 | [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}  | No data restrictions in test. |
+
+
+
 
