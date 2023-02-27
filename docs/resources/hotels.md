@@ -487,6 +487,8 @@ The API returns a list of `offers` objects containing the price of the cheapest 
 }
 
 ```
+!!! information
+    The commission information returned by the `commission` parameter is for information only. Hotels can voluntary provide commission. They are only obliged to do it if you are a IATA certified travel agency, in which case you need to [contact](https://developers.amadeus.com/support/contact-us-self-service) our Enterprise APIs team to get access to our REST/JSON booking APIs. Once you have moved to the [production environment](../API-Keys/moving-to-production.md) and obtained the offerId, it will be necessary for you to directly communicate with the hotel to receive the commission on this offer.
 
 If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} again with the `offerid` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
 
