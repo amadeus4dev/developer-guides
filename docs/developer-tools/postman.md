@@ -14,12 +14,12 @@ Before you begin, you need to:
 1. Login to Postman.
 2. Navigate to the Amadeus for Developers [public workspace](https://www.postman.com/amadeus4dev/workspace/amadeus-for-developers-s-public-workspace/documentation/2672636-27471449-d2ca-a8c4-1399-6b0cfbddd079).
 
-    ![1](../images/postman-1.png)
+    ![1](../images/developer-tools/postman/postman-1.png)
 
 3. Click **Fork**.
 4. Select **Amadeus for Developers** from the **Environment** dropdown.
 
-    ![2](../images/postman-2.png)
+    ![2](../images/developer-tools/postman/postman-2.png)
 
 5. Give the fork a name.
 6. Select the workspace where you need to fork the collection to.
@@ -30,19 +30,19 @@ Before you begin, you need to:
 
 1. Navigate to the Amadeus for Developers [public workspace](https://www.postman.com/amadeus4dev/workspace/amadeus-for-developers-s-public-workspace/documentation/2672636-27471449-d2ca-a8c4-1399-6b0cfbddd079).
 
-    ![1](../images/postman-1.png)
+    ![1](../images/developer-tools/postman/postman-1.png)
 
 2. On the left side bar, click **Environments**.
 
-    ![6](../images/postman-6.png)
+    ![6](../images/developer-tools/postman/postman-6.png)
 
 4. Select **...** beside the **Amadeus for Developers** envoronment and select **Create a fork**.
 
-    ![7](../images/postman-7.png)
+    ![7](../images/developer-tools/postman/postman-7.png)
 
 5. Give the fork a name.
 
-    ![8](../images/postman-8.png)
+    ![8](../images/developer-tools/postman/postman-8.png)
 
 
 6. Select the workspace where you need to fork the collection to.
@@ -52,11 +52,11 @@ Before you begin, you need to:
 
 1. On the right side bar, set the environment to **Amadeus for Developers**.
 
-    ![9](../images/postman-9.png)
+    ![9](../images/developer-tools/postman/postman-9.png)
 
 2. On the left side bar, click **Environments**.
 
-    ![10](../images/postman-10.png)
+    ![10](../images/developer-tools/postman/postman-10.png)
 
 3. Enter you [API key and secret values](/API-Keys/authorization/) into the **Current** values of the `client_id` and `client_secret` parameters respectively.
 4. Click **Save**.
@@ -75,7 +75,7 @@ Before you begin, you need to:
 3. If required, specify the request parameters. Alternatively, you can try the API without setting any parameters, as we have already preconfigured it to display data for the upcoming month.
 4. Click **Send** to make the call.
 
-    ![11](../images/postman-11.png)
+    ![11](../images/developer-tools/postman/postman-11.png)
 
 ## Make our preconfigured scenarios
 
@@ -98,4 +98,4 @@ To access a visualization of an API:
 3. Click **Send** to make the call.
 4. Click **Visualize** at the bottom of the screen.
 
-    ![12](../images/postman-12.png)
+    ![12](../images/developer-tools/postman/postman-12.png)
