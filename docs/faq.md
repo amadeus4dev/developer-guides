@@ -23,7 +23,7 @@ This page provides help with the most common questions about Amadeus Self-servic
 | [Branded Fares Upsell](#branded-fares-upsell) |       <ul><li>[Why do additional services change between segments in an Itinerary?](#why-do-additional-services-change-between-segments-in-an-itinerary)</li></ul>           |
 | [SeatMap Display](#seatmap-display) |       <ul><li>[Is there any way to request a seat map by cabin instead of having to specify a booking class code?](#is-there-any-way-to-request-a-seat-map-by-cabin-instead-of-having-to-specify-a-booking-class-code)</li><li>[Why do I get the error code 4926?](#why-do-i-get-the-error-code-4926)</li><li>[Why am I unable to retrieve seatmap data?](#why-am-i-unable-to-retrieve-seatmap-data)</li><li>[Seatmap not available as flight operated by another carrier](#seatmap-not-available-as-flight-operated-by-another-carrier)</li></ul>           |
 | [Flight Create Orders API](#flight-create-orders-api) |        <ul><li>[How are tickets issued for flights booked with Flight Create Orders in Self-Service?](#how-are-tickets-issued-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[How can I retrieve booking made with Flight Create Orders in Self-Service?](#how-can-i-retrieve-booking-made-with-flight-create-orders-in-self-service)</li><li>[Does Amadeus pay a commission for flights booked with Flight Create Orders in Self-Service?](#does-amadeus-pay-a-commission-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[Why do I get the INVALID DATA RECEIVED error?](#why-do-i-get-the-invalid-data-received-error)</li><li>[Why do I get the SEGMENT SELL FAILURE error?](#why-do-i-get-the-segment-sell-failure-error)</li><li>[How does payment work when I book a flight?](#how-does-payment-work-when-i-book-a-flight)</li><li>[How can I cancel a flight?](#how-can-i-cancel-a-flight)</li><li>[How to make the airline consolidator wait before issuing a ticket?](#how-to-make-the-airline-consolidator-wait-before-issuing-a-ticket)</li></ul>                 |
-| [Hotel Search](#hotel-search) |       <ul><li>[What are guarantee, deposit and prepay?](#what-are-guarantee-deposit-and-prepay)</li><li>[What is the total price?](#what-is-the-total-price)</li><li>[What is the latest possible date for check-in?](#what-is-the-latest-possible-date-for-check-in)</li><li>[There is a mismatch in the amenities returned](#there-is-a-mismatch-in-the-amenities-returned)</li><li>[How to search a hotel by location](#how-to-search-a-hotel-by-location)</li><li>[How to search hotel images](#how-to-search-hotel-images)</li></ul>           |
+| [Hotel Search](#hotel-search) |       <ul><li>[What are guarantee, deposit and prepay?](#what-are-guarantee-deposit-and-prepay)</li><li>[What is the total price?](#what-is-the-total-price)</li><li>[What is the latest possible date for check-in?](#what-is-the-latest-possible-date-for-check-in)</li><li>[How to search a hotel by location](#how-to-search-a-hotel-by-location)</li><li>[How to search hotel images](#how-to-search-hotel-images)</li></ul>           |
 | [Hotel Booking](#hotel-search) |       <ul><li>[What type of payments are supported?](#what-type-of-payments-are-supported)</li><li>[Can I markup the room prices?](#can-i-markup-the-room-prices)</li><li>[Payment providers and gateways](#payment-providers-and-gateways)</li><li>[How can I cancel a room booking?](#how-can-i-cancel-a-room-booking)</li><li>[Why do I get 500 status code?](#why-do-i-get-500-status-code)</li><li>[How can I see Amadeus API coverage for a hotel chain?](#how-can-i-see-amadeus-api-coverage-for-a-hotel-chain)</li><li>[What is considered a query?](#what-is-considered-a-query)</li><li>[Do I need any legal documents to make a booking?](#do-i-need-any-legal-documents-to-make-a-booking)</li><li>[What are the room type codes?](#what-are-the-room-type-codes)</li></ul>           |
 | [Airline consolidators](#airline-consolidators) |    <ul><li>[What is an airline consolidator?](#what-is-an-airline-consolidator)</li><li>[How are payments handled with my consolidator?](#how-are-payments-handled-with-my-consolidator)</li><li>[How do I handle cancellations, changes and post-booking services for bookings made with Flight Create Orders in Self-Service?](#how-do-i-handle-cancellations-changes-and-post-booking-services-for-bookings-made-with-flight-create-orders-in-self-service)</li><li>[How do I handle refunds for flights booked with Flight Create Orders in Self-Service?](#how-do-i-handle-refunds-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[How can I get a consolidator?](#how-can-i-get-a-consolidator)</li></ul>            |
 | [Technical support](#technical-support) |          <ul><li>[What kind of support does Amadeus for Developers offer?](#what-kind-of-support-does-amadeus-for-developers-offer)</li><li>[Where do I go for Self-Service technical support? What does it cost?](#where-do-i-go-for-self-service-technical-support-what-does-it-cost)</li><li>[Do you offer phone support for Self-Service APIs?](#do-you-offer-phone-support-for-self-service-apis)</li><li>[How can I report bugs or suggest improvements to the Self-Service section?](#how-can-i-report-bugs-or-suggest-improvements-to-the-self-service-section)</li></ul>          |
@@ -44,7 +44,7 @@ If you haven't received a confirmation mail, it is often because the email addre
 
 ### How can I monetise my application?
 
-You are free to create your own business models around our APIs, such as charging users to use our APIs in their apps or adopting a subscription-based model. However, we do not give any commission or other types of incentives for the Self-Service API. The latter is only possible in the Enterprise framework.
+You are free to create your own business models around our APIs, such as charging users to use our APIs in their apps or adopting a subscription-based model. However, we do not give any commission or other types of incentives for the Self-Service API. The latter is only possible in the Enterprise framework. In the case of flight booking, you can also monetise your apps by adding a markup on flight offers.
 
 ### I would like to partner up with Amadeus
 
@@ -359,7 +359,12 @@ Cancellation is possible with the Flight Orders Management API as long as the bo
 
 ### How to make the airline consolidator wait before issuing a ticket?
 
-There is no standard way or dedicated element in the API request to do that. You will need to agree on the process with your consolidator. It can be adding a remark or a specific ticketing agreement.
+There is no standard way or dedicated element in the API request to do that. You will need to agree on the process with your consolidator. It can be adding a remark or a specific ticketing agreement. You can delay ticketing using the `ticketingAgreement` parameter in Flight Create Orders. For this, you can use the following options:
+
+* `DELAY_TO_QUEUE`: this allows you to queue the reservation for the desired date if the traveller does not make the payment.
+* `DELAY_TO_CANCEL`: if the traveler does not make the payment, the reservation for the desired date will be cancelled.
+
+The queuing and cancellation take place based on the local date and time. If no specific time is mentioned, the reservation is queued or cancelled at 00:00.
 
 
 ## Hotel Search
@@ -378,15 +383,12 @@ The price total refers to the total price to be paid for the full stay. The vari
 
 The maximum date for the 'checkInDate' parameter is 359 days from today. Anything beyond this will return the error message 'MAXIMUM ADVANCE DAYS BOOKING EXCEEDED'.
 
-### There is a mismatch in the amenities returned
-
-The amenities shown as examples in the API reference documentation may not match some of the results returned. The list of amenities in our documentation is the ones that we are able to index with our API. The hotel content is fed by the hotel providers, and this is not standard, as each hotel is free to add whatever content they want to the amenities list.
 
 ### How to search a hotel by location
 
 Regarding the input for a specific location in a hotel search, you have the following options:
 
-* To search by city name, you can use the Amadeus Airport & City Search API (autocomplete) to search for cities only. Once a user selects a city, you will also receive the corresponding IATA city code as part of the response, which you can use in the Hotel Search API. Please note that the airport and city search API only returns cities that have an airport as of now.
+* Since the commissioning of Hotel Search v3, we can no longer search hotels by IATA codes. In order to search by location you will need to use the [third endpoint of Hotel List](/reference-data/locations/hotels/by-geocode), which allows you to search using a latitude & longitude. The Hotel List API returns `hotelIds` based on the specific search coordinates. You will then need to use this `hotelId` in the third endpoint of the Hotel Search API.
 
 * Alternatively, you can continue to use the Google API to retrieve the geo location of a specific location and use the Hotel Search by geo location, as you have been doing.
 
@@ -415,7 +417,7 @@ The process of booking a hotel in the test environment involves sending your req
 
 ### How can I see Amadeus API coverage for a hotel chain?
 
-You can use the Hotel Search API to search the hotels by their hotel Id.  
+You can use the Hotel Search API to search the hotels by their hotel Id. You can find the list of supported hotel chains in [our data collection](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md).
 
 ### What is considered a query?
 
@@ -423,7 +425,7 @@ When you make an initial call to the Hotel Search API with a cityCode parameter,
 
 ### Do I need any legal documents to make a booking?
 
-No, there are no legal documents required. 
+No, there are no legal documents required. However, you will need to comply with any local legal requirements for your market.
 
 ### What are the room type codes?
 
@@ -451,7 +453,7 @@ For Self-Service users, all post-booking services must be handled offline with t
 
 ### How can I get a consolidator?
 
-Before requesting a consolidator, please first make sure that you are approved markets for Flight Create Orders. You need it to implement flight booking in Self-Service. Once this is verified, please go to the Support section and get in touch with us using the Contact form.
+Before requesting a consolidator, please first make sure that you are in **one of** the approved markets for Flight Create Orders. You need it to implement flight booking in Self-Service. Once this is verified, please go to the Support section and get in touch with us using the Contact form.
 
 ### How do I handle refunds for flights booked with Flight Create Orders in Self-Service?
 
