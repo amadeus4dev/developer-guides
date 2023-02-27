@@ -44,7 +44,7 @@ If you haven't received a confirmation mail, it is often because the email addre
 
 ### How can I monetise my application?
 
-You are free to create your own business models around our APIs, such as charging users to use our APIs in their apps or adopting a subscription-based model. However, we do not give any commission or other types of incentives for the Self-Service API. The latter is only possible in the Enterprise framework. In the case of flight booking, you can also monetise your apps by adding a markup on flight offers.
+You are free to create your own business models around our APIs, such as charging users to use our APIs in their apps or adopting a subscription-based model. However, we do not give any commission or other types of incentives for the Self-Service API. The latter is only possible in the Enterprise framework. If you're offering flight booking services, you can generate revenue for your apps by applying a markup on flight offers.
 
 ### I would like to partner up with Amadeus
 
@@ -390,7 +390,7 @@ Regarding the input for a specific location in a hotel search, you have the foll
 
 * Since the commissioning of Hotel Search v3, we can no longer search hotels by IATA codes. In order to search by location you will need to use the [third endpoint of Hotel List](/reference-data/locations/hotels/by-geocode), which allows you to search using a latitude & longitude. The Hotel List API returns `hotelIds` based on the specific search coordinates. You will then need to use this `hotelId` in the third endpoint of the Hotel Search API.
 
-* Alternatively, you can continue to use the Google API to retrieve the geo location of a specific location and use the Hotel Search by geo location, as you have been doing.
+* Alternatively, you can use the Google API to retrieve the geo location of a specific location and use the Hotel Search by geo location.
 
 
 ## Hotel Booking
@@ -417,7 +417,7 @@ The process of booking a hotel in the test environment involves sending your req
 
 ### How can I see Amadeus API coverage for a hotel chain?
 
-You can use the Hotel Search API to search the hotels by their hotel Id. You can find the list of supported hotel chains in [our data collection](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md).
+You can find the list of supported hotel chains in [our data collection](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md).
 
 ### What is considered a query?
 
@@ -453,7 +453,7 @@ For Self-Service users, all post-booking services must be handled offline with t
 
 ### How can I get a consolidator?
 
-Before requesting a consolidator, please first make sure that you are in **one of** the approved markets for Flight Create Orders. You need it to implement flight booking in Self-Service. Once this is verified, please go to the Support section and get in touch with us using the Contact form.
+Before requesting a consolidator, please first make sure that you are **in one of the** approved markets for Flight Create Orders. You need it to implement flight booking in Self-Service. Once this is verified, please go to the Support section and get in touch with us using the Contact form.
 
 ### How do I handle refunds for flights booked with Flight Create Orders in Self-Service?
 
