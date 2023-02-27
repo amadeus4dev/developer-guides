@@ -359,7 +359,7 @@ Cancellation is possible with the Flight Orders Management API as long as the bo
 
 ### How to make the airline consolidator wait before issuing a ticket?
 
-There is no standard way or dedicated element in the API request to do that. You will need to agree on the process with your consolidator. It can be adding a remark or a specific ticketing agreement. You can delay ticketing using the `ticketingAgreement` parameter in Flight Create Orders. For this, you can use the following options:
+You can delay ticketing using the `ticketingAgreement` parameter in Flight Create Orders. For this, you can use the following options:
 
 * `DELAY_TO_QUEUE`: this allows you to queue the reservation for the desired date if the traveller does not make the payment.
 * `DELAY_TO_CANCEL`: if the traveler does not make the payment, the reservation for the desired date will be cancelled.
