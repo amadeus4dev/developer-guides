@@ -17,7 +17,7 @@ There are two types of prototypes (demo apps) available.
 | Hotel Booking engine                                  | Hotel List, Hotel Search, Hotel Booking                                                                                 | Python, django           | [amadeus-hotel-booking-django](#amadeus-hotel-booking-django)                   |
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Node, Vue                | [amadeus-flight-booking-node](#amadeus-flight-booking-node)                   |
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Python, django           | [amadeus-flight-price-analysis-django](#amadeus-flight-price-analysis-django)   |
-| Map with Hotels, Point of interests and Safety scores | Hotel List, Points of Interest, Safe Place                                                                | Python, django, HERE map | [amadeus-hotel-area-safety-pois-django](#amadeus-hotel-area-safety-pois-django) |
+| Map with Hotels, Point of interests and Safety scores | Hotel List, Points of Interest, Safe Place, Tours and Activities                                                                | Python, django, HERE map | [amadeus-hotel-area-safety-pois-django](#amadeus-hotel-area-safety-pois-django) |
 | Covid-19 info map                                     | Travel Restrictions                                                                                         | Node, Express            | [amadeus-travel-restrictions-node](#amadeus-travel-restrictions-node)           |
 
 
