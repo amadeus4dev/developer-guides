@@ -7,14 +7,12 @@
 
 Artificial intelligence APIs and APIs from Amadeus partners' are currently following the rate limits below. 
 
-<center>
 
 | Test and Production                   |
 |---------------------------------------|
 | 20 transactions per second, per user |
 | No more than 1 request every 50ms   |
 
-</center>
 
 | API Category             | API Sub Category        | API name                                                                                                                          |
 |--------------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -34,14 +32,10 @@ Artificial intelligence APIs and APIs from Amadeus partners' are currently follo
 
 **The rest of Self-Service APIs** apart from Artificial intelligence and Partners' APIs are below rate limits **per environment**.
 
-<center>
-
 | **Test** | **Production** |
 | :--- | :--- |
 | 10 transactions per second, per user | 40 transactions per second, per user  |
 | No more than 1 request every 100ms | |
-
-</center>
 
 ## Rate limits Examples 
 To manage the rate limits in APIs, we have mainly two options, use an external library or build a request queue from scratch. The choice depends on your resources and requisites. There are some great open-source ones available for the main programming languages. You can find [Rate limit examples](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"} in Node, Python and Java using the respective [Amadeus SDK](https://amadeus4dev.github.io/developer-guides/programming/).
