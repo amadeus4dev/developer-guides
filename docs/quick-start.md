@@ -23,13 +23,13 @@ All you need to do, is to attach an alphanumeric string called **token** to your
 * Sign in to the [Developers Portal](https://developers.amadeus.com/signin){:target="\_blank"}.
 * Click on your username \(located in the top right corner of the [Developers portal](https://developers.amadeus.com/){:target="\_blank"} page\) 
 * Go to [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}. 
-    ![api_key1](images/api_key1.png)
+    ![api_key1](images/quick-start/api_key1.png)
 
 * Click on **Create New App** button.
-    ![api_key2](images/api_key2.png)
+    ![api_key2](images/quick-start/api_key2.png)
 
 * Enter your application details and click on **Create**.
-    ![api_key3](images/api_key3.png)
+    ![api_key3](images/quick-start/api_key3.png)
 
 !!! important
     **Test environment** <br>

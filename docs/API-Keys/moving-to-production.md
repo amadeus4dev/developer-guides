@@ -9,7 +9,7 @@ To request a **production key**, you must complete the following steps:
 1. [Sign in](https://developers.amadeus.com/login){:target="\_blank"} to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 2. Select the application to move to `Production` and click `Get Production environment` :
 
-   ![request_prod](../images/request_production_key.png)
+   ![request_prod](../images/api-keys/moving-to-production/request_production_key.png)
 
 3. Complete the form with your personal information, billing address, and app information.
 4. Indicate whether your application uses `Flight Create Orders` in the checkbox at the bottom of the form. This API has special access requirements detailed below in the `Moving to Production with Flight Create Orders` section of this guide.
@@ -19,11 +19,11 @@ To request a **production key**, you must complete the following steps:
 
 Once these steps are completed, your application status will be **pending**:
 
-![pending](../images/app_pending.png)
+![pending](../images/api-keys/moving-to-production/app_pending.png)
 
 You will receive a notification that your application is validated and the status will change to **live**. This usually occurs within 72 hours. Note that the validation period applies to your first production application. Subsequent applications will be validated automatically.
 
-![live](../images/app_live.png)
+![live](../images/api-keys/moving-to-production/app_live.png)
 
 > Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more information.
 
@@ -92,8 +92,8 @@ to production.
 
 To add `Flight Create Orders` to an application currently in production, select the app in the **My Apps** section of your Self-Service Workspace and click **API requests**:
 
-![request_prod_booking](../images/api_request.png)
+![request_prod_booking](../images/api-keys/moving-to-production/api_request.png)
 
 Then request production access to `Flight Create Orders` by clicking the **Request** button located under **Actions**:
 
-![request_prod_booking_list](../images/api_request_list.png) 
+![request_prod_booking_list](../images/api-keys/moving-to-production/api_request_list.png) 
