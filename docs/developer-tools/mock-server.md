@@ -19,7 +19,7 @@ Open your Postman application and generate your Amadeus `access token` as descri
 
 Click on **Save Response > Save as example**, and in the same directory you will see the example that you just saved within your collection.
 
-![1](../images/mock-server/mock-server-1.png)
+![1](../images/developer-tools/mock-server/mock-server-1.png)
 
 ### 2. Add the API and example in a new collection 
 
@@ -30,7 +30,7 @@ Let's create a new Postman collection. On the top left of your screen click **Ne
 Now you are able to add the Travel Recommendations API to the collection. To do so, duplicate the `GET Travel Recommendations` API, which can be found at the collection **Amadeus for Developers > Trip > Artificial Intelligenge > GET Travel Recommendations** and drag & drop it your new collection. Your workspace will now look like: 
 
 
-![2](../images/mock-server/mock-server-2.png)
+![2](../images/developer-tools/mock-server/mock-server-2.png)
 
 
 ### 3. Build the mock server
@@ -40,11 +40,11 @@ In order to create a mock server go to **New > Mock Server > Select an existing 
 In the next step you can see several options to configure your server. Give a name and click the **Create a Mock Server** button.
 
 
-![3](../images/mock-server/mock-server-3.png)
+![3](../images/developer-tools/mock-server/mock-server-3.png)
 
 The mock server generates a URL in which your requests will be sent to. Make sure to copy the URL because you will need it for the next step.
 
-![4](../images/mock-server/mock-server-4.png)
+![4](../images/developer-tools/mock-server/mock-server-4.png)
 
 For this tutorial you built a public mock server, which means that anyone with access to the URL will be able to perform requests. If you want to keep it private, you will have to get a [Postman API key](https://learning.postman.com/docs/developer/intro-api/) and pass it to the request headers.
 
@@ -57,10 +57,10 @@ On the top left click on **New > HTTP Request** and create a `GET` request. For 
 
 Perform the API request and you will get as response, the one that we saved earlier.
 
-![5](../images/mock-server/mock-server-5.png)
+![5](../images/developer-tools/mock-server/mock-server-5.png)
 
 You can also paste the full URL in your browser and get the results, since it's a public mock server.
 
-![6](../images/mock-server/mock-server-6.png)
+![6](../images/developer-tools/mock-server/mock-server-6.png)
 
 Congratulations! You've created a mock server in Postman. You can now use this server in your code to mock several requests, successful responses and error messages according to your development needs.
