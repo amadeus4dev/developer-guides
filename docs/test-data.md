@@ -14,11 +14,11 @@ The test environment has the following differences with the production:
 | **Test**  | Free monthly quota | 10 TPS | Limited, cached | test.api.amadeus.com
 | **Production**  | Unlimited | 40 TPS | Unlimited, real-time | api.amadeus.com
 
-Check out the [rate limits guide](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} and [pricing page](https://developers.amadeus.com/pricing){:target="\_blank"} if you want to get more information on the specific topics.
+Check out the [rate limits guide](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} and [pricing page](https://developers.amadeus.com/pricing){:target="\_blank"} if you want to get more information on the specific topics. In this tutorial you can learn how to build a [mock server](./developer-tools/mock-server.md){:target="\_blank"} in Postman to help you consume less of your free quota.
 
 ### API usage
 
-To make sure you don't pass your monthly quota, you can go to **My Self-Service Workspace > API usage and quota** and review how many transactions you've performed. In case you pass the limit, you will need to wait for the new month and your quota will be renewed. 
+To make sure you don't pass your monthly quota, you can go to **My Self-Service Workspace > API usage and quota** and review how many transactions you've performed. In case you pass the limit, you will need to wait for the new month and your quota will be renewed.
 
 !!! information
     It may take up to 12 minutes to display your most recent API calls.
