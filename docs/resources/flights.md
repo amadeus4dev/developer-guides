@@ -401,7 +401,7 @@ With the parameter `excludedAirlineCodes` you can ignore specific airlines. For 
 
 #### Interactive code examples
 
-Check out this [interactive code example](https://amadeus4dev.github.io/developer-guides/examples/live-examples/#flight-search-form) which provides a flight search form to help you build your app. You can easily customize it and use the Flight Offers Search API to get the cheapest flight offers.
+Check out this [interactive code example](/docs/examples/live-examples.md#flight-search-form) which provides a flight search form to help you build your app. You can easily customize it and use the Flight Offers Search API to get the cheapest flight offers.
 
 ### Search for the best flight option
 

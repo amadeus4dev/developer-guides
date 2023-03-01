@@ -117,7 +117,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930400878
 Let's highlight some information that you'll get from both Travel Restrictions API and Safe Place API. 
 
 !!! Warning
-    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](https://amadeus4dev.github.io/developer-guides/guides/api-data-collection/){:target="\_blank"}. 
+    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](/docs/test-data.md){:target="\_blank"}. 
 
 !!! information
    - the data for Travel Restrictions API comes from [Riskline](https://riskline.com/){:target="\_blank"} and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 

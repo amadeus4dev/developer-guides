@@ -118,7 +118,7 @@ You can also check the video tutorial on how to get started with the Python SDK.
 
 ### Managing API rate limits
 
-[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Python using the Amadeus Python SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Python){:target="\_blank"}. 
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](/docs/api-rate-limits.md){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Python using the Amadeus Python SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Python){:target="\_blank"}. 
 
 ## Python Async API calls
 
@@ -219,7 +219,7 @@ asyncio.run(main())
 
 In this tutorial, we'll guide you through the process of making your first API calls using the OpenAPI Generator in Python. To begin, you'll need to retrieve the specification files from the GitHub [repository](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}. In this example, you will use the `Authorization_v1_swagger_specification.yaml` and `FlightOffersSearch_v2_swagger_specification.yaml` files.
 
-Before getting started make sure you check out how to [generate client libraries](https://amadeus4dev.github.io/developer-guides/developer-tools/openapi-generator/#step-1-setting-up-the-openapi-generator){:target="\_blank"} with the OpenAPI Generator.
+Before getting started make sure you check out how to [generate client libraries](/docs/developer-tools/openapi-generator.md){:target="\_blank"} with the OpenAPI Generator.
 
 ### Call the Authorization endpoint
 
@@ -267,7 +267,7 @@ print(api_response.body['access_token'])
 
 The code uses the library we have generated to get an OAuth2 access token. With the `o_auth2_access_token_api.OAuth2AccessTokenApi()` we are able to call the `oauth2_token()` method.
 
-The body of the request is being created by passing the `grant_type`, `client_id` and `client_secret` to the `oauth2_token()` method. If you want to know more about how to get the access token check the [authorization guide](https://amadeus4dev.github.io/developer-guides/API-Keys/authorization/?h=authori). 
+The body of the request is being created by passing the `grant_type`, `client_id` and `client_secret` to the `oauth2_token()` method. If you want to know more about how to get the access token check the [authorization guide](/docs/API-Keys/authorization.md). 
 
 ### Call the Flight Offers Search API
 

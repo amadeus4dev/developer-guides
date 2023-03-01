@@ -149,4 +149,4 @@ You can also check the video tutorial on how to get started with the Node SDK.
 
 ### Managing API rate limits
 
-[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Node using the Amadeus Node SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"}. 
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](/docs/api-rate-limits.md){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Node using the Amadeus Node SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"}. 
