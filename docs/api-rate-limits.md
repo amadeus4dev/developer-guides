@@ -38,4 +38,10 @@ Artificial intelligence APIs and APIs from Amadeus partners' are currently follo
 | No more than 1 request every 100ms | |
 
 ## Rate limits Examples 
-To manage the rate limits in APIs, we have mainly two options, use an external library or build a request queue from scratch. The choice depends on your resources and requisites. There are some great open-source ones available for the main programming languages. You can find [Rate limit examples](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"} in Node, Python and Java using the respective [Amadeus SDK](https://amadeus4dev.github.io/developer-guides/programming/).
+To manage the rate limits in APIs, there are mainly two options: 
+- Use an external library
+- Build a request queue from scratch
+
+The right choice depends on your resources and requisites. 
+
+Check out the [rate limits examples](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"} in Node, Python and Java using the respective [Amadeus SDKs](/docs/developer-tools/).

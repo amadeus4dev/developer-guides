@@ -13,7 +13,7 @@ Let's now check step-by-step to create a mock server.
 
 ### 1. Save a request and response example
 
-For the sake of the tutorial we will show you how to create a mock server for the [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations). We will make one request to the Amadeus API and then we will mock the request and response. To learn how to make an API call with Postman, please check this step-by-step [guide](https://amadeus4dev.github.io/developer-guides/developer-tools/postman/).
+For the sake of the tutorial we will show you how to create a mock server for the [Travel Recommendations API](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations). We will make one request to the Amadeus API and then we will mock the request and response. To learn how to make an API call with Postman, please check this step-by-step [guide](/docs/developer-tools/postman.md).
 
 Open your Postman application and generate your Amadeus `access token` as described in the guide above. Then go to **Amadeus for Developers > Trip > Artificial Intelligenge > GET Travel Recommendations**  and make an API call.
 

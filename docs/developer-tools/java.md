@@ -141,8 +141,7 @@ The method `amadeus.shopping.flightDestinations.get()` will return an Array with
 System.out.println(flightDestinations[0]);
 ```
 
-Now that you've tried out this example and know
-how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/){:target="\_blank"} in this
+Now that you've tried out this example and know how to use the objects, you can review the [Javadocs](https://amadeus4dev.github.io/amadeus-java/){:target="\_blank"} in this
 SDK and discover new ways to use it.
 
 ### Video Tutorial
@@ -153,4 +152,4 @@ You can also check the video tutorial on how to get started with the Java SDK.
 
 ### Managing API rate limits
 
-[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](https://amadeus4dev.github.io/developer-guides/api-rate-limits/){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Java using the Amadeus Java SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Java){:target="\_blank"}. 
+[Amadeus Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} have [rate limits](/docs/api-rate-limits.md){:target="\_blank"} in place to protect against abuse by third parties. You can find Rate limit example in Java using the Amadeus Java SDK [here](https://github.com/amadeus4dev-examples/APIRateLimits/tree/master/Java){:target="\_blank"}. 
