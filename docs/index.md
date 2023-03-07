@@ -1,4 +1,4 @@
-# Amadeus for Developers docs Test
+# Amadeus for Developers docs
 
 Welcome to the **Amadeus for Developers** docs portal! 
 
