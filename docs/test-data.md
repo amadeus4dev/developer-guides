@@ -5,7 +5,7 @@ Amadeus for Developers offers a `test environment` with free limited data. This 
 !!! warning
     It is important to note that the test environment protects our customers and data and it's exclusively intended for development purposes.
 
-### Test vs Production
+## Test vs Production
 
 The test environment has the following differences with the production:
 
@@ -16,7 +16,7 @@ The test environment has the following differences with the production:
 
 Check out the [rate limits guide](/docs/api-rate-limits.md){:target="\_blank"} and [pricing page](https://developers.amadeus.com/pricing){:target="\_blank"} if you want to get more information on the specific topics. In this tutorial you can learn how to build a [mock server](./developer-tools/mock-server.md){:target="\_blank"} in Postman to help you consume less of your free quota.
 
-### API usage
+## API usage
 
 To make sure you don't pass your monthly quota, you can go to **My Self-Service Workspace > API usage and quota** and review how many transactions you've performed. In case you pass the limit, you will need to wait for the new month and your quota will be renewed.
 
@@ -25,7 +25,8 @@ To make sure you don't pass your monthly quota, you can go to **My Self-Service 
 
 The table below details the available test data for each Self-Service API:
 
-## Air
+## Test Data Collections
+### Air
 
 
 | **API**      | **Test data** |
@@ -55,7 +56,7 @@ The table below details the available test data for each Self-Service API:
 | [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links){:target="\_blank"} |  See list of [valid airlines](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md){:target="\_blank"}. |
 
 
-## Hotel
+### Hotel
 
 
 | **API**      | **Test data** |
@@ -66,7 +67,7 @@ The table below details the available test data for each Self-Service API:
 | [Hotel Name Autocomplete](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete){:target="\_blank"} | Cached data including most hotels available through Amadeus |
 
 
-## Destination Content
+### Destination Content
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
@@ -77,7 +78,7 @@ The table below details the available test data for each Self-Service API:
 | [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
 
 
-## Trip
+### Trip
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
@@ -87,5 +88,8 @@ The table below details the available test data for each Self-Service API:
 | [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}  | No data restrictions in test. |
 
 
+## Video Tutorial
 
+Check out this video "Test vs Production" from [Get Started series](https://youtube.com/playlist?list=PLBehidtj-OiqQ0sIHBPvwf-8GAjMTJehF). 
 
+![type:video](https://www.youtube.com/embed/UU1EaWEpb5U)
