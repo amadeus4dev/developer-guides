@@ -1,15 +1,15 @@
 #Project info 
-site_name: Test Amadeus for Developers Test
+site_name: Amadeus for Developers
 site_url: https://developers.amadeus.com
 site_description: Amadeus for Developers Self-Service APIs Documentation
 site_author: Amadeus for Developers
 
 #Repository
 repo_name: amadeus4dev/developer-guides
-repo_url: https://github.com/minjikarin/developer-guides
+repo_url: https://github.com/amadeus4dev/developer-guides
 
 #Copyright
-copyright: Copyright demo
+copyright: Copyright © Amadeus IT Group S.A.
 
 #Configuration 
 theme:
@@ -60,6 +60,30 @@ plugins:
 
 #Customization
 extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics:
+    provider: google
+    property: G-4JL03MWFHC
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: -1
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://forms.office.com/e/q71CrJKTk6" target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/amadeus4dev
@@ -85,6 +109,33 @@ nav:
        - Authorization: API-Keys/authorization.md
        - Production: API-Keys/moving-to-production.md
     - Rate limits: api-rate-limits.md
-
-
-
+    - Pagination: pagination.md
+    - Common errors: common-errors.md
+    - API Tutorials:
+        - resources/index.md
+        - Covid-19 & travel safety: resources/covid-19.md
+        - Flights: resources/flights.md
+        - Hotels: resources/hotels.md
+        - Destination experiences: resources/destination-experiences.md
+        - Itinerary management: resources/itinerary-managment.md
+        - Market insights: resources/market-insight.md
+    - Developer tools:
+        - developer-tools/index.md
+        - Node: developer-tools/node.md
+        - Python: developer-tools/python.md
+        - Java: developer-tools/java.md
+        - PHP: developer-tools/php.md
+        - OpenAPI Generator: developer-tools/openapi-generator.md
+        - Postman collection: developer-tools/postman.md        
+        - Mock Server: developer-tools/mock-server.md
+    - Examples and prototypes:
+        - examples/index.md
+        - Code examples: examples/code-example.md
+        - Interactive examples: examples/live-examples.md
+        - Prototypes: examples/prototypes.md
+    - FAQ: faq.md
+    - Glossary: glossary.md
+    - Migration guides:
+        - migration-guides/index.md
+        - Hotel search: migration-guides/hotel-search.md
+        - Travel restrictions: migration-guides/travel-restrictions.md
