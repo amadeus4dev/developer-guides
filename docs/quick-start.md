@@ -98,7 +98,7 @@ Congratulations! You have just made your first Amadeus for Developers API call!
 
 ## Video Tutorial
 
-You can see the process step to step in this video "How to make your first API call" from [Get Started series](https://youtube.com/playlist?list=PLBehidtj-OiqQ0sIHBPvwf-8GAjMTJehF). 
+You can check the step by step process in this video tutorial of (How to make your first API call)[https://youtu.be/Lyy26SlgBZU] from [Get Started series](https://youtube.com/playlist?list=PLBehidtj-OiqQ0sIHBPvwf-8GAjMTJehF). 
 
 ![type:video](https://www.youtube.com/embed/Lyy26SlgBZU)
 

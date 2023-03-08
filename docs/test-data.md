@@ -90,6 +90,6 @@ The table below details the available test data for each Self-Service API:
 
 ## Video Tutorial
 
-Check out this video "Test vs Production" from [Get Started series](https://youtube.com/playlist?list=PLBehidtj-OiqQ0sIHBPvwf-8GAjMTJehF). 
+Check out (this video)[https://youtu.be/UU1EaWEpb5U] to know more about the differences between Test and Production from [Get Started with Amadeus Self-Service APIs Series](https://youtube.com/playlist?list=PLBehidtj-OiqQ0sIHBPvwf-8GAjMTJehF). 
 
 ![type:video](https://www.youtube.com/embed/UU1EaWEpb5U)
