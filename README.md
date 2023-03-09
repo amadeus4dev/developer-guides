@@ -5,7 +5,7 @@ This repository hosts the **developer documentation** for [Amadeus for Developer
 The documentation contains information such as: : 
 - ✅**Code examples** that you can copy and paste to build 
 - 📝**API Tutorials** to explain functionalities and use-cases per API category
-- 👩🏻‍💻**Developer Tools** and **Prototypes (Demo Apps)** for you to use and refer
+- 👩🏻‍💻**Developer Tools** and 📱**Prototypes (Demo Apps)** for you to use and refer
 - ▶️Quick start, Test Data Collection, FAQ and more
 
 You can access the documentation [here](https://amadeus4dev.github.io/developer-guides/).
