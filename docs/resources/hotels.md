@@ -235,7 +235,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?ho
 
 ### Interactive code examples 
 
-Check out this [interactive code example](/docs/examples/live-examples.md#hotel-search-form) which provides a hotel search form to help you build your app. You can easily customize it and use the Hotel Search API to get the cheapest flight offers.
+Check out this [interactive code example](../examples/live-examples.md) which provides a hotel search form to help you build your app. You can easily customize it and use the Hotel Search API to get the cheapest flight offers.
 
 ### Autocomplete Hotel Names
 
