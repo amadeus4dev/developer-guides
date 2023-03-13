@@ -20,7 +20,7 @@ If you are new to the [Travel Restrictions API](https://developers.amadeus.com/s
 
 2. Create a new project in your [Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"} to get your API key 
 
-3. Follow the steps in our [Authentication Guide](/API-Keys/authorization.md) to generate your access token 
+3. Follow the steps in our [Authentication Guide](../API-Keys/authorization.md) to generate your access token 
 
 4. Make your first call using the [API reference](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/travel-restrictions/api-reference){:target="\_blank"} or the tool of your choice. 
 

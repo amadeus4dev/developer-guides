@@ -82,7 +82,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=48.8
 ```
 
 !!! information
-    This endpoint supports [pagination](/pagination.md). 
+    This endpoint supports [pagination](../pagination.md). 
 
 #### Square information
 
@@ -98,7 +98,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/by-square?nor
 ```
 
 !!! information
-    This endpoint supports [pagination](/pagination.md). 
+    This endpoint supports [pagination](../pagination.md). 
 
 #### Location Id
 
@@ -117,7 +117,7 @@ curl https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930400878
 Let's highlight some information that you'll get from both Travel Restrictions API and Safe Place API. 
 
 !!! Warning
-    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](/docs/test-data.md){:target="\_blank"}. 
+    Don't forget that Amadeus for Developers provides a `Test Environment` with [limited data collections](../test-data.md){:target="\_blank"}. 
 
 !!! information
    - the data for Travel Restrictions API comes from [Riskline](https://riskline.com/){:target="\_blank"} and it has been sourced from local governments and media. The quantity of information provided may vary from country to country. 

@@ -1,6 +1,6 @@
 # Free test data collection of Self-Service APIs
 
-Amadeus for Developers offers a `test environment` with free limited data. This allows developers to build and test their applications before deploying them to production. To access real-time data, you will need to move to the [production environment](/docs/API-Keys/moving-to-production.md){:target="\_blank"}.
+Amadeus for Developers offers a `test environment` with free limited data. This allows developers to build and test their applications before deploying them to production. To access real-time data, you will need to move to the [production environment](./API-Keys/moving-to-production.md){:target="\_blank"}.
 
 !!! warning
     It is important to note that the test environment protects our customers and data and it's exclusively intended for development purposes.
@@ -14,7 +14,10 @@ The test environment has the following differences with the production:
 | **Test**  | Free monthly quota | 10 TPS | Limited, cached | test.api.amadeus.com
 | **Production**  | Unlimited | 40 TPS | Unlimited, real-time | api.amadeus.com
 
-Check out the [rate limits guide](/docs/api-rate-limits.md){:target="\_blank"} and [pricing page](https://developers.amadeus.com/pricing){:target="\_blank"} if you want to get more information on the specific topics. In this tutorial you can learn how to build a [mock server](./developer-tools/mock-server.md){:target="\_blank"} in Postman to help you consume less of your free quota.
+Check out the [rate limits guide](./api-rate-limits.md){:target="\_blank"} and [pricing page](https://developers.amadeus.com/pricing){:target="\_blank"} if you want to get more information on the specific topics. In this tutorial you can learn how to build a [mock server](./developer-tools/mock-server.md){:target="\_blank"} in Postman to help you consume less of your free quota.
+
+!!! important
+    Please note that in the production environment, you will only be charged for API calls that exceed the monthly free limit. Our Flight Order Management API, for instance, may offer a free limit of up to 10,000 calls. So, by registering for production, you can enjoy the benefits of free quotas while accessing our APIs for the latest and unrestricted data without any hidden costs.
 
 ## API usage
 

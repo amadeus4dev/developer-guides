@@ -83,11 +83,11 @@ If you need to increase the number of monthly API calls, please consider moving 
 
 ### How do I access the Self-Service APIs documentation?
 
-Check our [Amadeus for Developers docs portal](/docs/index.md) for links to interactive reference documentation for each API and helpful guides covering topics such as authorization, pagination and common errors. On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"}, you can also find code samples and SDKs.
+Check our [Amadeus for Developers docs portal](./index.md) for links to interactive reference documentation for each API and helpful guides covering topics such as authorization, pagination and common errors. On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"}, you can also find code samples and SDKs.
 
 ### Do you provide SDKs?
 
-Yes! On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"} you can find open-source SDKs in various languages. Alternatively, you can use [OpenAPI Generator](/docs/developer-tools/openapi-generator.md){:target="\_blank"} to create an SDK from our [OpenAPI files](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}.
+Yes! On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"} you can find open-source SDKs in various languages. Alternatively, you can use [OpenAPI Generator](./developer-tools/openapi-generator.md{:target="\_blank"} to create an SDK from our [OpenAPI files](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}.
 
 ### Where can I see code examples for Amadeus Self-Service APIs?
 
@@ -100,7 +100,7 @@ On the [Get Started with Self-Service APIs](https://developers.amadeus.com/get-s
 
 ### How do I move Self-Service APIs from test to production?
 
-To launch your application to production, please follow the steps described in our [Moving to production](/docs/API-Keys/moving-to-production.md){:target="\_blank"} guide.
+To launch your application to production, please follow the steps described in our [Moving to production](./API-Keys/moving-to-production.md){:target="\_blank"} guide.
 
 You will be asked to sign a contract and provide billing information before receiving your new API key. When you move to production, you will maintain the same free monthly request quota you enjoyed in test. When you reach your monthly threshold, you will be billed for the additional API calls you make at the rates shown on our [Pricing page](https://developers.amadeus.com/pricing){:target="\_blank"}.
 
@@ -131,7 +131,7 @@ We do not return data on American Airlines, Low cost carriers, and, in some mark
 
 ### What is an API key?
 
-An API key is a unique reference number which identifies your application to Amadeus. The API key is part of the authorization process and must be sent with each API request. If you have multiple applications using Amadeus APIs, each application must have its own API key. For more details, check our [Authorization guide](/docs/API-Keys/authorization.md).
+An API key is a unique reference number which identifies your application to Amadeus. The API key is part of the authorization process and must be sent with each API request. If you have multiple applications using Amadeus APIs, each application must have its own API key. For more details, check our [Authorization guide](./API-Keys/authorization.md).
 
 Your API keys are also used to track usage. To avoid unwanted charges, please do no share or post them in public repositories. For more information, see this [article on best practices for secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage){:target="\_blank"}.
 
@@ -210,7 +210,7 @@ If you wish to keep using the APIs, you can either move your app to production a
 
 ### Is the data returned in the Self-Service test environment accurate?
 
-The information returned in test environment is from [limited data collections](/docs/test-data.md){:target="\_blank"}. This is done as a security measure to protect our data and our customers. When you move to production, you will get access to complete and live data.
+The information returned in test environment is from [limited data collections](./test-data.md){:target="\_blank"}. This is done as a security measure to protect our data and our customers. When you move to production, you will get access to complete and live data.
 
 ## Flight Inspiration Search
 

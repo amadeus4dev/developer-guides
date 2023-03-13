@@ -44,4 +44,4 @@ To manage the rate limits in APIs, there are mainly two options:
 
 The right choice depends on your resources and requisites. 
 
-Check out the [rate limits examples](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"} in Node, Python and Java using the respective [Amadeus SDKs](/docs/developer-tools/).
+Check out the [rate limits examples](https://github.com/amadeus4dev-examples/APIRateLimits){:target="\_blank"} in Node, Python and Java using the respective [Amadeus SDKs](./developer-tools/index.md).
