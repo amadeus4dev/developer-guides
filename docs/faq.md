@@ -466,6 +466,11 @@ Refunds must be handled offline directly with your consolidator.
 There are two different support paths available based on our two different offer: Self-Service and Enterprise.
 
 1. Self-Service users have at their disposal detailed documentation, guides and SDKs, to help them solve any doubts they may have. Check the Self-Service Docs page for more information. For any other Self-Service support queries, such as billing issues or a refund request, please go to the support section and click on contact us about Self-Service support.
+
+!!! important
+    **Contact Support** <br>
+    You need to be [registered](https://developers.amadeus.com/register){:target="\_blank"} and [signed in](https://developers.amadeus.com/signin){:target="\_blank"} to reach out to the [Self-Service support](https://uat.developers.amadeus.com/support/contact-us-self-service){:target="\_blank"}.
+
 2. Enterprise users have access to dedicated support. If you are an Enterprise user, get in touch with your Account Manager or open a ticket via the Amadeus Service Hub.
  
 ### Where do I go for Self-Service technical support? What does it cost?
