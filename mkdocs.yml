@@ -126,6 +126,7 @@ nav:
         - Java: developer-tools/java.md
         - PHP: developer-tools/php.md
         - OpenAPI Generator: developer-tools/openapi-generator.md
+        - GraphQL wrapper for REST APIs: developer-tools/rest-to-graphql.md
         - Postman collection: developer-tools/postman.md        
         - Mock Server: developer-tools/mock-server.md
     - Examples and prototypes:
