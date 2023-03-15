@@ -132,7 +132,7 @@ Open the terminal and run:
 node index.mjs
 ```
 
-## Query the GrapQL API
+## Query the GraphQL API
 
 !!! information
     Before running the query, make sure to obtain the token as described in our [Authorization guide](../API-Keys/authorization.md).
