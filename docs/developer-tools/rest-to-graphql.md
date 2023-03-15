@@ -50,7 +50,7 @@ type City {
 ## Create a data fetching function
 
 !!! information
-    The `node-fetch` package is an ECMAScript module (ESM), so we will use .mjs extensions and ECMAScript module syntax in these examples.
+    The `node-fetch` package is an ECMAScript module (ESM), so we will use `.mjs` extensions and ECMAScript module syntax in these examples.
 
 Create a `fetchData.mjs` file and define a function that fetches data from the REST endpoint using `node-fetch`:
 
