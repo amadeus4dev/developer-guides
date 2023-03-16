@@ -32,7 +32,7 @@ openapi-to-graphql CitySearch_v1_Version_1.0_swagger_specification.json --save s
 
 ## Access the generated schema
 
-The schema is now created as schema.graphql. For the City Search API, the contents will appear like this:
+The schema is now created as `schema.graphql`. For the City Search API, the contents will appear like this:
 
 ```ts
 type Query {
