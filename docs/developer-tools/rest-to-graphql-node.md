@@ -1,4 +1,4 @@
-# Wrap a REST API endpoint with GraphQL
+# Wrap a REST API endpoint with GraphQL in Node.js
 
 Follow this tutorial to wrap a REST API endpoint with a GraphQL wrapper to make it accessible via a dedicated GraphQL API.
 
@@ -128,7 +128,7 @@ server.listen().then(({ url }) => {
 
 Open the terminal and run:
 
-```js
+```shell
 node index.mjs
 ```
 

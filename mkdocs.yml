@@ -1,6 +1,7 @@
 #Project info 
 site_name: Amadeus for Developers
-site_url: https://developers.amadeus.com
+site_url: https://amadeus4dev.github.io/developer-guides/
+use_directory_urls: false
 site_description: Amadeus for Developers Self-Service APIs Documentation
 site_author: Amadeus for Developers
 
@@ -126,8 +127,8 @@ nav:
         - Java: developer-tools/java.md
         - PHP: developer-tools/php.md
         - OpenAPI Generator: developer-tools/openapi-generator.md
-        - Convert OpenAPI to GraphQL: developer-tools/rest-to-graphql-export.md
-        - GraphQL wrapper for REST APIs: developer-tools/rest-to-graphql.md
+        - GraphQL wrapper for REST (Node): developer-tools/rest-to-graphql-node.md
+        - GraphQL wrapper for REST (Python): developer-tools/rest-to-graphql-python.md
         - Postman collection: developer-tools/postman.md        
         - Mock Server: developer-tools/mock-server.md
     - Examples and prototypes:
