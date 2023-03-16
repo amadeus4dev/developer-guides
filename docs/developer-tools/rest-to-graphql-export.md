@@ -20,7 +20,7 @@ npm install -g openapi-to-graphql-cli
 
 ## Download the required OpenAPI schema
 
-Navigate to the [amadeus-open-api-specification repository](https://github.com/amadeus4dev/amadeus-open-api-specification) and download the required specification for your API. Alternatively, you can visit the [Developers porttal](https://developers.amadeus.com/self-service) and download the specification from the page of a specific API.
+Navigate to the [amadeus-open-api-specification repository](https://github.com/amadeus4dev/amadeus-open-api-specification) and download the required specification for your API. Alternatively, you can visit the [Developers portal](https://developers.amadeus.com/self-service) and download the specification from the page of a specific API.
 
 ## Convert
 
