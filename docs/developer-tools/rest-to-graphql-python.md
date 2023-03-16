@@ -15,7 +15,7 @@ Before you begin, you need to:
 * Register your application with Amadeus for Developers as described in [Making your first API call](../quick-start.md).
 * Have Python installed on your machine.
 
-## Create a new Pytho  project
+## Create a new Python project
 
 1. Open your terminal and create a new directory for this project:
    ```shell
@@ -31,8 +31,8 @@ Before you begin, you need to:
 Install `uvicorn` and `requests` packages by running:
 
 ```shell
-pip3 install uvicorn
-pip3 install requests
+pip install uvicorn
+pip install requests
 ```
 
 ## Define GraphQL schema
