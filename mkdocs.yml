@@ -127,10 +127,13 @@ nav:
         - Java: developer-tools/java.md
         - PHP: developer-tools/php.md
         - OpenAPI Generator: developer-tools/openapi-generator.md
-        - GraphQL wrapper for REST (Node): developer-tools/rest-to-graphql-node.md
-        - GraphQL wrapper for REST (Python): developer-tools/rest-to-graphql-python.md
         - Postman collection: developer-tools/postman.md        
         - Mock Server: developer-tools/mock-server.md
+        - GraphQL:
+          - developer-tools/graphql/index.md
+          - GraphQL wrapper for REST (Node): developer-tools/graphql/rest-to-graphql-node.md
+          - GraphQL wrapper for REST (Python): developer-tools/graphql/rest-to-graphql-python.md
+          - OpenAPI to GraphQL converter: developer-tools/graphql/rest-to-graphql-export.md
     - Examples and prototypes:
         - examples/index.md
         - Code examples: examples/code-example.md

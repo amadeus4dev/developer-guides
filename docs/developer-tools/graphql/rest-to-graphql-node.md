@@ -10,7 +10,7 @@ The goal of this tutorial is to create a GraphQL API, which will only use the `k
 
 Before you begin, you need to:
 
-* Register your application with Amadeus for Developers as described in [Making your first API call](../quick-start.md).
+* Register your application with Amadeus for Developers as described in [Making your first API call](/developer-guides/quick-start.html).
 * Have Node.js installed on your machine.
 
 ## Initialize a new Node.js project
@@ -135,7 +135,7 @@ node index.mjs
 ## Query the GraphQL API
 
 !!! information
-    Before running the query, make sure to obtain the token as described in our [Authorization guide](../API-Keys/authorization.md).
+    Before running the query, make sure to obtain the token as described in our [Authorization guide](/developer-guides/API-Keys/authorization.html).
 
 Now that we have the server running, we can send requests to it. The most straightforward method to do this is by using `curl`. To query this API by the `keyword` "Paris":
 
