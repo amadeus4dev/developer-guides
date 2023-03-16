@@ -2,7 +2,7 @@
 
 Follow this tutorial to learn how to convert an OpenAPI specification to a GraphQL schema.
 
-Our self-service APIs are stored as OpenAPI specs in [this repository](https://github.com/amadeus4dev/amadeus-open-api-specification). In this tutorial, we will use the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search/api-reference) spec as an example and convert it to a GraphQL schema using [openapi-to-graphql](https://github.com/IBM/openapi-to-graphql). While there are many similar tools available, the underlying principle remains the same.
+Our Self-Service APIs are stored as OpenAPI specs in [this repository](https://github.com/amadeus4dev/amadeus-open-api-specification). In this tutorial, we will use the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search/api-reference) spec as an example and convert it to a GraphQL schema using [openapi-to-graphql](https://github.com/IBM/openapi-to-graphql). While there are many similar tools available, the underlying principle remains the same.
 
 The goal is to create a GraphQL schema and then utilise this schema for your GraphQL wrapper, regardless of the programming language your GraphQL server is written in.
 
