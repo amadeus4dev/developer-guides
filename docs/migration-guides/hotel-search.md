@@ -8,7 +8,7 @@ We also have a new API to help you ensure a seamless migration – the [Hotel Li
 
 The diagram below shows a high-level overview of the differences between the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} v2.1 and v3.
  
-![overview](../images/hotel-search.png) 
+![overview](../images/examples/prototypes/hotel-search.png) 
 
 Now let’s have a closer look at the differences on the parameters level.
 
