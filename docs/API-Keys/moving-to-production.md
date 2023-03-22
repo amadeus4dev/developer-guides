@@ -59,6 +59,12 @@ except ResponseError as error:
     print(error)
 ```
 
+## Video Tutorial
+
+You can check the step by step process in this video tutorial of [How to move to production](https://youtu.be/4S0J1vxMt04) from [Get Started series](https://youtube.com/playlist?list=PLBehidtj-OiqQ0sIHBPvwf-8GAjMTJehF). 
+
+![type:video](https://www.youtube.com/embed/4S0J1vxMt04)
+
 
 ## Moving to production with the Flight Create Orders API
 
