@@ -108,6 +108,6 @@ To start testing our APIs without any additional configuration, have a look at o
 
 ## Test and Production environment
 
-After successfully developing your travel app with Amadeus APIs in the Test environment, you can now move to Production. Discover the [differences between the Test and Production environments](https://developers.amadeus.com/blog/test-and-production-environments-for-amadeus-self-service-apis-?utm_source=github) in Amadeus Self-Service APIs. Find out how to seamlessly [switch to Production](https://developers.amadeus.com/self-service/apis-docs/guides/moving-to-production-743?utm_source=github) at no cost and, depending on your quota, gain access to real-time data, improved results, and quicker response times.
+After successfully developing your travel app with Amadeus APIs in the Test environment, you can now move to Production. Discover the [differences between the Test and Production environments](https://developers.amadeus.com/blog/test-and-production-environments-for-amadeus-self-service-apis-?utm_source=github){:target="\_blank"} in Amadeus Self-Service APIs. Find out how to seamlessly [switch to Production](https://developers.amadeus.com/self-service/apis-docs/guides/moving-to-production-743?utm_source=github){:target="\_blank"} at no cost and, depending on your quota, gain access to real-time data, improved results, and quicker response times.
 
 
