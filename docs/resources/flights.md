@@ -1557,6 +1557,23 @@ The [Flight Offers Price API](https://developers.amadeus.com/self-service/catego
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules
 ```
 
+The `FareRules` object represents a collection of fare rules and penalties associated with a specific fare. Each rule is represented as a `TermAndCondition` object, containing information about the rule category, circumstances, applicability, maximum penalty amount, and detailed descriptions.
+
+* `FareRules`:
+
+    * `currency`: The currency in which the penalties are expressed.
+    * `rules`: An array of `TermAndCondition` objects, each representing a specific fare rule or condition.
+    
+* `TermAndCondition`:
+    * `category`: A string defining the type of modification concerned in the rule, such as `REFUND`, `EXCHANGE`, `REVALIDATION`, `REISSUE`, `REBOOK`, or `CANCELLATION`.
+    * `circumstances`: A string providing additional information on the circumstances under which the rule applies.
+    * `notApplicable`: A boolean indicating if the rule does not apply to the fare.
+    * `maxPenaltyAmount`: A string representing the maximum penalty amount for the given rule.
+    * `descriptions`: An array of `Description` objects that provide further details on the rule. Each `Description` object includes:
+        * `descriptionType`: A string representing the type of description.
+        * `text`: The actual text of the description, providing more context or explanation for the rule.
+
+
 ## Book a Flight
 
 Once the fare is confirmed, you’re ready to use the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}
