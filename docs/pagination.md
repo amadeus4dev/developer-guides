@@ -10,7 +10,6 @@ Not all Amadeus Self-Service APIs support pagination. The following APIs current
 * [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}
 * [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant){:target="\_blank"}
 * [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}
-* [Hotel Search v2](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} 
 * [Flight Most Travelled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations){:target="\_blank"}
 * [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations){:target="\_blank"}
 
