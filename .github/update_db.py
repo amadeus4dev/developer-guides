@@ -10,7 +10,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 docs_dir = './docs'
 endpoint_url = os.environ['ENDPOINT_URL']
+BEARER_TOKEN = os.environ.get('BEARER_TOKEN')
 logging.basicConfig(level=logging.INFO)
+
+headers = {
+     "Authorization": f"Bearer {BEARER_TOKEN}"
+}
 
 all_docs = []
 
@@ -56,6 +61,7 @@ documents = []
 del_session = requests.Session()
 del_session.delete(
     f'{endpoint_url}/delete',
+    headers=headers,
     json={
         'delete_all': 'true'
     }
@@ -89,8 +95,8 @@ for i in tqdm(range(0, len(documents), batch_size)):
     i_end = min(len(documents), i+batch_size)
     res = s.post(
         f'{endpoint_url}/upsert',
+        headers=headers,
         json={
-
             'documents': documents[i:i_end]
         }
     )
