@@ -211,6 +211,10 @@ combinable fares to offer the cheapest options possible. For each itinerary,
 the API provides a list of flight offers with prices, fare details, airline
 names, baggage allowances and departure terminals.
 
+!!!tip
+    - Flight Offers Search API is the first step of Flight booking engine flow. Check the details from [Video Tutorials](https://youtube.com/playlist?list=PLBehidtj-OipMAl97bHV0pxHh9yGdOrdh){:target="\_blank"} and [Blog Tutorial](https://developers.amadeus.com/blog/tutorial-booking-engine-amadeus-flight-booking-api){:target="\_blank"}. 
+
+
 !!!warning
     - Flights from low-cost carriers and American Airlines are currently unavailable.
 
@@ -1001,8 +1005,7 @@ Please not that the `X-HTTP-Method-Override` header parameter is required to mak
 ```
 You can see the process step to step in this video tutorial.
 
-![type:video](https://www.youtube.com/embed/y3CNy8sdpzE)
-
+![type:video](https://www.youtube.com/embed/KC7rfO6j1_U)
 
 The API will procide the following JSON in the response:
 
@@ -1323,7 +1326,7 @@ The [Airport & City Search API](https://developers.amadeus.com/self-service/cate
 
 You can see the process step to step in this video tutorial.
 
-![type:video](https://www.youtube.com/embed/WoF2D1k5Y_I)
+![type:video](https://www.youtube.com/embed/Fbz3LOXoDh0)
 
 
 * `GET ​/reference-data​/locations` to return a list of airports and cities by a keyword
@@ -2146,3 +2149,8 @@ There are two things to consider regarding payments for flight booking:
 - The payment between you and the consolidator (to be able to pay the airline and issue the flight ticket). This will be done between you and your consolidator of choice, and is to be agreed with the consolidator.
 
 
+### Flight Booking Engine 101 Video tutorial 
+
+A [video tutorial series](https://youtube.com/playlist?list=PLBehidtj-OipMAl97bHV0pxHh9yGdOrdh){:target="\_blank"} to Explain Flight Booking Engine is available in Youtube channel. 
+
+![type:video](https://www.youtube.com/embed/2Jh3ouEe2ws)
