@@ -29,8 +29,15 @@ To make sure you don't pass your monthly quota, you can go to **My Self-Service 
 The table below details the available test data for each Self-Service API:
 
 ## Test Data Collections
-### Air
 
+### Covid-19 and travel safety
+
+| **API**      | **Test data** |
+| ----------- | ----------- |
+| [Safe Place](https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
+| [Travel Restrictions](https://developers.amadeus.com/self-service/category/destination-content/api-doc/travel-restrictions){:target="\_blank"} | Cached data for all available countries/cities. |
+
+### Flights
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
@@ -50,45 +57,47 @@ The table below details the available test data for each Self-Service API:
 | [Airport On-time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance){:target="\_blank"} |  No data restrictions in test. |
 | [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction){:target="\_blank"} | No data restrictions in test. |
 | [On Demand Flight Status](https://developers.amadeus.com/self-service/category/air/api-doc/on-demand-flight-status){:target="\_blank"}  | Cached data including most flights returned by Flight Offers Search. |
-| [Flight Most Traveled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
-| [Flight Busiest Traveling Period](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
-| [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
 | [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup){:target="\_blank"} |  No data restrictions in test. |
 | [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} |  Cities/airports in the United States, Spain, the United Kingdom, Germany and India. |
 | [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant){:target="\_blank"}  | Cities/airports in the United States, Spain, the United Kingdom, Germany and India. |
 | [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links){:target="\_blank"} |  See list of [valid airlines](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md){:target="\_blank"}. |
+| [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations){:target="\_blank"}  | No data restrictions in test. |
 
 
-### Hotel
+### Hotels
 
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
+| [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} |  See list of [valid hotel chains](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md){:target="\_blank"}.
 | [Hotel Search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} |  See list of [valid hotel chains](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelchains.md){:target="\_blank"}. Test with major cities like `LON` or `NYC`. |
 | [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"} |  Works with the response of `Hotel Search`. |
 | [Hotel Ratings](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-ratings){:target="\_blank"} |  See list of [valid hotels](https://github.com/amadeus4dev/data-collection/blob/master/data/hotelratings.md){:target="\_blank"}. |
 | [Hotel Name Autocomplete](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete){:target="\_blank"} | Cached data including most hotels available through Amadeus |
 
-
-### Destination Content
+### Destination experiences
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
-| [Safe Place](https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
-| [Travel Restrictions](https://developers.amadeus.com/self-service/category/destination-content/api-doc/travel-restrictions){:target="\_blank"} | Cached data for all available countries/cities. |
 | [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"} | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
-| [Location Score](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
 | [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
+| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}  | No data restrictions in test. |
 
 
-### Trip
+### Itinerary management
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
 | [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser){:target="\_blank"} |  No data restrictions in test. |
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction){:target="\_blank"}  | No data restrictions in test. |
-| [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations){:target="\_blank"}  | No data restrictions in test. |
-| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}  | No data restrictions in test. |
+
+### Market insights
+| **API**      | **Test data** |
+| ----------- | ----------- |
+| [Flight Most Traveled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
+| [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
+| [Flight Busiest Traveling Period](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
+| [Location Score](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
 
 
 ## Video Tutorial
