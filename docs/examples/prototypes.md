@@ -15,7 +15,6 @@ There are two types of prototypes (demo apps) available.
 |-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|--------------------------|---------------------------------------------------------------------------------|
 | Flight booking engine                                 | Flight Offers Search, Flight Offers Price, Flight Create Order, Airport & City Search, Travel Restrictions  | Python, django           | [amadeus-flight-booking-django](#amadeus-flight-booking-django)                 |
 | Hotel Booking engine                                  | Hotel List, Hotel Search, Hotel Booking                                                                                 | Python, django           | [amadeus-hotel-booking-django](#amadeus-hotel-booking-django)                   |
-| Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Node, Vue                | [amadeus-flight-booking-node](#amadeus-flight-booking-node)                   |
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Python, django           | [amadeus-flight-price-analysis-django](#amadeus-flight-price-analysis-django)   |
 | Map with Hotels, Point of interests and Safety scores | Hotel List, Points of Interest, Safe Place, Tours and Activities                                                                | Python, django, HERE map | [amadeus-hotel-area-safety-pois-django](#amadeus-hotel-area-safety-pois-django) |
 | Covid-19 info map                                     | Travel Restrictions                                                                                         | Node, Express            | [amadeus-travel-restrictions-node](#amadeus-travel-restrictions-node)           |
@@ -33,9 +32,6 @@ It also uses [Airport & City Search API](https://developers.amadeus.com/self-ser
 amadeus-hotel-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-hotel-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md). It demonstrates the end-to-end Hotel booking process (Hotel booking engine), which works in conjunction with three APIs: [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}, [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} and [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"}. 
 
 ![amadeus-hotel-booking-django](../images/examples/prototypes/amadeus-hotel-booking-django.png)
-
-### amadeus-flight-booking-node 
-amadeus-flight-booking-node ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-node){:target="\_blank"}) is built by Node, Vue and [Node SDK](../developer-tools/node.md). 
 
 
 ### amadeus-flight-price-analysis-django
@@ -92,7 +88,7 @@ We have many other prototypes or demo apps that developers in our community buil
 | Flight status notification service         | On-Demand Flight Status                                                                           | Python               | [amadeus-async-flight-status](#amadeus-async-flight-status)                                                                                      |
 | Flight Calendar search                     | Airport & City Search, Flight Offers Search                                                                                                  | Node, Svelte                 | [FlightSearchCalendar](#flightsearchcalendar)                                                                                             |
 | Airport & City autocomplete                | Airport & City Search                                                                             | Node and Express     | [Live-Airport-City-Search](#live-airport-city-search)                                                                                         |
-
+| Flight Booking      | Flight Offers Search, Flight Offers Price, Flight Create Orders                                        | Node, Vue                | [amadeus-flight-booking-node](#amadeus-flight-booking-node)                   |
 
 ### amadeus-trip-purpose-django
 
@@ -214,3 +210,6 @@ This application ([Link to GitHub](https://github.com/amadeus4dev-examples/Fligh
 This application ([Link to GitHub](https://github.com/amadeus4dev-examples/Live-Airport-City-Search){:target="\_blank"}) lets you perform a live search for Airports and Cities through the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}. The implementation is done through jQuery Autocomplete with Node and Express as the backend for which connects to the Amadeus API with [Node SDK](../developer-tools/node.md).
 
 ![Live-Airport-City-Search](../images/examples/prototypes/live_airport_city_search.gif)
+
+### amadeus-flight-booking-node 
+The Amadeus Flight Booking app is built with Node and Vue using the [Node SDK](../developer-tools/node.md). You can find the source code ([on GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-node){:target="\_blank"}) 
