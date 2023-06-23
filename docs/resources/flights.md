@@ -1003,9 +1003,6 @@ Please not that the `X-HTTP-Method-Override` header parameter is required to mak
   } 
 }  
 ```
-You can see the process step to step in this video tutorial.
-
-![type:video](https://www.youtube.com/embed/KC7rfO6j1_U)
 
 The API will procide the following JSON in the response:
 
