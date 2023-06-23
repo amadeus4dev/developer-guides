@@ -1152,6 +1152,9 @@ The API will procide the following JSON in the response:
 						}
 ```
 
+You can also see the process step to step How to upsell with branded fares in this video tutorial from [Advanced flight booking engine series](https://www.youtube.com/playlist?list=PLBehidtj-OiqHeziKjDH04IBXdvI0eBrg). 
+
+![type:video](https://www.youtube.com/embed/Sgi-cjWNbDg)
 
 
 ### Search for personalized destination recommendations
@@ -1576,6 +1579,9 @@ The `FareRules` object represents a collection of fare rules and penalties assoc
         * `descriptionType`: A string representing the type of description.
         * `text`: The actual text of the description, providing more context or explanation for the rule.
 
+You can also see the process step to step How to display farerules in this video tutorial from [Advanced flight booking engine series](https://www.youtube.com/playlist?list=PLBehidtj-OiqHeziKjDH04IBXdvI0eBrg). 
+
+![type:video](https://www.youtube.com/embed/CZ2bi0ifHqs)
 
 ## Book a Flight
 
@@ -1593,10 +1599,6 @@ Remember, you need to be able to issue a ticket to make bookings with our
 sign a contract with an airline consolidator or be accredited to issue tickets
 yourself.
 
-You can see the process step to step in this video tutorial.
-
-![type:video](https://www.youtube.com/embed/OEX7k6d52Ic)
-
 
 ## Issue a ticket
 
@@ -1612,6 +1614,10 @@ member airlines](https://www.iata.org/about/members/Pages/airline-list.aspx){:ta
 only certain accredited parties can issue tickets. In the next section, we’ll
 go into detail about your options for managing this final step in the booking
 process.
+
+You can see How to manage and issue flight booking process in this video tutorial from [Flight Booking Engine 101 series](https://www.youtube.com/playlist?list=PLBehidtj-OipMAl97bHV0pxHh9yGdOrdh). 
+
+![type:video](https://www.youtube.com/embed/--oFZEbMcmk)
 
 If you are interested in knowing more about issuing tickets in travel industry, please check out this [article](https://developers.amadeus.com/blog/what-is-air-ticketing){:target="\_blank"}. 
 
@@ -1830,6 +1836,13 @@ If the desired flight you want to book, does not permit the additional service, 
 You can see the process step to step in this video tutorial.
 
 ![type:video](https://www.youtube.com/embed/YtbT2Uwq2BQ)
+
+### Video Tutorial 
+
+You can also see the process step to step How to add additional baggages in this video tutorial from [Advanced flight booking engine series](https://www.youtube.com/playlist?list=PLBehidtj-OiqHeziKjDH04IBXdvI0eBrg). 
+
+![type:video](https://www.youtube.com/embed/zCKxgZt5KhQ)
+
 
 ## Check the flight status
 
