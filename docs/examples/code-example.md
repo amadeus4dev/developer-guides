@@ -1029,3 +1029,66 @@ By Id
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_redommendations/v1/get/Java%20SDK/TravelRecommendations.java"
     ```
+
+## Cars and Transfers 
+
+
+### Transfer Search
+
+=== "Python"
+
+    ```python
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_search/v1/post/Python%20SDK/transfer_search.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_search/v1/post/Node%20SDK/transfer_search.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_search/v1/post/Java%20SDK/TransferSearch.java"
+    ```
+
+### Transfer Booking
+
+=== "Python"
+
+    ```python
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_orders/v1/post/Python%20SDK/transfer_orders.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_orders/v1/post/Node%20SDK/transfer_orders.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_orders/v1/post/Java%20SDK/TransferOrders.java"
+    ```
+
+### Transfer Management
+
+=== "Python"
+
+    ```python
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_management/v1/post/Python%20SDK/transfer_management.py"
+    ```
+
+=== "Node"
+
+    ``` javascript
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_management/v1/post/Node%20SDK/transfer_management.js"
+    ```
+
+=== "Java"
+
+    ```java
+    --8<-- "https://raw.githubusercontent.com/amadeus4dev/amadeus-code-examples/master/transfer_management/v1/post/Java%20SDK/TransferManagement.java"
+    ```
