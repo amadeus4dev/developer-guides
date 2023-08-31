@@ -175,7 +175,7 @@ If you're a Self-Service API user, please send your refund requests via the [con
 
 ### Where can I find my invoices?
 
-You will receive your invoices on a monthly basis from [data.distribution@amadeus.com](data.distribution@amadeus.com). Please note that once opened, you will not be able to open the same invoice again.
+You will receive your invoices on a monthly basis from [data.distribution@amadeus.com](mailto:data.distribution@amadeus.com). Please note that once opened, you will not be able to open the same invoice again.
 
 ## Test collection
 

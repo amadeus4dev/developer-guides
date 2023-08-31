@@ -28,9 +28,9 @@ To make sure you don't pass your monthly quota, you can go to **My Self-Service 
 
 The table below details the available test data for each Self-Service API:
 
-## Test Data Collections
+## Test Data Collection
 
-### Covid-19 and travel safety
+### Travel safety
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
