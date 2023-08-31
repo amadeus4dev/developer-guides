@@ -14,13 +14,14 @@ Artificial intelligence APIs and APIs from Amadeus partners' are currently follo
 
 #### List of APIs with the above rate limits:
 
-- [Safe Place ](https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place){:target="\_blank"}
-- [Points of Interest]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest ){:target="\_blank"}
-- [Tours and Activities]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities ){:target="\_blank"}
-- [Location Score]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score ){:target="\_blank"}
-- [Airport On-time Performance]( https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance )
-- [Flight Price Analysis]( https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis ){:target="\_blank"}
-- [Flight Delay Prediction]( https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction ){:target="\_blank"}
+- [Safe Place](https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place){:target="\_blank"}
+- [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}
+- [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"}
+- [Location Score](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score){:target="\_blank"}
+- [Airport On-time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance)
+- [Flight Price Analysis](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis){:target="\_blank"}
+- [Flight Delay Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction){:target="\_blank"}
+- [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction){:target="\_blank"}
 
 
 
