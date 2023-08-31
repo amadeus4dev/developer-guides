@@ -4,27 +4,7 @@ To help you get up and running with the Amadeus Self-Service APIs as smoothly as
 
 If you have any questions or ideas for improvement, don't hesitate to raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples){:target="\_blank"}.
 
-## COVID-19 & Travel safety 
-
-### Travel Restrictions
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_restrictions/v2/get/Python%20SDK/travel_restrictions.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_restrictions/v2/get/Node%20SDK/travel_restrictions.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/travel_restrictions/v2/get/Java%20SDK/TravelRestrictions.java"
-    ```
+## Travel safety 
 
 ### Safe Place
 

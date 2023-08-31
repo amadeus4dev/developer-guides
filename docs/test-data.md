@@ -28,14 +28,13 @@ To make sure you don't pass your monthly quota, you can go to **My Self-Service 
 
 The table below details the available test data for each Self-Service API:
 
-## Test Data Collections
+## Test Data Collection
 
-### Covid-19 and travel safety
+### Travel safety
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
 | [Safe Place](https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
-| [Travel Restrictions](https://developers.amadeus.com/self-service/category/destination-content/api-doc/travel-restrictions){:target="\_blank"} | Cached data for all available countries/cities. |
 
 ### Flights
 

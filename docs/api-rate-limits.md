@@ -16,8 +16,7 @@ Artificial intelligence APIs and APIs from Amadeus partners' are currently follo
 
 | API Category             | API Sub Category        | API name                                                                                                                          |
 |--------------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Covid-19 & Travel Safety | Covid-19                | [Travel Restrictions](https://developers.amadeus.com/self-service/category/destination-content/api-doc/travel-restrictions){:target="\_blank"}       |
-| Covid-19 & Travel Safety | Location Risk           | [ Safe Place ]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place ){:target="\_blank"}                     |
+| Travel Safety | Location Risk           | [ Safe Place ]( https://developers.amadeus.com/self-service/category/destination-content/api-doc/safe-place ){:target="\_blank"}                     |
 | Air                      | Artificial Intelligence | [ Airport On-time Performance ]( https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance ){:target="\_blank"}   |
 | Air                      | Artificial Intelligence | [ Flight Price Analysis  ]( https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis ){:target="\_blank"}              |
 | Air                      | Artificial Intelligence | [ Flight Choice Prediction ]( https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction ){:target="\_blank"}         |
