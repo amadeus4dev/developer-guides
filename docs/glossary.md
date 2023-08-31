@@ -2,12 +2,6 @@
 
 This page provides help with the most common terminology used across Amadeus Self-service APIs.
 
-### [COVID-19 and travel safety](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety){:target="\_blank"} 
-
-| Term | Definition |
-|----|----|
-| Riskline  | Amadeus' travel restrictions data provider.    |
-
 ### [Air](https://developers.amadeus.com/self-service/category/air){:target="\_blank"}  and [Trip](https://developers.amadeus.com/self-service/category/trip){:target="\_blank"} 
 
 | Term | Definition |

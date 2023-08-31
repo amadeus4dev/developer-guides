@@ -114,7 +114,7 @@ nav:
     - Common errors: common-errors.md
     - API Tutorials:
         - resources/index.md
-        - Covid-19 & travel safety: resources/covid-19.md
+        - Travel safety: resources/travel-safety.md
         - Flights: resources/flights.md
         - Hotels: resources/hotels.md
         - Destination experiences: resources/destination-experiences.md
@@ -144,4 +144,3 @@ nav:
     - Migration guides:
         - migration-guides/index.md
         - Hotel search: migration-guides/hotel-search.md
-        - Travel restrictions: migration-guides/travel-restrictions.md
