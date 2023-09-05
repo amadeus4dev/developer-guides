@@ -12,9 +12,9 @@ This file was automatically generated - do not edit
             if (window.location.hostname === 'amadeus4dev.github.io') {
                 console.log(window.location.hostname);
                 const path = window.location.pathname;
-                const redirectPattern = /^\/([^/]+)/;
+                const redirectPattern = /^\/(.*)/;
                 const capturedPart = path.match(redirectPattern)[1];
-                const redirectUrl = `https://des.developers.amadeus.com/self-service/apis-docs/guides/${capturedPart}/`;
+                const redirectUrl = `https://des.developers.amadeus.com/self-service/apis-docs/guides/${capturedPart}`;
                 document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />       
                 <link rel="canonical" href="${redirectUrl}" />`);
             }
