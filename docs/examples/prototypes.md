@@ -19,21 +19,33 @@ There are two types of prototypes (demo apps) available.
 | Map with Hotels, Point of interests and Safety scores | Hotel List, Points of Interest, Safe Place, Tours and Activities                                                                | Python, django, HERE map | [amadeus-hotel-area-safety-pois-django](#amadeus-hotel-area-safety-pois-django) |
 
 ### amadeus-flight-booking-django
-amadeus-flight-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md) and demonstrates the end-to-end flight booking process (Flight booking engine), which works in conjunction with three APIs: [Flight Offer Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"}, [Flight Offer Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"} and [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders). 
+amadeus-flight-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md) and demonstrates the end-to-end flight booking process , which works in conjunction with three APIs: 
+- [Flight Offer Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} to search for flight offers. 
+- [Flight Offer Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"} to confirm the availability and price of given offers.
+- [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) to book the given flights.
 
-It also uses [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} to autocomplete the origin and destination with IATA code.
+It also calls the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} to autocomplete the origin and destination with IATA code.
+
+The [application](https://flight-booking-engine.azurewebsites.net/) is also hosted, so you can play directly with it.
 
 ![amadeus-flight-booking-django](../images/examples/prototypes/amadeus-flight-booking-django.png)
 ![amadeus-flight-booking-django-2](../images/examples/prototypes/amadeus-flight-booking-django-2.png)
 
 ### amadeus-hotel-booking-django
-amadeus-hotel-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-hotel-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md). It demonstrates the end-to-end Hotel booking process (Hotel booking engine), which works in conjunction with three APIs: [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}, [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} and [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"}. 
+amadeus-hotel-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-hotel-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md). It demonstrates the end-to-end Hotel booking process (Hotel booking engine), which works in conjunction with three APIs: 
+- [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"} to list the hotels in a specific location.
+- [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} to search for the offers of given hotels. 
+- [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"} to book the given hotel rooms. 
+
+You also check out the [demo](https://hotel-booking-engine.azurewebsites.net/) of the prototype as well.
 
 ![amadeus-hotel-booking-django](../images/examples/prototypes/amadeus-hotel-booking-django.png)
 
 
 ### amadeus-flight-price-analysis-django
 amadeus-flight-price-analysis-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-price-analysis-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md). It retrieves flight offers using the Flight Offers Search API for a given itinerary. Then it displays if the cheapest available flight is a good deal based on the Flight Price Analysis API. We finally predict if the trip is for business or leisure using the Trip Purpose Prediction API.
+
+You can also directly view the [demo](https://flight-price-analysis.azurewebsites.net/) of the prototype.
 
 ![amadeus-flight-price-analysis-django](../images/examples/prototypes/amadeus-flight-price-analysis-django.png)
 
@@ -45,6 +57,8 @@ amadeus-hotel-area-safety-pois-django ([Link to GitHub](https://github.com/amade
 * [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"}: shows safety information for the area each hotel is located
 * [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"}: shows bookable tours and activities around the hotel
 * [HERE Maps](https://developer.here.com/){:target="\_blank"}: displays a map with markers and text bubbles
+
+You can play directly with the [demo](https://hotel-safety-pois.azurewebsites.net/) of the prototype as well. 
 
 ![amadeus-hotel-area-safety-pois-django](../images/examples/prototypes/amadeus-hotel-area-safety-pois-django.png)
 
