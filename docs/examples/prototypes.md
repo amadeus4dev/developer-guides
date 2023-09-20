@@ -20,9 +20,9 @@ There are two types of prototypes (demo apps) available.
 
 ### amadeus-flight-booking-django
 amadeus-flight-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md) and demonstrates the end-to-end flight booking process , which works in conjunction with three APIs: 
-- [Flight Offer Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} to search for flight offers. 
-- [Flight Offer Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"} to confirm the availability and price of given offers.
-- [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) to book the given flights.
+* [Flight Offer Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} to search for flight offers. 
+* [Flight Offer Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"} to confirm the availability and price of given offers.
+* [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders) to book the given flights.
 
 It also calls the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} to autocomplete the origin and destination with IATA code.
 
@@ -33,9 +33,9 @@ The [application](https://flight-booking-engine.azurewebsites.net/) is also host
 
 ### amadeus-hotel-booking-django
 amadeus-hotel-booking-django ([Link to GitHub](https://github.com/amadeus4dev/amadeus-hotel-booking-django){:target="\_blank"}) is built with Django and [Python SDK](../developer-tools/python.md). It demonstrates the end-to-end Hotel booking process (Hotel booking engine), which works in conjunction with three APIs: 
-- [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"} to list the hotels in a specific location.
-- [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} to search for the offers of given hotels. 
-- [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"} to book the given hotel rooms. 
+* [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"} to list the hotels in a specific location.
+* [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} to search for the offers of given hotels. 
+* [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking){:target="\_blank"} to book the given hotel rooms. 
 
 You also check out the [demo](https://hotel-booking-engine.azurewebsites.net/) of the prototype as well.
 
