@@ -2,6 +2,7 @@
 
 This page provides help with the most common questions about Amadeus Self-service APIs.
 
+
 | Domain                                                                                                                                                          | Questions                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [Account registration](#account-registration) |  <ul><li>[How do I change my password?](#how-do-i-change-my-password)</li><li>[I registered but never received a confirmation email? What should I do?](#i-registered-but-never-received-a-confirmation-email-what-should-i-do)</li></ul>              |
