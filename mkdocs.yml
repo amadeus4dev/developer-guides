@@ -120,6 +120,7 @@ nav:
         - Destination experiences: resources/destination-experiences.md
         - Itinerary management: resources/itinerary-managment.md
         - Market insights: resources/market-insight.md
+        - Cars and Transfers: resources/cars-transfers.md
     - Developer tools:
         - developer-tools/index.md
         - Node: developer-tools/node.md
