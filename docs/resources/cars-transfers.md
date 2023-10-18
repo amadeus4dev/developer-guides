@@ -2,6 +2,10 @@
 
 The Amadeus Cars and Transfers APIs provide an extensive suite of capabilities designed to simplify the process of booking and managing transfers during a traveler's trip, delivering a seamless and efficient experience.
 
+![Cars and transfers API](https://amadeusworkplace.sharepoint.com/:i:/r/sites/AmadeusForDevelopers341/Shared%20Documents/1A4D%20Official/DevRel/03%20Knowledge/TransfersAPI.png?csf=1&web=1&e=lPs0b1)
+
+Have a look at our dedicated [Postman collection](./developer-tools/postman.md) to easily test the Cars and Transfers API with pre-set requests.
+
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [Transfer Search](https://developers.amadeus.com/self-service/category/cars-and-transfers/api-doc/transfer-search/api-reference){:target="\_blank"}     | This API enables users to search for a transfer using a range of pre-arranged transportation options. These options include Private Transfers, Hourly Services, Taxis, Shared Transfers, Airport Express trains and buses, Private Jets, and Helicopter Transfers.                                                 |
