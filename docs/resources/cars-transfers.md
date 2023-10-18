@@ -2,7 +2,7 @@
 
 The Amadeus Cars and Transfers APIs provide an extensive suite of capabilities designed to simplify the process of booking and managing transfers during a traveler's trip, delivering a seamless and efficient experience.
 
-![Cars and transfers API](https://amadeusworkplace.sharepoint.com/:i:/r/sites/AmadeusForDevelopers341/Shared%20Documents/1A4D%20Official/DevRel/03%20Knowledge/TransfersAPI.png?csf=1&web=1&e=lPs0b1)
+![Cars and transfers API](../images/resources/cars-transfers/TransfersAPI.png)
 
 Have a look at our dedicated [Postman collection](./developer-tools/postman.md) to easily test the Cars and Transfers API with pre-set requests.
 
