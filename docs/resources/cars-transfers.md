@@ -4,7 +4,7 @@ The Amadeus Cars and Transfers APIs provide an extensive suite of capabilities d
 
 ![Cars and transfers API](../images/resources/cars-transfers/TransfersAPI.png)
 
-Have a look at our dedicated [Postman collection](./developer-tools/postman.md) to easily test the Cars and Transfers API with pre-set requests.
+Have a look at our dedicated [Postman collection](../developer-tools/postman.md) to easily test the Cars and Transfers API with pre-set requests.
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|

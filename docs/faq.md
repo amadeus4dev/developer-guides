@@ -88,7 +88,7 @@ Check our [Amadeus for Developers docs portal](./index.md) for links to interact
 
 ### Do you provide SDKs?
 
-Yes! On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"} you can find open-source SDKs in various languages. Alternatively, you can use [OpenAPI Generator](./developer-tools/openapi-generator.md{:target="\_blank"} to create an SDK from our [OpenAPI files](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}.
+Yes! On the [Amadeus for Developers GitHub page](https://github.com/amadeus4dev/){:target="\_blank"} you can find open-source SDKs in various languages. Alternatively, you can use [OpenAPI Generator](./developer-tools/openapi-generator.md) to create an SDK from our [OpenAPI files](https://github.com/amadeus4dev/amadeus-open-api-specification){:target="\_blank"}.
 
 ### Where can I see code examples for Amadeus Self-Service APIs?
 
@@ -389,7 +389,7 @@ The maximum date for the 'checkInDate' parameter is 359 days from today. Anythin
 
 Regarding the input for a specific location in a hotel search, you have the following options:
 
-* Since the commissioning of Hotel Search v3, we can no longer search hotels by IATA codes. In order to search by location you will need to use the [third endpoint of Hotel List](/reference-data/locations/hotels/by-geocode), which allows you to search using a latitude & longitude. The Hotel List API returns `hotelIds` based on the specific search coordinates. You will then need to use this `hotelId` in the third endpoint of the Hotel Search API.
+* Since the commissioning of Hotel Search v3, we can no longer search hotels by IATA codes. In order to search by location you will need to use the third endpoint of Hotel List `/reference-data/locations/hotels/by-geocode`, which allows you to search using a latitude & longitude. The Hotel List API returns `hotelIds` based on the specific search coordinates. You will then need to use this `hotelId` in the third endpoint of the Hotel Search API.
 
 * Alternatively, you can use the Google API to retrieve the geo location of a specific location and use the Hotel Search by geo location.
 
