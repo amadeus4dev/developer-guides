@@ -58,7 +58,7 @@ Before you begin, you need to:
 
     ![10](../images/developer-tools/postman/postman-10.png)
 
-3. Enter you [API key and secret values](/API-Keys/authorization/) into the **Current** values of the `client_id` and `client_secret` parameters respectively.
+3. Enter you [API key and secret values](../API-Keys/authorization.md) into the **Current** values of the `client_id` and `client_secret` parameters respectively.
 4. Click **Save**.
 5. On the left side bar, navigate to **Collections**.
 6. Select the **Authorization > Access Granted Client Credentials**.
