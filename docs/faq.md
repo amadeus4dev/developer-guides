@@ -2,42 +2,13 @@
 
 This page provides help with the most common questions about Amadeus Self-service APIs.
 
-
-| Domain                                                                                                                                                          | Questions                                                                             |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [Account registration](#account-registration) |  <ul><li>[How do I change my password?](#how-do-i-change-my-password)</li><li>[I registered but never received a confirmation email? What should I do?](#i-registered-but-never-received-a-confirmation-email-what-should-i-do)</li></ul>              |
-| [Business enquiries](#business-enquiries) |  <ul><li>[How can I monetise my application?](#how-can-i-monetise-my-application)</li><li>[I would like to partner up with Amadeus](#i-would-like-to-partner-up-with-amadeus)</li></ul>              |
-| [Self-Service vs Enterprise](#self-service-vs-enterprise) |  <ul><li>[What is the difference between Self-Service and Enterprise APIs?](#what-is-the-difference-between-self-service-and-enterprise-apis)</li><li>[Can I use APIs from both Self-Service and Enterprise?](#can-i-use-apis-from-both-self-service-and-enterprise?)</li><li>[How can I contact Enterprise?](#how-can-i-contact-enterprise)</li></ul>               |
-| [Self-Service APIs general](#self-service-apis-general) |    <ul><li>[Is there a test environment to try the Self-Service APIs?](#is-there-a-test-environment-to-try-the-self-service-apis?)</li><li>[How do I access the Self-Service APIs documentation?](#how-do-i-access-the-self-service-apis-documentation?)</li><li>[Do you provide SDKs?](#do-you-provide-sdks)</li><li>[Where can I see code examples for Amadeus Self-Service APIs?](#where-can-i-see-code-examples-for-amadeus-self-service-apis)</li><li>[How do I make my first Self-Service API call?](#how-do-i-make-my-first-self-service-api-call)</li><li>[How do I move Self-Service APIs from test to production?](#how-do-i-move-self-service-apis-from-test-to-production)</li><li>[How do I delete my application built using Self-Service APIs?](#how-do-i-delete-my-application-built-using-self-service-apis)</li><li>[Will you include more APIs in the Self-Service catalog?](#will-you-include-more-apis-in-the-self-service-catalog?)</li><li>[What are the terms of service for Amadeus Self-Service APIs?](#what-are-the-terms-of-service-for-amadeus-self-service-apis)</li><li>[I am not a travel agent and have no experience in the travel industry, can I still use the Self-Service APIs?](#i-am-not-a-travel-agent-and-have-no-experience-in-the-travel-industry,-can-i-still-use-the-self-service-apis)</li><li>[Are there any limitations to the Self-Service API dataset?](#are-there-any-limitations-to-the-self-service-api-dataset)</li></ul>              |
-| [API keys](#api-keys) |       <ul><li>[How do I get my Self-Service API key?](#how-do-i-get-my-self-service-api-key)</li><li>[Why is my Self-Service API key not working?](#why-is-my-self-service-api-key-not-working)</li><li>[How long is my Self-Service access token valid for?](#how-long-is-my-self-service-access-token-valid-for)</li><li>[Can I use my API key in a public repository?](#can-i-use-my-api-key-in-a-public-repository)</li><li>[Why has my API key been revoked?](#why-has-my-api-key-been-revoked)</li></ul>              |
-| [Billing](#billing) |         <ul><li>[How is billing calculated for Self-Service APIs?](#how-is-billing-calculated-for-self-service-apis)</li><li>[How do I request a refund of my Self-Service usage bill?](#how-do-i-request-a-refund-of-my-self-service-usage-bill)</li><li>[Where can I find my invoices?](#where-can-i-find-my-invoices)</li></ul>            |
-| [Test collection](#test-collection) |           <ul><li>[Is there a limit to the calls I can make to Self-Service APIs in the test environment?](#is-there-a-limit-to-the-calls-i-can-make-to-self-service-apis-in-the-test-environment)</li><li>[What should I do if I'm about to reach my Self-Service free request quota limit?](#what-should-i-do-if-im-about-to-reach-my-self-service-free-request-quota-limit)</li><li>[Is there a limit to the calls I can make to Self-Service APIs in the production environment?](#is-there-a-limit-to-the-calls-i-can-make-to-self-service-apis-in-the-production-environment)</li><li>[Why do I get a 429 error in JSON if I have some free calls left?](#why-do-i-get-a-429-error-in-json-if-i-have-some-free-calls-left)</li><li>[Why do I get an error code 429 when I call a Self-Service API?](#why-do-i-get-an-error-code-429-when-i-call-a-self-service-api)</li><li>[Is the data returned in the Self-Service test environment accurate?](#is-the-data-returned-in-the-self-service-test-environment-accurate)</li></ul>           |
-| [Flight Inspiration Search](#flight-inspiration-search) |       <ul><li>[Why didn't I get any results for Flight Inspiration Search?](#why-didnt-i-get-any-results-for-flight-inspiration-search)</li><li>[Why are some origin and destination pairings not returning results?](#why-are-some-origin-and-destination-pairings-not-returning-results)</li></ul>           |
-| [Airport routes](#airport-routes) |       <ul><li>[The API returns an airport that has been permanently closed](#the-api-returns-an-airport-that-has-been-permanently-closed)</li></ul>           |
-| [Airport Nearest Relevant API](#airport-nearest-relevant-api) |       <ul><li>[Why isn't the Airport Nearest Relevant API returning a specific airport near me?](#why-isnt-the-airport-nearest-relevant-api-returning-a-specific-airport-near-me)</li></ul>           |
-| [Flight Offers Search](#flight-offers-search) |       <ul><li>[Why are the prices returned more expensive than on other websites?](#why-are-the-prices-returned-more-expensive-than-on-other-websites)</li><li>[What does nonHomogeneous mean in the API response?](#what-does-nonhomogeneous-mean-in-the-api-response)</li><li>[Why the dataWindow parameter returns less results with I3D or I2D?](#why-the-datawindow-parameter-returns-less-results-with-i3d-or-i2d)</li><li>[How do I search using loyalty programs?](#how-do-i-search-using-loyalty-programs)</li><li>[POST and GET do not return the same results](#post-and-get-do-not-return-the-same-results)</li></ul>           |
-| [Flight Offers Price](#flight-offers-price) |       <ul><li>[How can we get information on refundable flights?](#how-can-we-get-information-on-refundable-flights)</li></ul>           |
-| [Flight Price Analysis](#flight-price-analysis) |       <ul><li>[Why do some origin and destination pairings not return any results?](#why-do-some-origin-and-destination-pairings-not-return-any-results)</li></ul>           |
-| [Flight Delay Prediction](#flight-delay-prediction) |       <ul><li>[Why do I get the INFERENCE error?](#why-do-i-get-the-inference-error)</li></ul>           |
-| [Flight Cheapest Date Search](#flight-cheapest-date-search) |       <ul><li>[Why are some origin and destination pairings not returning results?](#why-are-some-origin-and-destination-pairings-not-returning-results)</li><li>[Why do I get the 500 error message?](#why-do-i-get-the-500-error-message)</li></ul>           |
-| [Flight Availabilities Search](#flight-availabilities-search) |       <ul><li>[Why are some travel classes not returned in the search results?](#why-are-some-travel-classes-not-returned-in-the-search-results)</li></ul>           |
-| [Branded Fares Upsell](#branded-fares-upsell) |       <ul><li>[Why do additional services change between segments in an Itinerary?](#why-do-additional-services-change-between-segments-in-an-itinerary)</li></ul>           |
-| [SeatMap Display](#seatmap-display) |       <ul><li>[Is there any way to request a seat map by cabin instead of having to specify a booking class code?](#is-there-any-way-to-request-a-seat-map-by-cabin-instead-of-having-to-specify-a-booking-class-code)</li><li>[Why do I get the error code 4926?](#why-do-i-get-the-error-code-4926)</li><li>[Why am I unable to retrieve seatmap data?](#why-am-i-unable-to-retrieve-seatmap-data)</li><li>[Seatmap not available as flight operated by another carrier](#seatmap-not-available-as-flight-operated-by-another-carrier)</li></ul>           |
-| [Flight Create Orders API](#flight-create-orders-api) |        <ul><li>[How are tickets issued for flights booked with Flight Create Orders in Self-Service?](#how-are-tickets-issued-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[How can I retrieve booking made with Flight Create Orders in Self-Service?](#how-can-i-retrieve-booking-made-with-flight-create-orders-in-self-service)</li><li>[Does Amadeus pay a commission for flights booked with Flight Create Orders in Self-Service?](#does-amadeus-pay-a-commission-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[Why do I get the INVALID DATA RECEIVED error?](#why-do-i-get-the-invalid-data-received-error)</li><li>[Why do I get the SEGMENT SELL FAILURE error?](#why-do-i-get-the-segment-sell-failure-error)</li><li>[How does payment work when I book a flight?](#how-does-payment-work-when-i-book-a-flight)</li><li>[How can I cancel a flight?](#how-can-i-cancel-a-flight)</li><li>[How to make the airline consolidator wait before issuing a ticket?](#how-to-make-the-airline-consolidator-wait-before-issuing-a-ticket)</li></ul>                 |
-| [Hotel Search](#hotel-search) |       <ul><li>[What are guarantee, deposit and prepay?](#what-are-guarantee-deposit-and-prepay)</li><li>[What is the total price?](#what-is-the-total-price)</li><li>[What is the latest possible date for check-in?](#what-is-the-latest-possible-date-for-check-in)</li><li>[How to search a hotel by location](#how-to-search-a-hotel-by-location)</li><li>[How to search hotel images](#how-to-search-hotel-images)</li></ul>           |
-| [Hotel Booking](#hotel-search) |       <ul><li>[What type of payments are supported?](#what-type-of-payments-are-supported)</li><li>[Can I markup the room prices?](#can-i-markup-the-room-prices)</li><li>[Payment providers and gateways](#payment-providers-and-gateways)</li><li>[How can I cancel a room booking?](#how-can-i-cancel-a-room-booking)</li><li>[Why do I get 500 status code?](#why-do-i-get-500-status-code)</li><li>[How can I see Amadeus API coverage for a hotel chain?](#how-can-i-see-amadeus-api-coverage-for-a-hotel-chain)</li><li>[What is considered a query?](#what-is-considered-a-query)</li><li>[Do I need any legal documents to make a booking?](#do-i-need-any-legal-documents-to-make-a-booking)</li><li>[What are the room type codes?](#what-are-the-room-type-codes)</li></ul>           |
-| [Airline consolidators](#airline-consolidators) |    <ul><li>[What is an airline consolidator?](#what-is-an-airline-consolidator)</li><li>[How are payments handled with my consolidator?](#how-are-payments-handled-with-my-consolidator)</li><li>[How do I handle cancellations, changes and post-booking services for bookings made with Flight Create Orders in Self-Service?](#how-do-i-handle-cancellations-changes-and-post-booking-services-for-bookings-made-with-flight-create-orders-in-self-service)</li><li>[How do I handle refunds for flights booked with Flight Create Orders in Self-Service?](#how-do-i-handle-refunds-for-flights-booked-with-flight-create-orders-in-self-service)</li><li>[How can I get a consolidator?](#how-can-i-get-a-consolidator)</li></ul>            |
-| [Technical support](#technical-support) |          <ul><li>[What kind of support does Amadeus for Developers offer?](#what-kind-of-support-does-amadeus-for-developers-offer)</li><li>[Where do I go for Self-Service technical support? What does it cost?](#where-do-i-go-for-self-service-technical-support-what-does-it-cost)</li><li>[Do you offer phone support for Self-Service APIs?](#do-you-offer-phone-support-for-self-service-apis)</li><li>[How can I report bugs or suggest improvements to the Self-Service section?](#how-can-i-report-bugs-or-suggest-improvements-to-the-self-service-section)</li></ul>          |
-
-
-
 ## Account registration
 
 ### How do I change my password?
 
 To change your password, sign in to the [Developers portal](https://developers.amadeus.com/){:target="\_blank"} and click on **My Account** in the top right corner of the screen. You'll find the option to change your password at the bottom of the page. Please remember that we never send your password in any correspondence.
 
-## I registered but never received a confirmation email? What should I do?
+### I registered but never received a confirmation email? What should I do?
 
 If you haven't received a confirmation mail, it is often because the email address was entered incorrectly. Please sign in to the [Developers portal](https://developers.amadeus.com/){:target="\_blank"} and visit the **My Account** section to confirm that the email address used to create the account is correct. If so, please check your spam folder for an email from noreply@amadeus.com.
 
@@ -72,6 +43,9 @@ Yes, you can use APIs from both catalogs, but please keep in mind that the requi
 
 To contact the Enterprise team, please fill in the following [contact us form](https://developers.amadeus.com/support/contact-us-enterprise) and someone from the Enterprise team will get back to you shortly. Please keep in mind that the access to Enterprise requires an implementation fee as well as monthly fees.
 
+### How much do I need to pay to access Enterprise APIs?
+
+The access to Enterprise APIs is subject to certain requirements depending on your market and the functionalities you want to access. It is usually reserved for experienced companies with the need to scale. Before we can disclose the pricing details you will need to sign an NDA. 
 
 ## Self-Service APIs general
 
@@ -127,6 +101,17 @@ Our Self-Service offer is designed for newcomers to Amadeus, there are no prereq
 
 We do not return data on American Airlines, Low cost carriers, and, in some markets, British Airways. For other arlines we only return published rates. We do not return negotiated rates or any other special rates. The Flight Offers Search only returns the bag allowance information for one passenger type code. Airlines blacklisted in the EU are not returned using the Flight Offers Search GET, e.g., Iraqi Airways. There is a possibility to override this with the POST method.
 
+### How can I do group booking?
+
+Our Self-Service APIs allow you to book up to 9 passengers on the same PNR number. For more passengers you will need to create a new booking.
+
+### What is it returning different prices with the Self-Service APIs and other Amadeus solutions?
+
+The Self-Service catalog only returns published GDS rates. If you have access to special rates through another solution, they will not be available through our Self-Service APIs.
+
+### Do I need an IATA license?
+
+IATA or ARC licenses (depending on your market) are mandatory if you want to issue flight tickets, but this option is only available in our Enterprise framework. In Self-Service you will need to work with an airline consolidator to issue flight tickets, therefore no IATA or ARC license is needed.
 
 ## API keys
 
@@ -250,13 +235,55 @@ PNRs are designed to be homogeneous, meaning that one PNR contains the same type
 
 This is normal behaviour. Flight Offers Search returns the cheapest option for all flights. When you request an extra delay in the search (+/- xDays), Flight Offers Search takes a matching flight (i.e., AF111), checks all possible days, and returns only the cheapest offers. Using more filters does not increase the number of results. It increases the range of data the API uses to find the cheapest offers to return. Having fewer options between 'I3D' and 'I2D' is normal. With 'I2D,' you most likely compare a working week with very regular flights, and with 'ID3,' you always include weekend flights on top, so there are more options.
 
-### How do I search using loyalty programs?
+### How can I add a loyalty program to a booking?
 
 Flight Offers Price and SeatMap Display both accept frequent flyer information, so end-users can benefit from their loyalty program. When adding frequent flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email, or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
 
 ### POST and GET do not return the same results
 
 By default the GET method does not return airlines blacklisted in Europe. However, users can override this using the POST method.
+
+### How do I add bags to a check in bag for flight reservation? 
+
+You can add a checked-in bag to a flight booking using the ‘’additionalServices’’ element in the flight offer when calling Flight Offers Price. For more details, please check our guide on [adding baggage with Amadeus flight booking APIs](https://developers.amadeus.com/blog/add-baggage-amadeus-flight-booking-api). 
+
+### How do I add bags to a cabin bag for flight reservation? 
+
+Our APIs do not return cabin bag information in the responses, and it is not possible to add an additional cabin bag to a booking. 
+
+### Can I display the price of flights using air miles/loyalty points and book a flight?
+Our Self-Service APIs do not let you display the prices in loyalty points or book a flight using loyalty points.
+
+### Why are some taxes refundable?
+A refundable tax is a type of tax or fee that is collected when you purchase an airline ticket but can be refunded to the passenger under certain circumstances, these conditions will vary depending on the specific country and airline. 
+
+### How can I integrate flight booking?
+You can integrate flight booking using our Self-Service APIs. Production access is subject to certain requirements, including being registered in one of our approved markets, meeting your local legal requirements, and working with an airline consolidator to issue tickets.
+
+The booking flow involves the following APIs:
+- [Flight Offers Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search?utm_source=support&utm_medium=email): to search for the best bookable flight offers.
+- [Flight Offers Price](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price?utm_source=support&utm_medium=email): confirms the latest price and availability of a specific chosen flight.
+- [Flight Create Orders](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders): to book flights and ancillary services proposed by the airline.
+- [Flight Orders Management](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-order-management): to manage and consult your bookings. This API also includes an endpoint to cancel the reservation.
+
+Once you generate a booking in production, your consolidator will receive it in their back office and issue the tickets from there. After the ticket has been issued, you will need to contact your consolidator for any modifications to the booking or refund requests. 
+For more information on flight booking please check our guide on [how to build a flight booking engine](https://developers.amadeus.com/get-started/create-a-flight-booking-engine-651).
+
+### Do you provide Co2 emission?
+
+You can return Co2 emissions for a flight only after booking it. The information will be included in the response of [Flight Create Orders API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-create-orders).
+
+### What are fare rules?
+
+Fare rules are a set of conditions that determine the price of an air ticket for each seat class. They also define whether a ticket is refundable/nonrefundable or whether additional charges are applicable. You can return those with our Self-Service APIs using Flight Offers Price and adding ''include=detailed-fare-rules'' in your base URL:
+
+`https://test.api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules`
+
+Please keep in mind that this will return the fare rules in a raw format. If you want a structured version of these, you will need to use our Enterprise APIs.
+
+### Do you return airline logos?
+
+We do not return airline logos in our Self-Service catalog.
 
 
 ## Flight Offers Price
@@ -321,6 +348,12 @@ This error is generated when the specified flight in the query is a codeshare, a
 
 This error message means that the airline never filled in a seat map for the specific flight. It's usually not generic to all flights of the airline. Unfortunately, there is no solution for this one.
 
+### What does AVAILABLE, BLOCKED, and OCCUPIED mean in the response? 
+- `AVAILABLE`: the seat is not occupied and is available to book. 
+- `BLOCKED`: the seat is not occupied but isn’t available to book for the user. This is usually due to the passenger type (e.g., children may not sit in exit rows), or their fare class (e.g., some seats may be reserved for travelers in higher classes).
+- `OCCUPIED`: the seat is occupied and unavailable to book.
+
+
 ## Flight Create Orders API
 
 ### How are tickets issued for flights booked with Flight Create Orders in Self-Service?
@@ -367,8 +400,16 @@ You can delay ticketing using the `ticketingAgreement` parameter in Flight Creat
 
 The queuing and cancellation take place based on the local date and time. If no specific time is mentioned, the reservation is queued or cancelled at 00:00.
 
+### Can I markup prices of flight tickets sold?
 
-## Hotel Search
+Yes you are free to add a markup on any flight ticket. This must be done through your own payment gateway.
+
+### How can I modify my booking once the ticket is issued?
+This is not possible through our Self-Service APIs. Once a ticket has been issued you will need to contact the consolidator for any changes, and this will be subject to a fee. 
+In case the ticket has not been issued. You will need to delete the booking and rebook with the modifications.
+
+
+## Hotel Search & Book
 
 ### What are guarantee, deposit and prepay?
 
@@ -392,9 +433,6 @@ Regarding the input for a specific location in a hotel search, you have the foll
 * Since the commissioning of Hotel Search v3, we can no longer search hotels by IATA codes. In order to search by location you will need to use the third endpoint of Hotel List `/reference-data/locations/hotels/by-geocode`, which allows you to search using a latitude & longitude. The Hotel List API returns `hotelIds` based on the specific search coordinates. You will then need to use this `hotelId` in the third endpoint of the Hotel Search API.
 
 * Alternatively, you can use the Google API to retrieve the geo location of a specific location and use the Hotel Search by geo location.
-
-
-## Hotel Booking
 
 ### What type of payments are supported?
 
@@ -432,6 +470,16 @@ No, there are no legal documents required. However, you will need to comply with
 
 The room type code is a 3-character identifier that indicates the room type category, the number of beds, and the bed type. However, some hotels may not follow this pattern and instead use custom types. In such cases, the room description is the best way to understand the room type.
 
+### How do I cancel a hotel?
+
+There is no way to cancel hotel bookings through the APIs. This needs to be done offline by ringing the hotels. 
+
+### Why is Hotel Search returning empty responses ‘{"data": []}’?
+You are returning this because this specific hotel is closed or unavailable for this specific date. You can either try to change the check-in date or use the ''includeClosed'' parameter set to ''true''. The latter will return further information on the hotel, but you will not be able to book it.
+
+### Do you return hotel images?
+Hotel images are not available through our Self-Service catalog.
+
 ## Airline consolidators
 
 ### What is an airline consolidator?
@@ -459,6 +507,49 @@ Before requesting a consolidator, please first make sure that you are **in one o
 ### How do I handle refunds for flights booked with Flight Create Orders in Self-Service?
 
 Refunds must be handled offline directly with your consolidator. 
+
+### Can I use multiple consolidators?
+
+Yes you can use different consolidator, but you will need to tell us so we can connect both your accounts. Once we open the access, you can decide where you want your booking to go using the ‘’queuingOfficeId’’ parameter in the Flight Create Orders request.
+
+## Destination Experiences
+
+### Do you provide tours and activities at destination?
+
+You can search and book activities with our [Tours and Activities API](https://developers.amadeus.com/self-service/category/destination-experiences/api-doc/tours-and-activities). It includes 300,000 activities around the world, such as sightseeing tours, days trips, and museum tickets. The API provides a list of top activities for a given location, including the prices, ratings, descriptions, photos, as well as a deep link to complete the booking with the provider.
+
+### What are the tags returned in Points of Interest?
+The Points of Interest API returns the following tags:
+
+food, schools, beauty&spas, commercialplace, outdoorplace, tourguide, health&hospital, health&medicalcenter, trail, health&medical, professionalservices, busline, honeymoonpackages, bakery, rental, newspaper, garden, generic, gift, vineyard, cityhall, sport, beauty&hairsalon, beauty&nailsalon, pet, market, machines, icecream, secondhand, communitycenter, toy, kids, health&seniorcenter, daycare, education, rugby, smoke, cemetery, harbor, laundromat, optical, cheese, financialservices, bank, field, college, car, florists, pharmacy, games, atm, building, university, mobilephone, center, donuts, beauty&barbershop, road, chocolate, tattoo, militarybase, surfing, lighthouse, cottage, square, cricket, patio, fusion, health&alternative, printing, basketball, pier, bay, wildlifesanctuary, airlines, lottery, fairground, health&nursinghome, art, tunnel, ski, gunroom, gunrange, camping, meat, antique, discount, prison, servicestation, thriftshop, gayfriendly, skate, creperie, electronic, petrolshelf, street, culturalcenter, volleyball, merchandise, popcorn, reservoir, sleepwear, beauty&professionals, firewall, drinkingwater, publicplace, quarries, health&services, prosthetics, industrialestate, american, mexican, internet, ignore, military, natural, canadian, technology, indian, tea, salon, beer, coffee, spanish, arts, communications, irish, french, river, neighbourhoodsandvillages, celebrities, office, social, japanese, institute, peruvian, british, continental, wine, brazilian, chinese, asian, italian, beauty, hair, religious, mediterranean, generic, african, portuguese, greek, farm, deli, german, european, ocean, english, religiousorganization, basque, latin, family, russian, austrian, southern, accessories, vegetarian, middleeastern, vietnamese, chicken, caribbean, lebanese, cosmetics, cuban, telecommunication, vegan, drink, design, moroccan, texmex, turkish, hawaiian, security, dining, contemporary, cajun, australian, korean, persian, pakistani, eating, painting, pet, bed&breakfast, bar, cooking, latte, ignore, chinese, nature, noodles, game, dating, automotive, car, electrician, funeral, travel, wedding, firestation, tvandradio, environmental, farm, agriculture, company, realestate, eyedoctor, campground, hostel, hotel, inn, lodging, motel, resort, corporatehousing, hiking, golf, events, sports, theater, gym, neighborhood, locality, city, island, region, home, office, dealership, storage, butcher, courthouse, radiostation, conferenceroom, insurance, dentist, photographer, animalshelter, coach, chiropractor, gardener, music, architect, nutritionist, apartments, vacationrental, yoga, tennis, nightlife, bodega, burrito, dance, skating, activelife, basketball, beach, baseball, state, shoppingdistrict, home, pet, veterinarian, mediaproduction, wholesale, factory, plumber, legal, government, fooddelivery, health, doctor, physicaltherapist, mobilehomes, police, conventioncenter, auctionhouse, religiousplace, coworkingspace, recycling, armedforces, marketing, publicservice, stadium, skydiving, sportclub, cine, zoo, massage, cricket, country, lawyer, design, childcare, carpenter, startup, financial, building, painter, retailer, graphicdesign, optometrists, transport, postoffice, itservices, spiritualcenter, distributor, embassy, recruiter, counseling, mover, tailor, festival, huntingandfishing, horseriding, lasertag, paintball, submarinism, rafting, surfing, climbing, summercamp, skate, gamingcafe, province, castle, operahouse, seamstress, hockey, mining, manufacturers, repair, accountant, chamberofcommerce, restorer, lab, publisher, pharmaceutical, psychologist, entertainer, energy, laborunions, traditional, pilates, stargazing, martialarts, rodeo, circus, karting, cheerleading, leisure, classiccuisine, traditionalcuisine, eco, floatels, accommodation, brewery, club, musicvenue, nightclub, pub, restaurant, barbecue, breakfast, buffet, burger, cheap, coffee, fastfood, foodtruck, gastropub, grills, hotdogs, internetcoffe, noodle, pizza, ramen, sandwich, seafood, activities, aquarium, attraction, banquethalls, bike, bowlingalley, casino, snack, steakhouse, sushi, taco, tapas, tea, thai, vegetarian, shopping, baby, bags, boutique, clothing, fashion, home, jewelry, library, liquor, mall, musicstore, outlet, perfume, personalcare, shoe, watches, supermarket, bridge, forest, garden, marina, marine, picnic, restarea, river, beach, capitol, church, lake, mosque, mountain, river, statuary, synagogue, temple, sightseeing, artgallerie, landmark, museum, sights, bridge, capitol, church, historicplace, marina, mosque, palace, synagogue, temple, buddhist, transport, airport, bus, busstation, busstop, gasstation, heliport, metro, metrostation, parking, port, taxi, train, trainstation, tram, boating, boating, park, italiancuisine, juicebar, bathingarea, fountain, statue, volcano, chargingstation, bistro, brasserie, churrasco, foodstand, mediterraneancuisine, moderncuisine, regionalcuisine, snackbar, spanishcuisine, swissfood, souvenir, amusementpark, boat, historic, japanese, guesthouse, camping, archery, bingohall, birdwatching, luxurybybrand, luxuryname, luxury.
+
+
+## Cars & Transfers 
+
+### Who are the providers available in the Car & Transfers APIs?
+The Transfers APIs will allow you to offer private transfers, hourly services, taxis, shared transfers, airport express, airport buses, private jets, and helicopter transfer. The API uses the following providers:
+
+| Name             | Code |
+|------------------|------|
+| Drivania         | DRV  |
+| Eco Rent A Car   | ECO  |
+| EZ Shuttle ZA    | ESZ  |
+| FlygTaxi         | FGT  |
+| Get-E            | GET  |
+| GroundScope      | GSE  |
+| GroundSpan       | GSN  |
+| HolidayTaxis     | HTX  |
+| iVcardo          | IVC  |
+| JPD Transport    | JPD  |
+| Servantrip       | SVP  |
+| Sixt Ride        | SMD  |
+| SuperShuttle     | SPS  |
+| Svea Taxi Allians| TXB  |
+| Talixo           | TXO  |
+| Taxibokning      | TXB  |
+| TaxiTender       | TXT  |
+| World Transfer   | WTR  |
+
 
 ## Technical support
 
