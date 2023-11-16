@@ -59,6 +59,87 @@ Occurs when the client credentials have an invalid format and are not recognized
 }
 ```
 
+**401 Unauthorized - Invalid HTTP header**
+
+The Authorization header is missing or its format invalid, e.g. the required word "Bearer" is wrongly spelled or not present at all in the Authorization header in an API request.
+```json
+{
+    "errors": [
+        {
+            "code": "38191",
+            "title": "Invalid HTTP header",
+            "detail": "Missing or invalid format for mandatory Authorization header",
+            "status": "401"
+        }
+    ]
+}
+```
+
+**401 Unauthorized – Access token expired**
+
+The access token sent by the client is expired. Access tokens are only valid for 30 minutes. To ease the generation of access tokens you can use our SDKs.
+```json
+{
+    "errors": [
+        {
+            "code": 38192,
+            "title": "Access token expired",
+            "detail": "The access token is expired",
+            "status": 401
+        }
+    ]
+}
+```
+
+**401 Unauthorized – Access token revoked**
+
+The access token has been revoked. Please generate a new one.
+```json
+{
+    "errors": [
+        {
+            "code": 38193,
+            "title": "Access token revoked",
+            "detail": "The access token is revoked",
+            "status": 401
+        }
+    ]
+}
+```
+
+**401 Unauthorized –API revoked**
+
+The API credentials have been revoked. This could be because we found it searchable in a public repository, in this case you can generate new keys in your Self-Service workspace. Or it could be that you have unpaid bills and we revoked your access, if that is the case please contact support.
+
+```json
+{
+    "errors": [
+        {
+            "code": 39683,
+            "title": "API key revoked",
+            "detail": "The API key is revoked",
+            "status": 401
+        }
+    ]
+}
+```
+
+**401 Unauthorized – Invalid API key**
+
+The API key used is invalid. Please check for spaces in the end and make sure you are using the correct key and case URL.
+```json
+{
+    "errors": [
+        {
+            "code": 39686,
+            "title": "Invalid API key",
+            "detail": "The API key is invalid",
+            "status": 401
+        }
+    ]
+}
+```
+
 ### Data Format Errors
 
 **400 Bad request - Invalid format**
@@ -76,6 +157,57 @@ Occurs when an input query parameter is incorrect. In the example below, the Air
             "source": {
                 "parameter": "origin"
             }
+        }
+    ]
+}
+```
+
+**403 Forbidden**
+
+The HTTP protocol is used instead of HTTPS when making the API call. Or you are attempting to reach an endpoint which requires additional permission. 
+```json
+{
+    "errors": [
+        {
+            "code": 38197,
+            "title": "Forbidden",
+            "detail": "Access forbidden",
+            "status": 403
+        }
+    ]
+}
+```
+
+### Too Many Requests Errors
+
+**429 Too many requests**
+
+Too many requests are sent in the given timeframe. Please check our rate limits and adjust accordingly for the targeted environment and API.
+```json
+{
+    "errors": [
+        {
+            "code": 38194,
+            "title": "Too many requests",
+            "detail": "The network rate limit is exceeded, please try again later",
+            "status": 429
+        }
+    ]
+}
+```
+
+
+**429 Quota limit exceeded**
+
+The number of free transactions allowed in test has been reached for this month. Please consider moving your app to production or wait next month to keep using the APIs.
+```json
+{
+    "errors": [
+        {
+            "code": 38195,
+            "title": "Quota limit exceeded",
+            "detail": "The quota limit is exceeded.",
+            "status": 429
         }
     ]
 }
