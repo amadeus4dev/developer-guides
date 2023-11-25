@@ -12,7 +12,6 @@ you can install the SDK as a regular Python package.
 
 -  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 - Python version >= 3.8
-- [virtualenv](https://virtualenv.pypa.io/en/latest/){:target="\_blank"} when installing packages for your local projects. There are several benefits of creating an isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
 
 First step is to create the environment. Switch to your project repository and type:
 
@@ -26,7 +25,7 @@ A new folder `.venv` will be created with everything necessary inside. Let's act
 source .venv/bin/activate
 ```
 
-From now on, all packages installed using `pip` will be located under `.venv/lib` and not on your global `/usr/lib` folder.
+From now on, all packages installed using `pip` will be located under `.venv/lib` and not in your global `/usr/lib` folder.
 
 Finally, install the Amadeus SDK as follows:
 
