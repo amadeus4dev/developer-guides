@@ -12,27 +12,21 @@ you can install the SDK as a regular Python package.
 
 -  Amadeus for Developers API key and API secret: to get one, [create a free developer account](https://developers.amadeus.com/register){:target="\_blank"} and set up your first application in your [Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 - Python version >= 3.8
-- [virtualenv](https://virtualenv.pypa.io/en/latest/){:target="\_blank"} when installing packages for your local projects. There are several beneficts of creating isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
+- [virtualenv](https://virtualenv.pypa.io/en/latest/){:target="\_blank"} when installing packages for your local projects. There are several benefits of creating an isolated environment, but the most interesting one is to avoid conflicts between different versions of the same package. 
 
-The tool can be easily installed using `pip`:
-
-```text
-pip install virtualenv
-```
-
-Next step is to create the environment. Switch to your project repository and type:
+First step is to create the environment. Switch to your project repository and type:
 
 ```text
-virtualenv venv
+python3 -m venv .venv
 ```
 
-A new folder `venv` will be created with everything necessary inside. Let's activate the isolated environment with the following command:
+A new folder `.venv` will be created with everything necessary inside. Let's activate the isolated environment with the following command:
 
 ```text
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
-From now on, all packages installed using `pip` will be located under `venv/lib` and not on your global `/usr/lib` folder.
+From now on, all packages installed using `pip` will be located under `.venv/lib` and not on your global `/usr/lib` folder.
 
 Finally, install the Amadeus SDK as follows:
 
@@ -61,7 +55,7 @@ This tutorial will guide you through the process of creating a simple Python app
 #### Request
 
 ```python
-from amadeus import Client, ResponseError
+from amadeus import Client, Location, ResponseError
 
 amadeus = Client(
     client_id='AMADEUS_CLIENT_ID',
@@ -70,8 +64,9 @@ amadeus = Client(
 
 try:
     response = amadeus.reference_data.locations.get(
-    keyword='LON',
-    subType=Location.AIRPORT)    
+        keyword='LON',
+        subType=Location.AIRPORT
+    )    
     print(response.data)
 except ResponseError as error:
     print(error)
