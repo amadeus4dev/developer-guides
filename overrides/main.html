@@ -9,7 +9,7 @@
                     console.log(window.location.hostname);
                     const path = window.location.pathname;
                     const redirectPattern = /^\/([^/]+)/;
-                    const redirectUrl = path.replace(redirectPattern, 'https://uat.developers.amadeus.com/self-service/apis-docs/guides/$1/');
+                    const redirectUrl = path.replace(redirectPattern, 'https://uat.developers.amadeus.com/self-service/apis-docs/guides/$1');
                     document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />       
                     <link rel="canonical" href="${redirectUrl}" />`);
                 }
