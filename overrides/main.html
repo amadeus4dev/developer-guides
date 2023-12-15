@@ -1,10 +1,10 @@
 {#-
-    This file was automatically generated - do not edit
-    -#}
-    
+This file was automatically generated - do not edit
+-#}
+
 {% extends "base.html" %}
-    {% block extrahead %}
-            <script>
+{% block extrahead %}
+<script>
     if (window.location.hostname === 'amadeus4dev.github.io') {
         console.log(window.location.hostname);
         const path = window.location.pathname;
@@ -15,10 +15,10 @@
 
     // Add event listener to all links starting with developers.amadeus.com
     document.querySelectorAll('a[href^="https://developers.amadeus.com"]').forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent the default action (navigating to the link)
             window.location.href = this.href; // Manually redirect the page to the link
         });
     });
-            </script>
-    {% endblock %}
+</script>
+{% endblock %}
