@@ -18,19 +18,20 @@ This file was automatically generated - do not edit
 {% block scripts %}
 <script>
     // Event listener for link clicks
-    document.body.addEventListener('click', function (event) {
-        var target = event.target;
-        console.log('we are in the second script');
-        if (target.tagName === 'A') {
-            console.log('we are in the first if');
-            var href = target.getAttribute('href');
-            if (href.includes('developers.amadeus.com')) {
-                console.log('we are in the second if');
-                event.preventDefault();
-                console.log('href:', href);
-                window.location.href = href;
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.body.addEventListener('click', function (event) {
+            var target = event.target;
+            console.log('we are in the second script');
+            if (target.tagName === 'A') {
+                console.log('we are in the first if from second script');
+                var href = target.getAttribute('href');
+                if (href.includes('developers.amadeus.com')) {
+                    console.log('we are in the second if from second script');
+                    event.preventDefault();
+                    window.location.href = href;
+                }
             }
-        }
+        });
     });
 </script>
 {% endblock %}
