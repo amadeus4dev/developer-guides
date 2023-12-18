@@ -12,11 +12,35 @@ This file was automatically generated - do not edit
         const redirectUrl = path.replace(redirectPattern, 'https://developers.amadeus.com/self-service/apis-docs/guides/$1');
         document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />`);
     }
+
+        // Event listener for link clicks
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.body.addEventListener('click', function (event) {
+            var target = event.target;
+            console.log('we are in the second script');
+            if (target.tagName === 'A') {
+                console.log('we are in the first if from second script');
+                var href = target.getAttribute('href');
+                if (href.startsWith('https://developers.amadeus.com')) {
+                    console.log('we are in the second if from second script');
+                    event.preventDefault();
+                    window.location.href = href;
+                }
+            }
+        });
+    });
 </script>
 {% endblock %}
 
 {% block scripts %}
 <script>
+        if (window.location.hostname === 'amadeus4dev.github.io') {
+        console.log('first script');
+        const path = window.location.pathname;
+        const redirectPattern = /^\/([^/]+)/;
+        const redirectUrl = path.replace(redirectPattern, 'https://developers.amadeus.com/self-service/apis-docs/guides/$1');
+        document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />`);
+    }
     // Event listener for link clicks
     window.addEventListener('DOMContentLoaded', (event) => {
         document.body.addEventListener('click', function (event) {
