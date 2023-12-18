@@ -5,7 +5,7 @@ This file was automatically generated - do not edit
 {% extends "base.html" %}
 {% block extrahead %}
 <script>
-    if (window.location.hostname === 'amadeus4dev.github.io') {
+    if (window.location.hostname === 'amadeus4dev.github.io' || window.location.hostname === 'developer.amadeus.com') {
         console.log('first script');
         const path = window.location.pathname;
         const redirectPattern = /^\/([^/]+)/;
