@@ -4,7 +4,9 @@ This file was automatically generated - do not edit
 
 {% extends "base.html" %}
 {% block extrahead %}
+
 <script>
+{ { super() } }
     if (window.location.hostname === 'amadeus4dev.github.io') {
         console.log('first script');
         const path = window.location.pathname;
@@ -12,7 +14,6 @@ This file was automatically generated - do not edit
         const redirectUrl = path.replace(redirectPattern, 'https://developers.amadeus.com/self-service/apis-docs/guides/$1');
         document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />`);
     }
-{ { super() } }
 </script>
 {% endblock %}
 
