@@ -20,7 +20,7 @@ This file was automatically generated - do not edit
             var href = target.getAttribute('href');
             if (href.startsWith('https://developers.amadeus.com')) {
                 event.preventDefault();
-                window.open(href, '_blank');
+                window.location.href = href;
             }
         }
     });
