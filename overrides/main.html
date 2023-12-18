@@ -24,9 +24,10 @@ This file was automatically generated - do not edit
         if (target.tagName === 'A') {
             console.log('we are in the first if');
             var href = target.getAttribute('href');
-            if (href.startsWith('https://developers.amadeus.com')) {
+            if (href.includes('developers.amadeus.com')) {
                 console.log('we are in the second if');
                 event.preventDefault();
+                console.log('href:', href);
                 window.location.href = href;
             }
         }
