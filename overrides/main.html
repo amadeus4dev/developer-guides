@@ -5,8 +5,8 @@
     window.addEventListener('DOMContentLoaded', (event) => {
         console.log('Script loaded');
 
-        // Initial redirection logic
-        if (window.location.hostname === 'amadeus4dev.github.io' || window.location.hostname === 'developer.amadeus.com') {
+        // Redirection logic for initial load
+        if (window.location.hostname === 'amadeus4dev.github.io') {
             console.log('Initial redirection');
             const path = window.location.pathname;
             const redirectPattern = /^\/([^/]+)/;
