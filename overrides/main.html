@@ -13,16 +13,36 @@ This file was automatically generated - do not edit
         document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />`);
     }
 
-    //event
-    document.addEventListener('click', function (event) {
-        var target = event.target;
-        if (target.tagName === 'A') {
-            var href = target.getAttribute('href');
-            if (href.startsWith('https://developers.amadeus.com')) {
-                event.preventDefault();
-                window.location.href = href;
+    // Event listener for link clicks
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.body.addEventListener('click', function (event) {
+            var target = event.target;
+            if (target.tagName === 'A') {
+                var href = target.getAttribute('href');
+                if (href.startsWith('https://developers.amadeus.com')) {
+                    event.preventDefault();
+                    window.location.href = href;
+                }
             }
-        }
+        });
+    });
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Event listener for link clicks
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.body.addEventListener('click', function (event) {
+            var target = event.target;
+            if (target.tagName === 'A') {
+                var href = target.getAttribute('href');
+                if (href.startsWith('https://developers.amadeus.com')) {
+                    event.preventDefault();
+                    window.location.href = href;
+                }
+            }
+        });
     });
 </script>
 {% endblock %}
