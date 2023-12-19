@@ -1,31 +1,16 @@
-{% extends "base.html" %}
-
-{% block scripts %}
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        console.log('Script loaded');
-
-        // Redirection logic for initial load
+{#-
+    This file was automatically generated - do not edit
+    -#}
+    
+    {% extends "base.html" %}
+    {% block extrahead %}
+    <script>
         if (window.location.hostname === 'amadeus4dev.github.io') {
-            console.log('Initial redirection');
             const path = window.location.pathname;
             const redirectPattern = /^\/([^/]+)/;
-            const redirectUrl = path.replace(redirectPattern, 'https://developers.amadeus.com/self-service/apis-docs/guides/$1');
-            window.location.href = redirectUrl;
+            const redirectUrl = path.replace(redirectPattern, 'https://uat.developers.amadeus.com/self-service/apis-docs/guides/$1');
+            document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />`);
         }
-
-        // Event listener for link clicks
-        document.body.addEventListener('click', function (event) {
-            var target = event.target;
-            if (target.tagName === 'A') {
-                var href = target.getAttribute('href');
-                if (href.includes('developers.amadeus.com')) {
-                    event.preventDefault();
-                    console.log('Link click redirection');
-                    window.location.href = href;
-                }
-            }
-        });
-    });
-</script>
-{% endblock %}
+    </script>
+    {% endblock %}
+    
