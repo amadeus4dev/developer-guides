@@ -13,29 +13,3 @@
         }
     </script>
     {% endblock %}
-
-    {% block scripts %}
-    <script>
-        // Event listener for link clicks
-        window.addEventListener('DOMContentLoaded', (event) => {
-            document.body.addEventListener('click', function (event) {
-                var target = event.target;
-    
-                if (target.tagName === 'A') {
-                    var href = target.getAttribute('href');
-    
-                    // Check if the link is external and matches the specified domain
-                    if (href.includes('developers.amadeus.com') && window.location.hostname === 'amadeus4dev.github.io') {
-                        event.preventDefault();
-    
-                        // Modify the redirect URL
-                        const redirectUrl = 'https://developers.amadeus.com/self-service/apis-docs/guides' + href.split('developers.amadeus.com')[1];
-    
-                        // Redirect to the modified URL
-                        window.location.href = redirectUrl;
-                    }
-                }
-            });
-        });
-    </script>
-    {% endblock %}
