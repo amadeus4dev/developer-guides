@@ -589,7 +589,7 @@ The API will then return the available offers where `roomQuantity`is equal to 2.
 ```
 
 !!! information
-    The current version of the Hotel Search API returns the price per room. To get the total price of a reservation for multiple rooms, you must multiply the price by roomQuantity. 
+    The current version of the Hotel Search API returns the price per room. To get the total price of a reservation for multiple rooms, you must multiply the price by `roomQuantity`. 
 
 ### Book multiple rooms with details for one guest
 
