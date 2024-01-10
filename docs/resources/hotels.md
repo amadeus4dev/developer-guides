@@ -587,9 +587,13 @@ The API will then return the available offers where `roomQuantity`is equal to 2.
                 "checkInDate": "2022-11-22", 
                 "checkOutDate": "2022-11-23",
 ```
+
+!!! information
+    The current version of the Hotel Search API returns the price per room. To get the total price of a reservation for multiple rooms, you must multiply the price by `roomQuantity`. 
+
 ### Book multiple rooms with details for one guest
 
-To call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"}, you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below provides details of one guest to book two rooms by `offerId`: 
+To call the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking/api-reference){:target="\_blank"}, you must provide details for at least one guest per offer (the offer contains all rooms for the reservation). For example, the JSON query below details a request for one guest to book two rooms using `offerId`: 
 
 ```json
 { 
