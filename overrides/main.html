@@ -3,10 +3,10 @@
     -#}
     
     {% extends "base.html" %}
-    {% block scripts %}
+    <!-- Keep scipt in extrahead to keep the search bar active -->
+    {% block extrahead %}
     <script>
         if (window.location.hostname === 'amadeus4dev.github.io') {
-            // console.log(window.location.hostname);
             const path = window.location.pathname;
             const redirectPattern = /^\/([^/]+)/;
             const redirectUrl = path.replace(redirectPattern, 'https://developers.amadeus.com/self-service/apis-docs/guides/$1');
