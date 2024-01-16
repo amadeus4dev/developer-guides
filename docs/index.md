@@ -2,7 +2,7 @@
 
 Welcome to the **Amadeus for Developers** docs portal! 
 
-Our main focus here is on the [Self-Service APIs](https://uat.developers.amadeus.com/self-service). If you need any information on the [Enterprise APIs](https://developers.amadeus.com/enterprise){:target="\_blank"}, please reach out to our [customer support team](https://developers.amadeus.com/support/contact-us-enterprise){:target="\_blank"} and we'll be happy to assist you further.
+Our main focus here is on the [Self-Service APIs](https://developers.amadeus.com/self-service). If you need any information on the [Enterprise APIs](https://developers.amadeus.com/enterprise){:target="\_blank"}, please reach out to our [customer support team](https://developers.amadeus.com/support/contact-us-enterprise){:target="\_blank"} and we'll be happy to assist you further.
 
 ## What are the Self-Service APIs?
 
