@@ -271,7 +271,8 @@ For more information on flight booking please check our guide on [how to build a
 
 ### Do you provide Co2 emission?
 
-You can return Co2 emissions for a flight only after booking it. The information will be included in the response of [Flight Create Orders API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-create-orders).
+**New update from January 2024:** 
+You can return Co2 emission in the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-price) response when you are validating the price and available, or after the booking step in the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-create-orders) response.
 
 ### What are fare rules?
 
