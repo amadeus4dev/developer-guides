@@ -26,24 +26,18 @@ for root, dirs, files in os.walk(docs_dir):
             file_path = os.path.join(root, file)
             loader = UnstructuredMarkdownLoader(file_path)
             docs = loader.load()
-            logging.info(f'Loaded {len(docs)} document(s) from {file_path}')
-
+            # logging.info(f'Loaded {len(docs)} document(s) from {file_path}')
             # Append the loaded documents to the all_docs list
             all_docs.extend(docs)
-
 logging.info(f'Total documents loaded: {len(all_docs)}')
 
 # Chunking
 tokenizer = tiktoken.get_encoding('cl100k_base')
 
-
 def tiktoken_len(text):
-    tokens = tokenizer.encode(
-        text,
-        disallowed_special=()
-    )
+    #.encode() method converts a text string into a list of token integers.
+    tokens = tokenizer.encode(text,disallowed_special=())
     return len(tokens)
-
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=400,
@@ -51,7 +45,6 @@ text_splitter = RecursiveCharacterTextSplitter(
     length_function=tiktoken_len,
     separators=['\n\n', '\n', ' ', '']
 )
-chunks = text_splitter.split_text(all_docs[5].page_content)
 
 m = hashlib.md5()  # this will convert URL into unique ID
 
@@ -69,7 +62,7 @@ del_session.delete(
 
 for doc in tqdm(all_docs):
     url = doc.metadata['source'].replace(
-        './docs/', 'https://amadeus4dev.github.io/developer-guides/').replace('.md', '')
+        './docs/', 'https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/').replace('.md', '')
     m.update(url.encode('utf-8'))
     uid = m.hexdigest()[:12]
     chunks = text_splitter.split_text(doc.page_content)
@@ -96,8 +89,6 @@ for i in tqdm(range(0, len(documents), batch_size)):
     res = s.post(
         f'{endpoint_url}/upsert',
         headers=headers,
-        json={
-            'documents': documents[i:i_end]
-        }
+        json={'documents': documents[i:i_end]}
     )
     logging.info(res.status_code)
