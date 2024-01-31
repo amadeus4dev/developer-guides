@@ -216,7 +216,7 @@ names, baggage allowances and departure terminals.
 
 
 !!!warning
-    - Flights from low-cost carriers and American Airlines are currently unavailable.
+    - Flights from low-cost carriers, American Airlines, Delta and, in some markets British Airways are unavailable.
 
 The [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"}  starts the booking cycle with a search for the
 best fares. The API returns a list of the cheapest flights given a city/airport
