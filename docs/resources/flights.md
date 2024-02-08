@@ -1580,6 +1580,24 @@ You can also see the process step to step How to display farerules in this video
 
 ![type:video](https://www.youtube.com/embed/CZ2bi0ifHqs)
 
+## Check CO2 emissions data
+
+The [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"} allows you to see the emissions data for your itinerary. This data is returned as part of the reponse in the following format:
+
+```json
+                "co2Emissions": [
+                  {
+                    "weight": 46,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+```
+
+* `weight` is an integer representing the weight of CO2 emitted for the concerned flight segment
+* `weightUnit` is a string indicating the unit of measurement for the weight of CO2 emissions, which can be specified in either pounds or kilos.
+* `cabin` is a string representing the quality of service offered in the cabin where the seat is located. This is an enum, which can be `ECONOMY`, `PREMIUM_ECONOMY`, `BUSINESS`, `FIRST`. 
+
 ## Book a Flight
 
 Once the fare is confirmed, you’re ready to use the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}
