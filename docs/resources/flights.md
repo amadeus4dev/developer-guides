@@ -268,30 +268,39 @@ GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BO
 
 We can limit the search to a specific airline by providing its IATA airline code, such as BA for the British Airways:
 
-
-https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&includedAirlineCodes=BA
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&includedAirlineCodes=BA
+```
 
 Alternatively, we can exclude an airline from the search in a similar way:
 
-https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&excludedAirlineCodes=BA
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&excludedAirlineCodes=BA
+```
 
 The `nonStop` parameter filters the search query to direct flights only:
 
-https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&nonStop=true
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&nonStop=true
+```
 
 The `currencyCode` defines the currency in which we will see the offer prices:
 
-https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&currencyCode=EUR
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&currencyCode=EUR
+```
 
 We can limit the maximum price to a certain amount and specify the currency as described above:
 
-
-https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&maxPrice=500&currencyCode=EUR
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&maxPrice=500&currencyCode=EUR
+```
 
 The maximum number of results retrieved can be limited using the `max` parameter in the search query:
 
-https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&max=1
-
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CHI&departureDate=2022-07-26&adults=1&max=1
+```
 
 
 The API returns a list of `flight-offer` objects (up to 250), including
