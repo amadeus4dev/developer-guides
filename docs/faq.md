@@ -99,7 +99,7 @@ Our Self-Service offer is designed for newcomers to Amadeus, there are no prereq
 
 ### Are there any limitations to the Self-Service API dataset?
 
-We do not return data on American Airlines, Delta, Low cost carriers, and, in some markets, British Airways. For other arlines we only return published rates. We do not return negotiated rates or any other special rates. The Flight Offers Search only returns the bag allowance information for one passenger type code. Airlines blacklisted in the EU are not returned using the Flight Offers Search GET, e.g., Iraqi Airways. There is a possibility to override this with the POST method.
+We do not return data on American Airlines, Delta, British Airways and Low cost carriers. For other arlines we only return published rates. We do not return negotiated rates or any other special rates. The Flight Offers Search only returns the bag allowance information for one passenger type code. Airlines blacklisted in the EU are not returned using the Flight Offers Search GET, e.g., Iraqi Airways. There is a possibility to override this with the POST method.
 
 ### How can I do group booking?
 
