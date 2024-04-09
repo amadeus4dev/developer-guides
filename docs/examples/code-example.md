@@ -4,69 +4,6 @@ To help you get up and running with the Amadeus Self-Service APIs as smoothly as
 
 If you have any questions or ideas for improvement, don't hesitate to raise an issue or a pull request directly from GitHub examples [repository](https://github.com/amadeus4dev/amadeus-code-examples){:target="\_blank"}.
 
-## Travel safety 
-
-### Safe Place
-
-By geolocation
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations/Python%20SDK/safe_place.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations/NodeSDK/safe_place.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations/Java%20SDK/SafePlace.java"
-    ```
-
-By square
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_by_square/Python%20SDK/safe_place.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_by_square/Node%20SDK/safe_place.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_by_square/Java%20SDK/SafePlace.java"
-    ```
-
-By Id
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_safety_rated_locationId/Python%20SDK/safe_place.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_safety_rated_locationId/Node%20SDK/safe_place.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/safe_place/v1/get/safety_rated_locations_safety_rated_locationId/Java%20SDK/SafePlace.java"
-    ```
 
 ## Flights 
 

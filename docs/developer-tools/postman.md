@@ -70,7 +70,7 @@ Before you begin, you need to:
 
 ## Make an API call
 
-1. Select the required API from the collection by navigating to the required endpoint on the left side bar. For example, **Air > Search & Shopping > Flight Offers Search**.
+1. Select the required API from the collection by navigating to the required endpoint on the left side bar. For example, **Flights > Flight Booking > Flight Offers Search**.
 2. Do not specify the `client_id` and `client_secret` parameters, as the **access_token** obtained previously is already linked to this API.
 3. If required, specify the request parameters. Alternatively, you can try the API without setting any parameters, as we have already preconfigured it to display data for the upcoming month.
 4. Click **Send** to make the call.
@@ -79,7 +79,7 @@ Before you begin, you need to:
 
 ## Make our preconfigured scenarios
 
-To give you a smooth user experience that emulates the actual workflow of a flight and hotel booking engine, we have included Scenarios in the **Air** and **Hotel** categories. A scenario combines all required APIs to achive a certain goal (e.g., book a flight) and uses data from each of the API's responses for calling the next API.
+To give you a smooth user experience that emulates the actual workflow of a flight and hotel booking engine, we have included Scenarios in the **Flights** and **Hotels** categories. A scenario combines all required APIs to achive a certain goal (e.g., book a flight) and uses data from each of the API's responses for calling the next API.
 
 1. Select the required scenario from the collection by navigating to the required category on the left side bar. For example, **Air > (Scenario)Basic Flight Booking flow**.
 2. Refresh the **access_token** by calling the Authorization API.
@@ -93,9 +93,9 @@ Some APIs in our Postman include a visualization to present the results graphica
 
 To access a visualization of an API:
 
-1. Select the required API from the collection by navigating to the required endpoint on the left side bar. For example, **Destination Content > Location > Safe Place**.
+1. Select the required API from the collection by navigating to the required endpoint on the left side bar. For example, **Market Insight > Flight Busiest Traveling Period**.
 2. Specify the API parameters.
 3. Click **Send** to make the call.
 4. Click **Visualize** at the bottom of the screen.
 
-    ![12](../images/developer-tools/postman/postman-12.png)
+    ![12](../images/developer-tools/postman/postman-13.png)

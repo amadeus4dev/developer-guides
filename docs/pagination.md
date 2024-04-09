@@ -5,8 +5,6 @@ That's where **pagination** comes in. Using pagination, you can split the result
 
 Not all Amadeus Self-Service APIs support pagination. The following APIs currently support pagination:
 
-
-* [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"} 
 * [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}
 * [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant){:target="\_blank"}
 * [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"}

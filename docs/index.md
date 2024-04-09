@@ -6,7 +6,7 @@ Our main focus here is on the [Self-Service APIs](https://developers.amadeus.com
 
 ## What are the Self-Service APIs?
 
-Target independent developers and start-ups that wish to connect to Amadeus APIs in a quick and easy manner. You can access and start to test these new REST/JSON APIs in less than 3 minutes, and get quick access to production data with a flexible pay-as-you-go pricing model. Please note that the catalog includes some selected APIs, although we will be constantly releasing new APIs. Currently, you can find APIs around flights, hotels, destination content, and travel safety.
+Target independent developers and start-ups that wish to connect to Amadeus APIs in a quick and easy manner. You can access and start to test these new REST/JSON APIs in less than 3 minutes, and get quick access to production data with a flexible pay-as-you-go pricing model. Please note that the catalog includes some selected APIs, although we will be constantly releasing new APIs. Currently, you can find APIs around flights, destination Experiences, cars & transfers, market insights, hotels, and itinerary management.
 
 Self-Service users have at their disposal detailed documentation, guides, and SDKs to be able to integrate the APIs in their apps. 
 
