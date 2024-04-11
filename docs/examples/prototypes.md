@@ -16,7 +16,7 @@ There are two types of prototypes (demo apps) available.
 | Flight booking engine                                 | Flight Offers Search, Flight Offers Price, Flight Create Order, Airport & City Search  | Python, Django           | [See details](##amadeus-flight-booking-django)                 |
 | Hotel Booking engine                                  | Hotel List, Hotel Search, Hotel Booking                                                                                 | Python, Django           | [See details](#amadeus-hotel-booking-django)                   |
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Python, Django           | [See details](#amadeus-flight-price-analysis-django)   |
-| Map with Hotels, Point of interests and Safety scores | Hotel List, Points of Interest, Safe Place, Tours and Activities                                                                | Python, Django, HERE Maps | [See details](#amadeus-hotel-area-safety-pois-django) |
+| Map with Hotels, Point of interests | Hotel List, Points of Interest, Tours and Activities                                                                | Python, Django, HERE Maps | [See details](#amadeus-hotel-area-safety-pois-django) |
 
 ### Amadeus Flight Booking in Django {#amadeus-flight-booking-django}
 
@@ -66,7 +66,6 @@ The prototype is built by Python/Django and the [Amadeus Python SDK](../develope
 
 * [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}: shows hotels on the map
 * [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}: shows POIs around the hotel
-* [Safe Place](https://developers.amadeus.com/self-service/category/covid-19-and-travel-safety/api-doc/safe-place){:target="\_blank"}: shows safety information for the area each hotel is located
 * [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"}: shows bookable tours and activities around the hotel
 * [HERE Maps](https://developer.here.com/){:target="\_blank"}: displays a map with markers and text bubbles
 
