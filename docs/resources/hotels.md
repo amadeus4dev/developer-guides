@@ -3,7 +3,7 @@
 The **Hotels** category contains APIs that can help you find the right hotel and complete the booking.
 
 !!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
+    This page has been updated with Hotel Booking API v2.0 new release since June 2024. 
 
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
@@ -14,9 +14,6 @@ The **Hotels** category contains APIs that can help you find the right hotel and
 | [Hotel Name Autocomplete API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-name-autocomplete/api-reference){:target="\_blank"} | Provides a list of up to 20 hotels whose names most closely match the search query string. |
 
 Let's learn how to get started and help your users book the perfect rooms at over 150,000 hotels worldwide.
-
-!!! information
-    This page has been updated based on `Hotel Search V3` updates since MAY 2022. 
 
 ## Search hotels
 
