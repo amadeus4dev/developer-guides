@@ -8,7 +8,7 @@ The method to acquire a token is called **grant**. There are different types of 
 
 Once you have created an app and received your `API Key` and  `API Secret`, you can generate an access token by sending a `POST` request to the authorization server:
 
-[https://test.api.amadeus.com/v1/security/oauth2/token/](https://test.api.amadeus.com/v1/security/oauth2/token/){:target="\_blank"}
+[https://test.api.amadeus.com/v1/security/oauth2/token](https://test.api.amadeus.com/v1/security/oauth2/token){:target="\_blank"}
 
 !!!information
     Remember that your `API Key` and  `API Secret` should be kept private. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage).
