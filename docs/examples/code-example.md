@@ -887,26 +887,6 @@ By Id
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Java%20SDK/CitySearch.java"
     ```
 
-### Trip Parser
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Python%20SDK/trip_parser.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Node%20SDK/trip_parser.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_parser/v3/post/Java%20SDK/TripParser.java"
-    ```
-
 ### Trip Purpose Prediction
 
 === "Python"

@@ -7,14 +7,8 @@ In the **Itinerary Management** category, you can give travelers a simple and pe
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference){:target="\_blank"} | Build a single itinerary with information from different booking confirmation emails.                                                 |
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference){:target="\_blank"} | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
 | [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} | Finds cities that match a specific word or string of letters. |
- 
-## Parse the email confirmation into JSON
-
-The [Trip Parser  API](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser/api-reference){:target="\_blank"} helps to extract information from different booking confirmation emails and compile it into a single structured `JSON` itinerary. This API can parse information from `flight`, `hotel`, `rail`, and `rental car` confirmation emails. It provides the result of your parsing immediately, thanks to our algorithm. 
-
 
 ### Encode your booking confirmation in Base64
 
