@@ -81,7 +81,6 @@ The table below details the available test data for each Self-Service API:
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
-| [Trip Parser](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-parser){:target="\_blank"} |  No data restrictions in test. |
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction){:target="\_blank"}  | No data restrictions in test. |
 
 ### Market insights
