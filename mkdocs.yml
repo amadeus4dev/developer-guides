@@ -121,11 +121,11 @@ nav:
     - API Tutorials:
         - resources/index.md
         - Flights: resources/flights.md
-        - Hotels: resources/hotels.md
         - Destination experiences: resources/destination-experiences.md
-        - Itinerary management: resources/itinerary-managment.md
-        - Market insights: resources/market-insight.md
         - Cars and Transfers: resources/cars-transfers.md
+        - Market insights: resources/market-insight.md
+        - Hotels: resources/hotels.md
+        - Itinerary management: resources/itinerary-managment.md
     - Developer tools:
         - developer-tools/index.md
         - Node: developer-tools/node.md

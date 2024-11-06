@@ -2,9 +2,6 @@
 
 The **Flights** category contains a wide array of APIs that can help you manage flights, from searching for flight options to actually booking a flight.
 
-!!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
-
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | **Flight booking** |
