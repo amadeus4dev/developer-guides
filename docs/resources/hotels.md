@@ -2,9 +2,6 @@
 
 The **Hotels** category contains APIs that can help you find the right hotel and complete the booking.
 
-!!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
-
 | APIs                                                                                                                                                          | Description                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} | Returns the name, address, geoCode, and time zone for each hotel bookable in Amadeus. |

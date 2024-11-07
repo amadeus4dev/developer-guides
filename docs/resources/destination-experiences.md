@@ -2,15 +2,13 @@
 
 With Amadeus Self-Service APIs, you can find data on over two million places and 150,000 activities and show travelers the best things to see and do. In the **Destination Experiences** category, we have two APIs available for that.
 
-!!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
-
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest/api-reference){:target="\_blank"}     | Find the best sights, shops, and restaurants in any city or neighborhood.                                                 |
 | [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"} | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
+| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} | Finds cities that match a specific word or string of letters. |
 
-These two APIs have the same behavior. You can search by radius or by a square, and retrieve results by ID. Let's go through them one by one.
+The first two APIs have the same behavior. You can search by radius or by a square, and retrieve results by ID. Let's go through them one by one.
 
 ## Show Travelers the best sights, shops, and restaurants
 
@@ -178,3 +176,64 @@ Same as [Points of Interest  API](https://developers.amadeus.com/self-service/ca
 ```bash
 curl https://test.api.amadeus.com/v1/shopping/activities/23642
 ```
+
+## Find a city by keywords
+
+If you are unsure of the exact spelling of a city, you can reach out to the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}. This API uses a keyword, which is a string containing a minimum of 3 and a maximum of 10 characters, to search for a city whose name contains this keyword. It is not critical whether you enter the entire city name or only a part of it. For example, `Paris`, `Par` or `ari` will all return `Paris` in the search results.
+
+There are two optional parameters to help you make the query more precise - `countryCode` and `max`. The `countryCode` is a string for the ISO 3166 Alpha-2 code of the country where you need to locate a city, for example, `FR` for France. The `max` is an integer that defines the maximum number of search results.
+
+You can also include a list of airports for each city returned in the search results. To do this, you need to add `AIRPORTS` to the include field, which is an array of strings defining additional resources for your search.
+
+Let's check out the results for keyword `PAR`. We will limit the search scope to `FR` and the number of results to two.
+
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/cities?countryCode=FR&keyword=PAR&max=2
+```
+
+The results are probably rather predictable:
+
+```json
+{
+  "meta": {
+    "count": 2,
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/reference-data/locations/cities?countryCode=FR&keyword=PAR&max=2"
+    }
+  },
+  "data": [
+    {
+      "type": "location",
+      "subType": "city",
+      "name": "Paris",
+      "iataCode": "PAR",
+      "address": {
+        "countryCode": "FR",
+        "stateCode": "FR-75"
+      },
+      "geoCode": {
+        "latitude": 48.85341,
+        "longitude": 2.3488
+      }
+    },
+    {
+      "type": "location",
+      "subType": "city",
+      "name": "Le Touquet-Paris-Plage",
+      "iataCode": "LTQ",
+      "address": {
+        "countryCode": "FR",
+        "stateCode": "FR-62"
+      },
+      "geoCode": {
+        "latitude": 50.52432,
+        "longitude": 1.58571
+      }
+    }
+  ]
+}
+```
+
+First of all we see the French capital at the top of the list. The second result refers to the town Le Touquet-Paris-Plage, whose official name contains three letters that match our keyword. If we want to see more results, we can always adjust the `max` number of results.
+
+The main difference between the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} and [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} is that the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} only shows cities that have an airport, while the [City Search API](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} retrieves any city that matches a keyword.

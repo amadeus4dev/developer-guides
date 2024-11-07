@@ -2,13 +2,9 @@
 
 In the **Itinerary Management** category, you can give travelers a simple and personalized way to view their itinerary. 
 
-!!! information
-    Our catalogue of [Self-Service APIs](https://developers.amadeus.com/self-service){:target="\_blank"} is currently organised by categories that are different to what you see on this page.
-
 | APIs                                                                                                                                                 | Description                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction/api-reference){:target="\_blank"} | Analyze a flight itinerary and predict whether the trip is for business or leisure. |
-| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} | Finds cities that match a specific word or string of letters. |
 
 
 ## Predict the trip purpose from a flight
