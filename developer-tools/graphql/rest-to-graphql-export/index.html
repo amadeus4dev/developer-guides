@@ -1,0 +1,1847 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Amadeus for Developers Self-Service APIs Documentation">
+      
+      
+        <meta name="author" content="Amadeus for Developers">
+      
+      
+        <link rel="canonical" href="https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/graphql/rest-to-graphql-export/">
+      
+      
+        <link rel="prev" href="../rest-to-graphql-python/">
+      
+      
+        <link rel="next" href="../../../examples/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>OpenAPI to GraphQL converter - Amadeus for Developers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=AmadeusNeue:300,300i,400,400i,700,700i%7CSource+Sans+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"AmadeusNeue";--md-code-font:"Source Sans Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-4JL03MWFHC"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-4JL03MWFHC",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-4JL03MWFHC",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <script>
+        if (window.location.hostname === 'amadeus4dev.github.io') {
+            const path = window.location.pathname;
+            const redirectPattern = /^\/([^/]+)/;
+            const redirectUrl = path.replace(redirectPattern, 'https://developers.amadeus.com/self-service/apis-docs/guides/$1');
+            document.write(`<meta http-equiv="refresh" content="0;url=${redirectUrl}" />`);
+        }
+    </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#convert-an-openapi-specification-to-a-graphql-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Amadeus for Developers" class="md-header__button md-logo" aria-label="Amadeus for Developers" data-md-component="logo">
+      
+  <img src="../../../assets/logo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Amadeus for Developers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OpenAPI to GraphQL converter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/amadeus4dev/developer-guides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    amadeus4dev/developer-guides
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Amadeus for Developers" class="md-nav__button md-logo" aria-label="Amadeus for Developers" data-md-component="logo">
+      
+  <img src="../../../assets/logo2.png" alt="logo">
+
+    </a>
+    Amadeus for Developers
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/amadeus4dev/developer-guides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    amadeus4dev/developer-guides
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Free test data collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../API-Keys/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API keys
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API keys
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../API-Keys/authorization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authorization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../API-Keys/moving-to-production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api-rate-limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rate limits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pagination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pagination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../common-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../resources/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API Tutorials
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            API Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/flights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/destination-experiences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Destination experiences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/cars-transfers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cars and Transfers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/market-insight/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/hotels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hotels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/itinerary-managment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Itinerary management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Developer tools
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Developer tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openapi-generator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenAPI Generator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Postman collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mock-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    GraphQL
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            GraphQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest-to-graphql-node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL wrapper for REST (Node)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest-to-graphql-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL wrapper for REST (Python)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OpenAPI to GraphQL converter
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    OpenAPI to GraphQL converter
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-openapi-to-graphql-tool" class="md-nav__link">
+    Install the openapi-to-graphql tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-required-openapi-schema" class="md-nav__link">
+    Download the required OpenAPI schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert" class="md-nav__link">
+    Convert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-generated-schema" class="md-nav__link">
+    Access the generated schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-the-schema-to-your-code" class="md-nav__link">
+    Import the schema to your code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples and prototypes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Examples and prototypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/code-example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/live-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/prototypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prototypes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../migration-guides/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Migration guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_14" id="__nav_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Migration guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration-guides/hotel-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hotel search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-openapi-to-graphql-tool" class="md-nav__link">
+    Install the openapi-to-graphql tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-required-openapi-schema" class="md-nav__link">
+    Download the required OpenAPI schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert" class="md-nav__link">
+    Convert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-generated-schema" class="md-nav__link">
+    Access the generated schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-the-schema-to-your-code" class="md-nav__link">
+    Import the schema to your code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="convert-an-openapi-specification-to-a-graphql-schema">Convert an OpenAPI specification to a GraphQL schema</h1>
+<p>Follow this tutorial to learn how to convert an OpenAPI specification to a GraphQL schema.</p>
+<p>Our Self-Service APIs are stored as OpenAPI specs in <a href="https://github.com/amadeus4dev/amadeus-open-api-specification">this repository</a>. In this tutorial, we will use the <a href="https://developers.amadeus.com/self-service/category/trip/api-doc/city-search/api-reference">City Search API</a> spec as an example and convert it to a GraphQL schema using <a href="https://github.com/IBM/openapi-to-graphql">openapi-to-graphql</a>. While there are many similar tools available, the underlying principle remains the same.</p>
+<p>The goal is to create a GraphQL schema and then utilise this schema for your GraphQL wrapper, regardless of the programming language your GraphQL server is written in.</p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>Before you begin, you need to:</p>
+<ul>
+<li>Have Node.js installed on your machine.</li>
+</ul>
+<h2 id="install-the-openapi-to-graphql-tool">Install the openapi-to-graphql tool</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>openapi-to-graphql-cli
+</code></pre></div></td></tr></table></div>
+<h2 id="download-the-required-openapi-schema">Download the required OpenAPI schema</h2>
+<p>Navigate to the <a href="https://github.com/amadeus4dev/amadeus-open-api-specification">amadeus-open-api-specification repository</a> and download the required specification for your API. Alternatively, you can visit the <a href="https://developers.amadeus.com/self-service">Developers portal</a> and download the specification from the page of a specific API.</p>
+<h2 id="convert">Convert</h2>
+<p>For example, let's download the <a href="https://developers.amadeus.com/self-service/category/trip/api-doc/city-search/api-reference">City Search API</a> OpenAPI specification to the same directory where we run our project. We will then specify the name for the output file - <code>schema.graphql</code> and execute the following command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>openapi-to-graphql<span class="w"> </span>CitySearch_v1_Version_1.0_swagger_specification.json<span class="w"> </span>--save<span class="w"> </span>schema.graphql<span class="w">   </span>
+</code></pre></div></td></tr></table></div>
+<h2 id="access-the-generated-schema">Access the generated schema</h2>
+<p>The schema is now created as <code>schema.graphql</code>. For the City Search API, the contents will appear like this:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">Query</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="s2">  GET Cities by keyword</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="s2">  Equivalent to GET /reference-data/locations/cities</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="s2">  &quot;&quot;&quot;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="nx">referenceDataLocationsCities</span><span class="p">(</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;ISO 3166 Alpha-2 code. e.g. &quot;</span><span class="nx">US</span><span class="s2">&quot; United States of America.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nx">countryCode</span><span class="o">:</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;Resources to be included example : Airports&quot;&quot;&quot;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">IncludeListItem</span><span class="p">]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;keyword that should represent the start of a word in a city name.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="nx">keyword</span><span class="o">:</span><span class="w"> </span><span class="kt">String</span><span class="o">!</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;Number of results user want to see in response.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="kt">Int</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="kd">enum</span><span class="w"> </span><span class="nx">IncludeListItem</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">  </span><span class="nx">AIRPORTS</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="import-the-schema-to-your-code">Import the schema to your code</h2>
+<p>Depending on the server that we use, we will now need to reference this schema. For example, in Node.js, you can use the Apollo Server library to create a GraphQL server:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ApolloServer</span><span class="p">,</span><span class="w"> </span><span class="nx">gql</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;apollo-server&#39;</span><span class="p">);</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">typeDefs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gql</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;&lt;path-to-generated-graphql-schema&gt;&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf8&#39;</span><span class="p">));</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">resolvers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// Implement your resolvers here</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ApolloServer</span><span class="p">({</span><span class="w"> </span><span class="nx">typeDefs</span><span class="p">,</span><span class="w"> </span><span class="nx">resolvers</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">().</span><span class="nx">then</span><span class="p">(({</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`🚀 Server ready at </span><span class="si">${</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 12, 2024</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="-1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="-1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://forms.office.com/e/q71CrJKTk6" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../rest-to-graphql-python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GraphQL wrapper for REST (Python)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                GraphQL wrapper for REST (Python)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Code examples and prototypes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Code examples and prototypes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © Amadeus IT Group S.A.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/amadeus4dev" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://stackoverflow.com/questions/tagged/amadeus" target="_blank" rel="noopener" title="stackoverflow.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M290.7 311 95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@amadeusfordevelopers8592" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.com/invite/cVrFBqx" target="_blank" rel="noopener" title="discord.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/amadeus4dev" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/showcase/amadeus-for-developers" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.footer", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>

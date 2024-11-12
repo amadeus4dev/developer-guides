@@ -1,0 +1,57 @@
+:root {
+    /* Primary color shades */
+    --md-primary-fg-color--light: #3A8BFF;
+    --md-primary-fg-color--dark:  #3A8BFF;
+    --md-accent-fg-color: #3A8BFF;
+
+  }
+  .md-header {
+    background-color: #000835; 
+  }
+  /* .md-search__form {
+    background-color: #C5D5F9; 
+  } */
+  .md-typeset a {
+    color: #3A8BFF; 
+  }
+  .md-footer-meta {
+    background-color: #000835; 
+  }
+  .md-footer {
+    background-color: #C5D5F9;
+    color: #000835
+  }
+  .md-nav__item .md-nav__link--active {
+    color:#3A8BFF;
+  }
+
+@font-face {
+    font-family: 'AmadeusNeue';
+    src: url('../fonts/AmadeusNeue-Light.woff2') format('woff2'),
+         url('../fonts/AmadeusNeue-Light.woff') format('woff'),
+         url('../fonts/AmadeusNeue-Light.ttf') format('truetype'),
+         url('../fonts/AmadeusNeue-Light.otf') format('opentype');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'AmadeusNeue';
+  src: url('../fonts/AmadeusNeue-Bold.woff2') format('woff2'),
+       url('../fonts/AmadeusNeue-Bold.woff') format('woff'),
+       url('../fonts/AmadeusNeue-Bold.ttf') format('truetype'),
+       url('../fonts/AmadeusNeue-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AmadeusNeue';
+  src: url('../fonts/AmadeusNeue-Regular.woff2') format('woff2'),
+       url('../fonts/AmadeusNeue-Regular.woff') format('woff'),
+       url('../fonts/AmadeusNeue-Regular.ttf') format('truetype'),
+       url('../fonts/AmadeusNeue-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
