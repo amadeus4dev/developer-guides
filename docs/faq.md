@@ -562,7 +562,7 @@ There are two different support paths available based on our two different offer
 
 !!! important
     **Contact Support** <br>
-    You need to be [registered](https://developers.amadeus.com/register){:target="\_blank"} and [signed in](https://developers.amadeus.com/signin){:target="\_blank"} to reach out to the [Self-Service support](https://uat.developers.amadeus.com/support/contact-us-self-service){:target="\_blank"}.
+    You need to be [registered](https://developers.amadeus.com/register){:target="\_blank"} and [signed in](https://developers.amadeus.com/signin){:target="\_blank"} to reach out to the [Self-Service support](https://developers.amadeus.com/support/contact-us-self-service){:target="\_blank"}.
 
 2. Enterprise users have access to dedicated support. If you are an Enterprise user, get in touch with your Account Manager or open a ticket via the Amadeus Service Hub.
  
