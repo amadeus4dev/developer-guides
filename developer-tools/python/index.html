@@ -1725,7 +1725,7 @@ you can install the SDK as a regular Python package.</p>
 <span class="normal"><a href="#__codelineno-5-12">12</a></span>
 <span class="normal"><a href="#__codelineno-5-13">13</a></span>
 <span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">amadeus</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">Location</span><span class="p">,</span> <span class="n">ResponseError</span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">amadeus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">Location</span><span class="p">,</span> <span class="n">ResponseError</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">amadeus</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;AMADEUS_CLIENT_ID&#39;</span><span class="p">,</span>
@@ -1821,9 +1821,9 @@ you can install the SDK as a regular Python package.</p>
 <span class="normal"><a href="#__codelineno-9-26">26</a></span>
 <span class="normal"><a href="#__codelineno-9-27">27</a></span>
 <span class="normal"><a href="#__codelineno-9-28">28</a></span>
-<span class="normal"><a href="#__codelineno-9-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">aiohttp</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span> <span class="nn">requests</span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">AUTH_ENDPOINT</span> <span class="o">=</span> <span class="s2">&quot;https://test.api.amadeus.com/v1/security/oauth2/token&quot;</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">}</span>
@@ -1835,7 +1835,7 @@ you can install the SDK as a regular Python package.</p>
 <a id="__codelineno-9-12" name="__codelineno-9-12"></a>                        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="n">access_token</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-9-16" name="__codelineno-9-16"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="s1">&#39;Bearer&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a>    <span class="n">flight_search_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://test.api.amadeus.com/v2/reference-data/urls/checkin-links&#39;</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a>    <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;airlineCode&quot;</span><span class="p">:</span> <span class="s1">&#39;BA&#39;</span><span class="p">}</span>
@@ -1878,16 +1878,16 @@ you can install the SDK as a regular Python package.</p>
 <span class="normal"><a href="#__codelineno-10-22">22</a></span>
 <span class="normal"><a href="#__codelineno-10-23">23</a></span>
 <span class="normal"><a href="#__codelineno-10-24">24</a></span>
-<span class="normal"><a href="#__codelineno-10-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span> <span class="nn">requests</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">from</span> <span class="nn">amadeus</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">amadeus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">amadeus</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;YOUR_AMADEUS_API_KEY&#39;</span><span class="p">,</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7"></a>    <span class="n">client_secret</span><span class="o">=</span><span class="s1">&#39;YOUR_AMADEUS_API_SECRET&#39;</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="p">)</span>
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11"></a>
 <a id="__codelineno-10-12" name="__codelineno-10-12"></a>        <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a>        <span class="n">futures</span> <span class="o">=</span> <span class="p">[</span>
@@ -1942,9 +1942,9 @@ In your local directory you will see the folder <code>auth</code> which contains
 <span class="normal"><a href="#__codelineno-13-15">15</a></span>
 <span class="normal"><a href="#__codelineno-13-16">16</a></span>
 <span class="normal"><a href="#__codelineno-13-17">17</a></span>
-<span class="normal"><a href="#__codelineno-13-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">openapi_client</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">openapi_client.apis.tags</span> <span class="kn">import</span> <span class="n">o_auth2_access_token_api</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kn">from</span> <span class="nn">openapi_client.model.amadeus_o_auth2_token</span> <span class="kn">import</span> <span class="n">AmadeusOAuth2Token</span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">openapi_client</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">openapi_client.apis.tags</span><span class="w"> </span><span class="kn">import</span> <span class="n">o_auth2_access_token_api</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">openapi_client.model.amadeus_o_auth2_token</span><span class="w"> </span><span class="kn">import</span> <span class="n">AmadeusOAuth2Token</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4"></a>
 <a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="n">auth_configuration</span> <span class="o">=</span> <span class="n">openapi_client</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="k">with</span> <span class="n">openapi_client</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">auth_configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
@@ -2002,8 +2002,8 @@ In your local directory you will see the folder <code>auth</code> which contains
 <span class="normal"><a href="#__codelineno-16-20">20</a></span>
 <span class="normal"><a href="#__codelineno-16-21">21</a></span>
 <span class="normal"><a href="#__codelineno-16-22">22</a></span>
-<span class="normal"><a href="#__codelineno-16-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">import</span> <span class="nn">openapi_client</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kn">from</span> <span class="nn">openapi_client.apis.tags</span> <span class="kn">import</span> <span class="n">shopping_api</span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">openapi_client</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">openapi_client.apis.tags</span><span class="w"> </span><span class="kn">import</span> <span class="n">shopping_api</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3"></a>
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="n">flight_configuration</span> <span class="o">=</span> <span class="n">openapi_client</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="n">api_client</span> <span class="o">=</span> <span class="n">openapi_client</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">flight_configuration</span><span class="p">)</span>

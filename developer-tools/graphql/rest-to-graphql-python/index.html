@@ -1583,9 +1583,9 @@
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
 <span class="normal"><a href="#__codelineno-4-13">13</a></span>
 <span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">def</span> <span class="nf">fetch_cities</span><span class="p">(</span><span class="n">keyword</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">fetch_cities</span><span class="p">(</span><span class="n">keyword</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://test.api.amadeus.com/v1/reference-data/locations/cities?keyword=</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
@@ -1607,9 +1607,9 @@
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">fetch_data</span> <span class="kn">import</span> <span class="n">fetch_cities</span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fetch_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_cities</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">def</span> <span class="nf">resolve_get_cities</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">resolve_get_cities</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="n">token</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;request&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;authorization&quot;</span><span class="p">]</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="n">cities</span> <span class="o">=</span> <span class="n">fetch_cities</span><span class="p">(</span><span class="n">keyword</span><span class="p">,</span> <span class="n">token</span><span class="p">)</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="k">return</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">city</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]}</span> <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">]</span>
@@ -1625,9 +1625,9 @@
 <span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">ariadne</span> <span class="kn">import</span> <span class="n">QueryType</span><span class="p">,</span> <span class="n">make_executable_schema</span><span class="p">,</span> <span class="n">load_schema_from_path</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">ariadne.asgi</span> <span class="kn">import</span> <span class="n">GraphQL</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">from</span> <span class="nn">resolvers</span> <span class="kn">import</span> <span class="n">resolve_get_cities</span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ariadne</span><span class="w"> </span><span class="kn">import</span> <span class="n">QueryType</span><span class="p">,</span> <span class="n">make_executable_schema</span><span class="p">,</span> <span class="n">load_schema_from_path</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ariadne.asgi</span><span class="w"> </span><span class="kn">import</span> <span class="n">GraphQL</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">resolvers</span><span class="w"> </span><span class="kn">import</span> <span class="n">resolve_get_cities</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">type_defs</span> <span class="o">=</span> <span class="n">load_schema_from_path</span><span class="p">(</span><span class="s2">&quot;schema.graphql&quot;</span><span class="p">)</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">query</span> <span class="o">=</span> <span class="n">QueryType</span><span class="p">()</span>
