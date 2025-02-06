@@ -59,7 +59,7 @@ The prototype is built with Python/Django and the [ Amadeus Python SDK](../devel
 
 ### Amadeus Hotel Search with area safety and POIs {#amadeus-hotel-area-safety-pois-django}
 
-* **Demo app**: You can access the demo of the prototype [here](https://flight-price-analysis.azurewebsites.net/).
+* **Demo app**: You can access the demo of the prototype [here](https://hotel-search-map.azurewebsites.net/).
 * **Source code**: You can access the source code [on GitHub](https://github.com/amadeus4dev/amadeus-hotel-area-safety-pois-django){:target="\_blank"}.
 
 The prototype is built by Python/Django and the [Amadeus Python SDK](../developer-tools/python.md), It demonstrates the safety information, POIs and tours for a chosen hotel on a map, using the following APIs:
