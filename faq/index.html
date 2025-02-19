@@ -2058,13 +2058,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-can-i-cancel-a-room-booking" class="md-nav__link">
-    How can I cancel a room booking?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#why-do-i-get-500-status-code" class="md-nav__link">
     Why do I get 500 status code?
   </a>
@@ -2100,8 +2093,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-do-i-cancel-a-hotel" class="md-nav__link">
-    How do I cancel a hotel?
+  <a href="#how-do-i-cancel-a-hotel-booking" class="md-nav__link">
+    How do I cancel a hotel booking?
   </a>
   
 </li>
@@ -3261,13 +3254,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-can-i-cancel-a-room-booking" class="md-nav__link">
-    How can I cancel a room booking?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#why-do-i-get-500-status-code" class="md-nav__link">
     Why do I get 500 status code?
   </a>
@@ -3303,8 +3289,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-do-i-cancel-a-hotel" class="md-nav__link">
-    How do I cancel a hotel?
+  <a href="#how-do-i-cancel-a-hotel-booking" class="md-nav__link">
+    How do I cancel a hotel booking?
   </a>
   
 </li>
@@ -3732,8 +3718,6 @@ In case the ticket has not been issued. You will need to delete the booking and 
 <p>It is not possible to markup the prices of the hotel rooms with the current version of the Hotel Booking API. The reason is that the content we offer today in our Hotel Search/Book API is post-paid, meaning the traveler will pay directly at the hotel. The Hotel Booking API is here to enable making a reservation but not to pay directly. We are working on adding more hotel offers, especially offers that will be pre-paid, meaning you will be able to charge the travelers directly and add a markup. However, you still need to add a credit card while booking in case of cancellations or no-shows.</p>
 <h3 id="payment-providers-and-gateways">Payment providers and gateways</h3>
 <p>The Hotel Booking API works by using the guest's payment information and sending it to a chosen hotel for the reservation. You can use a payment gateway in your app, but this will not change the way the API works. The hotels will never collect any money from you. Instead, the payments are always done at the time of checkout between the guest and the hotel. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate information, so it doesn’t play the role of payment gateway. Be sure to validate the payment and guest information as invalid information may result in the reservation being canceled. As soon as your application stores, transmits, or processes cardholder information, you will need to comply with the PCI Data Security Standard (PCI DSS). For more information, visit the <a href="https://www.pcisecuritystandards.org/merchants/">PCI Security Council website</a>.</p>
-<h3 id="how-can-i-cancel-a-room-booking">How can I cancel a room booking?</h3>
-<p>As of now, the hotel booking API does not allow canceling rooms. If this option is possible with your hotel offer, the cancellation will have to be done manually with the hotels. We are working on an API for the cancellation; however, it is still too soon to commit to anything.</p>
 <h3 id="why-do-i-get-500-status-code">Why do I get 500 status code?</h3>
 <p>The process of booking a hotel in the test environment involves sending your request to each hotel provider, and each provider has its own environment and rules. Due to these differences, there may be connectivity issues with the providers that can result in a timeout. Additionally, if many requests are sent to a particular hotel, they may choose to block them. If you provide us with a timestamp and details of another API request that has failed, including the hotel in question, we can search our logs to find more information. However, it is likely that the issue is one of the aforementioned cases.</p>
 <h3 id="how-can-i-see-amadeus-api-coverage-for-a-hotel-chain">How can I see Amadeus API coverage for a hotel chain?</h3>
@@ -3744,7 +3728,7 @@ In case the ticket has not been issued. You will need to delete the booking and 
 <p>No, there are no legal documents required. However, you will need to comply with any local legal requirements for your market.</p>
 <h3 id="what-are-the-room-type-codes">What are the room type codes?</h3>
 <p>The room type code is a 3-character identifier that indicates the room type category, the number of beds, and the bed type. However, some hotels may not follow this pattern and instead use custom types. In such cases, the room description is the best way to understand the room type.</p>
-<h3 id="how-do-i-cancel-a-hotel">How do I cancel a hotel?</h3>
+<h3 id="how-do-i-cancel-a-hotel-booking">How do I cancel a hotel booking?</h3>
 <p>There is no way to cancel hotel bookings through the APIs. This needs to be done offline by ringing the hotels. </p>
 <h3 id="why-is-hotel-search-returning-empty-responses-data">Why is Hotel Search returning empty responses ‘{"data": []}’?</h3>
 <p>You are returning this because this specific hotel is closed or unavailable for this specific date. You can either try to change the check-in date or use the ''includeClosed'' parameter set to ''true''. The latter will return further information on the hotel, but you will not be able to book it.</p>
@@ -3887,7 +3871,7 @@ You need to be <a href="https://developers.amadeus.com/register" target="_blank"
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 12, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 19, 2025</span>
       
     
   </small>
