@@ -447,10 +447,6 @@ It is not possible to markup the prices of the hotel rooms with the current vers
 
 The Hotel Booking API works by using the guest's payment information and sending it to a chosen hotel for the reservation. You can use a payment gateway in your app, but this will not change the way the API works. The hotels will never collect any money from you. Instead, the payments are always done at the time of checkout between the guest and the hotel. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate information, so it doesn’t play the role of payment gateway. Be sure to validate the payment and guest information as invalid information may result in the reservation being canceled. As soon as your application stores, transmits, or processes cardholder information, you will need to comply with the PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants/).
 
-### How can I cancel a room booking?
-
-As of now, the hotel booking API does not allow canceling rooms. If this option is possible with your hotel offer, the cancellation will have to be done manually with the hotels. We are working on an API for the cancellation; however, it is still too soon to commit to anything.
-
 ### Why do I get 500 status code?
 
 The process of booking a hotel in the test environment involves sending your request to each hotel provider, and each provider has its own environment and rules. Due to these differences, there may be connectivity issues with the providers that can result in a timeout. Additionally, if many requests are sent to a particular hotel, they may choose to block them. If you provide us with a timestamp and details of another API request that has failed, including the hotel in question, we can search our logs to find more information. However, it is likely that the issue is one of the aforementioned cases.
@@ -471,7 +467,7 @@ No, there are no legal documents required. However, you will need to comply with
 
 The room type code is a 3-character identifier that indicates the room type category, the number of beds, and the bed type. However, some hotels may not follow this pattern and instead use custom types. In such cases, the room description is the best way to understand the room type.
 
-### How do I cancel a hotel?
+### How do I cancel a hotel booking?
 
 There is no way to cancel hotel bookings through the APIs. This needs to be done offline by ringing the hotels. 
 
