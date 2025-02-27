@@ -18,7 +18,6 @@ This page provides help with the most common terminology used across Amadeus Sel
 | Booking | The process of reserving a seat on a flight or a room in a hotel. |
 | Cabin | The section of an aircraft or train where passengers sit during their trip. It is divided into different classes, such as first class, business class, and economy class, each one with different amenities and prices. |
 | Commission | Fee paid to intermediaries for booking travel-related services, usually a percentage of the total cost. |
-| Consolidator | An airline consolidator is a wholesaler that secures bulk ticketing agreements with airlines to offer lower fares to travel agents. These consolidators function as intermediaries, often issuing tickets on behalf of non-IATA-accredited agencies. Travel startups without direct airline agreements must establish commercial arrangements with consolidators to issue tickets in their target markets. |
 | Carrier Code          | 2 to 3-character IATA carrier code (IATA table codes).  |
 | Country Code          | Country code following ISO 3166 Alpha-2 standard.         |
 | Delayed Ticketing | Delayed ticketing postpones ticket issuance until a specified time, giving travel agents more flexibility to collect payment from customers and adjust bookings before finalization. |
@@ -74,11 +73,11 @@ This page provides help with the most common terminology used across Amadeus Sel
 |----|----|
 | Avuxi | Amadeus' data provider on locations popularity. |
 | Activity Id           | [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"}  returns a unique activity Id along with the activity name, short description, geolocation, customer rating, image, price and deep link to the provider page to complete the booking. |
-| GeoSure | Amadeus's provider od data on locations crime rate, health and economic data, official travel alerts, local reporting and a variety of other sources.    |
-| GeoSure GeoSafeScores | Algorithm that analyzes crime, health and economic data, official travel alerts, local reporting and a variety of other sources.    |
 
 ### Technology
 
+| Term | Definition |
+|----|----|
 | Metasearch Engine | A metasearch engine aggregates fare and availability data from multiple travel agencies, airlines, and booking platforms. Instead of handling direct transactions, metasearch engines operate on an affiliate model, redirecting users to providers and earning commissions based on referral volume. |
 | NDC (New Distribution Capability) | New Distribution Capability (NDC) is an XML-based messaging standard developed by IATA to modernize airline content distribution. NDC enables airlines to offer richer, more dynamic fare structures, ancillary services, and personalized offers to travel agents. Access to NDC content is available only through the Enterprise framework. |
 | Owner Office ID | The Owner Office ID is a unique identifier assigned to a travel agency, linking all bookings to its account. During implementation, we generate this ID for you. If working with a consolidator, your Owner Office ID is linked to their system, granting them access to bookings you generate. |
