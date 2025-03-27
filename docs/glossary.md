@@ -80,10 +80,7 @@ This glossary offers guidance on the most common terms used in the tourism and t
 
 | Term | Definition |
 |----|----|
-| Avuxi | Amadeus' data provider on locations popularity. |
 | Activity Id           | [Tours and Activities  API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"}  returns a unique activity Id along with the activity name, short description, geolocation, customer rating, image, price and deep link to the provider page to complete the booking. |
-| GeoSure | Amadeus's provider od data on locations crime rate, health and economic data, official travel alerts, local reporting and a variety of other sources.    |
-| GeoSure GeoSafeScores | Algorithm that analyzes crime, health and economic data, official travel alerts, local reporting and a variety of other sources.    |
 | Metasearch Engine | Metasearch engines compile fare and availability data from multiple travel agencies and airlines. They operate on an affiliate model, earning commissions based on the referral volume they generate for specific providers. |
 
 ### API technology
