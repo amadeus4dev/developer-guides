@@ -7,7 +7,7 @@ description: Explore our glossary of tourism and travel industry terms, featurin
 
 This glossary offers guidance on the most common terms used in the tourism and travel industry, ranging from basic concepts to API technical vocabulary. It covers airlines and air travel definitions, as well as topics in hospitality, destination content, and some essential business aspects within the framework of Amadeus for Developers Self-Service offering.
 
-### [Air](https://developers.amadeus.com/self-service/category/air){:target="\_blank"}  and [Trip](https://developers.amadeus.com/self-service/category/trip){:target="\_blank"} 
+### [Flights](https://developers.amadeus.com/self-service/category/flights){:target="\_blank"}  and [Trip](https://developers.amadeus.com/self-service/category/trip){:target="\_blank"} 
 
 | Term | Definition |
 |----|----|
