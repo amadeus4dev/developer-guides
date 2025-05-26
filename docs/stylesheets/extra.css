@@ -55,3 +55,7 @@
   font-style: normal;
 }
 
+.md-header__button.md-logo img {
+transform: scale(2);
+transform-origin: left center;
+}

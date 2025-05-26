@@ -1,5 +1,5 @@
 ---
-title: Glossary - Travel API Terminology & Definitions | Amadeus for Developers
+title: Glossary - Travel API Terminology & Definitions
 description: Explore our glossary of tourism and travel industry terms, featuring key concepts for working with Amadeus Self-Service APIs.
 ---
 
