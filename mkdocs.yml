@@ -41,7 +41,7 @@ theme:
     text: AmadeusNeue
     code: Source Sans Pro
   favicon: assets/favicon.png
-  logo: assets/logo2.png
+  logo: assets/logo.png
 
 markdown_extensions:
   - admonition
