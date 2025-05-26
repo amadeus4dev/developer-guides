@@ -1,11 +1,11 @@
 ---
-title: Glossary
+title: Glossary - Travel API Terminology & Definitions | Amadeus for Developers
 description: Explore our glossary of tourism and travel industry terms, featuring key concepts for working with Amadeus Self-Service APIs.
 ---
 
-# Key concepts
+# Key API and travel terminology
 
-This glossary offers guidance on the most common terms used in the tourism and travel industry, ranging from basic concepts to API technical vocabulary. It covers airlines and air travel definitions, as well as topics in hospitality, destination content, and some essential business aspects within the framework of Amadeus for Developers Self-Service offering.
+This glossary delivers guidance on the most common terms used in the tourism and travel industry, ranging from basic concepts to API technical vocabulary. It covers airlines and air travel definitions, as well as topics in hospitality, destination content, and some essential business aspects within the framework of Amadeus for Developers Self-Service offering.
 
 ### [Flights](https://developers.amadeus.com/self-service/category/flights){:target="\_blank"}  and [Trip](https://developers.amadeus.com/self-service/category/trip){:target="\_blank"} 
 
