@@ -23,7 +23,7 @@ You can now help your users find the best things to do in over 8,000 destination
 You can search activities for a specific location by providing a latitude and longitude. The API returns activities within a 1km radius, but you can also define a custom radius. 
 
 ```bash
-curl https://test.api.amadeus.com/v1/shopping/activities/longitude=-3.69170868&latitude=40.41436995&radius=1   
+curl https://test.api.amadeus.com/v1/shopping/activities?longitude=-3.69170868&latitude=40.41436995&radius=1   
 ```
 
 ### Search by a square
