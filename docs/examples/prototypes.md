@@ -16,7 +16,7 @@ There are two types of prototypes (demo apps) available.
 | Flight booking engine                                 | Flight Offers Search, Flight Offers Price, Flight Create Order, Airport & City Search  | Python, Django           | [See details](#amadeus-flight-booking-django)                 |
 | Hotel Booking engine                                  | Hotel List, Hotel Search, Hotel Booking                                                                                 | Python, Django           | [See details](#amadeus-hotel-booking-django)                   |
 | Flight Search with Price Analysis & Trip purpose      | Flight Offers Search, Flight Price Analysis, Trip Purpose Prediction                                        | Python, Django           | [See details](#amadeus-flight-price-analysis-django)   |
-| Map with Hotels, Point of interests | Hotel List, Points of Interest, Tours and Activities                                                                | Python, Django, HERE Maps | [See details](#amadeus-hotel-area-safety-pois-django) |
+| Map with Hotels, Point of interests | Hotel List, Tours and Activities                                                                | Python, Django, HERE Maps | [See details](#amadeus-hotel-area-safety-pois-django) |
 
 ### Amadeus Flight Booking in Django {#amadeus-flight-booking-django}
 
@@ -61,7 +61,6 @@ The prototype is built with Python/Django and the [ Amadeus Python SDK](../devel
 The prototype is built by Python/Django and the [Amadeus Python SDK](../developer-tools/python.md), It demonstrates the safety information, POIs and tours for a chosen hotel on a map, using the following APIs:
 
 * [Hotel List](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list){:target="\_blank"}: shows hotels on the map
-* [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"}: shows POIs around the hotel
 * [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"}: shows bookable tours and activities around the hotel
 * [HERE Maps](https://developer.here.com/){:target="\_blank"}: displays a map with markers and text bubbles
 
@@ -87,11 +86,9 @@ We have many other prototypes or demo apps that developers in our community buil
 | Airport & City autocomplete                | Airport & City Search                                                                             | Node, Express, React | [amadeus-airport-city-search-mern](#amadeus-airport-city-search-mern)                                                                                 |
 | Flight Seatmap display                     | SeatMap Display                                                                                   | React                | [amadeus-seatmap](#amadeus-seatmap)                                                                                                  |
 | Hotel booking engine                       | Hotel Search, Hotel Booking                                                                       | React Native         | [AmadeusNodeServer, AmadeusHotelBookingPart1](#amadeusnodeserver-amadeushotelbookingpart1)                                                                      |
-| Hotel booking engine                       | Airport & City Search, Hotel Search, Hotel Booking                                                | Node, React          | [Building-a-Hotel-Booking-App-in-NodeJS-and-React](#building-a-hotel-booking-app-in-nodejs-and-react) |
-| Map nearby                                 | Points of Interests                                                                                | Swift                | [MyPlaces](#myplaces)                                                                                                         |
+| Hotel booking engine                       | Airport & City Search, Hotel Search, Hotel Booking                                                | Node, React          | [Building-a-Hotel-Booking-App-in-NodeJS-and-React](#building-a-hotel-booking-app-in-nodejs-and-react) |                                                                                                        |
 | Flight Booking engine              | Flight Offers Search, Flight Offers price, Flight Create Orders, Airport & City Search             | Node, Angular        | [Flight-booking-frontend and backend](#flight-booking-frontend-and-backend)                                                                                                                                                                   |
 | Flight Search backend                      | Flight Offers Search, Airport & City Search                                                        | Bootstrap, Vanila JS | [Building-a-Flight-Search-Form-with-Bootstrap-and-the-Amadeus-API](#building-a-flight-search-form-with-bootstrap-and-the-amadeus-api)                                          |
-| Map nearby                                 | Points of Interests                                                                                | Android              | [Amadeus_POI_Android](#amadeus_poi_android)                                                                                              |
 | Hotel booking engine                       | Hotel Search, Hotel Booking                                                                       | Ruby on Rails        | [amadeus-hotel-booking-rubyonrails](#amadeus-hotel-booking-rubyonrails)                                                                                |
 | Flight status notification service         | On-Demand Flight Status                                                                           | Python               | [amadeus-async-flight-status](#amadeus-async-flight-status)                                                                                      |
 | Flight Calendar search                     | Airport & City Search, Flight Offers Search                                                                                                  | Node, Svelte                 | [FlightSearchCalendar](#flightsearchcalendar)                                                                                             |
@@ -149,23 +146,6 @@ This prototype consists of 2 Github repositories ([GitHub to Node Server](https:
 
 ![AmadeusNodeServer, AmadeusHotelBookingPart1](../images/examples/prototypes/AmadeusNodeServer%2C%20AmadeusHotelBookingPart1.png)
 
-### amadeus-safeplace
-
-This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-safeplace){:target="\_blank"}) demonstrates a neighbourhood safety map in Python to let users compare the relative safety levels of different neighbourhoods. You will use the Safe Place API for the safety scores and HERE Maps to visualize them on a map.
-
-* [How to build a neighbourhood safety map in Python with Amadeus Safe Place](https://github.com/amadeus4dev-examples/amadeus-safeplace)
-
-![amadeus-safeplace](../images/examples/prototypes/amadeus-safeplace.png)
-
-
-### MyPlaces
-
-This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/MyPlaces){:target="\_blank"}) demonstrates an iOS application that finds nearby places and displays them on a map. You will use the [Points of Interest API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"} to retrieve the places and MKMapView for the map.
-
-* [How to get nearby places using Amadeus APIs in iOS](https://developers.amadeus.com/blog/getting-nearby-places-ios-amadeus-api){:target="\_blank"}
-
-![MyPlaces](../images/examples/prototypes/MyPlaces.gif)
-
 ### Building-a-Hotel-Booking-App-in-NodeJS-and-React
 
 This prototype consists of 2 code sets ([Github to Backend](https://github.com/amadeus4dev-examples/Building-a-Hotel-Booking-App-in-NodeJS-and-React-Part-1){:target="\_blank"} and [Github to Frontend](https://github.com/amadeus4dev-examples/Building-a-Hotel-Booking-App-in-NodeJS-and-React-Part-2){:target="\_blank"}). It demonstrates a complete hotel booking app using Node on the backend and React for the frontend. 
@@ -192,11 +172,6 @@ This prototype consists of 2 code sets ([Github to Frontend](https://github.com/
 * [How to build a flight search form using Bootstrap 5 - Part 2](https://developers.amadeus.com/blog/bootstrap-flight-search-form-part-2){:target="\_blank"}
 
 ![Building-a-Flight-Search-Form-with-Bootstrap-and-the-Amadeus-API](../images/examples/prototypes/Building-a-Flight-Search-Form-with-Bootstrap-and-the-Amadeus-API.png)
-
-### Amadeus_POI_Android
-This app ([Link to GitHub](https://github.com/amadeus4dev-examples/Amadeus_POI_Android){:target="\_blank"}) demonstrates the usage of [Amadeus Points of Interest API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"} to
-fetch the list of best attractions near the user's current location and
-displays them on a list as well as a map.
 
 ### amadeus-hotel-booking-rubyonrails
 This prototype ([Link to GitHub](https://github.com/amadeus4dev-examples/amadeus-hotel-booking-rubyonrails){:target="\_blank"}) demonstrates an end-to-end Hotel booking process, which works in conjunction with 2 APIs, Hotel Search API and Hotel Booking API. 
