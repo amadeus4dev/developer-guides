@@ -195,4 +195,4 @@ This application ([Link to GitHub](https://github.com/amadeus4dev-examples/Live-
 ![Live-Airport-City-Search](../images/examples/prototypes/live_airport_city_search.gif)
 
 ### amadeus-flight-booking-node 
-The Amadeus Flight Booking app is built with Node and Vue using the [Node SDK](../developer-tools/node.md). You can find the source code [on GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-node){:target="\_blank"} 
+The Amadeus Flight Booking app is built with Node and Vue using the [Node SDK](../developer-tools/node.md). You can find the source code [on GitHub](https://github.com/amadeus4dev/amadeus-flight-booking-node){:target="\_blank"}.
