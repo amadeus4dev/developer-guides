@@ -72,7 +72,6 @@ The table below details the available test data for each Self-Service API:
 
 | **API**      | **Test data** |
 | ----------- | ----------- |
-| [Points of Interest](https://developers.amadeus.com/self-service/category/destination-content/api-doc/points-of-interest){:target="\_blank"} | See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
 | [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
 | [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}  | No data restrictions in test. |
 
@@ -89,7 +88,7 @@ The table below details the available test data for each Self-Service API:
 | [Flight Most Traveled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
 | [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
 | [Flight Busiest Traveling Period](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period){:target="\_blank"} |  See list of [origin and destination cities/airports](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md){:target="\_blank"}. |
-| [Location Score](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
+
 
 
 ## Video Tutorial

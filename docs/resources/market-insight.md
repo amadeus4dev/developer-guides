@@ -7,8 +7,6 @@ With Amadeus Self-Service APIs, you can get insights from millions of bookings a
 | [Flight Most Traveled Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-traveled-destinations/api-reference){:target="\_blank"} | See the top destinations by passenger volume for a given city and month.                |
 | [Flight Most Booked Destinations](https://developers.amadeus.com/self-service/category/air/api-doc/flight-most-booked-destinations/api-reference){:target="\_blank"}           | See the top destinations by booking volume for a given city and month.                  |
 | [Flight Busiest Traveling Period](https://developers.amadeus.com/self-service/category/air/api-doc/flight-busiest-traveling-period/api-reference){:target="\_blank"}        | See monthly air traffic levels by city to understand season trends.                     |
-| [Location Score](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score/api-reference){:target="\_blank"}                               | Assess a neighborhood’s popularity for sightseeing, shopping, eating out, or nightlife. |
-
 
 ## Find the top destinations or the busiest period for a given city
 
@@ -157,96 +155,4 @@ By default, statistics are given on travelers ARRIVING in the city.
 
 ```bash
 GET https://test.api.amadeus.com/v1/travel/analytics/air-traffic/busiest-period?cityCode=PAR&period=2018&direction=ARRIVING
-```
-
-## Find insight within a given city
-
-Apart from the top destinations and busiest period insight in a city, you can also help users gain insights into a neighborhood, hotel, or vacation rental with the [Location Score API](https://developers.amadeus.com/self-service/category/destination-content/api-doc/location-score/api-reference){:target="\_blank"}. 
-
-For a given latitude and longitude, it provides popularity scores for the following leisure and tourism categories:
-
-- Sightseeing
-- Restaurants
-- Shopping
-- Nightlife
-
-For each category, the API provides an overall popularity score as well as scores for select subcategories, 
-such as luxury shopping, vegetarian restaurants, or historical sights. Location scores are on 
-a simple 0-100 scale and are powered by the [AVUXI TopPlace](https://www.avuxi.com/topplace/location-scores){:target="\_blank"} algorithm, which analyzes millions of online reviews, comments, and points of interest.
-
-!!! Notes
-    - For each location, the API will return scores for a 200m., 500m., and 1500m. radius. 
-    - Scores indicate positive traveler sentiments and may not reflect the most visited locations.
-
-**Request:**
-
-```
-curl https://test.api.amadeus.com/v1/location/analytics/category-rated-areas?latitude=41.397158&longitude=2.160873
-```
-
-**Response:**
-
-```json
-{
-  "data": [
-    {
-      "type": "category-rated-area",
-      "geoCode": {
-        "latitude": 41.397158,
-        "longitude": 2.160873
-      },
-      "radius": 200,
-      "categoryScores": {
-        "sight": {
-          "overall": 87,
-          "historical": 83,
-          "beachAndPark": 0
-        },
-        "restaurant": {
-          "overall": 92,
-          "vegetarian": 61
-        },
-        "shopping": {
-          "overall": 96,
-          "luxury": 96
-        },
-        "nightLife": {
-          "overall": 86
-        }
-      }
-    },
-    {
-      "type": "category-rated-area",
-      "geoCode": {
-        "latitude": 41.397158,
-        "longitude": 2.160873
-      },
-      "radius": 500,
-      "categoryScores": {
-        "sight": {
-          "overall": 99,
-          "historical": 69,
-          "beachAndPark": 0
-        },
-        "restaurant": {
-          "overall": 94,
-          "vegetarian": 71
-        },
-        "shopping": {
-          "overall": 99,
-          "luxury": 99
-        },
-        "nightLife": {
-          "overall": 88
-        }
-      }
-    }
-  ],
-  "meta": {
-    "count": 3,
-    "links": {
-      "self": "https://test.api.amadeus.com/v1/location/analytics/category-rated-areas?latitude=41.397158&longitude=2.160873"
-    }
-  }
-}
 ```
