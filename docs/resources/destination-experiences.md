@@ -3,11 +3,11 @@
 With Amadeus Self-Service APIs, you can find data on over two million places and 150,000 activities and show travelers the best things to see and do. In the **Destination Experiences** category, we have two APIs available for that.
 
 | APIs                                                                                                                                                 | Description                                                                                                               |
-|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|                                                |
-| [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="\_blank"} | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
-| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"} | Finds cities that match a specific word or string of letters. |
+|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities/api-reference){:target="_blank"} | Find the best tours, activities, and tickets in any city or neighborhood. Includes a deep link to book with the provider. |
+| [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="_blank"}                                      | Finds cities that match a specific word or string of letters.                                                             |
 
-The first two APIs have the same behavior. You can search by radius or by a square, and retrieve results by ID. Let's go through them one by one.
+
 
 ## Offer tours, activities, and attraction tickets
 
