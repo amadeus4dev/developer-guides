@@ -2,154 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/api-rate-limits/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/common-errors/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/faq/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/glossary/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/pagination/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/pricing/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/quick-start/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/test-data/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/API-Keys/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/API-Keys/authorization/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/API-Keys/moving-to-production/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/java/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/mock-server/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/node/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/openapi-generator/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/php/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/postman/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/python/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/graphql/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/graphql/rest-to-graphql-export/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/graphql/rest-to-graphql-node/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/developer-tools/graphql/rest-to-graphql-python/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/examples/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/examples/code-example/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/examples/live-examples/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/examples/prototypes/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/migration-guides/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/migration-guides/hotel-booking/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/migration-guides/hotel-search/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/cars-transfers/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/destination-experiences/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/flights/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/hotels/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/itinerary-managment/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/resources/market-insight/</loc>
-         <lastmod>2025-07-14</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
 </urlset>
