@@ -142,9 +142,10 @@ Now that we have the server running, we can send requests to it. The most straig
 ```shell
 curl -X POST \
   -H "Content-Type: application/json" \
-  -H "Authorization: <your_bearer_token>" \
+  -H "Authorization: <YOUR-BEARER-TOKEN>" \
   -d '{ "query": "{ getCities(keyword: \"PARIS\") { name } }" }' \
   http://localhost:4000/
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 If your token is valid, the above command will return a list of city names that contain the word `Paris`.

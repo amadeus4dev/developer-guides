@@ -15,7 +15,7 @@ Have a look at our dedicated [Postman collection](../developer-tools/postman.md)
 
 ## Search for a transfer
 
-The search is carried out through a POST API call to /shopping​/transfer-offers. The API request includes parameters like the start and end locations, type of transfer, number of passengers, provider codes, and other optional parameters.
+The search is carried out through a POST API call to `/shopping/transfer-offers`. The API request includes parameters like the start and end locations, type of transfer, number of passengers, provider codes, and other optional parameters.
 
 
 In the following example request, we have multiple parameters each with its own specific meaning and structure:
@@ -469,6 +469,7 @@ The main endpoint URL is `https://test.api.amadeus.com/v1/ordering/transfer-orde
   }
 }
 ```
+
 - **`data`**: Root level object encapsulating all the necessary data for the transfer order.
     - **`note`**: A string containing a note intended for the driver. (Example: "Note to driver")
     - **`passengers`**: An array of objects, each representing a passenger with the following properties:
@@ -528,10 +529,11 @@ The [Transfer Management API](https://developers.amadeus.com/self-service/catego
 
 For example:
 
-`POST https://test.api.amadeus.com/v1/ordering/transfer-orders/{orderId}/transfers/cancellation`
+```bash
+POST https://test.api.amadeus.com/v1/ordering/transfer-orders/<orderId>/transfers/cancellation
+```
 
-
-The `{orderId}` in the URL should be replaced with the unique identifier of the order that was previously generated when the order was created. For instance, the `orderId` could be something like `0cb11574-4a02-11e8-842f-0ed5f89f718b`.
+Replace the `<orderId>` with the unique identifier of the order that was previously generated when the order was created. For instance, the `orderId` could be something like `0cb11574-4a02-11e8-842f-0ed5f89f718b`.
 
 The `confirmNbr` is a unique confirmation number associated with the transfer that is to be cancelled. 
 

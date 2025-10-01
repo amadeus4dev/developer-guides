@@ -20,8 +20,8 @@ To make your first API call, you will need to [register](https://developers.amad
 ```js
 var Amadeus = require('amadeus');
 var amadeus = new Amadeus({
-  clientId: 'REPLACE_BY_YOUR_API_KEY',
-  clientSecret: 'REPLACE_BY_YOUR_API_SECRET'
+  clientId: '<YOUR-CLIENT-ID>',
+  clientSecret: '<YOUR-CLIENT-SECRET>'
 });
 
 amadeus.shopping.flightOffersSearch.get({
@@ -35,6 +35,7 @@ amadeus.shopping.flightOffersSearch.get({
   console.log(responseError.code);
 });
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 ### Initialization
 
@@ -44,10 +45,11 @@ The client can be initialized directly as below. Your credentials `client Id` an
 ```js
 // Initialize using parameters
 var amadeus = new Amadeus({
-  clientId: 'REPLACE_BY_YOUR_API_KEY',
-  clientSecret: 'REPLACE_BY_YOUR_API_SECRET'
+  clientId: '<YOUR-CLIENT-ID>',
+  clientSecret: '<YOUR-CLIENT-SECRET>'
 });
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 !!! warning
     Remember that hardcoding your credentials is not the best practice due to the potential exposure to others. Read more about best practices for [secure API key storage](https://developers.amadeus.com/blog/best-practices-api-key-storage){:target="\_blank"}.
@@ -62,9 +64,10 @@ npm install dotenv
 Put your API credentials in `.env` file:
 
 ```sh
-AMADEUS_CLIENT_ID=REPLACE_BY_YOUR_API_KEY,
-AMADEUS_CLIENT_SECRET=REPLACE_BY_YOUR_API_SECRET
+AMADEUS_CLIENT_ID=<YOUR-CLIENT-ID>,
+AMADEUS_CLIENT_SECRET=<YOUR-CLIENT-SECRET>
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 Initialize using dotenv package:
 
@@ -81,10 +84,11 @@ If you don't want to use another package, you can also simply export your key in
 Export your credentials in terminal:
 
 ```sh
-export AMADEUS_CLIENT_ID="REPLACE_BY_YOUR_API_KEY"
-export AMADEUS_CLIENT_SECRET="REPLACE_BY_YOUR_API_SECRET"
-
+export AMADEUS_CLIENT_ID="<YOUR-CLIENT-ID>"
+export AMADEUS_CLIENT_SECRET="<YOUR-CLIENT-SECRET>"
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
+
 Initialize:
 
 ```js

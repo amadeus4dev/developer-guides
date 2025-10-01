@@ -133,10 +133,10 @@ Response to the busines period from a given city :
 
 ### Sorting
 
-Sorting is enabled on the "top destinations" endpoints. 
+Sorting is enabled on the [Top Destinations](https://developers.amadeus.com/self-service/category/market-insights/api-doc/flight-most-traveled-destinations/api-reference) endpoints. 
 
-- analytics.flights.score - sort destination by flights score (decreasing)
-- analytics.travelers.score - sort destination by traveler's score (decreasing)
+- `analytics.flights.score` - sort destination by flights score (decreasing)
+- `analytics.travelers.score` - sort destination by traveler's score (decreasing)
 
 For example : 
 

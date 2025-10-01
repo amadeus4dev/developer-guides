@@ -77,7 +77,7 @@ As you can see, the API returns a unique activity Id along with the activity nam
 - `name` and `shortDescription` contains the information about the activity. 
 - `geoCode` is a structure that contains geolocation information: latitude and longitude of the location.
 - `rating` is a rating of the activity. 
-- `pictures` and `booking link` are external links to check the relevant pictures and to go to the booking URL from the activity provider.
+- `pictures` and `bookingLink` are external links to check the relevant pictures and to go to the booking URL from the activity provider.
 - `price` is the price of the fare, which can be alpha-numeric. Ex- 500.20 or 514.13A, `A` signifies additional collection.
 
 ### Retrieve by Id

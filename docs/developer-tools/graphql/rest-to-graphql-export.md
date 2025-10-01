@@ -78,3 +78,4 @@ server.listen().then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
 ```
+Replace `<path-to-generated-graphql-schema>` with the path to the schema generated in the **Convert** step.
