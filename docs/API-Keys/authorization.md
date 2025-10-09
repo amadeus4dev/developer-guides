@@ -1,3 +1,7 @@
+---
+title: API Keys Authorization - Oauth Authentication - Access Token
+---
+
 # Authorizing your application
 
 Amadeus for Developers uses `OAuth` to authenticate access requests. `OAuth` generates an `access token` which grants the client permission to access a protected resource. 
