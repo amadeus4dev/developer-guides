@@ -1,3 +1,7 @@
+---
+title: Itinerary Management APIs Tutorial
+---
+
 # Itinerary Management
 
 In the **Itinerary Management** category, you can give travelers a simple and personalized way to view their itinerary. 
