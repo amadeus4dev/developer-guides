@@ -1,3 +1,7 @@
+---
+title: Flight APIs Tutorial
+---
+
 # Flights
 
 The **Flights** category contains a wide array of APIs that can help you manage flights, from searching for flight options to actually booking a flight.
