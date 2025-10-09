@@ -1,3 +1,7 @@
+---
+title: Pricing
+---
+
 # Pricing options for Amadeus Travel APIs
 
 Amadeus for Developers provides two environments: test and production. 
