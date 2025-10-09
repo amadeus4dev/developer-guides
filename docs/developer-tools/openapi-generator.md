@@ -1,3 +1,7 @@
+---
+title: OpenAPI Generator - Amadeus OpenAPI Specification
+---
+
 # Generating SDKs from Amadeus OpenAPI specification using the OpenAPI Generator
 
 The [OpenAPI Generator](https://openapi-generator.tech/){:target="\_blank"} is an open-source project for generating REST API clients, server stubs, documentation and schemas based on the OpenAPI specification.
