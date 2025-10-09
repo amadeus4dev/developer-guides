@@ -1,3 +1,7 @@
+---
+title: SDK Tutorials
+---
+
 # Amadeus SDKs Tutorials
 
 We have a number of SDKs available to help you integrate Amadeus Self-Service APIs into your applications. To give more context to how each of the SDKs can be used, we also have a dedicated tutorial per programming language.
