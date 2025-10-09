@@ -1,3 +1,7 @@
+---
+title: Pagination Guide for APIs
+---
+
 # Pagination on Self-Service APIs
 
 Amadeus for Developers Self-Service APIs can often return a lot of results. That's where **pagination** comes in. Using pagination, you can split the results into different pages to make the responses easier to handle.
