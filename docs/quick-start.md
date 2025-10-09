@@ -1,3 +1,7 @@
+---
+title: Self-Service APIs Quick Start Guide
+---
+
 # Making your first API call
 
 ## Step 1: Create an account
