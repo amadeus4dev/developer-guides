@@ -1,5 +1,5 @@
 ---
-title: How to get your API Keys
+title: How to Get your API Keys
 ---
 
 # API keys
