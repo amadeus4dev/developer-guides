@@ -1,3 +1,7 @@
+---
+title: OpenAPI to GraphQL Converter Tutorial
+---
+
 # Convert an OpenAPI specification to a GraphQL schema
 
 Follow this tutorial to learn how to convert an OpenAPI specification to a GraphQL schema.
