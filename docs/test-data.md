@@ -1,3 +1,7 @@
+---
+title: Free API Testing Data Collection
+---
+
 # Free test data collection of Self-Service APIs
 
 Amadeus for Developers offers a `test environment` with free limited data. This allows developers to build and test their applications before deploying them to production. To access real-time data, you will need to move to the [production environment](./API-Keys/moving-to-production.md){:target="\_blank"}.
