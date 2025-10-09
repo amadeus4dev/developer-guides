@@ -1,3 +1,7 @@
+---
+title: Code Examples for SDKs and REST API Endpoints
+---
+
 # Code Examples
 
 To help you get up and running with the Amadeus Self-Service APIs as smoothly as possible, we have provided code examples for **each SDK** and **API endpoint**. Simply copy and paste these examples into your project to make API requests. 
