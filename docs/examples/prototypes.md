@@ -1,3 +1,7 @@
+---
+title: API Prototypes
+---
+
 # Prototypes 
 
 Would you like to explore the applications that you could build with Amadeus Self-Service APIs?
