@@ -1,3 +1,7 @@
+---
+title: API Migration Guides
+---
+
 # Migration guides
 
 To ensure you have a seamless transition to the latest API version, we've compiled migration guides for your reference. As we continuously enhance our APIs and launch new releases, these guides will assist you in the upgrading process.
