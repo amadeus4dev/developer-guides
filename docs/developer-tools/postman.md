@@ -1,3 +1,7 @@
+---
+title: Self-Service APIs Postman Collection
+---
+
 # Self-Service API Postman collection
 
 Follow this tutorial to test Amadeus Self-Service APIs using our dedicated Postman collection.
