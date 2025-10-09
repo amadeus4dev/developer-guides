@@ -1,3 +1,7 @@
+---
+title: GraphQL Wrapper for REST APIs Python Tutorial | Amadeus for Developers
+---
+
 # Wrap a REST API endpoint with GraphQL in Python
 
 Follow this tutorial to wrap a REST API endpoint with a GraphQL wrapper to make it accessible via a dedicated GraphQL API.
