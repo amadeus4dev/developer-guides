@@ -1,3 +1,7 @@
+---
+title: API Code Examples and Prototypes
+---
+
 # Code examples and prototypes
 
 To facilitate a smooth and efficient start, or to spark creativity in using our Self-Service APIs within your applications, we've assembled a compilation of code examples and prototypes. These resources aim to serve as guides for you to quickly integrate our APIs into your project.
