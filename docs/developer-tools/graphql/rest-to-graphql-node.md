@@ -1,3 +1,7 @@
+---
+title: GraphQL Wrapper for REST APIs Node Tutorial
+---
+
 # Wrap a REST API endpoint with GraphQL in Node.js
 
 Follow this tutorial to wrap a REST API endpoint with a GraphQL wrapper to make it accessible via a dedicated GraphQL API.
