@@ -61,8 +61,8 @@ This tutorial will guide you through the process of creating a simple Python app
 from amadeus import Client, Location, ResponseError
 
 amadeus = Client(
-    client_id='AMADEUS_CLIENT_ID',
-    client_secret='AMADEUS_CLIENT_SECRET'
+    client_id='<YOUR-CLIENT-ID>',
+    client_secret='<YOUR-CLIENT-SECRET>'
 )
 
 try:
@@ -74,6 +74,7 @@ try:
 except ResponseError as error:
     print(error)
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 - Once you import the amadeus library, you initialize the client by adding your credentials in the `builder` method. The library can also be initialized without any parameters when the environment variables `AMADEUS_CLIENT_ID` and `AMADEUS_CLIENT_SECRET` are present.
 - The authentication process is handled by the SDK and the access token is renewed every 30 minutes.
@@ -145,7 +146,7 @@ To follow along with the tutorial you will need the followings:
 
 `aiohttp` is a Python library for making asynchronous HTTP requests build top of `asyncio`. The library provides a simple way of making HTTP requests and handling the responses in a non-blocking way.
 
-In the example below you can call the the Amadeus Flight-Checkin link API using the `aiohttp` library and the code runs in an async way.
+In the example below you can call the the [Amadeus Flight-Checkin link API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-check-in-links) using the `aiohttp` library and the code runs in an async way.
 
 ```python
 import aiohttp
@@ -155,8 +156,8 @@ import requests
 AUTH_ENDPOINT = "https://test.api.amadeus.com/v1/security/oauth2/token"
 headers = {"Content-Type": "application/x-www-form-urlencoded"}
 data = {"grant_type": "client_credentials",
-        "client_id": 'YOUR_AMADEUS_API_KEY',
-        "client_secret": 'YOUR_AMADEUS_API_SECRET'}
+        "client_id": '<YOUR-CLIENT-ID>',
+        "client_secret": '<YOUR-CLIENT-SECRET>'}
 response = requests.post(AUTH_ENDPOINT,
                         headers=headers,
                         data=data)
@@ -178,6 +179,7 @@ async def main():
                 
 asyncio.run(main())
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 The above code makes `POST` request to the Authentication API using the `requests` library. The returned access token is then used in the headers of following requests to make 20 asyncronous API calls.
 
@@ -191,8 +193,8 @@ import requests
 from amadeus import Client
 
 amadeus = Client(
-    client_id='YOUR_AMADEUS_API_KEY',
-    client_secret='YOUR_AMADEUS_API_SECRET'
+    client_id='<YOUR-CLIENT-ID>',
+    client_secret='<YOUR-CLIENT-SECRET>'
 )
 
 async def main():
@@ -212,6 +214,7 @@ async def main():
 
 asyncio.run(main())
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 ## OpenAPI Generator
 
@@ -253,8 +256,8 @@ with openapi_client.ApiClient(auth_configuration) as api_client:
 
     body = dict(
         grant_type="client_credentials",
-        client_id="YOUR_API_KEY",
-        client_secret="YOUR_API_SECRET",
+        client_id="<YOUR-CLIENT-ID>",
+        client_secret="<YOUR-CLIENT-SECRET>",
     )
     api_response = api_instance.oauth2_token(
         body=body,
@@ -262,6 +265,7 @@ with openapi_client.ApiClient(auth_configuration) as api_client:
 
 print(api_response.body['access_token'])
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 The code uses the library we have generated to get an OAuth2 access token. With the `o_auth2_access_token_api.OAuth2AccessTokenApi()` we are able to call the `oauth2_token()` method.
 
@@ -269,7 +273,7 @@ The body of the request is being created by passing the `grant_type`, `client_id
 
 ### Call the Flight Offers Search API
 
-Now let's call the Flight Offers Search API. Since thr OpenAPI Generator works with OAS3 you will have to convert the flight search specification to version 3 using the swagger editor (https://editor.swagger.io/){:target="\_blank"}. To do the convertion, navigate to the top menu and select `Edit` then `Convert to OAS 3`.
+Now let's call the Flight Offers Search API. Since the OpenAPI Generator works with OAS3 you will have to convert the flight search specification to version 3 using the [swagger editor](https://editor.swagger.io/){:target="\_blank"}. To do the conversion, navigate to the top menu and select `Edit` then `Convert to OAS 3`.
 
 The process is the same as above. You need to generate the library:
 
@@ -295,7 +299,7 @@ from openapi_client.apis.tags import shopping_api
 
 flight_configuration = openapi_client.Configuration()
 api_client = openapi_client.ApiClient(flight_configuration)
-api_client.default_headers['Authorization'] = 'Bearer YOUR_ACCESS_TOKEN'
+api_client.default_headers['Authorization'] = 'Bearer <YOUR-BEARER-TOKEN>'
 
 api_instance = shopping_api.ShoppingApi(api_client)
 
@@ -314,6 +318,7 @@ try:
 except openapi_client.ApiException as e:
     print("Exception: %s\n" % e)
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 The above code uses the generated library to to search for flight offers. It creates an instance of the `shopping_api.ShoppingApi` class and setting the default headers to include the access token.
 

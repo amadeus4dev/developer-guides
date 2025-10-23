@@ -23,7 +23,13 @@ Let's learn how to get started and help your users book the perfect rooms at ove
 
 ### Get a list of hotels by location 
 
-First, users should be able to search hotels for a given location. The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} returns a list of hotels based on a city, a geographic code or the unique Amadeus hotel Id. To answer a question, such as **"what are the hotels closed to the city hall?"** the `Hotel List API` has three endpoints to utilize based on your search criteria. It returns `hotel name`, `location`, and `hotel id` for you to proceed to the next steps of the hotel search. 
+First, users should be able to search hotels for a given location. The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} returns a list of hotels based on a city, a geographic code or the unique Amadeus hotel Id. To answer a question, such as **"what are the hotels close to the city hall?"** the `Hotel List API` has three endpoints to utilize based on your search criteria. Each endpoint will return
+
+- **Hotel Name** as `name`
+- **Location** as `geoCode` containing a `latitude` and `longitude`
+- **Hotel Id** as `hotelId`
+
+Use these to proceed to the next steps of the hotel search.
 
 The [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"} contains the following endpoints:
 
@@ -92,7 +98,7 @@ If you are looking for hotels with certain amenities, such as a spa or a swimmin
 The query to find a hotel in Paris with a swimming pool will look like this:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&chainCodes=&amenities=SWIMMING_POOL
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PAR&amenities=SWIMMING_POOL
 ```
 
 If stars rating is important for the search, you can include up to four values separated by comma in the `ratings` parameter:
@@ -188,7 +194,7 @@ If you are looking for hotels with certain amenities, such as a spa or a swimmin
 The query to find a hotel in Paris with a swimming pool will look like this:
 
 ```bash
-GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&chainCodes=&amenities=SWIMMING_POOL&ratings=
+GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-geocode?latitude=41.397158&longitude=2.160873&amenities=SWIMMING_POOL&ratings=
 ```
 
 If stars rating is important for the search, you can include up to four values separated by comma in the `ratings` parameter:
@@ -236,7 +242,7 @@ GET https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-hotels?ho
 
 ### Interactive code examples 
 
-Check out this [interactive code example](../examples/live-examples.md) which provides a hotel search form to help you build your app. You can easily customize it and use the Hotel Search API to get the cheapest flight offers.
+Check out this [interactive code example](../examples/live-examples.md) which provides a hotel search form to help you build your app. You can easily customize it and use the Hotel Search API to get the cheapest hotel offers.
 
 ### Autocomplete Hotel Names
 
@@ -380,7 +386,7 @@ GET https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=HLPAR266&adul
 The API returns a list of `offers` objects containing the price of the cheapest available room as well as information including the room description and payment policy. 
 
 !!! Note
-    The response of `Hotel Search V3` contains real-time data, so you don't need an additional validation step anymore. However, as there are thousands of people reserving hotels at any given second, the availability of a given room may change between the moment you search and the moment you decide to book. It is therefore advised that you proceed with booking **as soon as possible** or **add a validation step** by searching by `offerid` described below.
+    The response of `Hotel Search V3` contains real-time data, so you don't need an additional validation step anymore. However, as there are thousands of people reserving hotels at any given second, the availability of a given room may change between the moment you search and the moment you decide to book. It is therefore advised that you proceed with booking **as soon as possible** or **add a validation step** by searching by `offerId` described below.
 
 ```json
 {
@@ -491,9 +497,9 @@ The API returns a list of `offers` objects containing the price of the cheapest 
 !!! information
     The commission information returned by the `commission` parameter is for information only. Hotels can voluntary provide commission. They are only obliged to do it if you are a IATA certified travel agency, in which case you need to [contact](https://developers.amadeus.com/support/contact-us-self-service) our Enterprise APIs team to get access to our REST/JSON booking APIs. Once you have moved to the [production environment](../API-Keys/moving-to-production.md) and obtained the offerId, it will be necessary for you to directly communicate with the hotel to receive the commission on this offer.
 
-If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} again with the `offerid` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
+If the time between displaying prices and booking the room is long enough to allow others to book the same room, you can consider requesting [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} again with the `offerId` that you got before. This is not mandatory as you always will see if the offer is available or not when you try to book the offer.
 
-An example to request the offer information with `offer id`: 
+An example to request the offer information with `offerId`: 
 
 ```bash
 GET https://test.api.amadeus.com/v3/shopping/hotel-offers/ZBC0IYFMFV
@@ -566,11 +572,11 @@ As soon as your application stores transmits, or processes cardholder informatio
 
 ## Guide for multiple hotel rooms
 
-Now that we have gone through the hotel booking flow, you may wonder how to proceed to booking more than two rooms in a hotel. 
+Now that we have gone through the hotel booking flow, you may wonder how to proceed to booking more than one room in a hotel. 
 
 ### Check availability and prices for multiple rooms 
 
-The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} using the `hotelid` that you got from the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"}. 
+The first step to booking multiple rooms is to search for hotels in your destination with the desired number of available rooms. You can do this by specifying the `roomQuantity` parameter when you call the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference){:target="\_blank"} using the `hotelId` that you got from the [Hotel List API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-list/api-reference){:target="\_blank"}. 
 
 Here is an example of a search in Hilton Paris for **two rooms** for **three adults**: 
 

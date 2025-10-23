@@ -33,8 +33,10 @@ The following example uses `cURL` to request a new token:
 ```bash
 curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
      -H "Content-Type: application/x-www-form-urlencoded" \
-     -d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
+     -d "grant_type=client_credentials&client_id=<YOUR-CLIENT-ID>&client_secret=<YOUR-CLIENT-SECRET>"
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
+
 Note that the `-X POST` parameter is not needed in the `cURL` command. As we are sending a body, `cURL` sends the request as `POST` automatically.
 
 ## Response
@@ -71,14 +73,15 @@ The response will contain the following parameters:
 
 Once the token has been retrieved, you can authenticate your requests to Amadeus Self-Service APIs.
 
-Each API call must contain the `authorization` HTTP header with the value `Bearer {access_token}`, where `acess_token` is the token you have just retrieved.
+Each API call must contain the `authorization` HTTP header with the value `Bearer <access_token>`, where `<acess_token>` is the token you have just retrieved.
 
 The following example is a call to the `Flight Check-in Links` API to retrieve the check-in URL for Iberia \(`IB`\):
 
 ```bash
 curl "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airline=IB" \
-     -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
+     -H "Authorization: Bearer <YOUR-BEARER-TOKEN>"
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 ## Managing tokens from your source code
 
@@ -96,10 +99,11 @@ Example of initializing the client and authenticating with the `Node` SDK:
 var Amadeus = require('amadeus');
 
 var amadeus = new Amadeus({
-  clientId: '[API Key]',
-  clientSecret: '[API Secret]'
+  clientId: '<YOUR-CLIENT-ID>',
+  clientSecret: '<YOUR-CLIENT-SECRET>'
 });
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret.
 
 You can then call the API. The following example is a call to the `Flight Check-in Links` API to retrieve the check-in URL for Iberia \(`IB`\):
 
@@ -108,8 +112,8 @@ You can then call the API. The following example is a call to the `Flight Check-
 var Amadeus = require('amadeus');
 
 var amadeus = new Amadeus({
-  clientId: '[API Key]',
-  clientSecret: '[API Secret]'
+  clientId: '<YOUR-CLIENT-ID>',
+  clientSecret: '<YOUR-CLIENT-SECRET>'
 });
 
 amadeus.referenceData.urls.checkinLinks.get({
@@ -120,4 +124,5 @@ amadeus.referenceData.urls.checkinLinks.get({
   console.log(responseError.code);
 });
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret.
 

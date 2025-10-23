@@ -103,7 +103,7 @@ Our Self-Service offer is designed for newcomers to Amadeus, there are no prereq
 
 ### Are there any limitations to the Self-Service API dataset?
 
-We do not return data on American Airlines, Delta, British Airways and Low cost carriers. For other arlines we only return published rates. We do not return negotiated rates or any other special rates. The Flight Offers Search only returns the bag allowance information for one passenger type code. Airlines blacklisted in the EU are not returned using the Flight Offers Search GET, e.g., Iraqi Airways. There is a possibility to override this with the POST method.
+We do not return data on American Airlines, Delta, British Airways and Low cost carriers. For other airlines we only return published rates. We do not return negotiated rates or any other special rates. The Flight Offers Search only returns the bag allowance information for one passenger type code. Airlines blacklisted in the EU are not returned using the Flight Offers Search GET, e.g., Iraqi Airways. There is a possibility to override this with the POST method.
 
 ### How can I do group booking?
 
@@ -206,11 +206,11 @@ The information returned in test environment is from [limited data collections](
 
 ### Why didn't I get any results for Flight Inspiration Search?
 
-This API works with cached data in the test environment and not all airports are cached. You can find a list of airports included in the cached data in our guides section. When combining these searches with the Airport Nearest Relevant API, it is better to search using the city code rather than the airport code.
+This API works with cached data in the test environment and not all airports are cached. You can find a list of airports included in the cached data in our guides section. When combining these searches with the [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/flights/api-doc/airport-nearest-relevant){:target="\_blank"}, it is better to search using the city code rather than the airport code.
 
 ### Why are some origin and destination pairings not returning results?
 
-The Flight Inspiration Search and Flight Cheapest Date Search APIs are built on top of a pre-computed cache of selected origin-destination pairs. This is why, even in production, you cannot find all possible origin-destination pairs. If you need to access more results, you need to use the live Flight Offers Search API.
+The [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-inspiration-search){:target="\_blank"} and [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-cheapest-date-search){:target="\_blank"} APIs are built on top of a pre-computed cache of selected origin-destination pairs. This is why, even in production, you cannot find all possible origin-destination pairs. If you need to access more results, you need to use the live [Flight Offers Search API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-search){:target="\_blank"}.
 
 ## Airport routes
 
@@ -222,18 +222,18 @@ This is the expected behavior. The IATA code in the response corresponds to the 
 
 ### Why isn't the Airport Nearest Relevant API returning a specific airport near me?
 
-This may be because an airport is near a national boarder. If so, please check the API parameters for location. Also, please keep in mind that our Airport Nearest Relevant API excludes private and military airports.
+This may be because an airport is near a national boarder. If so, please check the API parameters for location. Also, please keep in mind that our [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/flights/api-doc/airport-nearest-relevant){:target="\_blank"} excludes private and military airports.
 
 ## Flight Offers Search
 
 ### Why are the prices returned more expensive than on other websites?
 
-The API only returns published rates, which are the standard rates given by airlines. Amadeus then redistributes them to the travel agencies around the world. However, big players in the industry can negotiate their rates directly with the airlines, which can help them be more competitive or maximise returns made form selling tickets.
+The API only returns published rates, which are the standard rates given by airlines. Amadeus then redistributes them to the travel agencies around the world. However, big players in the industry can negotiate their rates directly with the airlines, which can help them be more competitive or maximise returns made from selling tickets.
 
 
 ### What does nonHomogeneous mean in the API response?
 
-PNRs are designed to be homogeneous, meaning that one PNR contains the same type of content (e.g., flights only) and number of passengers. However, nowadays, there can be a mix of different content, such as air and hotel. When nonHomogeneous is true, it means that a single PNR can contain records that would initially be split across different PNRs.
+PNRs are designed to be homogeneous, meaning that one PNR contains the same type of content (e.g., flights only) and number of passengers. However, nowadays, there can be a mix of different content, such as air and hotel. When `nonHomogeneous` is true, it means that a single PNR can contain records that would initially be split across different PNRs.
 
 ### Why the dataWindow parameter returns less results with I3D or I2D?
 
@@ -241,7 +241,7 @@ This is normal behaviour. Flight Offers Search returns the cheapest option for a
 
 ### How can I add a loyalty program to a booking?
 
-Flight Offers Price and SeatMap Display both accept frequent flyer information, so end-users can benefit from their loyalty program. When adding frequent flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email, or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
+[Flight Offers Price API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-search){:target="\_blank"} and [SeatMap Display API](https://developers.amadeus.com/self-service/category/flights/api-doc/seatmap-display){:target="\_blank"} both accept frequent flyer information, so end-users can benefit from their loyalty program. When adding frequent flyer information, please remember that each airline policy is different, and some require additional information like passenger name, email, or phone number to validate the account. If validation fails, your user won’t receive their loyalty program advantages.
 
 ### POST and GET do not return the same results
 
@@ -249,7 +249,7 @@ By default the GET method does not return airlines blacklisted in Europe. Howeve
 
 ### How do I add bags to a check in bag for flight reservation? 
 
-You can add a checked-in bag to a flight booking using the ‘’additionalServices’’ element in the flight offer when calling Flight Offers Price. For more details, please check our guide on [adding baggage with Amadeus flight booking APIs](https://developers.amadeus.com/blog/add-baggage-amadeus-flight-booking-api). 
+You can add a checked-in bag to a flight booking using the `additionalServices` element in the flight offer when calling Flight Offers Price. For more details, please check our guide on [adding baggage with Amadeus flight booking APIs](https://developers.amadeus.com/blog/add-baggage-amadeus-flight-booking-api). 
 
 ### How do I add bags to a cabin bag for flight reservation? 
 
@@ -369,7 +369,7 @@ To access Flight Create Orders in production, you must have a contract signed wi
 
 ### How can I retrieve booking made with Flight Create Orders in Self-Service?
 
-You can consult booking made through Flight Create Orders using the Flight Order Management API. This API works using a unique identifier(the flight offer id) that is returned by the Flight Create Orders API.
+You can consult booking made through Flight Create Orders using the [Flight Order Management API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-order-management){:target="\_blank"}. This API works using a unique identifier(the flight offer id) that is returned by the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-create-orders){:target="\_blank"}.
 
 ### Does Amadeus pay a commission for flights booked with Flight Create Orders in Self-Service?
 
@@ -382,7 +382,7 @@ Getting the error message: `INVALID DATA RECEIVED`. Some of the data in the quer
 
 ### Why do I get the SEGMENT SELL FAILURE error?
 
-Getting the error message: `SEGMENT SELL FAILURE` means that you were not able to book the seat in the airline inventory. Most of the time, it comes from the flight being full. This often happens in the test environment, as you can perform many bookings without restrictions (no real payment). But the inventory is a copy of the real one, so if you book many seats, the inventory can get empty and you won't be able to book anymore. The good practice here is to use Flight Offers Price right before booking and avoid last-minute flights that tend to quickly get full.
+Getting the error message: `SEGMENT SELL FAILURE` means that you were not able to book the seat in the airline inventory. Most of the time, it comes from the flight being full. This often happens in the test environment, as you can perform many bookings without restrictions (no real payment). But the inventory is a copy of the real one, so if you book many seats, the inventory can get empty and you won't be able to book anymore. The good practice here is to use [Flight Offers Price](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-price){:target="\_blank"} right before booking and avoid last-minute flights that tend to quickly get full.
 
 ### How does payment work when I book a flight?
 
@@ -394,7 +394,7 @@ There are two things to consider regarding payments for flight booking:
 
 ### How can I cancel a flight?
 
-Cancellation is possible with the Flight Orders Management API as long as the booking has not been issued by the consolidator yet. If the booking has been issued, it will need to be canceled by the consolidator directly.
+Cancellation is possible with the [Flight Orders Management API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-order-management){:target="\_blank"} as long as the booking has not been issued by the consolidator yet. If the booking has been issued, it will need to be canceled by the consolidator directly.
 
 ### How to make the airline consolidator wait before issuing a ticket?
 
@@ -445,11 +445,11 @@ The current version of the Hotel Booking API only supports credit card payments.
 
 ### Can I markup the room prices?
 
-It is not possible to markup the prices of the hotel rooms with the current version of the Hotel Booking API. The reason is that the content we offer today in our Hotel Search/Book API is post-paid, meaning the traveler will pay directly at the hotel. The Hotel Booking API is here to enable making a reservation but not to pay directly. We are working on adding more hotel offers, especially offers that will be pre-paid, meaning you will be able to charge the travelers directly and add a markup. However, you still need to add a credit card while booking in case of cancellations or no-shows.
+It is not possible to markup the prices of the hotel rooms with the current version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-booking){:target="\_blank"}. The reason is that the content we offer today in our Hotel Search/Book API is post-paid, meaning the traveler will pay directly at the hotel. The [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-booking){:target="\_blank"} is here to enable making a reservation but not to pay directly. We are working on adding more hotel offers, especially offers that will be pre-paid, meaning you will be able to charge the travelers directly and add a markup. However, you still need to add a credit card while booking in case of cancellations or no-shows.
 
 ### Payment providers and gateways
 
-The Hotel Booking API works by using the guest's payment information and sending it to a chosen hotel for the reservation. You can use a payment gateway in your app, but this will not change the way the API works. The hotels will never collect any money from you. Instead, the payments are always done at the time of checkout between the guest and the hotel. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate information, so it doesn’t play the role of payment gateway. Be sure to validate the payment and guest information as invalid information may result in the reservation being canceled. As soon as your application stores, transmits, or processes cardholder information, you will need to comply with the PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants/).
+The [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-booking){:target="\_blank"} works by using the guest's payment information and sending it to a chosen hotel for the reservation. You can use a payment gateway in your app, but this will not change the way the API works. The hotels will never collect any money from you. Instead, the payments are always done at the time of checkout between the guest and the hotel. During the booking process, Amadeus passes the payment and guest information to the hotel but does not validate information, so it doesn’t play the role of payment gateway. Be sure to validate the payment and guest information as invalid information may result in the reservation being canceled. As soon as your application stores, transmits, or processes cardholder information, you will need to comply with the PCI Data Security Standard (PCI DSS). For more information, visit the [PCI Security Council website](https://www.pcisecuritystandards.org/merchants/).
 
 ### Why do I get 500 status code?
 
@@ -461,7 +461,7 @@ You can find the list of supported hotel chains in [our data collection](https:/
 
 ### What is considered a query?
 
-When you make an initial call to the Hotel Search API with a cityCode parameter, it is considered one query that returns 10 hotels. If you then click on each hotel to view room details and other information, you are making additional API calls using the second endpoint of the Hotel Search. Each hotel that you click on generates another API call. For example, if you click on 5 hotels to see room details, you will be making a total of 5 additional queries.
+When you make an initial call to the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-search){:target="\_blank"} with a `cityCode` parameter, it is considered one query that returns 10 hotels. If you then click on each hotel to view room details and other information, you are making additional API calls using the second endpoint of the Hotel Search. Each hotel that you click on generates another API call. For example, if you click on 5 hotels to see room details, you will be making a total of 5 additional queries.
 
 ### Do I need any legal documents to make a booking?
 
@@ -476,7 +476,7 @@ The room type code is a 3-character identifier that indicates the room type cate
 There is no way to cancel hotel bookings through the APIs. This needs to be done offline by ringing the hotels. 
 
 ### Why is Hotel Search returning empty responses ‘{"data": []}’?
-You are returning this because this specific hotel is closed or unavailable for this specific date. You can either try to change the check-in date or use the ''includeClosed'' parameter set to ''true''. The latter will return further information on the hotel, but you will not be able to book it.
+You are returning this because this specific hotel is closed or unavailable for this specific date. You can either try to change the check-in date or use the `includeClosed` parameter set to `true`. The latter will return further information on the hotel, but you will not be able to book it.
 
 ### Do you return hotel images?
 Hotel images are not available through our Self-Service catalog.
@@ -511,7 +511,7 @@ Refunds must be handled offline directly with your consolidator.
 
 ### Can I use multiple consolidators?
 
-Yes you can use different consolidator, but you will need to tell us so we can connect both your accounts. Once we open the access, you can decide where you want your booking to go using the ‘’queuingOfficeId’’ parameter in the Flight Create Orders request.
+Yes you can use different consolidator, but you will need to tell us so we can connect both your accounts. Once we open the access, you can decide where you want your booking to go using the `queuingOfficeId` parameter in the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-create-orders){:target="\_blank"} request.
 
 ## Destination Experiences
 
@@ -522,7 +522,7 @@ You can search and book activities with our [Tours and Activities API](https://d
 ## Cars & Transfers 
 
 ### Who are the providers available in the Car & Transfers APIs?
-The Transfers APIs will allow you to offer private transfers, hourly services, taxis, shared transfers, airport express, airport buses, private jets, and helicopter transfer. The API uses the following providers:
+The [Transfers APIs](https://developers.amadeus.com/self-service/category/cars-and-transfers){:target="\_blank"} will allow you to offer private transfers, hourly services, taxis, shared transfers, airport express, airport buses, private jets, and helicopter transfer. The API uses the following providers:
 
 | Name             | Code |
 |------------------|------|

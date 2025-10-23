@@ -11,9 +11,9 @@ When your application is ready to be deployed to the Real World™, you can requ
 To request a **production key**, you must complete the following steps:
 
 1. [Sign in](https://developers.amadeus.com/signin){:target="\_blank"} to your account and enter [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
-2. Select the application to move to `Production` and click `Get Production environment` :
+2. Select the application to move to `Production` and click `Get production environment` :
 
-   ![request_prod](../images/api-keys/moving-to-production/request_production_key.png)
+    ![request_prod](../images/api-keys/moving-to-production/request_production_key.png)
 
 3. Complete the form with your personal information, billing address, and app information.
 4. Indicate whether your application uses `Flight Create Orders` in the checkbox at the bottom of the form. This API has special access requirements detailed below in the `Moving to Production with Flight Create Orders` section of this guide.
@@ -29,8 +29,8 @@ You will receive a notification that your application is validated and the statu
 
 ![live](../images/api-keys/moving-to-production/app_live.png)
 
-> Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more information.
-
+!!!information
+    Production keys are valid for all Self-Service APIs except `Flight Create Orders API`, which has special requirements. See the `Moving to Production with Flight Create Orders` of this guide for more information.
 
 Remember that once you exceed your free transactions threshold, you will be billed automatically for your transactions every month. You can manage and track your app usage in [My Self-Service Workspace](https://developers.amadeus.com/my-apps){:target="\_blank"}.
 
@@ -47,8 +47,8 @@ If you are using [Amadeus for Developers SDKs](https://github.com/amadeus4dev){:
 from amadeus import Client, ResponseError
 
 amadeus = Client(
-    client_id='REPLACE_BY_YOUR_API_KEY',
-    client_secret='REPLACE_BY_YOUR_API_SECRET',
+    client_id='<YOUR-CLIENT-ID>',
+    client_secret='<YOUR-CLIENT-SECRET>',
     hostname='production'
 )
 
@@ -61,7 +61,8 @@ try:
     print(response.data)
 except ResponseError as error:
     print(error)
-```
+```  
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 ## Video Tutorial
 
@@ -83,7 +84,7 @@ Applications using `Flight Create Orders` must meet special requirements before 
 
 2. **There are no restrictions in your country**. Though we are working to make Self-Service flight booking available worldwide, `Flight Create Orders` API is currently not available to companies in the following countries: 
 
-   *Algeria, Bangladesh, Bhutan, Bulgaria, Croatia, Egypt, Finland, Iceland,
+    *Algeria, Bangladesh, Bhutan, Bulgaria, Croatia, Egypt, Finland, Iceland,
 Iran, Iraq, Jordan, Kuwait, Kosovo, Lebanon, Libya, Madagascar, Maldives,
 Montenegro, Morocco, Nepal, Pakistan, Palestine, Qatar, Saudi Arabia, Serbia, Sri Lanka, Sudan, Syria, Tahiti, Tunisia, United Arab Emirates and
 Yemen* 
