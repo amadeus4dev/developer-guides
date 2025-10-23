@@ -1,3 +1,7 @@
+---
+title: REST APIs Tutorials
+---
+
 # Self-Service API tutorials
 
 In this section, you'll discover a comprehensive collection of tutorials for each Self-Service API, organized by their respective categories. These tutorials delve into the typical use cases for each API and offer illustrative examples of parameters, along with clear explanations of their function.

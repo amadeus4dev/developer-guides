@@ -1,3 +1,7 @@
+---
+title: API FAQ - Q&A
+---
+
 # Frequently Asked Questions
 
 This page provides help with the most common questions about Amadeus Self-service APIs.

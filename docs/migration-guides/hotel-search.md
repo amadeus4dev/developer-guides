@@ -1,3 +1,7 @@
+---
+title: Hotel Search API Migration Guide
+---
+
 Are you still using the old version of the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"}? This guide will help you migrate to the new version of the [Hotel Search API](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search){:target="\_blank"} and leverage its advantages right from the start.
 
 ## How is the Hotel Search API v3 different to v2.1?

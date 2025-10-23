@@ -1,3 +1,7 @@
+---
+title: GraphQL Tutorials
+---
+
 # GraphQL Resources
 
 Explore our collection of GraphQL resources, including guides on creating GraphQL wrappers for REST APIs and converting OpenAPI specifications into GraphQL schemas.

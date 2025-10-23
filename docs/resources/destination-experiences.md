@@ -1,3 +1,7 @@
+---
+title: Destination Experiences APIs Tutorial
+---
+
 # Destination Experiences
 
 With Amadeus Self-Service APIs, you can find data on over two million places and 150,000 activities and show travelers the best things to see and do. In the **Destination Experiences** category, we have two APIs available for that.

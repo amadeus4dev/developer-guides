@@ -1,3 +1,7 @@
+---
+title: Java SDK Tutorial
+---
+
 # Java
 
 ## Java SDK

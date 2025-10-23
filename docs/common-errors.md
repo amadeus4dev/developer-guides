@@ -1,3 +1,7 @@
+---
+title: Common Errors - REST API Response Codes
+---
+
 # Common client and server errors
 
 Amadeus for Developers Self-Service APIs use HTTP status codes to communicate whether a request has been successfully processed.

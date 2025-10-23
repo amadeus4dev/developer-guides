@@ -1,3 +1,7 @@
+---
+title: API Interactive Code Examples for Flights & Hotels
+---
+
 ## Interactive code examples
 
 Explore our collection of interactive code examples, which can be easily integrated into your website. These examples allow you to view and modify the code to see how it affects the appearance and functionality of each component.

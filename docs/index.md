@@ -1,3 +1,8 @@
+---
+title: API Guides
+description: Learn how to build new travel apps with Amadeus for Developers Self-Service APIs Guides, designed to simplify and accelerate your workflow.
+---
+
 # Amadeus for Developers docs
 
 Welcome to the **Amadeus for Developers** docs portal! 

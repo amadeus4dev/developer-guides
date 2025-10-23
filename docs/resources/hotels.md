@@ -1,3 +1,7 @@
+---
+title: Hotel APIs Tutorial
+---
+
 # Hotels
 
 The **Hotels** category contains APIs that can help you find the right hotel and complete the booking.

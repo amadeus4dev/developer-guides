@@ -1,3 +1,7 @@
+---
+title: Hotel Booking API Migration Guide
+---
+
 Are you still using the old version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-booking/v/1.0){:target="\_blank"}? This guide will help you migrate to the new version of the [Hotel Booking API](https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-booking/v/2.0){:target="\_blank"} and leverage its advantages right from the start.
 
 # Endpoint Changes
