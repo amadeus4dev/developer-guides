@@ -38,6 +38,8 @@ The **Self-Service** offer targets independent developers and start-ups that wis
  
 The **Enterprise** offer provides access to the full Amadeus APIs catalog, tailored to companies with scaling needs as well as the leading brands in the travel industry. Customers of Enterprise APIs receive dedicated support from their account managers and enjoy a customized pricing scheme to meet their needs. Please note that access to Enterprise APIs is only granted on a request basis, and some special requirements may apply. Our Enterprise commercial teams will be happy to guide you through the process.
 
+### Can you help us with moving our application to Enterprise? 
+Unfortunately, the self-service team will not be able to help you move to Enterprise. Enterprise APIs are managed by different teams based on your business area. You will need to find the contact form of your specific business area in the [Amadeus contact us form](https://amadeus.com/en/contact). After you submit the form, someone from the right business area will reach out to you with the next steps. 
 
 ### Can I use APIs from both Self-Service and Enterprise?
 
@@ -45,7 +47,7 @@ Yes, you can use APIs from both catalogs, but please keep in mind that the requi
 
 ### How can I contact Enterprise?
 
-To contact the Enterprise team, please fill in the following [contact us form](https://developers.amadeus.com/support/contact-us-enterprise) and someone from the Enterprise team will get back to you shortly. Please keep in mind that the access to Enterprise requires an implementation fee as well as monthly fees.
+To contact the Enterprise team, please visit the [Amadeus contact us form](https://developers.amadeus.com/support/contact-us-enterprise), select your specific business area (example: Airlines, Airports, Travel Sellers, etc.), and fill the form. Choosing the right business area helps the correct team to reach out to you and ensures a fast implementation process. Please keep in mind that the access to Enterprise requires an implementation fee as well as monthly fees.
 
 ### How much do I need to pay to access Enterprise APIs?
 
@@ -53,6 +55,9 @@ The access to Enterprise APIs is subject to certain requirements depending on yo
 
 ## Self-Service APIs general
 
+### What is an alternative to Amadeus for Developers self-service APIs? 
+
+Unfortunately, we currently do not have internal alternatives to Amadeus for Developers self-service APIs.
 
 ### Is there a test environment to try the Self-Service APIs?
 
@@ -75,7 +80,6 @@ Code examples for all Amadeus Self-Service APIs are available in our [GitHub](ht
 ### How do I make my first Self-Service API call?
 
 On the [Get Started with Self-Service APIs](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335){:target="\_blank"} page you can find information on creating an account, getting your API key and making your first call.
- 
 
 ### How do I move Self-Service APIs from test to production?
 
