@@ -47,7 +47,7 @@ Yes, you can use APIs from both catalogs, but please keep in mind that the requi
 
 ### How can I contact Enterprise?
 
-To contact the Enterprise team, please visit the [Amadeus contact us form](https://developers.amadeus.com/support/contact-us-enterprise), select your specific business area (example: Airlines, Airports, Travel Sellers, etc.), and fill the form. Choosing the right business area helps the correct team to reach out to you and ensures a fast implementation process. Please keep in mind that the access to Enterprise requires an implementation fee as well as monthly fees.
+To contact the Enterprise team, please visit the [Amadeus contact us form](https://amadeus.com/en/contact), select your specific business area (example: Airlines, Airports, Travel Sellers, etc.), and fill the form. Choosing the right business area helps the correct team to reach out to you and ensures a fast implementation process. Please keep in mind that the access to Enterprise requires an implementation fee as well as monthly fees.
 
 ### How much do I need to pay to access Enterprise APIs?
 
