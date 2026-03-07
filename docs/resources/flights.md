@@ -407,11 +407,15 @@ The `POST` endpoint consumes JSON data in the format described below. So, instea
 
 If you want your search to return flights with only specified airlines, you can use the parameter `includedAirlineCodes` to consider specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens only with Aegean Airlines (A3): 
 
-`GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&includedAirlineCodes=A3&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2022-12-06`
+```bash 
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&includedAirlineCodes=A3&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2022-12-06
+```
 
 With the parameter `excludedAirlineCodes` you can ignore specific airlines. For example, there is a traveler who wants to travel from Berlin to Athens ignoring both Aegean Airlines (A3) and Iberia (IB):
 
-`GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06`
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?max=3&adults=1&excludedAirlineCodes=A3,IB&originLocationCode=BER&destinationLocationCode=ATH&departureDate=2021-09-06
+```
 
 #### Interactive code examples
 
@@ -431,14 +435,15 @@ Let’s look at flight offers for a Madrid-New York round trip (limiting to four
 
 ```bash
 curl --request GET \
-     --header 'Authorization: Bearer <token>' \
+     --header 'Authorization: Bearer <YOUR-BEARER-TOKEN>' \
      --url https://test.api.amadeus.com/v2/shopping/flight-offers\?origin\=MAD\&destination\=NYC\&departureDate\=2019-08-24\&returnDate\=2019-09-19\&adults\=1 \
 | curl --request POST \
        --header 'content-type: application/json' \
-       --header 'Authorization: Bearer <token>' \
+       --header 'Authorization: Bearer <YOUR-BEARER-TOKEN>' \
        --header 'X-HTTP-Method-Override: POST' \
        --url https://test.api.amadeus.com/v2/shopping/flight-offers/prediction --data @-
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 The prediction API returns the same content as the Low Fare search with the
 addition of the `choiceProbability` field for each flight offer element.
@@ -562,9 +567,10 @@ The request will look like this:
 
 ```bash
 curl --request GET \
-     --header 'Authorization: Bearer <token>' \
+     --header 'Authorization: Bearer <YOUR-BEARER-TOKEN>' \
      --url https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=MAD&max=10 \
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 So we can see the the following results:
 
@@ -649,9 +655,10 @@ The request will look like this:
 
 ```bash
 curl --request GET \
-     --header 'Authorization: Bearer <token>' \
+     --header 'Authorization: Bearer <YOUR-BEARER-TOKEN>' \
      --url https://test.api.amadeus.com/v1/airline/destinations?airlineCode=BA&max=2 \
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 So we can see the the following results:
 
@@ -687,9 +694,10 @@ If we need to know the IATA code for a particular airline but only have the airl
 
 ```bash
 curl --request GET \
-     --header 'Authorization: Bearer <token>' \
+     --header 'Authorization: Bearer <YOUR-BEARER-TOKEN>' \
      --url https://test.api.amadeus.com/v1/reference-data/airlines?airlineCodes=BA \
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 The response is pretty straightforward:
 
@@ -873,8 +881,7 @@ You can build the request by passing the flight-offer object from the [Flight Of
 POST https://test.api.amadeus.com/v1/shopping/flight-offers/upselling
 ```
 
-Please not that the `X-HTTP-Method-Override` header parameter is required to make this call.
-
+Please note that the `X-HTTP-Method-Override` header parameter is required to make this call.
 
 ```json
 { 
@@ -1014,7 +1021,7 @@ Please not that the `X-HTTP-Method-Override` header parameter is required to mak
 }  
 ```
 
-The API will procide the following JSON in the response:
+The API will provide the following JSON in the response:
 
 ```json
 {
@@ -1170,7 +1177,9 @@ The [Travel Recommendations API](https://developers.amadeus.com/self-service/cat
 
 For example, for a traveler based in San Francisco who has searched for multiple flights to Barcelona, what other similar destinations the API could recommend? The API takes as input the country of the traveler and the IATA code of the city that was searched, in our case this will be US and BCN respectively. 
 
-`GET https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=BCN&travelerCountryCode=US`
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/recommended-locations?cityCodes=BCN&travelerCountryCode=US
+```
 
 The response will look like this:
 
@@ -1225,8 +1234,9 @@ With the [Airport Nearest Relevant API](https://developers.amadeus.com/self-serv
     To get the latitude and longitude of a city you can use the [Airport & City Search API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} using the city's IATA code.
 
 Let's call the [Airport Nearest Relevant API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant){:target="\_blank"} to find airports within the 500km radius of Madrid.
-
-`GET https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=40.416775&longitude=-3.703790&radius=500`
+```bash
+GET https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=40.416775&longitude=-3.703790&radius=500
+```
 
 A part of the response looks like:
  
@@ -1267,8 +1277,9 @@ A part of the response looks like:
 What we want to do at this point, is to find the cheapest dates for all these destinations. 
 
 We can do this by calling the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search){:target="\_blank"} which finds the cheapest dates to travel from one city to another. Let's see, for example, the cheapest dates to fly to Barcelona in November 2021. 
-
-`GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MAD&destination=BCN&departureDate=2021-05-01,2021-05-30`
+```bash
+GET https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MAD&destination=BCN&departureDate=2021-05-01,2021-05-30
+```
 
 ```json
 {
@@ -1318,8 +1329,9 @@ As you can see above, in the results we have a list of dates for a roundtrip fro
 
 In the last step, we want to let the traveler perform a flight search for any of the above dates that are convenient for them. That is very easy with our APIs, as the [Flight Cheapest Date Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search){:target="\_blank"} for each result contains a link to the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"}. For example, if we want to perform a flight search for the first result, we only have to take the link provided and make an API call:
 
-
-`GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false`
+```bash
+GET https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MAD&destinationLocationCode=BCN&departureDate=2021-05-29&returnDate=2021-06-11&adults=1&nonStop=false
+```
 
 
 ### Search for a city that has an airport
@@ -1522,7 +1534,7 @@ This is what we get in the response:
 }
 ```
 
-By default the price will be shown in Euros. In this example we can see that the lowest price for such ticket should be 29.59 Euros and the highest 198.15 Euros. The first, medium and trird choices give you an idea about the possible price ranges for this flight.
+By default the price will be shown in Euros. In this example we can see that the lowest price for such ticket should be 29.59 Euros and the highest 198.15 Euros. The first, medium and third choices give you an idea about the possible price ranges for this flight.
 
 We also have an option to request the result in a different currency. This is done by using the `currencyCode` parameter, which is an ISO 4217 format currency code. In addition, we can specify whether we are inquiring about a round trip or a one way ticket.
 
@@ -1715,7 +1727,8 @@ For each seat, the [Seatmap Display API](https://developers.amadeus.com/self-ser
 - `BLOCKED` – the seat is not occupied but isn’t available to book for the user. This is usually due to the passenger type (e.g., children may not sit in exit rows) or their fare class (e.g., some seats may be reserved for flyers in higher classes).
 - `OCCUPIED` – the seat is  occupied and unavailable to book.
 
-If a flight is fully booked, the API returns an OCCUPIED status for all seats. In most cases, fully booked flights are filtered out during search with the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} or when confirming the price with the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"}. The [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"} returns an error message if you try to book an unavailable seat. For more information on the booking flow, check out how to build a flight booking engine.
+If a flight is fully booked, the API returns an OCCUPIED status for all seats. In most cases, fully booked flights are filtered out during search with the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} or when confirming the price with the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price){:target="\_blank"}. The [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"} returns an error message if you try to book an unavailable seat. For more information on the booking flow, check out [how to build a flight booking engine](https://developers.amadeus.com/get-started/create-a-flight-booking-engine-651).
+
 
 Once your user has selected their seat, the next step is to add the desired seat to the flight offer and prepare them for booking.
 
@@ -2058,9 +2071,10 @@ Suppose we are building an app with an integrated check-in flow for a particular
 
 ```bash
 curl --request GET \
-     --header 'Authorization: Bearer <token>' \
+     --header 'Authorization: Bearer <YOUR-BEARER-TOKEN>' \
      --url https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airlineCode=BA&language=en-GB \
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
 
 This is what we get in the response:
 
@@ -2102,7 +2116,7 @@ Here we've got a dedicated link for web applications, a dedicated link for mobil
 
 Just as you can help users book a flight with the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}, you can now also help them cancel their reservations with the [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"} API. However, you have a limited window of time to cancel via API. If you’re working with an airline consolidator for ticketing, cancellations via API are generally only allowed while the order is queued for ticketing. Once the ticket has been issued, you’ll have to contact your consolidator directly to handle the cancellation.
 
-To call the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"}, you have pass as a parameter the flight-orderId from the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}.
+To call the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"}, you must pass as a parameter the flight-orderId from the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}.
 
 To retrieve the flight order data:
 
@@ -2121,7 +2135,7 @@ DELETE https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp
 
 With the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"} you can consult and check your flight reservation. 
 
-To call the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"}, you have pass as a parameter the flight-orderId from the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}, such as:
+To call the [Flight Order Management API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"}, you must pass as a parameter the flight-orderId from the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"}, such as:
 
 ```bash
 GET https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2fAiY
@@ -2134,7 +2148,7 @@ GET https://test.api.amadeus.com/v1/booking/flight-orders/eJzTd9f3NjIJdzUGAAp%2f
 Self-Service users must work with an airline consolidator that can issue
 tickets on your behalf. In that case, the payment is not processed by the API
 but directly between you and the consolidator. Adding a form of payment to
-the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"} will be rejected by error INVALID FORMAT.
+the [Flight Create Orders API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"} will be rejected by error `INVALID FORMAT`.
 
 ### Price discrepancy 
 

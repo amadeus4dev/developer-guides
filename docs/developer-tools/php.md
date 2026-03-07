@@ -34,7 +34,7 @@ use Amadeus\Exceptions\ResponseException;
 require __DIR__ . '/vendor/autoload.php'; // include composer autoloader
 
 try {
-    $amadeus = Amadeus::builder("REPLACE_BY_YOUR_API_KEY", "REPLACE_BY_YOUR_API_SECRET")
+    $amadeus = Amadeus::builder("<YOUR-CLIENT-ID>", "<YOUR-CLIENT-SECRET>")
         ->build();
 
     // Flight Offers Search GET
@@ -76,6 +76,8 @@ try {
     print $e;
 }
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above and execute it.
+
 
 #### Handling the response  
 

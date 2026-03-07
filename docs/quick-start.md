@@ -11,7 +11,7 @@ The first step to start using Amadeus Self-Service APIs is to register and creat
 * Open the [Amadeus Developers Portal](https://developers.amadeus.com/){:target="\_blank"}.
 * Click on [Register](https://developers.amadeus.com/register){:target="\_blank"}.
 * Complete the form using a valid email address and click on the `Create account` button. An automatic confirmation email will be sent to the email address you provided.
-* In the confirmation email you receive, click on `Activate your account`. 
+* Click on the `Activate your account` link in the confirmation email you receive.
 
 You can now log in to the portal with your new credentials! Welcome to **Amadeus for Developers**!
 
@@ -45,13 +45,14 @@ For our first call, let's get a list of possible destinations from Paris for a m
 
 ### Creating the Request
 
-Before making your first API call, you need to get your **access token**. For security purposes, we implemented the `oauth2` process that will give you an access token based on your `API Key` and `API Secret.` To retrieve the **token**, you need to send a `POST` request to the endpoint `/v1/security/oauth2/token`with the correct `Content-Type` header and body. Replace `{client_id}` with your API Key and `{client_secret}` with your API Secret in the command below and execute it:
+Before making your first API call, you need to get your **access token**. For security purposes, we implemented the `oauth2` process that will give you an access token based on your `API Key` and `API Secret.` To retrieve the **token**, you need to send a `POST` request to the endpoint `/v1/security/oauth2/token`with the correct `Content-Type` header and body. 
 
 ```bash
 curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
      -H "Content-Type: application/x-www-form-urlencoded" \
-     -d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
+     -d "grant_type=client_credentials&client_id=<YOUR-CLIENT-ID>&client_secret=<YOUR-CLIENT-SECRET>"
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above and execute it.
 
 !!! warning
     Please take a look at our [Authorization guide](API-Keys/authorization.md) to understand how the process works in depth.
@@ -62,8 +63,10 @@ Our call is therefore:
 
 ```bash
 curl 'https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&maxPrice=200' \
-      -H 'Authorization: Bearer ABCDEFGH12345'
+      -H 'Authorization: Bearer <YOUR-BEARER-TOKEN>'
 ```
+Replace `<YOUR-BEARER-TOKEN>` with the token you received from the authorization call.
+
 
 Note how we add the `Authorization` header to the request with the value `Bearer` string concatenated with the token previously requested.
 

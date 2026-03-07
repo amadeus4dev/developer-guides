@@ -32,12 +32,12 @@ compile "com.amadeus:amadeus-java:7.0.0"
 
 **Further information:**
 
-You can check the library in the [Maven repository](https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest){:target="\_blank"} for futher information.
+You can check the library in the [Maven repository](https://mvnrepository.com/artifact/com.amadeus/amadeus-java/latest){:target="\_blank"} for further information.
 
 ### Step-by-step example
 
 This tutorial will guide you through the process of creating a simple Java
-application which calls the Flight Inspiration Search API using the Amadeus
+application which calls the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/flights/api-doc/flight-inspiration-search){:target="\_blank"} using the Amadeus
 for Developers Java SDK.
 
 ### Using the Amadeus Java SDK
@@ -89,9 +89,10 @@ public class FlightSearch {
 Before testing the example, export your credentials in your terminal:
 
 ```bash
-export AMADEUS_CLIENT_ID=YOUR_CLIENT_ID
-export AMADEUS_CLIENT_SECRET=YOUR_CLIENT_SECRET
+export AMADEUS_CLIENT_ID=<YOUR-CLIENT-ID>
+export AMADEUS_CLIENT_SECRET=<YOUR-CLIENT-SECRET>
 ```
+Replace `<YOUR-CLIENT-ID>` with your API Key and `<YOUR-CLIENT-SECRET>` with your API Secret in the command above.
 
 Let's build and run the code to make sure that everything is working properly:
 
