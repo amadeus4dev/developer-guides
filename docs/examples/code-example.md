@@ -316,66 +316,6 @@ DELETE
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_price_analysis/v1/get/Java%20SDK/FlightPriceAnalysis.java"
     ```
 
-### Flight Delay Prediction
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_delay_prediction/v1/get/Python%20SDK/flight_delay_prediction.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_delay_prediction/v1/get/Node%20SDK/flight_delay_prediction.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_delay_prediction/v1/get/Java%20SDK/FlightDelayPrediction.java"
-    ```
-
-### Airport On Time Performance
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Python%20SDK/airport_on_time_performance.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Node%20SDK/airport_on_time_performance.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/airport_on_time_performance/v1/get/Java%20SDK/AirportOnTime.java"
-    ```
-
-### Flight Choice Prediction
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_choice_prediction/v2/post/Python%20SDK/flight_choice_prediction.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_choice_prediction/v2/post/Node%20SDK/flight_choice_prediction.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/flight_choice_prediction/v2/post/Java%20SDK/FlightChoicePrediction.java"
-    ```
-
 ### On Demand Flight Status
 
 === "Python"
@@ -806,26 +746,6 @@ By Id
 
     ```java
     --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/city_search/v1/get/Java%20SDK/CitySearch.java"
-    ```
-
-### Trip Purpose Prediction
-
-=== "Python"
-
-    ```python
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Python%20SDK/trip_purpose_prediction.py"
-    ```
-
-=== "Node"
-
-    ``` javascript
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Node%20SDK/trip_purpose_prediction.js"
-    ```
-
-=== "Java"
-
-    ```java
-    --8<-- "https://github.com/amadeus4dev/amadeus-code-examples/raw/master/trip_purpose_prediction/v2/get/Java%20SDK/TripPurposePrediction.java"
     ```
 
 ### Travel Recommendations

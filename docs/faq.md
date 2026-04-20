@@ -301,19 +301,6 @@ We do not return airline logos in our Self-Service catalog.
 
 To get the refund policy for a specific flight, you will need to use the [Flight Offers Price API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-price), with the parameter `include` set to `detailed-fare-rules` at the endpoint of the URL as follows: https://api.amadeus.com/v1/shopping/flight-offers/pricing?include=detailed-fare-rules 
 
-## Flight Price Analysis
-
-### Why do some origin and destination pairings not return any results?
-
-Not all possible routes are supported by the API even in production. The reason is that the machine learning model filters out all the routes with an error rate below 15% MAPE (Mean absolute percentage error). For more insights on how the model works, please refer to [this blog post](https://developers.amadeus.com/blog/flight-price-analysis-model-machine-learning).
-
-
-## Flight Delay Prediction
-
-### Why do I get the INFERENCE error?
-
-This means the requested origin/city pairing was not included in our training data. So, we have no previous information on whether that flight is normally delayed or not.
-
 
 ## Flight Cheapest Date Search
 

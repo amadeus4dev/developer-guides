@@ -16,7 +16,7 @@ The goal of this tutorial is to create a GraphQL API, which will only use the `k
 
 Before you begin, you need to:
 
-* Register your application with Amadeus for Developers as described in [Making your first API call](../../quick-start.md).
+* Register your application with Amadeus for Developers.
 * Have Python installed on your machine.
 
 ## Create a new Python project

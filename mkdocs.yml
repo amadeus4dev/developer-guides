@@ -108,7 +108,6 @@ extra_css:
 #Page tree
 nav:
     - Home: index.md
-    - Quick start: quick-start.md
     - Pricing: pricing.md
     - Free test data collection: test-data.md
     - API keys:
@@ -123,9 +122,7 @@ nav:
         - Flights: resources/flights.md
         - Destination experiences: resources/destination-experiences.md
         - Cars and Transfers: resources/cars-transfers.md
-        - Market insights: resources/market-insight.md
         - Hotels: resources/hotels.md
-        - Itinerary management: resources/itinerary-managment.md
     - Developer tools:
         - developer-tools/index.md
         - Node: developer-tools/node.md
@@ -144,7 +141,6 @@ nav:
         - examples/index.md
         - Code examples: examples/code-example.md
         - Interactive examples: examples/live-examples.md
-        - Prototypes: examples/prototypes.md
     - FAQ: faq.md
     - Glossary: glossary.md
     - Migration guides:

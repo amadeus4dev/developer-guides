@@ -49,10 +49,6 @@ The table below details the available test data for each Self-Service API:
 | [SeatMap Display](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display){:target="\_blank"} |  Works with the response of Flight Offers Search. |
 | [Flight Create Orders](https://developers.amadeus.com/self-service/category/air/api-doc/flight-create-orders){:target="\_blank"} |  Works with the response of Flight Offers Price. |
 | [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"}  | Works with the response of Flight Create Orders. |
-| [Flight Price Analysis](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis){:target="\_blank"} |  Contains the following [routes](https://github.com/amadeus4dev/data-collection/blob/master/data/flightpriceanalysis.md){:target="\_blank"} in both test and production environments. |
-| [Flight Delay Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction){:target="\_blank"} | No data restrictions in test. |
-| [Airport On-time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance){:target="\_blank"} |  No data restrictions in test. |
-| [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction){:target="\_blank"} | No data restrictions in test. |
 | [On Demand Flight Status](https://developers.amadeus.com/self-service/category/air/api-doc/on-demand-flight-status){:target="\_blank"}  | Contains a copy of live data at a given time and real-time updates are not supported. Check out [the differences between test and production environment.](https://github.com/amadeus4dev/data-collection/blob/master/data/ondemandflightstatus.md){:target="\_blank"} |
 | [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup){:target="\_blank"} |  No data restrictions in test. |
 | [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} |  Cities/airports in the United States, Spain, the United Kingdom, Germany and India. |
@@ -78,13 +74,6 @@ The table below details the available test data for each Self-Service API:
 | ----------- | ----------- |
 | [Tours and Activities](https://developers.amadeus.com/self-service/category/destination-content/api-doc/tours-and-activities){:target="\_blank"} |  See list of [valid cities](https://github.com/amadeus4dev/data-collection/blob/master/data/pois.md){:target="\_blank"}. |
 | [City Search](https://developers.amadeus.com/self-service/category/trip/api-doc/city-search){:target="\_blank"}  | No data restrictions in test. |
-
-
-### Itinerary management
-
-| **API**      | **Test data** |
-| ----------- | ----------- |
-| [Trip Purpose Prediction](https://developers.amadeus.com/self-service/category/trip/api-doc/trip-purpose-prediction){:target="\_blank"}  | No data restrictions in test. |
 
 ### Market insights
 | **API**      | **Test data** |
