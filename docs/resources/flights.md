@@ -15,8 +15,8 @@ The **Flights** category contains a wide array of APIs that can help you manage 
 | [Flight Order Management](https://developers.amadeus.com/self-service/category/air/api-doc/flight-order-management){:target="\_blank"} | Checks the latest status of a reservation, shows post-booking modifications like ticket information or form of payment and lets you cancel reservations. |
 | [Seatmap Display](https://developers.amadeus.com/self-service/category/air/api-doc/seatmap-display){:target="\_blank"} | Shows airplane cabin plan from a Flight Offer in order for the traveler to be able to choose their seat during the flight booking flow. |
 | [Branded Fares Upsell](https://developers.amadeus.com/self-service/category/air/api-doc/branded-fares-upsell){:target="\_blank"} | Provides the branded fares available for a given flight, along with pricing and a fare description. |
-| [Flight Price Analysis](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis){:target="\_blank"} | Uses an Artificial Intelligence algorithm trained on Amadeus historical flight booking data to show how current flight prices compare to historical fares and whether the price of a flight is below or above average.  |
-| [Flight Choice Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction){:target="\_blank"} | Uses Artificial Intelligence and Amadeus historical flight booking data to identify which flights in search results are most likely to be booked. |
+
+
 | **Flight inspiration** |
 | [Flight Inspiration Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search){:target="\_blank"} | Provides a list of destinations from a given city that is ordered by price and can be filtered by departure date or maximum price.                |
 | [Flight Cheapest Date Search](https://developers.amadeus.com/self-service/category/air/api-doc/flight-cheapest-date-search){:target="\_blank"}          |  Provides a list of flight options with dates and prices, and allows you to order by price, departure date or duration.                  |
@@ -24,12 +24,12 @@ The **Flights** category contains a wide array of APIs that can help you manage 
 | [Travel Recommendations](https://developers.amadeus.com/self-service/category/trip/api-doc/travel-recommendations){:target="\_blank"} | Uses Artificial Intelligence trained on Amadeus historical flight search data to determine which destinations are also popular among travelers with similar profiles, and provides a list of recommended destinations with name, IATA code, coordinates and similarity score. |
 | **Flight schedule** |
 | [On Demand Flight Status](https://developers.amadeus.com/self-service/category/air/api-doc/on-demand-flight-status){:target="\_blank"} | Provides real-time flight schedule data including up-to-date departure and arrival times, terminal and gate information, flight duration and real-time delay status. Help travelers track the live status of their flight and enjoy a stress-free trip. |
-| [Flight Delay Prediction](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction){:target="\_blank"} | Provides delay probabilities for four possible delay lengths |
+
 | **Airport** |
 | [Airport & City Search](https://developers.amadeus.com/self-service/category/air/api-doc/airport-and-city-search){:target="\_blank"} | Finds airports and cities that match a specific word or a string of letters. |
 | [Airport Nearest Relevant](https://developers.amadeus.com/self-service/category/air/api-doc/airport-nearest-relevant){:target="\_blank"} | Provides a list of commercial airports within a 500km (311mi) radius of a given point that are ordered by relevance, which considers their distance from the starting point and their yearly flight traffic. |
 | [Airport Routes API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-routes){:target="\_blank"} | Finds all destinations served by a given airport. |
-| [Airport On-Time Performance](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance){:target="\_blank"} | Predicts an airport's overall performance based on the delay of all flights during a day. |
+|
 | **Airlines** |
 | [Flight Check-in Links](https://developers.amadeus.com/self-service/category/air/api-doc/flight-check-in-links){:target="\_blank"} |  Simplifies the check-in process by providing direct links to the airline check-in page.                |
 | [Airline Code Lookup](https://developers.amadeus.com/self-service/category/air/api-doc/airline-code-lookup){:target="\_blank"}           | Finds the name of an airline by its IATA or ICAO airline codes.                  |
@@ -416,67 +416,6 @@ With the parameter `excludedAirlineCodes` you can ignore specific airlines. For 
 #### Interactive code examples
 
 Check out this [interactive code example](../examples/live-examples.md) which provides a flight search form to help you build your app. You can easily customize it and use the Flight Offers Search API to get the cheapest flight offers.
-
-### Search for the best flight option
-
-The [Flight Choice Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-choice-prediction){:target="\_blank"} predicts the flight your users will choose.
-Our machine-learning models have analyzed historical interactions with the
-[Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} and can determine each flight’s probability of being
-chosen. Boost conversions and create a personalized experience by filtering out
-the noise and showing your users the flights which are best for them.
-
-Here is a quick cURL example piping the [Flight Offers Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-offers-search){:target="\_blank"} results directly to the prediction API. Please note that a `X-HTTP-Method-Override` header parameter is required.
-
-Let’s look at flight offers for a Madrid-New York round trip (limiting to four options for this test illustration)
-
-```bash
-curl --request GET \
-     --header 'Authorization: Bearer <token>' \
-     --url https://test.api.amadeus.com/v2/shopping/flight-offers\?origin\=MAD\&destination\=NYC\&departureDate\=2019-08-24\&returnDate\=2019-09-19\&adults\=1 \
-| curl --request POST \
-       --header 'content-type: application/json' \
-       --header 'Authorization: Bearer <token>' \
-       --header 'X-HTTP-Method-Override: POST' \
-       --url https://test.api.amadeus.com/v2/shopping/flight-offers/prediction --data @-
-```
-
-The prediction API returns the same content as the Low Fare search with the
-addition of the `choiceProbability` field for each flight offer element.
-
-```json
- {
-  "data": [
-    {
-      "choiceProbability": "0.9437563627430908",
-      "id": "1558602440311-352021104",
-      "offerItems": [...],
-      "type": "flight-offer"
-    },
-    {
-      "choiceProbability": "0.0562028823257711",
-      "id": "1558602440311--1831925786",
-      "offerItems": [...],
-      "type": "flight-offer"
-    },
-    {
-      "choiceProbability": "0.0000252425060482",
-      "id": "1558602440311-480701674",
-      "offerItems": [...],
-      "type": "flight-offer"
-    },
-    {
-      "choiceProbability": "0.0000155124250899",
-      "id": "1558602440311--966634676",
-      "offerItems": [...],
-      "type": "flight-offer"
-    }
-  ],
-  "dictionaries": {...}
-  },
-  "meta": {...}
-  }
-}
-```
 
 #### Search for flight offers for multiple cities
 
@@ -1459,78 +1398,6 @@ The Id for the city of Munich is `CMUC`. However, for the Munich Airport the Id 
 GET https://test.api.amadeus.com/v1/reference-data/locations/CMUC
 ```
 
-### Compare the flight price to historical fares
-
-When booking a flight, travelers need to be confident that they're getting a good deal. You can compare a flight price to historical fares for the same flight route using the [Flight Price Analysis API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-price-analysis){:target="\_blank"}. It uses an Artificial Intelligence algorithm trained on Amadeus historical flight booking data to show how current flight prices compare to historical fares and whether the price of a flight is below or above average.
-
-The only mandatory parameters for this search are the origin airport IATA code, destination airport IATA code and the departure date in the ISO 8601 YYYY-MM-DD format.
-
-Let's see how it works. In our example we will be flying from Madrid (MAD) to Paris (CDG) on 12 December 2022:
-
-```bash
-https://test.api.amadeus.com/v1/analytics/itinerary-price-metrics?originIataCode=MAD&destinationIataCode=CDG&departureDate=2022-12-12
-```
-
-This is what we get in the response:
-
-```json
-{
-  "warnings": [],
-  "data": [
-    {
-      "type": "itinerary-price-metric",
-      "origin": {
-        "iataCode": "MAD"
-      },
-      "destination": {
-        "iataCode": "CDG"
-      },
-      "departureDate": "2022-12-12",
-      "transportType": "FLIGHT",
-      "currencyCode": "EUR",
-      "oneWay": true,
-      "priceMetrics": [
-        {
-          "amount": "29.59",
-          "quartileRanking": "MINIMUM"
-        },
-        {
-          "amount": "76.17",
-          "quartileRanking": "FIRST"
-        },
-        {
-          "amount": "129.24",
-          "quartileRanking": "MEDIUM"
-        },
-        {
-          "amount": "185.59",
-          "quartileRanking": "THIRD"
-        },
-        {
-          "amount": "198.15",
-          "quartileRanking": "MAXIMUM"
-        }
-      ]
-    }
-  ],
-  "meta": {
-    "count": 1,
-    "links": {
-      "self": "https://test.api.amadeus.com/v1/analytics/flight-price-metrics?originIataCode=MAD&destinationIataCode=CDG&departureDate=2022-12-12&currencyCode=EUR&oneWay=True"
-    }
-  }
-}
-```
-
-By default the price will be shown in Euros. In this example we can see that the lowest price for such ticket should be 29.59 Euros and the highest 198.15 Euros. The first, medium and trird choices give you an idea about the possible price ranges for this flight.
-
-We also have an option to request the result in a different currency. This is done by using the `currencyCode` parameter, which is an ISO 4217 format currency code. In addition, we can specify whether we are inquiring about a round trip or a one way ticket.
-
-```bash
-GET https://test.api.amadeus.com/v1/analytics/itinerary-price-metrics?originIataCode=MAD&destinationIataCode=CDG&departureDate=2021-03-21&currencyCode=EUR&oneWay=true
-```
-
-
 ## Confirm Fares
 
 The availability and price of airfare fluctuate, so it’s important to confirm
@@ -1948,108 +1815,6 @@ The example response looks as follows:
   ]
 }
 ```
-
-
-
-## Check for any flight delays
-
-For any traveller it's quite important to know how far in advance they should get to the airport. The [Flight Delay Prediction API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-delay-prediction){:target="\_blank"} estimates the probability of a specific flight being delayed. 
-
-The query consists of ten mandatory parameters:
-
-* `originLocationCode` - IATA code of the city or airport from which the traveler is departing, e.g. `PAR` for Paris
-* `destinationLocationCode` - IATA code of the city or airport to which the traveler is going, e.g. `PAR` for Paris
-* `departureDate` - the date on which the traveler will depart from the origin to go to the destination in the ISO 8601 YYYY-MM-DD format, e.g. `2019-12-25`
-* `departureTime` - local time relative to `originLocationCode` on which the traveler will depart from the origin in the ISO 8601 format, e.g. `13:22:00`
-* `arrivalDate` - the date on which the traveler will arrive to the destination from the origin in the ISO 8601 in the YYYY-MM-DD format, e.g. `2019-12-25`
-* `arrivalTime` - local time relative to `destinationLocationCode` on which the traveler will arrive to destination in the ISO 8601 standard. e.g. `13:22:00`
-* `aircraftCode` - IATA [aircraft code](http://www.flugzeuginfo.net/table_accodes_iata_en.php){:target="\_blank"}
-* `carrierCode` - airline / carrier code, e.g. `TK`
-* `flightNumber` - flight number as assigned by the carrier, e.g. `1816`
-* `duration` - flight duration in the ISO 8601 `PnYnMnDTnHnMnS` format, e.g. `PT2H10M`
-
-```shell
-GET https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=NCE&destinationLocationCode=IST&departureDate=2020-08-01&departureTime=18%3A20%3A00&arrivalDate=2020-08-01&arrivalTime=22%3A15%3A00&aircraftCode=321&carrierCode=TK&flightNumber=1816&duration=PT31H10M
-```
-
-The response result will look as follows:
-
-
-```json
-{
-  "data": [
-    {
-      "id": "TK1816NCEIST20200801",
-      "probability": "0.13336977",
-      "result": "LESS_THAN_30_MINUTES",
-      "subType": "flight-delay",
-      "type": "prediction"
-    },
-    {
-      "id": "TK1816NCEIST20200801",
-      "probability": "0.42023364",
-      "result": "BETWEEN_30_AND_60_MINUTES",
-      "subType": "flight-delay",
-      "type": "prediction"
-    },
-    {
-      "id": "TK1816NCEIST20200801",
-      "probability": "0.34671372",
-      "result": "BETWEEN_60_AND_120_MINUTES",
-      "subType": "flight-delay",
-      "type": "prediction"
-    },
-    {
-      "id": "TK1816NCEIST20200801",
-      "probability": "0.09968289",
-      "result": "OVER_120_MINUTES_OR_CANCELLED",
-      "subType": "flight-delay",
-      "type": "prediction"
-    }
-  ],
-  "meta": {
-    "count": 4,
-    "links": {
-      "self": "https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=NCE&destinationLocationCode=IST&departureDate=2020-08-01&departureTime=18:20:00&arrivalDate=2020-08-01&arrivalTime=22:15:00&aircraftCode=321&carrierCode=TK&flightNumber=1816&duration=PT31H10M"
-    }
-  }
-}
-```
-
-The main parameter of the dataset is the `result`, which contains a self-explanatory value, e.g. `LESS_THAN_30_MINUTES`, `BETWEEN_30_AND_60_MINUTES`, etc.
-
-
-## Check the on-time performance of an airport
-
-Another way to get prepared for any delays, is checking the on-time performance of the actual airport. The [Airport On-Time Performance API](https://developers.amadeus.com/self-service/category/air/api-doc/airport-on-time-performance){:target="\_blank"} estimates the probability of a specific flight being delayed. 
-
-The search query is very simple. In our query we only need to provide our flight departure date and the departure airport. For example, JFK on 12 December 2022.
-
-
-```bash
-GET https://test.api.amadeus.com/v1/airport/predictions/on-time?airportCode=JFK&date=2022-12-12 
-```
-
-This is the result:
-
-```json
-{
-  "data": {
-    "id": "JFK20221212",
-    "probability": "0.928",
-    "result": "0.77541769",
-    "subType": "on-time",
-    "type": "prediction"
-  },
-  "meta": {
-    "links": {
-      "self": "https://test.api.amadeus.com/v1/airport/predictions/on-time?airportCode=JFK&date=2022-12-12"
-    }
-  }
-}
-```
-
-The `probability` parameter shows the probability of the airport running smoothly. In our example, this metric means that there is a 92.8% chance that there will be no delays.
 
 ## Get a direct link to the airline check-in page
 

@@ -49,15 +49,6 @@ The prototype is built with Python/Django and the [Amadeus Python SDK](../develo
 
 ![amadeus-hotel-booking-django](../images/examples/prototypes/amadeus-hotel-booking-django.png)
 
-
-### Amadeus Flight Price Analysis in Django {#amadeus-flight-price-analysis-django}
-
-* **Source code**: You can access the source code [on GitHub](https://github.com/amadeus4dev/amadeus-flight-price-analysis-django){:target="\_blank"}.
-
-The prototype is built with Python/Django and the [ Amadeus Python SDK](../developer-tools/python.md). It retrieves flight offers using the Flight Offers Search API for a given itinerary. Then it displays if the cheapest available flight is a good deal based on the Flight Price Analysis API. We finally predict if the trip is for business or leisure using the Trip Purpose Prediction API.
-
-![amadeus-flight-price-analysis-django](../images/examples/prototypes/amadeus-flight-price-analysis-django.png)
-
 ### Amadeus Hotel Search with area safety and POIs {#amadeus-hotel-area-safety-pois-django}
 
 * **Source code**: You can access the source code [on GitHub](https://github.com/amadeus4dev/amadeus-hotel-area-safety-pois-django){:target="\_blank"}.
@@ -81,7 +72,6 @@ We have many other prototypes or demo apps that developers in our community buil
 
 | Use case                                   | Amadeus APIs used                                                                                 | Technology           | Details                                                                                                          |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------|
-| Trip purpose prediction                    | Trip Purpose Prediction                                                                           | Python, django       | [amadeus-trip-purpose-django](#amadeus-trip-purpose-django)                                                                                      |
 | Hotel Search                               | Hotel Search                                                                                      | Swift                | [amadeus-hotel-search-swift](#amadeus-hotel-search-swift)                                                                                       |
 | Hotel booking engine                       | Hotel Search, Hotel Booking                                                                       | Kotlin               | [amadeus-hotel-booking-android](#amadeus-hotel-booking-android)                                                                                    |
 | Flight Search with Artificial intelligence | Flight Offers Search, Flight Choice Prediction, Trip Purpose Prediction and Airport & City Search | Python, django       | [amadeus-smart-flight-search-django](#amadeus-smart-flight-search-django)                                                                              |

@@ -10,5 +10,3 @@ To facilitate a smooth and efficient start, or to spark creativity in using our 
 | ----------- | ----------- | 
 | Code examples | [For each SDK and API endpoint](./code-example.md) |
 | Interactive code examples | [Flight Search and Hotel Search](./live-examples.md) |
-| Prototypes | [Official prototypes](./prototypes.md#official-prototypes)<br>[Community prototypes](./prototypes.md#prototypes-from-community)   |
-
