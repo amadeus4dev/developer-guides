@@ -1,4 +1,5 @@
-# Developer Guides
+# [DEPRECATED] Developer Guides
+**The Amadeus for Developers Self-Service offer has been deprecated. Please check our [press release](https://amadeus.com/en/industry-messaging/statement-regarding-amadeus-for-developers-portal) for more information**
 
 This repository hosts the **developer documentation** for [Amadeus for Developers](https://developers.amadeus.com), offering a comprehensive guide for developers seeking to work with Amadeus Self-Service APIs.
 
